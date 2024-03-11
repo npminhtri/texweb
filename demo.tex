@@ -10,13 +10,17 @@
 \usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,mathabx}%\for eqref
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
 \usepackage{lscape}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\setlength\parindent{0pt}
 
 
 
@@ -24,10 +28,28 @@
 \begin{document} % All begin commands must be paired with an end command somewhere
 \maketitle % creates title using information in preamble (title, author, date)
 
-This note is used to list every theorems in chapter 9 of the book \textbf{Complex made simple}
+This note is used to list every theorems in chapter 9 of the book \textbf{Complex made simple}.
 \section{Quasi-metrics} % creates a section
+\begin{definition}
+A function $d \colon X \times X \to [0,\infty]$ satisfying the condition
+\begin{itemize}
+    \item $d(x,x) = 0 (x \in X)$
+    \item $d(x,y) = d(y,x) (x,y \in X)$
+    \item $d(x,z) \le d(x,y) + d(y,z) (x,y,z)$
+\end{itemize} 
+then it is called a quasi-metric on space $X$. We can see that $d$ is almost the same as a metric except that $d(x,y)$ can be zero for distinct $x,y$.
+\end{definition}
 
+One can construct a metric $\overline{d}$ from quasi-metric $d$, noting that $d$ is an equivalence relation on $X$.
 
-
-
+Now we introduction the notion of \textit{concave function}: The function $\psi \colon I \to \mathbb{R}$ is said to be \textit{concave} if 
+\begin{align*}
+    \psi(tx + (1-t)y) \le t\psi(x) + (1-t)\psi(y),
+\end{align*}
+for all $x,y \in X$ and $ 0 \le t \le 1$. It can be inferred from the definition that $\psi$ is concave iff $-\psi$ is convex. Now we have the following lemma
+\begin{lemma}
+    Suppose that $\psi \colon I \to \mathbb{R}$ is concave and $a_1,a_2,b_1,b_2 \in I$ such that $a_1 <b_1, a_2 <b_2, a_2 \ge a_1, b_2 \ge b_1$. Then 
+    \[\dfrac{\psi(b_2)- \psi(a_2)}{b_2-a_2} \le \dfrac{\psi(b_1)- \psi(a_1)}{b_1-a_1} \]
+\end{lemma}
+Geometrically speaking, the slope of the segment joining two points on the graph of $\psi$ decreases as the points moves to the right.
 \end{document} % This is the end of the document
