@@ -31,25 +31,51 @@
 This note is used to list every theorems in chapter 9 of the book \textbf{Complex made simple}.
 \section{Quasi-metrics} % creates a section
 \begin{definition}
-A function $d \colon X \times X \to [0,\infty]$ satisfying the condition
-\begin{itemize}
-    \item $d(x,x) = 0 (x \in X)$
-    \item $d(x,y) = d(y,x) (x,y \in X)$
-    \item $d(x,z) \le d(x,y) + d(y,z) (x,y,z)$
-\end{itemize} 
-then it is called a quasi-metric on space $X$. We can see that $d$ is almost the same as a metric except that $d(x,y)$ can be zero for distinct $x,y$.
+    A function $d \colon X \times X \to [0,\infty]$ satisfying the condition
+    \begin{itemize}
+        \item $d(x,x) = 0 (x \in X)$
+        \item $d(x,y) = d(y,x) (x,y \in X)$
+        \item $d(x,z) \le d(x,y) + d(y,z) (x,y,z)$
+    \end{itemize}
+    then it is called a quasi-metric on space $X$. We can see that $d$ is almost the same as a metric except that $d(x,y)$ can be zero for distinct $x,y$.
 \end{definition}
 
 One can construct a metric $\overline{d}$ from quasi-metric $d$, noting that $d$ is an equivalence relation on $X$.
 
-Now we introduction the notion of \textit{concave function}: The function $\psi \colon I \to \mathbb{R}$ is said to be \textit{concave} if 
+Now we introduction the notion of \textit{concave function}: The function $\psi \colon I \to \mathbb{R}$ is said to be \textit{concave} if
 \begin{align*}
     \psi(tx + (1-t)y) \le t\psi(x) + (1-t)\psi(y),
 \end{align*}
 for all $x,y \in X$ and $ 0 \le t \le 1$. It can be inferred from the definition that $\psi$ is concave iff $-\psi$ is convex. Now we have the following lemma
 \begin{lemma}
-    Suppose that $\psi \colon I \to \mathbb{R}$ is concave and $a_1,a_2,b_1,b_2 \in I$ such that $a_1 <b_1, a_2 <b_2, a_2 \ge a_1, b_2 \ge b_1$. Then 
+    Suppose that $\psi \colon I \to \mathbb{R}$ is concave and $a_1,a_2,b_1,b_2 \in I$ such that $a_1 <b_1, a_2 <b_2, a_2 \ge a_1, b_2 \ge b_1$. Then
     \[\dfrac{\psi(b_2)- \psi(a_2)}{b_2-a_2} \le \dfrac{\psi(b_1)- \psi(a_1)}{b_1-a_1} \]
 \end{lemma}
 Geometrically speaking, the slope of the segment joining two points on the graph of $\psi$ decreases as the points moves to the right.
+
+Applying this lemma for $a_1 =0, b_1=x = a_2, b_2=x+y$, we get the following result:
+\begin{lemma}
+    Suppose that $\psi \colon [0,\infty] \to \mathbb{R}$ is concave and $\psi(0)=0$. Then
+    \[ \psi(x+y) \le \psi(x) + \psi(y),\]
+    for all $x,y \ge 0$.
+\end{lemma}
+\begin{lemma}
+    Suppose that $\psi \colon [0,\infty] \to \mathbb{R}$ is concave and
+    \[\psi(0)=0.\]
+    Suppose further that $\psi$ is nondecreasing, $\psi(t) >0$ for $t >0$ and this function is continuous at $0$.
+
+    If $d$ is a quasi-metric on $X$ then $\tilde{d} = \psi \circ d$ is also a quasi-metric on $X$
+    such that
+    \begin{itemize}
+        \item $\tilde{d}(x,y)=0$ iff $d(x,y)=0$.
+        \item $\tilde{d}(x_n,y_n) \to 0$ iff $d(x_n,y_n) \to 0$.
+    \end{itemize}
+\end{lemma}
+Now choosing $\psi$ to be a bounded function, we can further assume that $\tilde{d}$ is bounded. Two traditional choices are:
+\[ \psi_1(t)= \dfrac{t}{t+1}\]
+and
+\[\psi_2(t) = \begin{cases}
+        t \quad (0 \le t \le 1) \\
+        1 \quad (t >1)
+    \end{cases}\]
 \end{document} % This is the end of the document
