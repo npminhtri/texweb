@@ -82,7 +82,15 @@ and
 One might choose $\psi_1$ since it is a smooth function, or choose $\psi_2$ as it is easy to compute.
 The main reason for choosing a new equivalent bounded quasi-metric because it is easy to add up.
 For example, in the next lemma, showing that given a countabel family of quasi-metrics $(d_j)$, there exists a single quasi-metric $d$
-such that $d(x_n,y_n) \to 0$  if and only if $d_j(x_n,y_n) \to 0$ for every $j$.
+such that $d(x_n,y_n) \to 0$  if and only if $d_j(x_n,y_n) \to 0$ for every $j$, begins by converting the original family of quasi-metrics to a family of bounded quasi-metrics.
 
+\begin{lemma}
+    Suppose that $d_j$ is a quasi-metric on $X$ for $j =1,2\ldots$ Define
+    \[d(x,y) = \sum_{j=1}^\infty 2^{-j}\dfrac{d_j(x,y)}{1+d_j(x,y)} \quad (x,y \in X)\]
+    Then $d$ is a quasi-metric on $X$ with the property that $d(x_n,y_n) \to 0$ as $n \to \infty$
+    if and only if $d_j(x_n,y_n) \to 0$ for every $j$.
+
+    Furthermore, $d$ is a metric on $X$ if and only if for every $x,y \in X$ with $x \ne y$ there exists a positive integer $j$ such that $d_j(x,y)>0$.
+\end{lemma}
 
 \end{document} % This is the end of the document
