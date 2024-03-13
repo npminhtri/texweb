@@ -2,26 +2,47 @@
 
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
-\title{Simple Sample} % Sets article title
-\author{My Name} % Sets authors name
+\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{fancyhdr}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\parindent{0pt}
+
+
+\title{Conformal equivalence between annuli} % Sets article title
+\author{Tri Nguyen} % Sets authors name
 \date{\today} % Sets date for date compiled
 
 % The preamble ends with the command \begin{document}
 \begin{document} % All begin commands must be paired with an end command somewhere
-\maketitle % creates title using information in preamble (title, author, date)
+\maketitle % creates a title using the information in the preamble (title, author, date)
+\noindent \textbf{Introduction}
+First we give a definition for an annulus in complex plane:
+\begin{definition}
+  An annulus in $\mathbb{C}$ is the set
+  \[A(r,R) = \left\lbrace z \in \mathbb{C}: r < |z| <R \right\rbrace\]
+\end{definition}
+Given two annuli $A_1 = A(r_1, R_1)$ and $A_2 = A(r_2, R_2)$, one may ask under which conditions
+that two annuli are biholomorphic. It turns out that in a complex plane, the biholomorphic relation is defined using only
+the ratio $r_1/r_2$ and $R_1/R_2$. This is shown in the following theorem
 
-\section{Hello World!} % creates a section
+\begin{theorem}
+  $A_1$ is biholomorphic to $A_2$ if and only if $\dfrac{R_1}{r_1} = \dfrac{R_2}{r_2}$.
+\end{theorem}
+\begin{proof}
+  First suppose that $\dfrac{R_1}{R_2} = \dfrac{r_1}{r_2} =k$. Then clearly the linear map $f(z)=kz$
+  is a biholomorphic map and $f(A_1) = A_2$. Thus $A_1$ is biholomorphic to $A_2$.
 
-\textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
-\LaTeX{} is a great program for writing math. I can write in-line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
-. I can also give equations their own space:
-\begin{equation} % Creates an equation environment and is compiled as math
-  \gamma^2+\theta^2=\alpha^3
-\end{equation}
-If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).
-Also notice how even though I hit enter after that sentence and here $\downarrow$
-\LaTeX{} formats the sentence without any break.  Also   look  how it   doesn't     matter          how    many  spaces     I put     between       my    words.
+  Conversely, assume that $A_1$ is biholomorphic to $A_2$. By scaling if necessary, we could
+  further assume that $r_1=r_2=1$. Thus now we need to show that $R_1=R_2$. Fix some $1<r<R_2$.
 
-For a new essay I can leave a blank space in my code.
-
+\end{proof}
 \end{document} % This is the end of the document
