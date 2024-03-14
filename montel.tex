@@ -1,0 +1,41 @@
+\documentclass[12pt]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+
+\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+
+\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{fancyhdr}
+\usepackage{hyperref} %creat hyperlink
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    } %set up a hyperlink to be in blue 
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\parindent{0pt} % noindent for the whole document.
+\renewcommand{\baselinestretch}{1.2} % increase the distance between line.
+
+\title{Montel theorem and some related results} % Sets article title
+\author{Tri Nguyen - University of Alberta} % Sets authors name
+\date{\today} % Sets date for date compiled
+
+% The preamble ends with the command \begin{document}
+\begin{document}
+\maketitle % creates title using information in preamble (title, author, date)
+In this short note, I will recover the proof for Montel's theorem and some applications/consequences.
+A nice result that follows from Montel's theorem is Riemann mapping theorem - which says that
+every simply connected set in complex plan $\mathbb{C}$ is either the whole plane or biholomorphic to the unit disk.
+
+
+\end{document}
