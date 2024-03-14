@@ -1,7 +1,0 @@
-This is LuaHBTeX, Version 1.18.0 (MiKTeX 24.3) (format=lualatex 2024.3.13)  13 MAR 2024 19:11
- restricted system commands enabled.
- file:line:error style messages enabled.
-**e:/texweb/Theorem.tex
-(
-e:/texweb/Theorem.tex:0: error:  (file io): fflush() failed (Invalid argument)
-e:/texweb/Theorem.tex:0:  ==> Fatal error occurred, no output PDF file produced!
