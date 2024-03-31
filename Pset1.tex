@@ -1,0 +1,223 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[toc,page]{appendix}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{colortbl}
+
+\usepackage{mathtools}
+\usepackage{extarrows}
+
+\usepackage[all,cmtip]{xy}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+%graphics
+%\usepackage{graphicx}
+%\usepackage{pstricks}
+%\usepackage{pst-plot}
+
+%\setlength{\textwidth}{4.7in}
+%\setlength{\textheight}{7.5in}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{question}[thm]{Question}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{fact}[thm]{Fact}
+
+\theoremstyle{remark}
+
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{example}[thm]{Example}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+\numberwithin{equation}{section}
+
+\allowdisplaybreaks[4]
+
+\begin{document}
+
+\vfuzz0.5pc
+\hfuzz0.5pc % Don't bother to report 
+% overfull boxes if overage is < 6pt
+
+
+\newcommand{\claimref}[1]{Claim \ref{#1}}
+\newcommand{\thmref}[1]{Theorem \ref{#1}}
+\newcommand{\propref}[1]{Proposition \ref{#1}}
+\newcommand{\lemref}[1]{Lemma \ref{#1}}
+\newcommand{\coref}[1]{Corollary \ref{#1}}
+\newcommand{\remref}[1]{Remark \ref{#1}}
+\newcommand{\conjref}[1]{Conjecture \ref{#1}}
+\newcommand{\questionref}[1]{Question \ref{#1}}
+\newcommand{\defnref}[1]{Definition \ref{#1}}
+\newcommand{\secref}[1]{\S \ref{#1}}
+\newcommand{\ssecref}[1]{\ref{#1}}
+\newcommand{\sssecref}[1]{\ref{#1}}
+
+%\def \d#1{\displaystyle{#1}}
+%\def \mult{\mathop{\mathrm{mult}}\nolimits}
+%\def \br{\mathop{\mathrm{br}}\nolimits}
+%\def \rank{\mathop{\mathrm{rank}}\nolimits}
+
+%\def \codim{\mathop{\mathrm{codim}}\nolimits}
+%\def \Ord{\mathop{\mathrm{Ord}}\nolimits}
+%\def \Var{\mathop{\mathrm{Var}}\nolimits}
+%\def \Ext{\mathop{\mathrm{Ext}}\nolimits}
+%\def \Pic{\mathop{\mathrm{Pic}}\nolimits}
+%\def \Spec{\mathop{\mathrm{Spec}}\nolimits}
+%\def \Jac{{\mathrm{Jac}}}
+
+%\def \Div{{\mathrm{Div}}}
+%\def \sgn{{\mathrm{sgn}}}
+%\def \Hom{{\mathrm{Hom}}}
+%\def \Sym{{\mathrm{Sym}}}
+%\def \nilrad{{\mathrm{nilrad}}}
+%\def \Supp{{\mathrm{Supp}}}
+%\def \Ann{{\mathrm{Ann}}}
+
+\newcommand{\RED}{{\mathrm{red}}}
+\newcommand{\tors}{{\mathrm{tors}}}
+\newcommand{\eq}{\Leftrightarrow}
+
+\newcommand{\mapright}[1]{\smash{\mathop{\longrightarrow}\limits^{#1}}}
+\newcommand{\mapleft}[1]{\smash{\mathop{\longleftarrow}\limits^{#1}}}
+\newcommand{\mapdown}[1]{\Big\downarrow\rlap{$\vcenter{\hbox{$\scriptstyle#1$}}$}}
+\newcommand{\smapdown}[1]{\downarrow\rlap{$\vcenter{\hbox{$\scriptstyle#1$}}$}}
+
+\newcommand{\A}{{\mathbb A}}
+\newcommand{\I}{{\mathcal I}}
+\newcommand{\J}{{\mathcal J}}
+\newcommand{\CO}{{\mathcal O}}
+\newcommand{\C}{{\mathcal C}}
+\newcommand{\BC}{{\mathbb C}}
+\newcommand{\BQ}{{\mathbb Q}}
+\newcommand{\m}{{\mathcal M}}
+\newcommand{\h}{{\mathcal H}}
+\newcommand{\Z}{{\mathcal Z}}
+\newcommand{\BZ}{{\mathbb Z}}
+\newcommand{\W}{{\mathcal W}}
+\newcommand{\Y}{{\mathcal Y}}
+\newcommand{\T}{{\mathcal T}}
+\newcommand{\BP}{{\mathbb P}}
+\newcommand{\CP}{{\mathcal P}}
+\newcommand{\G}{{\mathbb G}}
+\newcommand{\BR}{{\mathbb R}}
+\newcommand{\D}{{\mathcal D}}
+\newcommand{\DD}{{\mathcal D}}
+\newcommand{\LL}{{\mathcal L}}
+\newcommand{\f}{{\mathcal F}}
+\newcommand{\E}{{\mathcal E}}
+\newcommand{\BN}{{\mathbb N}}
+\newcommand{\N}{{\mathcal N}}
+\newcommand{\K}{{\mathcal K}}
+\newcommand{\R} {{\mathbb R}}
+\newcommand{\PP}{{\mathbb P}}
+\newcommand{\Pp}{{\mathbb P}}
+\newcommand{\BF}{{\mathbb F}}
+\newcommand{\QQ}{{\mathcal Q}}
+\newcommand{\VV}{{\mathcal V}}
+\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\EQ}{\Leftrightarrow}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\isom}{\cong}
+\newcommand{\embed}{\hookrightarrow}
+\newcommand{\tensor}{\mathop{\otimes}}
+\newcommand{\wt}[1]{{\widetilde{#1}}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+
+\newcommand{\bs}{{\backslash}}
+\newcommand{\CS}{{\mathcal S}}
+\newcommand{\CA}{{\mathcal A}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\F}{{\mathcal F}}
+\newcommand{\sing}{{\text{sing}}}
+\newcommand{\U} {{\mathcal U}}
+\newcommand{\B}{{\mathcal B}}
+\newcommand{\X}{{\mathcal X}}
+\newcommand{\g}{{\mathcal G}}
+
+% Javier-Macro
+\newcommand{\ECS}[1]{E_{#1}(X)}
+\newcommand{\CV}[2]{{\mathcal C}_{#1,#2}(X)}
+
+\newcommand{\rank}{\mathop{\mathrm{rank}}\nolimits}
+\newcommand{\codim}{\mathop{\mathrm{codim}}\nolimits}
+\newcommand{\Ord}{\mathop{\mathrm{Ord}}\nolimits}
+\newcommand{\Var}{\mathop{\mathrm{Var}}\nolimits}
+\newcommand{\Ext}{\mathop{\mathrm{Ext}}\nolimits}
+\newcommand{\EXT}{\mathop{{\mathcal E}\mathrm{xt}}\nolimits}
+\newcommand{\Pic}{\mathop{\mathrm{Pic}}\nolimits}
+\newcommand{\Spec}{\mathop{\mathrm{Spec}}\nolimits}
+\newcommand{\Jac}{\mathop{\mathrm{Jac}}\nolimits}
+\newcommand{\Div}{\mathop{\mathrm{Div}}\nolimits}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}\nolimits}
+\newcommand{\supp}{\mathop{\mathrm{supp}}\nolimits}
+\newcommand{\Hom}{\mathop{\mathrm{Hom}}\nolimits}
+\newcommand{\Sym}{\mathop{\mathrm{Sym}}\nolimits}
+\newcommand{\nilrad}{\mathop{\mathrm{nilrad}}\nolimits}
+\newcommand{\Ann}{\mathop{\mathrm{Ann}}\nolimits}
+\newcommand{\Proj}{\mathop{\mathrm{Proj}}\nolimits}
+\newcommand{\mult}{\mathop{\mathrm{mult}}\nolimits}
+\newcommand{\Bs}{\mathop{\mathrm{Bs}}\nolimits}
+\newcommand{\Span}{\mathop{\mathrm{Span}}\nolimits}
+\newcommand{\IM}{\mathop{\mathrm{Im}}\nolimits}
+\newcommand{\im}{\mathop{\mathrm{im}}\nolimits}
+\newcommand{\Hol}{\mathop{\mathrm{Hol}}\nolimits}
+\newcommand{\End}{\mathop{\mathrm{End}}\nolimits}
+\newcommand{\CH}{\mathop{\mathrm{CH}}\nolimits}
+\newcommand{\Exec}{\mathop{\mathrm{Exec}}\nolimits}
+\newcommand{\SPAN}{\mathop{\mathrm{span}}\nolimits}
+\newcommand{\birat}{\mathop{\mathrm{birat}}\nolimits}
+\newcommand{\cl}{\mathop{\mathrm{cl}}\nolimits}
+\newcommand{\rat}{\mathop{\mathrm{rat}}\nolimits}
+\newcommand{\Bir}{\mathop{\mathrm{Bir}}\nolimits}
+\newcommand{\Rat}{\mathop{\mathrm{Rat}}\nolimits}
+\newcommand{\aut}{\mathop{\mathrm{aut}}\nolimits}
+\newcommand{\Aut}{\mathop{\mathrm{Aut}}\nolimits}
+\newcommand{\eff}{\mathop{\mathrm{eff}}\nolimits}
+\newcommand{\nef}{\mathop{\mathrm{nef}}\nolimits}
+\newcommand{\amp}{\mathop{\mathrm{amp}}\nolimits}
+\newcommand{\DIV}{\mathop{\mathrm{Div}}\nolimits}
+\newcommand{\Bl}{\mathop{\mathrm{Bl}}\nolimits}
+\newcommand{\Cox}{\mathop{\mathrm{Cox}}\nolimits}
+\newcommand{\NE}{\mathop{\mathrm{NE}}\nolimits}
+\newcommand{\NM}{\mathop{\mathrm{NM}}\nolimits}
+\newcommand{\Gal}{\mathop{\mathrm{Gal}}\nolimits}
+\newcommand{\coker}{\mathop{\mathrm{coker}}\nolimits}
+\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+
+\begin{center}
+    {\large PROBLEM SET 1}
+\end{center}
+
+\bigskip
+
+\begin{enumerate}
+    \item
+          Prove that if $f$ is an entire function, then $f(\BC)$ is dense in $\BC$.
+
+    \item Consider the series
+          \[ \sum_{k=0}^\infty z^{2^k} = z+z^2+ z^4+\ldots\]
+          Determine the singular points and the natural boundary (if exists) of the above series.
+    \item
+          Show that for any injective analytic map $f \colon \BC \to \BC$, it must have the form
+          \[ f(z) = az + b, \quad a \neq 0, b \in \BC\]
+          Similarly, show that all injective maps from $\BC_\infty \to \BC_\infty$ has the form
+          \[ f(z) = \frac{az+b}{cz+d}, \]
+          where $ad - bc \neq 0$.
+\end{enumerate}
+\end{document}
