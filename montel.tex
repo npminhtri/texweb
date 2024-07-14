@@ -6,6 +6,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{faktor}
 \usepackage{lscape}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
@@ -21,6 +22,10 @@
     } %set up a hyperlink to be in blue 
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\pj1}{\mathbb{P}^1(\mathbb{Q})}
+\DeclareMathOperator{\sl2}{SL_2(\mathbb{Z})}
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\baselinestretch}{1.2} % increase the distance between line.
@@ -32,12 +37,50 @@
 % The preamble ends with the command
 \begin{document}
 \maketitle % creates a title using the information in the preamble (title, author, date)
-In this short note, I will recover the proof for Montel's theorem and some applications/consequences.
-A nice result that follows from Montel's theorem is the Riemann mapping theorem - which says that
-every simply connected set in complex plan $\mathbb{C}$ is either the whole plane or biholomorphic to the unit disk.
+In this expository note, I will try to explain explicitly how to compactify $\Gamma\backslash \mathbb{H}$ by adding points in two ways.
+\section{Some preparations}
+We will always denote $\Gamma$ a subgroup of the group $SL_2(\mathbb{Z})$ of finite index, and this group acts on
+the upper half complex plane $\mathbb{H}$ by
+\[\begin{bmatrix}
+        a & b \\
+        c & d
+    \end{bmatrix} \circ z := \dfrac{az+b}{cz+d} \]
+When $z$ tends to infinity, we have
+\[\lim_{z \to \infty} \dfrac{az+b}{cz+d}= \frac{a}{c},\]
+so we add the rational line to define the action of this group at $\infty$. In particular, we consider the set
+\[\overline{\mathbb{H}} = \mathbb{H} \cup \mathbb{P}^1(\mathbb{Q})\]
+Note that on the projective rational line, we define the action to be the multiplication of a $2 \times 2$ matrix with a $2\times 1$ vector.
+Then under this action, we have the following lemma
+\begin{lemma}
+    $SL_2(\mathbb{Z})$ acts transitively on $\mathbb{P}^1(\mathbb{Q})$.
+\end{lemma}
+\begin{proof}
+    For each point in $\pj1$, we can choose the representative to be of the form $[a:b]$, where
+    $\gcd(a,b)=1$. Then there exists $x,y \in \mathbb{Z}$ such that
+    \[ax - by = 1\]
+    Thus we get the following equality
+    \[ \begin{bmatrix}
+            b  & a \\
+            -x & y \\
+        \end{bmatrix}\begin{bmatrix}
+            a \\
+            b
+        \end{bmatrix} = \begin{bmatrix}
+            0 \\
+            1
+        \end{bmatrix}\]
+    This implies any points in $\pj1$ can be moved to $[0:1]$, and thus the action is transitive.
+\end{proof}
 
-\section{Introduction}
-In this section, I will define some concepts that will be used.
+\begin{corollary}
+    If $\Gamma$ is a subgroup of finite index in $\sl2$ then $\Gamma \backslash \pj1$ has only finite orbits.
+\end{corollary}
+\section{Compactification of $\Gamma \backslash \mathbb{H}$ by adding points.}
+We introduction a topology on $\overline{\mathbb{H}}$. For the usual upper half plane, the topology are the usual metric
+topology on $\mathbb{C}$, and we only define the system of neighborhood of $r \in \pj1$.
 
-
+Let $S(c, \omega)$ be the circle that touches the real line at $\omega = p/q$ and has the radius $\frac{c}{2q^2}$.
+Then the collection of circle $D(c,\omega ) = \bigcup_{0<c' \le c} S(c',\omega)$ is called \textit{Farey disk}. Let $c \to 0$, these disks
+define a neighborhood of $\omega$. The Farey disks at $\infty$ is defined to be the region
+\[ D(T,\infty ) = \left\lbrace z: \Im z \ge T \right\rbrace\]
 \end{document}
