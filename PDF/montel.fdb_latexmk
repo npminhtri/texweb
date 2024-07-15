@@ -1,9 +1,0 @@
-# Fdb version 4
-["pdflatex"] 0 "e:/texweb/montel.tex" "PDF/montel.pdf" "montel" 0 -1
-  "PDF/montel.aux" 0 -1 0 "pdflatex"
-  "e:/texweb/montel.tex" 0 -1 0 ""
-  (generated)
-  "PDF/montel.aux"
-  "PDF/montel.log"
-  "PDF/montel.pdf"
-  (rewritten before read)
