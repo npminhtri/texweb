@@ -72,7 +72,7 @@ Then under this action, we have the following lemma
     This implies any points in $\pj1$ can be moved to $[0:1]$, and thus the action is transitive.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor2}
     If $\Gamma$ is a subgroup of finite index in $\sl2$ then $\Gamma \backslash \pj1$ has only finite orbits.
 \end{corollary}
 \section{Compactification of $\Gamma \backslash \mathbb{H}$ by adding points.}
@@ -87,5 +87,13 @@ It can be checked easily that the matrix under inversion, the Farey disk at $\in
 to $D(1/T,0)$. In general, if $\gamma \in \sl2$ such that $\gamma \circ \infty = \omega$ then $D(T,\infty)$ is mapped to
 $D(1/T, \omega)$.
 
-Now we will show that $\Gamma \backslash \mathbb{\overline{H}}$ is a compact set.
+With the above topology on the extended upper half plane, we could show that
+\begin{lemma}
+    $\Gamma \backslash \mathbb{\overline{H}}$ is a compact set.
+\end{lemma}
+\begin{proof}
+    By Corollary \ref{cor2}, we have
+    \[\Gamma \backslash \mathbb{\overline{H}} = \Gamma \backslash \mathbb{H} \cup \bigcup_{i=1}^n \Gamma_i,\]
+    where $\Gamma_i$'s are orbits of $\pj1$ under the action of $\Gamma$.
+\end{proof}
 \end{document}
