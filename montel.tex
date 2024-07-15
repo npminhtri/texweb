@@ -76,12 +76,12 @@ Then under this action, we have the following lemma
     If $\Gamma$ is a subgroup of finite index in $\sl2$ then $\Gamma \backslash \pj1$ has only finite orbits.
 \end{corollary}
 \section{Compactification of $\Gamma \backslash \mathbb{H}$ by adding points.}
-We introduction a topology on $\overline{\mathbb{H}}$. For the usual upper half plane, the topology are the usual metric
-topology on $\mathbb{C}$, and we only define the system of neighborhood of $r \in \pj1$.
+We introduction a topology on $\overline{\mathbb{H}}$. For the usual upper half plane, the topology is the usual metric
+topology on $\mathbb{C}$, and we only define the system of the neighborhood of $r \in \pj1$.
 
 Let $S(c, \omega)$ be the circle that touches the real line at $\omega = p/q$ and has the radius $\frac{c}{2q^2}$.
 Then the collection of circle $D(c,\omega ) = \bigcup_{0<c' \le c} S(c',\omega)$ is called \textit{Farey disk}. Let $c \to 0$, these disks
-define a neighborhood of $\omega$. The Farey disks at $\infty$ is defined to be the region
+define a neighborhood of $\omega$. The Farey disks at $\infty$ are defined to be the region
 \[ D(T,\infty ) = \left\lbrace z: \Im z \ge T \right\rbrace\]
 It can be checked easily that the matrix under inversion, the Farey disk at $\infty$ is mapped
 to $D(1/T,0)$. In general, if $\gamma \in \sl2$ such that $\gamma \circ \infty = \omega$ then $D(T,\infty)$ is mapped to
@@ -92,8 +92,23 @@ With the above topology on the extended upper half plane, we could show that
     $\Gamma \backslash \mathbb{\overline{H}}$ is a compact set.
 \end{lemma}
 \begin{proof}
-    By Corollary \ref{cor2}, we have
-    \[\Gamma \backslash \mathbb{\overline{H}} = \Gamma \backslash \mathbb{H} \cup \bigcup_{i=1}^n \Gamma_i,\]
-    where $\Gamma_i$'s are orbits of $\pj1$ under the action of $\Gamma$.
+    We first prove for the case $\Gamma = \sl2$. It is well known that the  quotient space
+    $\Gamma \backslash \mathbb{H}$ is identical to the set
+    \[\mathcal{F} = \left\lbrace z \in \mathbb{H}: \Re z \in [-1/2,1/2), |z| \ge 1  \text{ and } |z|>1 \text{ if } \Re z > 0 \right\rbrace\]
+    By lemma 1, the projective rational line "shrinks" to a point under the action of $\Gamma = \sl2$,
+    Thus we can identify $\Gamma \backslash  \mathbb{\overline{H}}$ with the set $\tilde{\mathcal{F}} =\mathcal{F} \cup \left\lbrace \infty \right\rbrace$. Consider an open cover $\left\lbrace U_i\right\rbrace_{i \in I}$ of
+    $\tilde{\mathcal{F}}$ and the natural projection $ \pi \colon \mathbb{\overline{H}} \to \mathbb{\tilde{F}}$. Then the set $\left\lbrace \pi^{-1}(U_i)\right\rbrace_{i \in I}$ forms
+    an open cover of $\mathbb{\overline{H}}$. There must be an index $i_0$ such that $\pi^{-1}(U_{i_0})$ contains a neighborhood of $\infty$, namely contains a Farey disk $D(T,\infty)$ for some $T>0$.
+    Since $\overline{\mathcal{F}} - D(T,\infty)$ is a compact set, its image under $\pi$ is compact, hence it can be covered by $U_{i_1},\ldots, U_{i_m}$. Altogether, $\tilde{\mathcal{F}}$
+    admits a finite subcover $U_{i_0}, \ldots, U_{i_m}$.
+
+    Now we proceed to the general case. Note that
+    \[ \overline{\mathbb{H}} = \sl2 \circ \tilde{\mathcal{F}} = \bigcup \Gamma a_i \circ \tilde{\mathcal{F}} \]
+    by corollary 2. Then under the surjective map $ \pi \colon \overline{\mathbb{H}} \to \Gamma \backslash \overline{\mathbb{H}}$, we have
+    \[ \Gamma \backslash \overline{\mathbb{H}} = \bigcup \pi\left(\Gamma a_i \circ \tilde{\mathcal{F}}\right),\]
+    which shows that the set $Y(\Gamma) = \Gamma\backslash \mathbb{\overline{H}}$ is compact as it is the union of compact sets.
 \end{proof}
+The orbit of $\pj1$ under the action of $\Gamma$ is called \textit{ cusps}. We have the obvious equality that
+\[ \Gamma\backslash \mathbb{\overline{H}} = \Gamma \backslash \mathbb{H} \cup  \underbrace{\Gamma \backslash \pj1}_{\text{ cusps}}\]
+So in fact lemma 3 tells us that we only need to add finite cups.
 \end{document}
