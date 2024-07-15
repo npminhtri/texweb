@@ -115,5 +115,16 @@ $\Gamma$ on the projective rational line. By the orbit-stabilizer theorem, we ge
 \[ \Gamma \backslash \bigcup_\omega D(c,\omega) = \bigcup \Gamma_{\omega_i} \backslash D(c,\omega_i)\]
 where $\omega_i$ is the set of representative for the action of $\Gamma$ on $\pj1$ and $\Gamma_{\omega_i}$ are the stabilizer of $\omega_i \in \Gamma$.
 
+Again, since the action of $\sl2$ on $\pj1$ is transitive, for each $r \in \pj1$, there exists an element
+$\gamma \in \sl2$ such that $\gamma \circ \infty = r$. So we have $\Gamma_r = \gamma \Gamma_\infty \gamma^{-1}$. Hence we only need know the "shape" of the domain
+$\Gamma_\infty \backslash D(T,\infty)$. WLOG, we could assume $\Gamma = \sl2$, and hence
+\[ \Gamma_\infty = \left\lbrace \begin{bmatrix}
+        1 & n \\
+        0 & 1
+    \end{bmatrix}: n \in \mathbb{Z}\right\rbrace\]
+Geometrically, $\Gamma_\infty\backslash D(T,\infty)$ is the strip $\left\lbrace \Re z \in [-1/2,1/2), \Im z \ge T \right\rbrace$. But this is biholomorphically to a closed disk that misses a point on the boundary.
+So the compactification is obtained by filling in the missing points in to get finitely many compact disks.
+
+\section{Borel - Serre compatification of $\sl2 \backslash \mathbb{H}$}
 
 \end{document}
