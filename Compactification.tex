@@ -29,6 +29,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\baselinestretch}{1.2} % increase the distance between line.
+\setlength\parindent{0pt} % noindent for the whole file.
 
 \title{Compactification in low dimension} % Sets article title
 \author{Tri Nguyen - University of Alberta} % Sets authors name
@@ -76,11 +77,11 @@ Then under this action, we have the following lemma
     If $\Gamma$ is a subgroup of finite index in $\sl2$ then $\Gamma \backslash \pj1$ has only finite orbits.
 \end{corollary}
 \section{Compactification of $\Gamma \backslash \mathbb{H}$ by adding points.}
-We introduction a topology on $\overline{\mathbb{H}}$. For the usual upper half plane, the topology is the usual metric
+We introduce a topology on $\overline{\mathbb{H}}$. For the usual upper half plane, the topology is the usual metric
 topology on $\mathbb{C}$, and we only define the system of the neighborhood of $r \in \pj1$.
 
 Let $S(c, \omega)$ be the circle that touches the real line at $\omega = p/q$ and has the radius $\frac{c}{2q^2}$.
-Then the collection of circle $D(c,\omega ) = \bigcup_{0<c' \le c} S(c',\omega)$ is called \textit{Farey disk}. Let $c \to 0$, these disks
+Then the collection of circles $D(c,\omega ) = \bigcup_{0<c' \le c} S(c',\omega)$ is called \textit{Farey disk}. Let $c \to 0$, these disks
 define a neighborhood of $\omega$. The Farey disks at $\infty$ are defined to be the region
 \[ D(T,\infty ) = \left\lbrace z: \Im z \ge T \right\rbrace\]
 It can be checked easily that the matrix under inversion, the Farey disk at $\infty$ is mapped
@@ -110,21 +111,71 @@ With the above topology on the extended upper half plane, we could show that
 \end{proof}
 The orbit of $\pj1$ under the action of $\Gamma$ is called \textit{ cusps}. We have the obvious equality that
 \[ \Gamma\backslash \mathbb{\overline{H}} = \Gamma \backslash \mathbb{H} \cup  \underbrace{\Gamma \backslash \pj1}_{\text{ cusps}}\]
-So in fact lemma 3 tells us that we only need to add finite cusp to get a compact domain. That means we only need to consider the action of
+So in fact lemma 3 tells us that we only need to add a finite cusp to get a compact domain. That means we only need to consider the actions of
 $\Gamma$ on the projective rational line. By the orbit-stabilizer theorem, we get the decomposition
 \[ \Gamma \backslash \bigcup_\omega D(c,\omega) = \bigcup \Gamma_{\omega_i} \backslash D(c,\omega_i)\]
 where $\omega_i$ is the set of representative for the action of $\Gamma$ on $\pj1$ and $\Gamma_{\omega_i}$ are the stabilizer of $\omega_i \in \Gamma$.
 
 Again, since the action of $\sl2$ on $\pj1$ is transitive, for each $r \in \pj1$, there exists an element
-$\gamma \in \sl2$ such that $\gamma \circ \infty = r$. So we have $\Gamma_r = \gamma \Gamma_\infty \gamma^{-1}$. Hence we only need know the "shape" of the domain
+$\gamma \in \sl2$ such that $\gamma \circ \infty = r$. So we have $\Gamma_r = \gamma \Gamma_\infty \gamma^{-1}$. Hence we only need to know the "shape" of the domain
 $\Gamma_\infty \backslash D(T,\infty)$. WLOG, we could assume $\Gamma = \sl2$, and hence
 \[ \Gamma_\infty = \left\lbrace \begin{bmatrix}
         1 & n \\
         0 & 1
     \end{bmatrix}: n \in \mathbb{Z}\right\rbrace\]
-Geometrically, $\Gamma_\infty\backslash D(T,\infty)$ is the strip $\left\lbrace \Re z \in [-1/2,1/2), \Im z \ge T \right\rbrace$. But this is biholomorphically to a closed disk that misses a point on the boundary.
-So the compactification is obtained by filling in the missing points in to get finitely many compact disks.
+Geometrically, $\Gamma_\infty\backslash D(T,\infty)$ is the strip $\left\lbrace \Re z \in [-1/2,1/2), \Im z \ge T \right\rbrace$. But this is biholomorphic to a closed disk that misses a point on the boundary.
+            So compactification is obtained by filling in the missing points to get finitely many compact disks.
 
-\section{Borel - Serre compatification of $\sl2 \backslash \mathbb{H}$}
+            \section{Borel - Serre compactification of $\sl2 \backslash \mathbb{H}$}
+            We consider another compactification, by looking at the Farey disk $D(c,\omega)$ for fixed parameters
+        $c,\omega$. Then for any points $y \ne \omega$ on the Farey circle $S(c,\omega)$, we could connect $y$ with $\omega$
+            by a unique geodesic in the upper half-plane.
 
+            These geodesics are either upper half circles that are orthogonal to the real line or the vertical line passing through $\omega$.
+        We thus can identify the Farey disks as follows
+        \[ D(c,\omega) - \left\lbrace \omega \right\rbrace = X_{\infty, \omega} \times (0,c],\]
+    since a point $\theta$ on the Farey circles $S(c,\omega)$ is defined by its radius, up to a scaling of $c$, and the intersection of the geodesic $\overline{\theta\omega}$ with the real line. The uniqueness of the geodesics
+    gives us a bijection between two sets. Here we let $X_{\infty,\omega} = \mathbb{P}^1(\mathbb{R}) - \left\lbrace \omega \right\rbrace$
+
+
+    How does the group $\Gamma$ act on the set on the RHS set in the above identification? First, we look at the special case where
+$\omega = \infty$. In this case, the identification is
+    \[ D(T,\infty) - \infty = X_{\infty,\infty} \times [T,\infty)\]
+    On the left, stabilizer subgroup $\Gamma_\infty$ can be thought of as a subgroup of the group of translation,
+    which leaves all the Farey circles $S(t,\infty)$ - which are the line $\left\lbrace \Im z = t \ge T \right\rbrace$ in this case - intact.
+    Thus on the right-hand side, the action of $\Gamma_\infty$ only affects the first coordinate.
+    In general case, we need a lemma
+    \begin{lemma}\label{l4}
+        If $\gamma \in \sl2$ such that $\gamma \circ \infty = \omega$ then $\gamma \circ D(T,\infty) = D(1/T, \omega)$.
+    \end{lemma}
+    Assume lemma \ref{l4} with the note that $\Gamma_\omega = \gamma \Gamma_\infty \gamma^{-1}$, we conclude that the action of $\Gamma_\omega$ only affects $X_{\infty,\omega}$ for
+    all $\omega \in \pj1$. Since $\Gamma_\omega \backslash X_{\infty,\omega}$ is a circle, it is compact. Hence we can compactify the quotient space
+$\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace $ as
+    \[\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace \hookrightarrow \Gamma_\omega \backslash X_{\infty,\omega } \times [0,c]\]
+
+    As in section 1, we only need to compactify finitely many such quotient spaces and get the compactification of $\Gamma\backslash \mathbb{H}$.
+
+Now we give a proof of lemma \ref{l4}
+\begin{proof}
+    Assume $\gamma \in \sl2$ is an element that sends $\infty$ to $\omega = \frac{p}{q}$. Let $\gamma = \begin{bmatrix}
+            a & b \\
+            c & d \\
+        \end{bmatrix}$ then
+    \[\begin{bmatrix}
+            a & b \\
+            c & d \\
+        \end{bmatrix}\begin{bmatrix}
+            1 \\
+            0
+        \end{bmatrix} = \begin{bmatrix}
+            p \\
+            q
+        \end{bmatrix}.\]
+    Thus we must have $a = p, c=q$ and $b,c$ are integers such that $aq-cp=1$. A Farey circle in the neighborhood of
+    $\infty$ is, in fact, a line $S(T,\infty) = \left\lbrace \Im z = T\right\rbrace$, and this line is mapped to a circle tangent to the real line.
+    Direct calculation shows that, for $z = x+iT$
+    \[\Im(\gamma \circ z )= \dfrac{\Im z}{|cz+d|^2} = \dfrac{T}{(cx+d)^2+c^2T^2} \le \dfrac{1}{q^2T} \]
+    The equality happens if $x = -d/c$. Since this $\gamma \circ z$ is a point on the circle tangent to the real line at $p/q$ and has the largest distance to the real line, the segment connect $p/q$ and $\gamma \circ z$ must be the diameter of the image circle.
+    In particular, the radius of the image circle is $\frac{1}{2Tq^2}$. Lemma \ref{l4} follows immediately.
+\end{proof}
 \end{document}
