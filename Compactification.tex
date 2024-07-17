@@ -91,6 +91,7 @@ With the above topology on the extended upper half plane, we could show that
 \begin{lemma}
     $\Gamma \backslash \mathbb{\overline{H}}$ is a compact set.
 \end{lemma}
+The proof is taken from \cite{modf} and I rewrite here for completeness.
 \begin{proof}
     We first prove for the case $\Gamma = \sl2$. It is well known that the  quotient space
     $\Gamma \backslash \mathbb{H}$ is identical to the set
@@ -154,30 +155,33 @@ $\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace $ as
 
     As in section 1, we only need to compactify finitely many such quotient spaces and get the compactification of $\Gamma\backslash \mathbb{H}$.
 
-Now we give a proof of lemma \ref{l4}
-\begin{proof}
-    Assume $\gamma \in \sl2$ is an element that sends $\infty$ to $\omega = \frac{p}{q}$. Let $\gamma = \begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix}$ then
-    \[\begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix}\begin{bmatrix}
-            1 \\
-            0
-        \end{bmatrix} = \begin{bmatrix}
-            p \\
-            q
-        \end{bmatrix}.\]
-    Thus we must have $a = p, c=q$ and $b,c$ are integers such that $aq-cp=1$. A Farey circle in the neighborhood of
-    $\infty$ is, in fact, a line $S(T,\infty) = \left\lbrace \Im z = T\right\rbrace$, and this line is mapped to a circle tangent to the real line.
-    Direct calculation shows that, for $z = x+iT$
-    \[\Im(\gamma \circ z )= \dfrac{\Im z}{|cz+d|^2} = \dfrac{T}{(cx+d)^2+c^2T^2} \le \dfrac{1}{q^2T} \]
-    The equality happens if $x = -d/c$. Since this $\gamma \circ z$ is a point on the circle tangent to the real line at $p/q$ and has the largest distance to the real line, the segment connect $p/q$ and $\gamma \circ z$ must be the diameter of the image circle.
-    In particular, the radius of the image circle is $\frac{1}{2Tq^2}$. Lemma \ref{l4} follows immediately.
-\end{proof}
-
+    Now we give a proof of lemma \ref{l4}
+    \begin{proof}
+        Assume $\gamma \in \sl2$ is an element that sends $\infty$ to $\omega = \frac{p}{q}$. Let $\gamma = \begin{bmatrix}
+                a & b \\
+                c & d \\
+            \end{bmatrix}$ then
+        \[\begin{bmatrix}
+                a & b \\
+                c & d \\
+            \end{bmatrix}\begin{bmatrix}
+                1 \\
+                0
+            \end{bmatrix} = \begin{bmatrix}
+                p \\
+                q
+            \end{bmatrix}.\]
+        Thus we must have $a = p, c=q$ and $b,c$ are integers such that $aq-cp=1$. A Farey circle in the neighborhood of
+        $\infty$ is, in fact, a line $S(T,\infty) = \left\lbrace \Im z = T\right\rbrace$, and this line is mapped to a circle tangent to the real line.
+        Direct calculation shows that, for $z = x+iT$
+        \[\Im(\gamma \circ z )= \dfrac{\Im z}{|cz+d|^2} = \dfrac{T}{(cx+d)^2+c^2T^2} \le \dfrac{1}{q^2T} \]
+        The equality happens if $x = -d/c$. Since this $\gamma \circ z$ is a point on the circle tangent to the real line at $p/q$ and has the largest distance to the real line, the segment connect $p/q$ and $\gamma \circ z$ must be the diameter of the image circle.
+        In particular, the radius of the image circle is $\frac{1}{2Tq^2}$. Lemma \ref{l4} follows immediately.
+    \end{proof}
+    The above process can be applied to finitely many Fareye disks as in section 2 to get a compactification of $\Gamma \backslash \mathbb{H}$.
+\begin{thebibliography}{}
+    \bibitem{modf}  Diamond, F., \& Shurman, J. M. (2005). A first course in modular forms (Vol. 228, pp. xvi-436). New York: Springer.
+\end{thebibliography}
 
 
 \end{document}
