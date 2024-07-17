@@ -154,27 +154,30 @@ $\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace $ as
 
     As in section 1, we only need to compactify finitely many such quotient spaces and get the compactification of $\Gamma\backslash \mathbb{H}$.
 
-Now we give a proof of lemma \ref{l4}
-\begin{proof}
-    Assume $\gamma \in \sl2$ is an element that sends $\infty$ to $\omega = \frac{p}{q}$. Let $\gamma = \begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix}$ then
-    \[\begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix}\begin{bmatrix}
-            1 \\
-            0
-        \end{bmatrix} = \begin{bmatrix}
-            p \\
-            q
-        \end{bmatrix}.\]
-    Thus we must have $a = p, c=q$ and $b,c$ are integers such that $aq-cp=1$. A Farey circle in the neighborhood of
-    $\infty$ is, in fact, a line $S(T,\infty) = \left\lbrace \Im z = T\right\rbrace$, and this line is mapped to a circle tangent to the real line.
-    Direct calculation shows that, for $z = x+iT$
-    \[\Im(\gamma \circ z )= \dfrac{\Im z}{|cz+d|^2} = \dfrac{T}{(cx+d)^2+c^2T^2} \le \dfrac{1}{q^2T} \]
-    The equality happens if $x = -d/c$. Since this $\gamma \circ z$ is a point on the circle tangent to the real line at $p/q$ and has the largest distance to the real line, the segment connect $p/q$ and $\gamma \circ z$ must be the diameter of the image circle.
-    In particular, the radius of the image circle is $\frac{1}{2Tq^2}$. Lemma \ref{l4} follows immediately.
-\end{proof}
+    Now we give a proof of lemma \ref{l4}
+    \begin{proof}
+        Assume $\gamma \in \sl2$ is an element that sends $\infty$ to $\omega = \frac{p}{q}$. Let $\gamma = \begin{bmatrix}
+                a & b \\
+                c & d \\
+            \end{bmatrix}$ then
+        \[\begin{bmatrix}
+                a & b \\
+                c & d \\
+            \end{bmatrix}\begin{bmatrix}
+                1 \\
+                0
+            \end{bmatrix} = \begin{bmatrix}
+                p \\
+                q
+            \end{bmatrix}.\]
+        Thus we must have $a = p, c=q$ and $b,c$ are integers such that $aq-cp=1$. A Farey circle in the neighborhood of
+        $\infty$ is, in fact, a line $S(T,\infty) = \left\lbrace \Im z = T\right\rbrace$, and this line is mapped to a circle tangent to the real line.
+        Direct calculation shows that, for $z = x+iT$
+        \[\Im(\gamma \circ z )= \dfrac{\Im z}{|cz+d|^2} = \dfrac{T}{(cx+d)^2+c^2T^2} \le \dfrac{1}{q^2T} \]
+        The equality happens if $x = -d/c$. Since this $\gamma \circ z$ is a point on the circle tangent to the real line at $p/q$ and has the largest distance to the real line, the segment connect $p/q$ and $\gamma \circ z$ must be the diameter of the image circle.
+        In particular, the radius of the image circle is $\frac{1}{2Tq^2}$. Lemma \ref{l4} follows immediately.
+    \end{proof}
+    This gives us a second way to compactify $\Gamma \backslash \mathbb{H}$ by compactifying a finite set of Farey disks using the above process.
+
+
 \end{document}
