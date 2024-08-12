@@ -30,6 +30,7 @@
 
 \DeclareMathOperator{\Aff}{\mathbb{A}^n}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Sp}{Spec}
 \setlength\parindent{0pt} % noindent for the whole document.
 \renewcommand{\baselinestretch}{1.2} % increase the distance between line.
 
@@ -80,13 +81,36 @@ In particular, the above correspondence can be given as follows:
 \subsection{Why varieties are not good enough?}
 Some possible reasons are:
 \begin{enumerate}
-      \item embedding into $\Aff$ shouldn't really be part of the data. It would be nice
+      \item embedding into $\Aff$ shouldn't be part of the data. It would be nice
             to have an intrinsic definition, since you can embed the same variety in different spaces.
-      \item for non-algebraic closed field, the Nullstellensatz doesn't work.
+      \item for non-algebraic closed field, the Nullstellensatz doesn't work: $I = (x^2+y^2+1)$ is a prime ideal in $\mathbb{R}[x,y]$, hence is a radical ideal.
+            But $Z(I)= \varnothing$, so $I(Z(I)) = \mathbb{R}[x,y].$
       \item We can ask, on which topological space is $\mathbb{R}[x,y]/(x^2+y^2+1)$ naturally a functions space? Or $\mathbb{Z}[x]$? Or $\mathbb{Z}$?
             This leads to the idea of considering all possible rings.
       \item Nilpotent arises naturally when deforming varieties, so ignoring them is not a good option.
 \end{enumerate}
 \newpage
+\section{The prime spectrum}
+In the last sections, we have an equivalence between categories
+\[\text{ affine varieties over $k=\overline{k}$} \cong_{op} \text{ reduced finitely generated $k-$ algebras}\]
+Now we want to extend this equivalent relation as follows:
+\[\text{ affine schemes } \cong_{op} \text{ commutative ring with unit}\]
+This generalization allows to study arithmetic phenomena by geometric methods, by taking rings to be $\mathbb{Z},\mathbb{Z}_p$, etc.
 
+\begin{definition}
+      Given a ring $R$, its spectrum is defined to be
+      \[\Sp R: = \left\lbrace \mathfrak{p} | \mathfrak{p} \subset R \text{ is a prime ideal}\right\rbrace\]
+\end{definition}
+This way ,$x \in \Sp R \leftrightsquigarrow \mathfrak{p}_x \in R$.
+
+\textbf{NB:} in general, we cannot think about $f \in R$ as functions with values in a fixed field $k$. However, there is a more general notion.
+\begin{definition}
+      Let $x \in \Sp R$ correspond to $\mathfrak{p} \subset R$. The \textbf{residue field} of $x$
+      (or $\mathfrak{p}$) is
+      \[\kappa(x) = \kappa(\mathfrak{p}):= R_\mathfrak{p}/\mathfrak{p}R_\mathfrak{p}\]
+\end{definition}
+Every $f \in R$ has a "value"
+\[f(x):=f \mod \mathfrak{p}_x \in \kappa(x), \quad \forall x \in \Sp R\]
+and the codomain depends on the choice of $x$. By definition, $f(x)=0$ if $f \in \mathfrak{p}_x$. The moral of
+the story is that $\Sp R$ will be the space on which $R$ is the ring of functions: the affine scheme corresponding to $R$.
 \end{document} % This is the end of the document
