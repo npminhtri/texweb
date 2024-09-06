@@ -26,6 +26,10 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \DeclareMathOperator{\pj1}{\mathbb{P}^1(\mathbb{Q})}
 \DeclareMathOperator{\sl2}{SL_2(\mathbb{Z})}
+\DeclareMathOperator{\so2}{SO_2(\mathbb{R})}
+
+\DeclareMathOperator{\uph}{\mathbb{H}}
+
 \pagestyle{plain}
 \renewcommand{\baselinestretch}{1.2} % increase the distance between line.
 \setlength\parindent{0pt} % noindent for the whole file.
@@ -179,6 +183,76 @@ $\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace $ as
         In particular, the radius of the image circle is $\frac{1}{2Tq^2}$. Lemma \ref{l4} follows immediately.
     \end{proof}
     The above process can be applied to finitely many Fareye disks as in section 2 to get a compactification of $\Gamma \backslash \mathbb{H}$.
+
+    \newpage
+
+    \section{Equivalent definitions of semi-stability}
+    In this section, we give two definitions of semi-stability in $\uph$, and show that
+    they are essentially the same. We will also compute the semi-stable locus in $\uph$.
+
+    We first introduce some terminology: for each complex number $z \in \uph$, we assign to it a lattice in $\mathbb{C}$,where the lattice is spanned by two vectors $\left\lbrace z,1 \right\rbrace$. By identifying $\mathbb{C} \cong \mathbb{R}^2$,
+    we can compute the volume of the fundamental domain given by this lattice is $y = \Im(z)$. Then we scale two vectors in the basis to get a unit lattice.
+
+    Following this process, each $z \in \uph$ is assigned with a unique unit lattice, namely $\Gamma_z = \text{span}_\mathbb{Z}\left\lbrace a, z/a\right\rbrace$, where $a = \Im(z)$. Now we are ready to define semi-stability.
+    Furthermore, to each lattice, we assigned to it a plot in the following way:
+    \begin{itemize}
+        \item We start with the point $(0,0)$ in the plane.
+        \item Let $u$ be the shortest vector in the lattice $\Gamma_z$, we highlight the point $(1,\log|u|)$ in the plane.
+        \item Finally, we attached the point $(2,\log(vol(A)))$, where $A$ is the fundamental domain of $\Gamma_z$.
+        \item We connect consecutive points by line segments. The union of these line segments is called \textit{profile} of the lattice.
+    \end{itemize}
+    In our setting, since we already normalize all lattices to unit lattice, the final point is in fact $(2,0)$.
+    \begin{definition}
+        The lattice assigned to the number $z \in \uph$ is call semi-stable if and only if the point $(1,\log|u|)$ lies above the $x$-axis.
+    \end{definition}
+    Before giving the second definition of semi-stablility, we will try to find the semi-stable locus using this definition.
+    First, we restrict our attention to the fundamental domain
+    \[\mathcal{F} = \left\lbrace z \in \mathbb{H}: \Re z \in [-1/2,1/2), |z| \ge 1  \text{ and } |z|>1 \text{ if } \Re z > 0 \right\rbrace\]
+    For each point $z \in \mathcal{F}$, it is easily to see that the shortest vector in the corresponding lattice is $a$. Indeed
+    \[a = \frac{1}{\sqrt{y}} \le \frac{|z|}{\sqrt{y}}\]
+    Thus the 1-dim point is $(1,\log(a))=(1,-\log(y)/2)$. By definition, $\Gamma_z$ is semi-stable iff $\log(y)\le 0$, i.e. $y \ge 1$.
+    To find the semi-stable locus in the whole upper half plane, we need the following result
+    \begin{lemma}
+        If $\Gamma_z$ is semi-stable, then so is the lattice $\Gamma_{g \circ z}$, where $g \in \sl2$.
+    \end{lemma}
+    \begin{proof}
+        If we denote $L_z=\text{span}_\mathbb{Z}\left\lbrace 1,z\right\rbrace$, then $L_{\gamma\circ z} = cL_z$ for some complex number $c$.
+        Indeed, we just need to check for $\gamma$ be an inversion or translation, since these two transformations generate $\sl2$, but this is easy.
+        Now let $c = re^{it}$. Multiplying by $e^{it}$ doesn't change the length, hence doesn't change the semi-stability. Multiplying by a positive number
+        $r$ will shift $(1,\log|u|)$ to $(1,\log|u|+\log r)$ and $(2,\log(vol(A)))$ to $(2,\log(vol(A))+2\log r)$.
+
+        The line segment $d$ connecting origin with the final point intersect the line $x=1$ at $(1,\log(vol(A))+\log r)$. By the semi-stability of the original lattice
+        the point $(1,\log|u|+\log r)$ is above the line segment $d$.
+    \end{proof}
+    From this lemma, we could see that the semi-stable locus is the complement of the Farey balls in the upper half plane.
+
+    Now we give the second definition of semi-stability. First we note that $\uph$ can be identified
+    with the set $\text{SL}_2(\mathbb{R})/\so2$. Using Iwasawa's decomposition, we could identify $z = x+iy$
+    with the pair $(a(z),n(z))$ where
+    \[a(z) = \begin{bmatrix}
+            y^{-1/2} & 0       \\ ,
+            0        & y^{1/2}
+        \end{bmatrix} \quad n(z) = \begin{bmatrix}
+            1 & x \\
+            0 & 1
+        \end{bmatrix}\]
+    Then we can define a map
+    \[H_B \colon  \uph \to \mathfrak{sl}_2, \quad z \mapsto \log(a(z))H,\]
+    where $H= \begin{bmatrix}
+    1 & 0  \\
+    0 & -1
+\end{bmatrix}$. Then we define a unique linear map $\alpha \colon \mathbb{R}H\to \mathbb{C}$ such that $\alpha(H)=2$. Set
+$\rho = \alpha/2$. For each $T = -kH$ where $k>0$, we define the degree of instability of $x \in \text{SL}_2(\mathbb{R})/\so2$
+    as follows
+    \[\deg_\text{inst}^T(x):= \min_{\gamma \in \Gamma/\Gamma \cap B}\left\langle \rho, H_B(x\gamma )-T\right\rangle \]
+    In this particular case, the RHS of the above definition can be simplified as
+    \[\deg_\text{inst}^T(x) = \min_{\gamma \in \Gamma}\log(a(x\gamma)+k)\]
+    For the case $k=0$, the point $x$ is call semi-stable iff $\deg_\text{inst}^T(x) \ge 0$. Since the minimum
+    is always achieved, this implies $\frac{-1}{2}\log(\Im(x\gamma)) \ge 0 $, i.e. $\Im(x\gamma) \le 1$ for all $\gamma$.
+
+    A key observation is that the minimum of $a(z)$ is achieved inside the Siegel's set, which is exactly the fundamental domain $\mathcal{F}$ in this case. This implies the semi-stable locus inside the fudamental domain
+    is the intersection of $\mathcal{F}$ with $\left\lbrace \Im(z)<1\right\rbrace$. So the semi-stable locus is the union of orbits who has a representative in this part.
+
 \begin{thebibliography}{}
     \bibitem{modf}  Diamond, F., \& Shurman, J. M. (2005). A first course in modular forms (Vol. 228, pp. xvi-436). New York: Springer.
 \end{thebibliography}
