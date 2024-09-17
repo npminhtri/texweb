@@ -1,0 +1,56 @@
+\documentclass[12pt]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+
+\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{fancyhdr}
+\usepackage{hyperref} %creat hyperlink
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    } %set up a hyperlink to be in blue 
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\parindent{0pt} % noindent for the whole document.
+\renewcommand{\baselinestretch}{1.2} % increase the distance between line.
+\DeclareMathOperator{\frkh}{\mathfrak{h}}
+\DeclareMathOperator{\frkg}{\mathfrak{g}}
+\DeclareMathOperator{\ad}{ad}
+
+\title{Lie theory - homework 1} % Sets article title
+\author{Tri Nguyen - University of Alberta} % Sets authors name
+\date{\today} % Sets date for date compiled
+
+% The preamble ends with the command \begin{document}
+\begin{document}
+\maketitle
+\textbf{Problem 1}
+\begin{enumerate}
+    \item By definition, we only need to check that
+          \[[[a,b],c] \in \mathfrak{g} \quad \forall a,b \in \frkh, c \in \frkg,\]
+          but this is clear as $\frkh$ is an ideal of $\frkg$, we could use Jacobi's identity to get
+          \[[[a,b],c] = [b,[c,a]]+ [a,[b,c]] \in [\frkh,\frkh].\]
+    \item Recall that $\mathcal{D}^{k+1} \frkg = [\frkg^k,\frkg^k]$. Clearly $\frkg$ is itself an ideal, so the fact that
+          $\mathcal{D}^{k+1}\frkg$ follows immediately from part a and induction on $k$.
+    \item In class, we called $\frkg$ semisimple iff it has no nontrivial solvable ideal. Note that abelian ideals are solvable, hence all abelian ideals are zero if $\frkg$ is semisimple.
+          Conversely, assume that $\frkg$ is not semisimple, then it has a non trivial solvable ideal $\frkh$. In particular, we have a strictly decreasing chain of ideals as follows:
+          \[\frkh = \frkh^{(0)} \supset \frkh^{(1)} \supset \ldots \supset \frkh^{(n)} \supset \frkh^{(n+1)}= (0)\]
+          But this implies that $\frkh^{(n)}$ is a non trivial abelian ideal of $\frkg$ by part a.
+\end{enumerate}
+\textbf{Problem 2}
+We compute $\ad x$ with respect to this basis. The other two are computed similarly.
+\begin{align}
+    \ad x
+\end{align}
+\end{document}
