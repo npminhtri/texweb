@@ -26,6 +26,8 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \DeclareMathOperator{\pj1}{\mathbb{P}^1(\mathbb{Q})}
 \DeclareMathOperator{\sl2}{SL_2(\mathbb{Z})}
+\DeclareMathOperator{\sln}{SL_n(\mathbb{Z})}
+\DeclareMathOperator{\slnr}{SL_n(\mathbb{R})}
 \DeclareMathOperator{\so2}{SO_2(\mathbb{R})}
 
 \DeclareMathOperator{\uph}{\mathbb{H}}
@@ -187,6 +189,7 @@ $\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace $ as
     \newpage
 
     \section{Equivalent definitions of semi-stability}
+    \subsection{In two dimension}
     In this section, we give two definitions of semi-stability in $\uph$, and show that
     they are essentially the same. We will also compute the semi-stable locus in $\uph$.
 
@@ -230,7 +233,7 @@ $\Gamma_\omega \backslash D(c,\omega) - \left\lbrace \omega\right\rbrace $ as
     with the set $\text{SL}_2(\mathbb{R})/\so2$. Using Iwasawa's decomposition, we could identify $z = x+iy$
     with the pair $(a(z),n(z))$ where
     \[a(z) = \begin{bmatrix}
-            y^{-1/2} & 0       \\ ,
+            y^{-1/2} & 0       \\ 
             0        & y^{1/2}
         \end{bmatrix} \quad n(z) = \begin{bmatrix}
             1 & x \\
@@ -252,8 +255,85 @@ $\rho = \alpha/2$. For each $T = -kH$ where $k>0$, we define the degree of insta
 
     A key observation is that the minimum of $a(z)$ is achieved inside the Siegel's set, which is exactly the fundamental domain $\mathcal{F}$ in this case. This implies the semi-stable locus inside the fudamental domain
     is the intersection of $\mathcal{F}$ with $\left\lbrace \Im(z)<1\right\rbrace$. So the semi-stable locus is the union of orbits who has a representative in this part.
+    \subsection{In higher dimension}
+    We start with the standard basis $\left\lbrace e_i\right\rbrace_{i=1}^n$ in the Euclidean space $\mathbb{R}^n$. Then for each $g \in \slnr$, we can assign $g$ to the lattice
+    spanned by $\left\lbrace g e_i\right\rbrace_{i=1}^n$. By normalizing, we can choose $g$ so that the fundamental domain 
+    corresponding to this lattice has unit volume and denoted by $\Gamma_g$. for each $ 1 \le m \le n-1$, pick the sublattice $M$ of the smallest volume and 
+    assign it to the point $(m,\log vol(M))$, and connecting to consecutive points by a line segment. 
+    boundary of the convex hull of this plot is called \textbf{canonical plot}. The analogue of semi-stability in higher dimension is 
+    \begin{definition}
+        For each point $g$, if the canonical plot of the lattice $\Gamma_g$ contains exactly a line connecting the origin with $(n,0)$.
+    \end{definition}
+    We can defined a function $H_B$ similarly to the function is previous section, then the degree of instability can be defined by computing 
+    the following function:
+    \[\deg_{\text{inst}}(g):= \min_{P \in ParSt, \gamma \in \text{SL}(\mathbb{Q})/P(\mathbb{Q})}\left\langle \rho_P, H_B(g\gamma) \right\rangle\]
 
+    \begin{definition}
+        A point $g$ is semi-stable if $\deg_{\text{inst}}(g)\ge 0$.
+    \end{definition}
+
+    To give a feeling how to compute the degree of instability of $g$, we look at the Iwasawa decomposition and consider $n=3$.
+    Then 
+    \[g = kan,\]
+    where $k \in \text{SO}(3,\mathbb{R})$ and $a$ is the the diagonal matrix, $n$ is unipotent upper triangular matrix. In particular
+    \[a = \begin{bmatrix}
+        a_1 & 0 & 0\\
+        0 & a_2 & 0\\
+        0 & 0 & a_3
+    \end{bmatrix}\quad \text{and }\quad n =\begin{bmatrix}
+        1 & x & y\\
+        0 & 1 & z\\
+        0 & 0 & 1
+    \end{bmatrix} \]
+    The value of $\deg_{\text{inst}}(g)$ will depend on which parabolic subgroup we are evaluating at. But in short, we will have 
+    the following system of inequalities
+    \[\begin{cases}
+        \log(s_1) \ge 0 \\
+        \log(s_1)+\log(s_2) \ge 0
+    \end{cases}\]
+    Now we introduce some setting to understand what semi-stability means in term of canonical plot.
+    
+    In $\mathbb{R}^3$, we choose a specific set of linearly independent vector $\Delta = \left\lbrace \alpha_1,\alpha_2\right\rbrace$, where
+    \[\alpha_i = e_{i+1}-e_i, \quad i = 1,2\]
+    For each $j = \overline{1,n}$, we defined the weight $\lambda_j$ such that 
+    \begin{align*}
+        \lambda_j \cdot \alpha_i = \begin{cases}
+            1, \quad &\text{if } i =j \\
+            0, \quad &\text{ if } i \ne j
+        \end{cases}
+    \end{align*}
+    Clearly we have $\lambda_n$ is orthogonal to $\Delta$. Now consider the vector 
+    \[\omega = \sum_{i=1}^n \log{a_g} \cdot e_1 = (s_1,\ldots, s_n)\]
+    Since multiplying by $k$ doesn't change the volume of the lattice, we can assume that $g = an$.
+    The following equations are easily verified:
+    \begin{lemma}
+        We have the following identities:
+        \begin{enumerate}
+            \item $\alpha_i \cdot \omega = s_{i+1}-s_i$.
+            \item $\lambda_1,\ldots,\lambda_n$ is a basis of $\mathbb{R}^n$.
+            \item $\nu_\Delta(\lambda_i) = \lambda_i - (i/n)\lambda_n$, where $\mu_\Delta$ is the projection on the subspace spanned by $\Delta$.
+        \end{enumerate}
+    \end{lemma}
+    Let $\mathcal{C} = \left\lbrace v \in \mathbb{R}^3\mid \alpha_i \cdot v > 0 \text{ for all } \alpha_i\right\rbrace$. This defines a cone in $\mathbb{R}^n$. We also denote
+    \begin{itemize}
+        \item $V_{\Delta} = \left\lbrace v \in \mathbb{R}^n\mid \alpha_i \cdot v = 0\right\rbrace$.
+        \item $V_{\Delta}^\Delta = \left\lbrace v\in \mathbb{R}^n \mid \text{ The nearest point to $v$ lies on the faces $V_\Delta$}\right\rbrace $
+    \end{itemize}
+    In particular, we have a rather nice description of $V_{\Delta}^\Delta$ in term of $\alpha_i's$ and $\lambda_n$.
+    \begin{lemma}
+        \[V_{\Delta}^\Delta = \left\lbrace \sum_{i=1}^{n-1}c_i\alpha_i + c_n\lambda_n\mid c_i \le 0, \quad\forall i \le n-1\right\rbrace \]
+    \end{lemma}
+    Now for each point $g$, we assign to this point the point $\omega$ and we defined its \textbf{profile} to be  the profile polygon that moves from $x=i$ to $x=i+1$ along a segment
+    of slope $s_i$. Assume that this profile passes through $n$ points $(i,y_i)$, we have a relation
+    \[y_0 = 0, y_{i}-y_{i-1} = s_{i}\]
+    which implies
+    \[y_i = s_1+\ldots+s_i = -\lambda_i \cdot \omega\]
+    By the lemma 7, $V_\Delta^\Delta$ are spanned by $\lambda_n$ and $\alpha_i$'s, which means for it consists of the points $v$ such that
+    $\nu_\Delta(\lambda_i) \cdot v  \le 0$ for $i=\overline{1,n-1}$ by lemma 6. In term of $y_i$'s, it can be rephrased as $y_i - (i/n)y_n$ (note that $y_i = -\lambda_i\cdot \omega$).
+    But in term of plot, this is just saying that the point $(i,y_i)$ lies above the point $(n,y_n)$ for all $n$. Note that in our setting, $y_n=0$. So $V_{\Delta}^\Delta$ is exactly the set of semi-stable lattice points. 
+    Note that we showed above $y_i/i \ge y_n/n = 0$, which implies that a point $g$ corresponding to a lattice point lies inside $V_{\Delta}^\Delta$ must satisfies $s_1+\ldots+s_i \ge 0$, for $i\le n-1$. For $n=3$, we recover the previous definition.
 \begin{thebibliography}{}
+
     \bibitem{modf}  Diamond, F., \& Shurman, J. M. (2005). A first course in modular forms (Vol. 228, pp. xvi-436). New York: Springer.
 \end{thebibliography}
 
