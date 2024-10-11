@@ -42,46 +42,46 @@
 \textbf{Problem 1}
 \begin{proof}
     By definition of $\frkg$-module, we need to check that:
-\begin{enumerate}
-    \item $(ax+by)\cdot f = a(x\cdot f)+ b(y\cdot f)$: But it is easy to see that for any $v \in V$:
-   \begin{align*}
-    [(ax+by) \cdot f](v) &= (ax+by)\cdot f(v)- f((ax+by)\cdot v) \\
-    &= a(x\cdot f)(v)+b(y\cdot f)(v) - af(x\cdot v)-b f(y\cdot v)\\
-    &= a(x\cdot f)(v)+b(y\cdot f)(v)
-   \end{align*}
-   \item Similarly, we can also check that $x\cdot(af+bg) = a(x\cdot f)+ b(y \cdot g)$.
-   \item $[xy]\cdot f = x\cdot (y\cdot f)-y\cdot (x \cdot f)$: Evaluating at $v \in V$, we get 
-        \begin{align*}
-            ([xy]\cdot f)(v)&= [xy]f(v)-f([xy]\cdot v)\\
-            &=x\cdot (y\cdot f(v))-y\cdot(x\cdot f(v))-f(x\cdot (y\cdot v)-y\cdot(x\cdot v))\\
-            &= (x\cdot (y\cdot f)(v))-(y\cdot (x\cdot f)(v))\\
-            &=(x\cdot y\cdot f)(v)- (y\cdot x \cdot f)(v)
-        \end{align*}
-    This shows that $\Hom(V,W)$ is indeed a $\frkg$-module.
-\end{enumerate}
+    \begin{enumerate}
+        \item $(ax+by)\cdot f = a(x\cdot f)+ b(y\cdot f)$: But it is easy to see that for any $v \in V$:
+              \begin{align*}
+                  [(ax+by) \cdot f](v) & = (ax+by)\cdot f(v)- f((ax+by)\cdot v)                       \\
+                                       & = a(x\cdot f)(v)+b(y\cdot f)(v) - af(x\cdot v)-b f(y\cdot v) \\
+                                       & = a(x\cdot f)(v)+b(y\cdot f)(v)
+              \end{align*}
+        \item Similarly, we can also check that $x\cdot(af+bg) = a(x\cdot f)+ b(y \cdot g)$.
+        \item $[xy]\cdot f = x\cdot (y\cdot f)-y\cdot (x \cdot f)$: Evaluating at $v \in V$, we get
+              \begin{align*}
+                  ([xy]\cdot f)(v) & = [xy]f(v)-f([xy]\cdot v)                                                       \\
+                                   & =x\cdot (y\cdot f(v))-y\cdot(x\cdot f(v))-f(x\cdot (y\cdot v)-y\cdot(x\cdot v)) \\
+                                   & = (x\cdot (y\cdot f)(v))-(y\cdot (x\cdot f)(v))                                 \\
+                                   & =(x\cdot y\cdot f)(v)- (y\cdot x \cdot f)(v)
+              \end{align*}
+              This shows that $\Hom(V,W)$ is indeed a $\frkg$-module.
+    \end{enumerate}
 
     Now we want to show that $\Hom(V,W)$ is isomorphic to $V^*\otimes W$ as vector spaces. Since for any
     $v \in V$, $f(v)$ is a scalar for $f \in V^*$, we define a bilinear map from $V^* \times W$ to $\Hom(V,W)$ as follows:
     \begin{align*}
-        \overline{f} \colon V^* \times W &\to \Hom(V,W) \\
-        (f,w) &\mapsto f(*)\cdot w
+        \overline{f} \colon V^* \times W & \to \Hom(V,W)       \\
+        (f,w)                            & \mapsto f(*)\cdot w
     \end{align*}
     Clearly this is a well-defined biliear map, and thus there exists a linear map $f$ such that
     \begin{align*}
-        f \colon V^* \otimes W &\to \Hom(V,W) \\
-        h\otimes w &\mapsto (v\mapsto h(v)\cdot w)
+        f \colon V^* \otimes W & \to \Hom(V,W)                  \\
+        h\otimes w             & \mapsto (v\mapsto h(v)\cdot w)
     \end{align*}
     Assume that $V$ has dimension $n$, then so does $V^*$. Let $\left\lbrace e_i\right\rbrace_{i=1}^n$ be a basis of $V$ and
     denote $\left\lbrace e^*_i\right\rbrace_{i=1}^n$ be its dual basis. Then for any $g \in \Hom(V,W)$ we define a map
     \begin{align*}
-        g \colon  \Hom(V,W) &\to V^* \otimes W \\
-       u &\mapsto \sum e_i^* \otimes u(e_i)
+        g \colon  \Hom(V,W) & \to V^* \otimes W                 \\
+        u                   & \mapsto \sum e_i^* \otimes u(e_i)
     \end{align*}
-    Clearly $g$ is also well-defined and we have that 
+    Clearly $g$ is also well-defined and we have that
     \[(f\circ g(u))(v) = f\left(\sum e_i^* \otimes u(e_i)\right)(v) = \sum e_i^*(v)\cdot u(e_i)=u(v)\]
-    and 
+    and
     \[g\circ f (h\otimes w)=g(h()\cdot w)=\sum e_i^* \otimes h(e_i)w = (\sum h(e_i)e_i^*)\otimes w=h\otimes w \]
-So $g$ and $f$ are inverse of each other, which implies the desired isomorphism.
+    So $g$ and $f$ are inverse of each other, which implies the desired isomorphism.
 \end{proof}
 \textbf{Problem 2}
 \begin{proof}
@@ -89,9 +89,9 @@ So $g$ and $f$ are inverse of each other, which implies the desired isomorphism.
     Thus an element $x$ is semisimple if it is diagonalizable. Clearly if $x,y$ are nilpotent, then there are $n,m \in \mathbb{Z}$ such that
     $x^n=0$ and $y^m=0$. Since $xy=yx$ by hypothesis, we have that
     \[(x+y)^{m+n} = \sum_{k=1}^{m+n} x^k y^{m+n-k} = 0\]
-    \textbf{Claim:} If two matrices are commute, they are simultaneously diagonalizable. 
-    Using the above claim, we can choose a basis of $V$ such that, with respect to that basis, $x,y$ are two diagonal matrices. 
-    Then it is clear that $x+y$ is also diagonal. 
+    \textbf{Claim:} If two matrices are commute, they are simultaneously diagonalizable.
+    Using the above claim, we can choose a basis of $V$ such that, with respect to that basis, $x,y$ are two diagonal matrices.
+    Then it is clear that $x+y$ is also diagonal.
     From the obvervation above, if $x = x_s+x_n$ and $y=y_s+y_n$, then we must have
     $x_s+y_s$ is semisimple and $x_n+y_n$ is nilpotent. Moreover
     \[(x_s+y_s)+(x_n+y_n) = x+y\]
@@ -101,8 +101,8 @@ So $g$ and $f$ are inverse of each other, which implies the desired isomorphism.
 \end{proof}
 \textbf{Problem 3}
 \begin{proof}
-    Given the Killing form is nondegenerate, the corresponding Lie algebra will be semisimple. The proof of this part is identical 
-    to the proof in class (or in Humphrey's textbook). We will show that the converse is not always true, i.e. a semisimple Lie algebra 
+    Given the Killing form is nondegenerate, the corresponding Lie algebra will be semisimple. The proof of this part is identical
+    to the proof in class (or in Humphrey's textbook). We will show that the converse is not always true, i.e. a semisimple Lie algebra
     can have degenerate Killing form. Using the hint, we look at the quotient algebra of $\sl3$ of its center over the field $F$ of characteristic 3.
 
     First we show that the quotient is semisimple. Indeed, let denote this quotient by $L$. Any solvable ideals of $L$ corresponds to a solvable
@@ -111,28 +111,28 @@ So $g$ and $f$ are inverse of each other, which implies the desired isomorphism.
 
     Now the Gram matrix with respect to the Killing form over $L$ is given by
     \[\begin{pmatrix}
-        12 & -6 & 0 & 0 & 0 & 0 & 0 & 0\cr
-        -6 & 12 & 0 & 0 & 0 & 0 & 0 & 0\cr
-        0 & 0 & 0 & 0 & 6 & 0 & 0 & 0 \cr
-        0 & 0 & 0 & 0 & 0 & 0 & 6 & 0 \cr
-        0 & 0 & 6 & 0 & 0 & 0 & 0 & 0 \cr
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & 6 \cr
-        0 & 0 & 0 & 6 & 0 & 0 & 0 & 0 \cr
-        0 & 0 & 0 & 0 & 0 & 6 & 0 & 0 
+            12 & -6 & 0 & 0 & 0 & 0 & 0 & 0\cr
+            -6 & 12 & 0 & 0 & 0 & 0 & 0 & 0\cr
+            0  & 0  & 0 & 0 & 6 & 0 & 0 & 0 \cr
+            0  & 0  & 0 & 0 & 0 & 0 & 6 & 0 \cr
+            0  & 0  & 6 & 0 & 0 & 0 & 0 & 0 \cr
+            0  & 0  & 0 & 0 & 0 & 0 & 0 & 6 \cr
+            0  & 0  & 0 & 6 & 0 & 0 & 0 & 0 \cr
+            0  & 0  & 0 & 0 & 0 & 6 & 0 & 0
         \end{pmatrix}\]
-        which is identially 0 matrix over field of characteristic 3, hence the Killing form is degenerate.
+    which is identially 0 matrix over field of characteristic 3, hence the Killing form is degenerate.
 
-        Below I provided how to compute the first few entries of the Grammian matrix of the Killing form -  is essentially the same for every 
-        other entries. 
+    Below I provided how to compute the first few entries of the Grammian matrix of the Killing form -  is essentially the same for every
+    other entries.
 
-        For example, we choose a basis of the Cartan subalgebra of $\sl3$ as 
-        \begin{align*}
-           H_{13}= \begin{pmatrix}
-                1 & 0 & 0\\
-                0 & -1 & 0 \\
-                0 & 0 & -1
-            \end{pmatrix}, \quad
-        \end{align*}
-        
+    For example, we choose a basis of the Cartan subalgebra of $\sl3$ as
+    \begin{align*}
+        H_{13}= \begin{pmatrix}
+                    1 & 0  & 0  \\
+                    0 & -1 & 0  \\
+                    0 & 0  & -1
+                \end{pmatrix}, \quad
+    \end{align*}
+
 \end{proof}
 \end{document}
