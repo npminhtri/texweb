@@ -30,6 +30,7 @@
 	],
 	// Edit the following property to change export directory
 	"latex-workshop.latex.outDir": "./PDF",
+	"latex-workshop.formatting.latex": "latexindent",
 	"latex-workshop.latex.autoClean.run": "onBuilt",
 	"latex-workshop.latex.build.forceRecipeUsage": false,
 	"latex-workshop.synctex.afterBuild.enabled": true,
