@@ -89,7 +89,8 @@
     Thus an element $x$ is semisimple if it is diagonalizable. Clearly if $x,y$ are nilpotent, then there are $n,m \in \mathbb{Z}$ such that
     $x^n=0$ and $y^m=0$. Since $xy=yx$ by hypothesis, we have that
     \[(x+y)^{m+n} = \sum_{k=1}^{m+n} x^k y^{m+n-k} = 0\]
-    \textbf{Claim:} If two matrices are commute, they are simultaneously diagonalizable.
+    \textbf{Claim: If two matrices are commute, they are simultaneously diagonalizable.}
+
     Using the above claim, we can choose a basis of $V$ such that, with respect to that basis, $x,y$ are two diagonal matrices.
     Then it is clear that $x+y$ is also diagonal.
     From the obvervation above, if $x = x_s+x_n$ and $y=y_s+y_n$, then we must have
@@ -127,12 +128,44 @@
 
     For example, we choose a basis of the Cartan subalgebra of $\sl3$ as
     \begin{align*}
-        H_{13}= \begin{pmatrix}
-                    1 & 0  & 0  \\
-                    0 & -1 & 0  \\
-                    0 & 0  & -1
+        H_{12}= \begin{pmatrix}
+                    1 & 0  & 0 \\
+                    0 & -1 & 0 \\
+                    0 & 0  & 0
                 \end{pmatrix}, \quad
+        H_{23} = \begin{pmatrix}
+                     0 & 0 & 0  \\
+                     0 & 1 & 0  \\
+                     0 & 0 & -1
+                 \end{pmatrix}
     \end{align*}
-
+    It can be verified that $\ad(H_{12})(E_{ij}) =(\omega_i - \omega_j)E_{ij}$ where $\omega = (1,-1,0)$ for $H_{13}$.
+    So as a matrix, with respect to the ordered basis
+    \[\left\lbrace H_{12},H_{23}, E_{12},E_{21},E_{13},E_{31|},E_{23},E_{32}\right\rbrace\]
+    $\ad H_{12}$ is of the form
+    \begin{align*}
+        \begin{pmatrix}
+            0 & 0 & 0 & 0  & 0 & 0  & 0  & 0\cr
+            0 & 0 & 0 & 0  & 0 & 0  & 0  & 0\cr
+            0 & 0 & 2 & 0  & 0 & 0  & 0  & 0 \cr
+            0 & 0 & 0 & -2 & 0 & 0  & 0  & 0 \cr
+            0 & 0 & 0 & 0  & 1 & 0  & 0  & 0 \cr
+            0 & 0 & 0 & 0  & 0 & -1 & 0  & 0 \cr
+            0 & 0 & 0 & 0  & 0 & 0  & -1 & 0 \cr
+            0 & 0 & 0 & 0  & 0 & 0  & 0  & 1
+        \end{pmatrix}
+    \end{align*}
+    In a similar way, we have
+    \[\ad H_{23} = \begin{pmatrix}
+            0 & 0 & 0  & 0 & 0 & 0  & 0 & 0\cr
+            0 & 0 & 0  & 0 & 0 & 0  & 0 & 0\cr
+            0 & 0 & -1 & 0 & 0 & 0  & 0 & 0 \cr
+            0 & 0 & 0  & 1 & 0 & 0  & 0 & 0 \cr
+            0 & 0 & 0  & 0 & 1 & 0  & 0 & 0 \cr
+            0 & 0 & 0  & 0 & 0 & -1 & 0 & 0 \cr
+            0 & 0 & 0  & 0 & 0 & 0  & 2 & 0 \cr
+            0 & 0 & 0  & 0 & 0 & 0  & 0 & -2
+        \end{pmatrix}\]
+    From this we have that $\kappa(H_{13},H_{13})=12$ and $\kappa(H_{13},H_{23})=-6$
 \end{proof}
 \end{document}
