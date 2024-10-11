@@ -107,11 +107,14 @@
     can have degenerate Killing form. Using the hint, we look at the quotient algebra of $\sl3$ of its center over the field $F$ of characteristic 3.
 
     First we show that the quotient is semisimple. Indeed, let denote this quotient by $L$. Any solvable ideals of $L$ corresponds to a solvable
-    ideals of $\sl3$ containing the center. But it is well know that $\sl3$ is semisimple, thus any solvable ideals of $\sl3$ is trivial, thus implies any solvable ideal
-    of $L$ is trivial. Hence $L$ is semisimple, by definition.
+    ideals of $\sl3$ containing the center. But note that we are working over ground field $F$ with characteristic 3, thus $\sl3$ has a non-trivial center,
+    which is also a non-trivial ideal of $\sl3$. Therefore, consider
+    \[\mathfrak{psl}_3(F) = \sl3 /Z(\sl3)\]
+    Then this algebra is simple, hence semisimple. Indeed, assume that we are given a non zero ideal $I$ of
+    $\mathfrak{psl}_3(F) $, then by repeating taking the Lie bracket like in $\mathfrak{sl}_2$, we will get the whole algebra $\mathfrak{psl}_3(F) $.
 
     Now the Gram matrix with respect to the Killing form over $L$ is given by
-    \[\begin{pmatrix}
+    \[\begin{bmatrix}
             12 & -6 & 0 & 0 & 0 & 0 & 0 & 0\cr
             -6 & 12 & 0 & 0 & 0 & 0 & 0 & 0\cr
             0  & 0  & 0 & 0 & 6 & 0 & 0 & 0 \cr
@@ -120,31 +123,34 @@
             0  & 0  & 0 & 0 & 0 & 0 & 0 & 6 \cr
             0  & 0  & 0 & 6 & 0 & 0 & 0 & 0 \cr
             0  & 0  & 0 & 0 & 0 & 6 & 0 & 0
-        \end{pmatrix}\]
+        \end{bmatrix}\]
     which is identially 0 matrix over field of characteristic 3, hence the Killing form is degenerate.
 
     Below I provided how to compute the first few entries of the Grammian matrix of the Killing form -  is essentially the same for every
     other entries.
 
-    For example, we choose a basis of the Cartan subalgebra of $\sl3$ as
+    To get the matrix above, we chose a basis of the algebra of $\sl3$ quotient the center as
     \begin{align*}
-        H_{12}= \begin{pmatrix}
+        H_{12}= \begin{bmatrix}
                     1 & 0  & 0 \\
                     0 & -1 & 0 \\
                     0 & 0  & 0
-                \end{pmatrix}, \quad
-        H_{23} = \begin{pmatrix}
+                \end{bmatrix}, \quad
+        H_{23} = \begin{bmatrix}
                      0 & 0 & 0  \\
                      0 & 1 & 0  \\
                      0 & 0 & -1
-                 \end{pmatrix}
+                 \end{bmatrix}, \quad
+        E_{ij} = \begin{bmatrix}
+                     \delta_{ij}
+                 \end{bmatrix}_{1\le i,j\le 3}
     \end{align*}
     It can be verified that $\ad(H_{12})(E_{ij}) =(\omega_i - \omega_j)E_{ij}$ where $\omega = (1,-1,0)$ for $H_{13}$.
     So as a matrix, with respect to the ordered basis
     \[\left\lbrace H_{12},H_{23}, E_{12},E_{21},E_{13},E_{31|},E_{23},E_{32}\right\rbrace\]
     $\ad H_{12}$ is of the form
     \begin{align*}
-        \begin{pmatrix}
+        \begin{bmatrix}
             0 & 0 & 0 & 0  & 0 & 0  & 0  & 0\cr
             0 & 0 & 0 & 0  & 0 & 0  & 0  & 0\cr
             0 & 0 & 2 & 0  & 0 & 0  & 0  & 0 \cr
@@ -153,10 +159,10 @@
             0 & 0 & 0 & 0  & 0 & -1 & 0  & 0 \cr
             0 & 0 & 0 & 0  & 0 & 0  & -1 & 0 \cr
             0 & 0 & 0 & 0  & 0 & 0  & 0  & 1
-        \end{pmatrix}
+        \end{bmatrix}
     \end{align*}
     In a similar way, we have
-    \[\ad H_{23} = \begin{pmatrix}
+    \[\ad H_{23} = \begin{bmatrix}
             0 & 0 & 0  & 0 & 0 & 0  & 0 & 0\cr
             0 & 0 & 0  & 0 & 0 & 0  & 0 & 0\cr
             0 & 0 & -1 & 0 & 0 & 0  & 0 & 0 \cr
@@ -165,7 +171,7 @@
             0 & 0 & 0  & 0 & 0 & -1 & 0 & 0 \cr
             0 & 0 & 0  & 0 & 0 & 0  & 2 & 0 \cr
             0 & 0 & 0  & 0 & 0 & 0  & 0 & -2
-        \end{pmatrix}\]
+        \end{bmatrix}\]
     From this we have that $\kappa(H_{12},H_{12})= \kappa(H_{23},H_{23}) =12$ and $\kappa(H_{13},H_{23})=-6.$
 \end{proof}
 \end{document}
