@@ -4,7 +4,7 @@
 
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
-\title{Normal Families and the Riemann Mapping theorem} % Sets article title
+\title{SOME (VERY EASY) EXERCISES IN MATH 681} % Sets article title
 \author{Tri Nguyen} % Sets authors name
 \date{\today} % Sets date for date compiled
 \usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
@@ -15,11 +15,15 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{fancyhdr}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
 \pagestyle{fancy}
 \fancyhf{}
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
-
+\DeclareMathOperator{\sln}{\mathfrak{sl}_n(\mathbb{R})}
+\DeclareMathOperator{\Tr}{\textbf{Tr}}
+\DeclareMathOperator{\ad}{ad}
 \setlength\parindent{0pt}
 
 
@@ -27,68 +31,123 @@
 % The preamble ends with the command \begin{document}
 \begin{document} % All begin commands must be paired with an end command somewhere
 \maketitle % creates title using information in preamble (title, author, date)
-
-This note is used to list every theorems in chapter 9 of the book \textbf{Complex made simple}.
-\section{Quasi-metrics} % creates a section
-\begin{definition}
-  A function $d \colon X \times X \to [0,\infty]$ satisfying the condition
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 1]
+  Let $\mathfrak{k} = \left\lbrace X \in \sln : X^t = -X \right\rbrace $ and $ \mathfrak{p } = \left\lbrace X \in \sln: X=X^t\right\rbrace$.
+  Verify the following inclusion relation:
   \begin{itemize}
-    \item $d(x,x) = 0 (x \in X)$
-    \item $d(x,y) = d(y,x) (x,y \in X)$
-    \item $d(x,z) \le d(x,y) + d(y,z) (x,y,z)$
+    \item $[\mathfrak{k},\mathfrak{k}] \subset \mathfrak{k}$.
+    \item  $[\mathfrak{k},\mathfrak{p}] \subset \mathfrak{p}$.
+    \item  $[\mathfrak{p},\mathfrak{p}] \subset \mathfrak{k}$.
   \end{itemize}
-  then it is called a quasi-metric on space $X$. We can see that $d$ is almost the same as a metric except that $d(x,y)$ can be zero for distinct $x,y$.
-\end{definition}
+\end{tcolorbox}
+\begin{proof}
+  \hfill
 
-One can construct a metric $\overline{d}$ from quasi-metric $d$, noting that $d$ is an equivalence relation on $X$.
+  Let $X,Y \in \mathfrak{k}$ be arbitrary. Then we have
+  \[ [X,Y]^t= \left(XY-YX\right)^t=Y^tX^t-X^tY^t=YX-XY = -[X,Y]\]
+  Thus by definition, $[X,Y] \in \mathfrak{k}$.
 
-Now we introduction the notion of \textit{concave function}: The function $\psi \colon I \to \mathbb{R}$ is said to be \textit{concave} if
-\begin{align*}
-  \psi(tx + (1-t)y) \le t\psi(x) + (1-t)\psi(y),
-\end{align*}
-for all $x,y \in X$ and $ 0 \le t \le 1$. It can be inferred from the definition that $\psi$ is concave iff $-\psi$ is convex. Now we have the following lemma
-\begin{lemma}
-  Suppose that $\psi \colon I \to \mathbb{R}$ is concave and $a_1,a_2,b_1,b_2 \in I$ such that $a_1 <b_1, a_2 <b_2, a_2 \ge a_1, b_2 \ge b_1$. Then
-  \[\dfrac{\psi(b_2)- \psi(a_2)}{b_2-a_2} \le \dfrac{\psi(b_1)- \psi(a_1)}{b_1-a_1} \]
-\end{lemma}
-Geometrically speaking, the slope of the segment joining two points on the graph of $\psi$ decreases as the points moves to the right.
+  Let $U,V \in \mathfrak{p}$ be arbitrary. Similarly, we have
+  \[[U,V]^t = (UV - VU)^t= V^tU^t- U^tV^t = VU - UV = -[U,V]\]
+  which also implies that $[\mathfrak{p},\mathfrak{p}] \subset \mathfrak{k}$.
 
-Applying this lemma for $a_1 =0, b_1=x = a_2, b_2=x+y$, we get the following result:
-\begin{lemma}
-  Suppose that $\psi \colon [0,\infty] \to \mathbb{R}$ is concave and $\psi(0)=0$. Then
-  \[ \psi(x+y) \le \psi(x) + \psi(y),\]
-  for all $x,y \ge 0$.
-\end{lemma}
-\begin{lemma}
-  Suppose that $\psi \colon [0,\infty] \to \mathbb{R}$ is concave and
-  \[\psi(0)=0.\]
-  Suppose further that $\psi$ is nondecreasing, $\psi(t) >0$ for $t >0$ and this function is continuous at $0$.
-
-  If $d$ is a quasi-metric on $X$ then $\tilde{d} = \psi \circ d$ is also a quasi-metric on $X$
-  such that
+  Lastly, we have
+  \[[X,U]^t = (XU-UX)^t = U^tX^t-X^tU^t = -UX+XU=[X,U]\]
+  which means  $[\mathfrak{k},\mathfrak{p}] \subset \mathfrak{p}$.
+\end{proof}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 2]
+  This is a verification exercise about choosing the \textbf{right} basis. Let denote $\kappa(.,.)$
+  the Killing form. Follows the same notation in previous exercise, let
   \begin{itemize}
-    \item $\tilde{d}(x,y)=0$ iff $d(x,y)=0$.
-    \item $\tilde{d}(x_n,y_n) \to 0$ iff $d(x_n,y_n) \to 0$.
+    \item $Y_1,\ldots, Y_N$ be a basis of $\mathfrak{p}$ and this basis is indexed by $i,j,k,l$.
+    \item $Y_{N+1},\ldots, Y_n$ be a basis of $\mathfrak{k}$ and this basis is indexed by $a,b,c,d$.
   \end{itemize}
-\end{lemma}
-Now choosing $\psi$ to be a bounded function, we can further assume that $\tilde{d}$ is bounded. Two traditional choices are:
-\[ \psi_1(t)= \dfrac{t}{t+1}\]
-and
-\[\psi_2(t) = \begin{cases}
-    t \quad (0 \le t \le 1) \\
-    1 \quad (t >1)
-  \end{cases}\]
+  \textit{Fact: } $\kappa$ is positive definite on $\mathfrak{p}$ and negative definite on $\mathfrak{k}$. Furthermore
+  we chose the above basis such that
+  \[\begin{cases}
+      \kappa(Y_i,Y_j) = \delta_{ij}, \\
+      \kappa (Y_a,Y_b) = -\delta_{ab}
+    \end{cases}\]
+  By the above exercise, we have that
+  \[\begin{cases}
+      [Y_i,Y_j] = \sum_{a} c^a_{ij}Y_a \\
+      [Y_a,Y_i] = \sum_{j} c_{ai}^j Y_j
+    \end{cases}\]
+  Show that $c^a_{ij} = c^i_{aj}$.
+\end{tcolorbox}
+\begin{proof}
+  \hfill
 
-One might choose $\psi_1$ since it is a smooth function, or choose $\psi_2$ as it is easy to compute.
-The main reason for choosing a new equivalent bounded quasi-metric is because it is easy to add up.
-For example, in the next lemma, showing that given a countable family of quasi-metrics $(d_j)$, there exists a single quasi-metric $d$
-such that $d(x_n,y_n) \to 0$  if and only if $d_j(x_n,y_n) \to 0$ for every $j$, begins by converting the original family of quasi-metrics to a family of bounded quasi-metrics.
+  It is well-known that the Killing form is invariant in the following sense
+  \[\kappa([a,b],c) = \kappa(a,[b,c])\]
+  Using this invariant property, we will compute $\kappa(Y_a,[Y_i,Y_j])$ in two ways
+  \begin{enumerate}
+    \item we have:
+          \[\kappa\left(Y_a,[Y_i,Y_j]\right) = \kappa\left(Y_a,\sum_b c^b_{ij}Y_b\right) = -c^a_{ij}\]
+    \item On the other hand we also have
+          \[\kappa(Y_a,[Y_i,Y_j]) = -\kappa([Y_a,Y_j],Y_i) = -\kappa \left(\sum_k c_{aj}^k Y_k,Y_i\right)=-c^i_{aj}\]
+  \end{enumerate}
+  Comparing both results yield the desired equality.
+\end{proof}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 3]
+  Verify that
+  \begin{enumerate}
+    \item $\sln  = \mathfrak{k}\oplus\mathfrak{p}$.
+    \item $\kappa$ is positive definite on $\mathfrak{p}$ and negative definite on $\mathfrak{k}$.
+  \end{enumerate}
+\end{tcolorbox}
+\begin{proof}
+  It is easy to check that for any traceless matrix $X = [c_{ij}]$, we can easily
+  find two traceless matrices $A = [a_{ij}]$ and $B = [b_{ij}]$ such that
+  \begin{itemize}
+    \item $A$ is symmetric and $B$ is skew-symmetric.
+    \item $X= A+B$.
+  \end{itemize}
+  Indeed, in order to determine the matrices $A,B$, it boils down to solve the the system
+  \begin{align*}
+    \begin{cases}
+      a_{ij}+b_{ij}=c_{ij} \\
+      a_{ij}-b_{ij} = c{ji}
+    \end{cases},
+  \end{align*}
+  for distinct indices $i,j$. This system is always solvable. It is obvious that the zero matrix
+  is the only matrix that is both symmetric and skew-symmetric. Thus
+  \[\sln = \mathfrak{k}\oplus\mathfrak{p}\]
+  The positive/negative definite part follows directly from the definitions of
+  the Killing form and the obvervation that
+  \[\kappa(X,X) = \Tr(\ad X \circ \ad X) = \Tr(\ad (X)^t\ad X) = \sum_{i,j}c^2_{ij} \ge 0,\]
+  where $X \in \mathfrak{p}$. similarly for $X \in \mathfrak{k}$
+  \[\kappa(X,X) = \Tr(\ad X \circ \ad X) = -\Tr(\ad (X)^t\ad X) = -\left(\sum_{i,j}c^2_{ij}\right) \le 0.\]
+  Hence we are done.
+\end{proof}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 3]
+  Given a parabolic subgroup $P \in \text{SL}_n(\mathbb{R})$ and assume that
+  \[P = M_P \times A_P \times U_P.\]
+  Recall that we have the Iwasawa decomposition
+  \[ \text{SL}_n(\mathbb{R}) \cong K \times A \times N\]
+  Prove that $K \cap P = K \cap M_P$.
+\end{tcolorbox}
+\begin{proof}
+  It is obvious that $K \cap P \supset K \cap M_P$, so we just need to prove the other inclusion. Let $X \in K \cap P$
+  be arbitrary, then it has the form
+  \[X = \begin{bmatrix}
+      A_{n_1} & \star   & \ldots & \star   \\
+      0       & A_{n_2} & \ldots & \star   \\
+      0       & 0       & \ldots & \star   \\
+      \vdots  & \vdots  & \ddots & \vdots  \\
+      0       & 0       & \ldots & A_{n_k} \\
+    \end{bmatrix},\]
+  and satisfies $X^t = X^{-1}$. By comparing the entries, all the entries off the diagonal block matrix $A_{n_i}$
+  must be zero. So we have
+  \[X = \begin{bmatrix}
+      A_{n_1} & 0       & \ldots & 0       \\
+      0       & A_{n_2} & \ldots & 0       \\
+      0       & 0       & \ldots & 0       \\
+      \vdots  & \vdots  & \ddots & \vdots  \\
+      0       & 0       & \ldots & A_{n_k} \\
+    \end{bmatrix}\]
+  But the block matrices themselves also satisfy $A_{n_i}^t = A_{n_i}^{-1}$, thus implies
+  $\det(A_{n_i}) = \pm 1$, which also means $X \in M_P$
+\end{proof}
 
-\begin{lemma}
-  Suppose that $d_j$ is a quasi-metric on $X$ for $j =1,2\ldots$ Define
-  \[d(x,y) = \sum_{j=1}^\infty 2^{-j}\dfrac{d_j(x,y)}{1+d_j(x,y)} \quad (x,y \in X)\]
-  Then $d$ is a quasi-metric on $X$ with the property that $d(x_n,y_n) \to 0$ as $n \to \infty$
-  if and only if $d_j(x_n,y_n) \to 0$ for every $j$.
-  Furthermore, $d$ is a metric on $X$ if and only if for every $x,y \in X$ with $x \ne y$ there exists a positive integer $j$ such that $d_j(x,y)>0$.
-\end{lemma}
 \end{document} % This is the end of the document
