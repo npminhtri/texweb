@@ -147,7 +147,29 @@
       0       & 0       & \ldots & A_{n_k} \\
     \end{bmatrix}\]
   But the block matrices themselves also satisfy $A_{n_i}^t = A_{n_i}^{-1}$, thus implies
-  $\det(A_{n_i}) = \pm 1$, which also means $X \in M_P$
+  $\det(A_{n_i}) = \pm 1$, which also means $X \in M_P.$
 \end{proof}
-
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 5]
+  Show that the map $d_{q+1} \circ d_q$ in section 1.1 of the note is identically zero.
+\end{tcolorbox}
+\begin{proof}
+  Recall that the map $d_q$ is given by
+  \begin{align*}
+    d_q \colon C^q & \to C^{q+1}   \\
+    f              & \mapsto d_q f
+  \end{align*}
+  where $(d_q f)(x_0,\ldots,x_{q+1}) = \sum (-1)^i f(x_0,\ldots \hat{x_i},\ldots,x_{q+1})$. Here the notation
+  $\hat{\cdot}$ means we omit the corresponding variable. Now we have
+  \begin{align*}(d_{q+1} \circ d_q)(f)(x_0,\ldots,x_{q+2}) & = \sum (-1)^i(d_q f)((x_0,\ldots \hat{x_i},\ldots,x_{q+2}))                                                                 \\
+                                                         & = \sum_{i=0}^{q+2} (-1)^i \left[\sum_{j\ne i} (-1)^{a_{i,j}} f(x_0,\ldots \hat{x_i},\ldots,\hat{x_j},\ldots,x_{q+1})\right] \\
+                                                         & =\sum (-1)^{i+a_{i,j}}f(x_0,\ldots \hat{x_i},\ldots,\hat{x_j},\ldots,x_{q+1})
+  \end{align*}
+  Now we fixes some nonnegative integers $u,v$ and consider two cases
+  \begin{itemize}
+    \item $i =u> v = j: $ In this case $a_{i,j} = u$, thus the coefficients of $f(x_0,\ldots \hat{x_u},\ldots,\hat{x_v},\ldots,x_{q+1})$ is $(-1)^{u+v}$.
+    \item $i = v< u  =j: $ In this cases $a_{i,j} = u-1$,  thus the coefficients of $f(x_0,\ldots \hat{x_u},\ldots,\hat{x_v},\ldots,x_{q+1})$ is $(-1)^{u+v-1}$.
+  \end{itemize}
+  This implies that for each pair of distinct $(u,v)$, the function $f$ is evaluated at the same points with different signs, hence canceled out.
+  In particular, the sum will vanish. Therefore $d_{q+1} \circ d_q \equiv 0$.
+\end{proof}
 \end{document} % This is the end of the document
