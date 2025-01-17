@@ -18,6 +18,7 @@
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{tikz, tabularx}
 \usepackage{graphics}
+\usepackage{hyperref}
 \newcolumntype{W}{>{\centering\arraybackslash}X}%Para agilizar las columnas.
 % -------------------
 % Font
@@ -29,7 +30,7 @@
 % -------------------
 % Commands
 % -------------------
-\newcommand{\homework}[2]{\noindent\textbf{Name: }\makebox[3in]{Fill my name here} \hfill \textbf{} \\  \textbf{: #2} \hfill \textbf{}\\}
+\newcommand{\homework}[2]{\noindent\textbf{Name: }{Fill my name here.} \hfill \textbf{} \\  \textbf{Due date: #2} \hfill \textbf{}\\}
 
 \newcommand{\prob}{\noindent\textbf{Problem. }}
 \newcounter{problem}
@@ -86,20 +87,21 @@
 % Content
 % -------------------
 \begin{document}
+\homework{\#}{01/25}
 
 
 % Question 1
 \begin{exercise}
   Let $\chi_0$ be the principal character mod $3$, that is
   \[\chi_0 (n) = \begin{cases}
-      1 , \quad \gcd(x,3)=1 \\
+      1 , \quad \gcd(n,3)=1 \\
       0, \quad \text{otherwise}
     \end{cases}\]
   Define
   \[\chi(n) = \begin{cases}
-      1, \quad n \equiv 1 \pmod 3  \\
-      -1, \quad n \equiv 2 \pmod 3 \\
-      0, \quad \text{otherwise}
+      1, \quad  & n \equiv 1 \pmod 3 \\
+      -1, \quad & n \equiv 2 \pmod 3 \\
+      0, \quad  & \text{otherwise}
     \end{cases}\]
   Prove that $\chi_0$ and $\chi$ are completely multiplicative functions. Verify the identity
   \[ \mathbbm{1} = \dfrac{1}{2}(\chi_0 +\chi)\]
@@ -140,9 +142,9 @@
 
 
 % Question 2
-\begin{exercise}
+\begin{exercise}\label{ex2}
   For $s>1$, define the $L$ function
-  \[L(s,\chi):= \sum_{n=1}^\infty \dfrac{\chi(n)}{n^s} = \sum_{k=0}^\infty \dfrac{1}{(3k+1)^s}-\sum_{k=0}^\infty \dfrac{1}{(3k+2)^s} = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots \]
+  \[L(s,\chi):= \sum_{n=1}^\infty \dfrac{\chi(n)}{n^s} = \sum_{k=0}^\infty \dfrac{1}{(3k+1)^s}-\sum_{k=0}^\infty \dfrac{1}{(3k+2)^s} = 1- \dfrac{1}{2^s}+\dfrac{1}{4^s}-\dfrac{1}{5^s}+\ldots \]
   Show that
   \[\dfrac{1}{2} \le L(s,\chi) \le 1\]
   for $s>1$, and hence show that
@@ -151,52 +153,40 @@
   \[L(s,\chi_0):= \sum_{n=1}^\infty \dfrac{\chi_0(n)}{n^s}.\]
 \end{exercise}
 \begin{proof}
-  It can be seen easily that
-  \[\sum_{k=1}^\infty \left|\dfrac{\chi(k)}{k^s}\right|< \sum_{k=1}^\infty \dfrac{1}{k^s}<\infty\]
-  for $s>1$. Thus the series $L(s,\chi)$ converges absolutely. In particular, we can rearrange the term of the series
-  without changing it values. Note that
-  \[L(s,\chi) = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots = 1-\sum_{k=0}\left(\dfrac{1}{(3k+2)^s}-\dfrac{1}{(3k+4)^s}\right) \le 1,\]
+  It can be easily seen that \[\sum_{k=1}^\infty \left|\dfrac{\chi(k)}{k^s}\right|< \sum_{k=1}^\infty \dfrac{1}{k^s}<\infty\] for $s>1$. Thus, the series $L(s,\chi)$ converges absolutely for fixed $s>1$. In particular, we can rearrange the term of the series
+  without changing its values. Note that
+  \[L(s,\chi) = 1- \dfrac{1}{2^s}+\dfrac{1}{4^s}-\dfrac{1}{5^s}+\ldots = 1-\sum_{k=0}\left(\dfrac{1}{(3k+2)^s}-\dfrac{1}{(3k+4)^s}\right) \le 1,\]
   and
   \[L(s,\chi) = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots = 1-\dfrac{1}{2^s}+\sum_{k=1}\left(\dfrac{1}{(3k+1)^s}-\dfrac{1}{(3k+2)^s}\right)>1-\dfrac{1}{2^s}\ge \dfrac{1}{2},\]
-  where $s>1$. In conclustion, we have
-  \[1/2 \le L(s,\chi) \le 1 \]
-  Using formulae $(14)$ for the principal character in the note, we get
+  where $s>1$. In conclusion, we have \[1/2 \le L(s,\chi) \le 1 \] Using formulae $(14)$ for the principal character of the note, we get
   \[ L(s,\chi_0) \ge \dfrac{\Phi(3)}{3^x}\sum_{k=1}^\infty \dfrac{1}{k^s} \longrightarrow \infty,\]
-  as $s \to 1^+$. Moreover, $L(s,\chi)$ is bounded as $s \to 1^+$ as showed above, we can conclude that
-  \[L(s,\chi_0) \cdot L(s,\chi) \to \infty \quad \text{ as } s \to 1^+\]
-  which clearly show that
-  \[\dfrac{1}{2} \log L(s,\chi_0) + \dfrac{1}{2}\log L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\]
-  as desired.
+  as $s \to 1^+$. Moreover, $L(s,\chi)$ is bounded as $s \to 1^+$, as shown above, we can conclude that
+  \[L(s,\chi_0) \cdot L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\] which clearly shows that \[\dfrac{1}{2} \log L(s,\chi_0) + \dfrac{1}{2}\log L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\] as desired.
 \end{proof}
-
-
-%Question 3
 \newpage
+%Question 3
 \begin{exercise}
+  \label{ex3}
   Show that
   \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}}\]
   for $s>1$, where the sum extends over all primes $p$.
 \end{exercise}
 \begin{proof}
   Since $\chi$ and $\chi_0$ are real-valued, we can safely taking the logarithm without the need to taking care of
-  complex logarithm. Using the Taylor's expansion for the $\log$, we get
+  complex logarithm. Using the Taylor's expansion for $\log$, we get
   \[ \log L(s,\chi) = - \sum_{p} \log(1-\chi(p)p^{-s}) = \sum_{p}\sum_{k=1}^\infty \dfrac{\chi(p^k)p^{-ks}}{k}\]
   and
   \[ \log L(s,\chi_0) = - \sum_{p} \log(1-\chi_0(p)p^{-s}) = \sum_{p}\sum_{k=1}^\infty \dfrac{\chi_0(p^k)p^{-ks}}{k}\]
   As shown above, we have that $\mathbbm{1}= \frac{\chi+\chi_0}{2}$, thus
-  \[\log L(s,\chi_0)+ \log L(s,\chi) =\sum_{p}\sum_{k=1}^\infty \dfrac{[\chi(p^k)+\chi_0(p^k)]p^{-ks}}{k}= \sum_{p}\sum_{k=1}^\infty 2\cdot \dfrac{\mathbbm{1}(p^k)p^{-ks}}{k},\]
-  which implies
-  \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}},\]
-  for $s>1$.
+  \[\log L(s,\chi_0)+ \log L(s,\chi) =\sum_{p}\sum_{k=1}^\infty \dfrac{[\chi(p^k)+\chi_0(p^k)]p^{-ks}}{k}= \sum_{p}\sum_{k=1}^\infty 2\cdot \dfrac{\mathbbm{1}(p^k)p^{-ks}}{k},\], which implies \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}},\] for $s>1$.
 \end{proof}
 
 %Question 4
 \begin{exercise}
-  Put everything together to conclude that the series $$\displaystyle\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p}$$ diverges.
+  Putting everything together, we conclude that the series $$\displaystyle\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p}$$ diverges.
 \end{exercise}
 \begin{proof}
-  It can be seen easily that the double sum in problem 3 is the Taylor's expansion of the function
-  $\log(L(s,\mathbbm{1}))$ with $s>1$. By problem 2 we have
+  It can be easily seen that the double sum in problem \ref{ex3} is the Taylor expansion of the function $\log(L(s,\mathbbm{1}))$ with $s>1$. By problem \ref{ex2} we have
   \[ \log(L(s,\mathbbm{1})) \longrightarrow \infty \quad \text{ as } \quad x \to 1^+\]
   Taking the exponent of $\log(L(s,\mathbbm{1}))$ and use the definition, we get
   \[ \log L(s,\mathbbm{1}) = \sum_{p=3t+1} \dfrac{1}{p^s} + \underbrace{\sum_{p=3t+1}\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}}}_{E(x)}\]
