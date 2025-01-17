@@ -1,175 +1,214 @@
-% This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=0.75in,rmargin=0.75in,tmargin=0.75in,bmargin=0.5in]{geometry}
 
-\documentclass[12pt]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	enumerate,		    % Enumerate Environments
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	multicol,			% Use Multi-columns
+	multirow,			% Use Multi-rows
+  bbm,           % Mathbb for numbers
+  amsthm
+}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{tikz, tabularx}
+\usepackage{graphics}
+\newcolumntype{W}{>{\centering\arraybackslash}X}%Para agilizar las columnas.
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
 
-\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
-\title{ASSIGNMENT 1} % Sets article title
-\author{author} % Sets authors name
-\date{\today} % Sets date for date compiled
-\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
-\usepackage{lscape}
-\usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
+% -------------------
+% Commands
+% -------------------
+\newcommand{\homework}[2]{\noindent\textbf{Name: }\makebox[3in]{Fill my name here} \hfill \textbf{} \\  \textbf{: #2} \hfill \textbf{}\\}
+
+\newcommand{\prob}{\noindent\textbf{Problem. }}
+\newcounter{problem}
+\newcommand{\problem}{
+	\stepcounter{problem}%
+	\noindent \textbf{Problem \theproblem. }%
+}
+\newcommand{\pointproblem}[1]{
+	\stepcounter{problem}%
+	\noindent \textbf{Problem \theproblem.} (#1 points)\,%
+}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\ds}{\displaystyle}
+
+
+% -------------------
+% Theorem Environment
+% -------------------
+\mdfdefinestyle{theoremstyle}{%
+	frametitlerule=true,
+	roundcorner=5pt,
+	linecolor=black,
+	outerlinewidth=0.5pt,
+	middlelinewidth=0.5pt
+}
+\mdtheorem[style=theoremstyle]{exercise}{\textbf{Problem}}
+
+
+% -------------------
+% Header & Footer
+% -------------------
 \usepackage{fancyhdr}
-\usepackage{tikz,lipsum,lmodern}
-\usepackage[most]{tcolorbox}
-\pagestyle{fancy}
-\fancyhf{}
-\newtheorem{definition}{Definition}
-\newtheorem{lemma}{Lemma}
-\DeclareMathOperator{\sln}{\mathfrak{sl}_n(\mathbb{R})}
-\DeclareMathOperator{\Tr}{\textbf{Tr}}
-\DeclareMathOperator{\ad}{ad}
-\setlength\parindent{0pt}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{page \thepage \, of \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.0pt}
+}
+\headheight=0pt
+\footskip=14pt
+
+\pagestyle{pages}
+
+\DeclareMathOperator{\1}{\mathbbm{1}}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
 
 
-
-% The preamble ends with the command \begin{document}
-\begin{document} % All begin commands must be paired with an end command somewhere
-\maketitle % creates title using information in preamble (title, author, date)
-\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 1]
-  Let $\mathfrak{k} = \left\lbrace X \in \sln : X^t = -X \right\rbrace $ and $ \mathfrak{p } = \left\lbrace X \in \sln: X=X^t\right\rbrace$.
-  Verify the following inclusion relation:
-  \begin{itemize}
-    \item $[\mathfrak{k},\mathfrak{k}] \subset \mathfrak{k}$.
-    \item  $[\mathfrak{k},\mathfrak{p}] \subset \mathfrak{p}$.
-    \item  $[\mathfrak{p},\mathfrak{p}] \subset \mathfrak{k}$.
-  \end{itemize}
-\end{tcolorbox}
+% Question 1
+\begin{exercise}
+  Let $\chi_0$ be the principal character mod $3$, that is
+  \[\chi_0 (n) = \begin{cases}
+      1 , \quad \gcd(x,3)=1 \\
+      0, \quad \text{otherwise}
+    \end{cases}\]
+  Define
+  \[\chi(n) = \begin{cases}
+      1, \quad n \equiv 1 \pmod 3  \\
+      -1, \quad n \equiv 2 \pmod 3 \\
+      0, \quad \text{otherwise}
+    \end{cases}\]
+  Prove that $\chi_0$ and $\chi$ are completely multiplicative functions. Verify the identity
+  \[ \mathbbm{1} = \dfrac{1}{2}(\chi_0 +\chi)\]
+\end{exercise}
 \begin{proof}
   \hfill
 
-  Let $X,Y \in \mathfrak{k}$ be arbitrary. Then we have
-  \[ [X,Y]^t= \left(XY-YX\right)^t=Y^tX^t-X^tY^t=YX-XY = -[X,Y]\]
-  Thus by definition, $[X,Y] \in \mathfrak{k}$.
-
-  Let $U,V \in \mathfrak{p}$ be arbitrary. Similarly, we have
-  \[[U,V]^t = (UV - VU)^t= V^tU^t- U^tV^t = VU - UV = -[U,V]\]
-  which also implies that $[\mathfrak{p},\mathfrak{p}] \subset \mathfrak{k}$.
-
-  Lastly, we have
-  \[[X,U]^t = (XU-UX)^t = U^tX^t-X^tU^t = -UX+XU=[X,U]\]
-  which means  $[\mathfrak{k},\mathfrak{p}] \subset \mathfrak{p}$.
-\end{proof}
-\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 2]
-  This is a verification exercise about choosing the \textbf{right} basis. Let denote $\kappa(.,.)$
-  the Killing form. Follows the same notation in previous exercise, let
-  \begin{itemize}
-    \item $Y_1,\ldots, Y_N$ be a basis of $\mathfrak{p}$ and this basis is indexed by $i,j,k,l$.
-    \item $Y_{N+1},\ldots, Y_n$ be a basis of $\mathfrak{k}$ and this basis is indexed by $a,b,c,d$.
-  \end{itemize}
-  \textit{Fact: } $\kappa$ is positive definite on $\mathfrak{p}$ and negative definite on $\mathfrak{k}$. Furthermore
-  we chose the above basis such that
-  \[\begin{cases}
-      \kappa(Y_i,Y_j) = \delta_{ij}, \\
-      \kappa (Y_a,Y_b) = -\delta_{ab}
-    \end{cases}\]
-  By the above exercise, we have that
-  \[\begin{cases}
-      [Y_i,Y_j] = \sum_{a} c^a_{ij}Y_a \\
-      [Y_a,Y_i] = \sum_{j} c_{ai}^j Y_j
-    \end{cases}\]
-  Show that $c^a_{ij} = c^i_{aj}$.
-\end{tcolorbox}
-\begin{proof}
-  \hfill
-
-  It is well-known that the Killing form is invariant in the following sense
-  \[\kappa([a,b],c) = \kappa(a,[b,c])\]
-  Using this invariant property, we will compute $\kappa(Y_a,[Y_i,Y_j])$ in two ways
+  Let $m,n \in \mathbb{Z}$ be arbitrary integers. We consider the following cases:
   \begin{enumerate}
-    \item we have:
-          \[\kappa\left(Y_a,[Y_i,Y_j]\right) = \kappa\left(Y_a,\sum_b c^b_{ij}Y_b\right) = -c^a_{ij}\]
-    \item On the other hand we also have
-          \[\kappa(Y_a,[Y_i,Y_j]) = -\kappa([Y_a,Y_j],Y_i) = -\kappa \left(\sum_k c_{aj}^k Y_k,Y_i\right)=-c^i_{aj}\]
+    \item At least one of $m,n$ is divisible by $3$. WLOG, we can assume $3 \mid m$. Then it is clear that $3 \mid mn$.
+          By definition, we must have $\chi_0(m) = \chi(m) =0$ and $\chi_0(mn) =\chi(mn)=0$. Thus we have
+          \[\chi(m)\chi(n) = 0\cdot \chi(n) = 0 = \chi(mn) \quad \text{ and }\chi_0(m)\chi_0(n) = 0\cdot \chi(n) = 0 = \chi(mn).\]
+    \item Both $m,n$ are coprime to $3$. There will be then two subcases
+          \begin{itemize}
+            \item $m \equiv n \pmod 3$. Then clearly we have $\chi_0(m) = \chi_0(n)=1$ and $\chi(m)=\chi(n)$. Moreover
+                  $mn \equiv 1 \pmod 3$, thus $\chi(mn)=\chi_0(mn)=1$. In particular, we have
+                  \[\chi(m)\chi(n) = 1\cdot 1 = 1 = \chi(mn) \quad \text{ and }\chi_0(m)\chi_0(n) = 1\cdot 1 = 1 = \chi(mn).\]
+            \item $m \not\equiv n \pmod 3$. We can further assume that $ m \equiv 1 \pmod 3$ and $n \equiv 2 \pmod 3$. clearly
+                  \[\chi_0(m)\chi_0(n) = 1\cdot 1 = 1 = \chi_0(mn), \]
+                  as $\gcd(mn,3)=1$.
+
+                  On the other hand, $mn \equiv 1 \cdot (-1)\equiv 2 \pmod 3$, thus
+                  \[\chi(m)\chi(n) = 1\cdot (-1) = -1 = \chi(mn) \]
+          \end{itemize}
+          In conclustion, $\chi$ and $\chi_0$ are completely multiplicative. To verify the given identity, we consider
+          the following cases
+          \begin{enumerate}
+            \item $m \not\equiv 1 \pmod 3$: Then $\mathbbm{1}(m) = 0$. On the other hand, we have
+                  \[\dfrac{1}{2}\left(\chi(m)+\chi_0(m)\right)= \begin{cases}
+                      0+0, \quad m \equiv 0 \pmod 3 \\
+                      -1+1, \quad m \equiv 2 \pmod 3
+                    \end{cases} = 0\]
+            \item $m \equiv 1 \pmod 3$: Then $\mathbbm{1}(m) =1 =1/2(\chi(m)+\chi_0(m))$
+          \end{enumerate}
   \end{enumerate}
-  Comparing both results yield the desired equality.
+  Thus we are done.
 \end{proof}
-\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 3]
-  Verify that
-  \begin{enumerate}
-    \item $\sln  = \mathfrak{k}\oplus\mathfrak{p}$.
-    \item $\kappa$ is positive definite on $\mathfrak{p}$ and negative definite on $\mathfrak{k}$.
-  \end{enumerate}
-\end{tcolorbox}
+
+
+% Question 2
+\begin{exercise}
+  For $s>1$, define the $L$ function
+  \[L(s,\chi):= \sum_{n=1}^\infty \dfrac{\chi(n)}{n^s} = \sum_{k=0}^\infty \dfrac{1}{(3k+1)^s}-\sum_{k=0}^\infty \dfrac{1}{(3k+2)^s} = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots \]
+  Show that
+  \[\dfrac{1}{2} \le L(s,\chi) \le 1\]
+  for $s>1$, and hence show that
+  \[\dfrac{1}{2} \log L(s,\chi_0) + \dfrac{1}{2}\log L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\]
+  where
+  \[L(s,\chi_0):= \sum_{n=1}^\infty \dfrac{\chi_0(n)}{n^s}.\]
+\end{exercise}
 \begin{proof}
-  It is easy to check that for any traceless matrix $X = [c_{ij}]$, we can easily
-  find two traceless matrices $A = [a_{ij}]$ and $B = [b_{ij}]$ such that
-  \begin{itemize}
-    \item $A$ is symmetric and $B$ is skew-symmetric.
-    \item $X= A+B$.
-  \end{itemize}
-  Indeed, in order to determine the matrices $A,B$, it boils down to solve the the system
-  \begin{align*}
-    \begin{cases}
-      a_{ij}+b_{ij}=c_{ij} \\
-      a_{ij}-b_{ij} = c{ji}
-    \end{cases},
-  \end{align*}
-  for distinct indices $i,j$. This system is always solvable. It is obvious that the zero matrix
-  is the only matrix that is both symmetric and skew-symmetric. Thus
-  \[\sln = \mathfrak{k}\oplus\mathfrak{p}\]
-  The positive/negative definite part follows directly from the definitions of
-  the Killing form and the obvervation that
-  \[\kappa(X,X) = \Tr(\ad X \circ \ad X) = \Tr(\ad (X)^t\ad X) = \sum_{i,j}c^2_{ij} \ge 0,\]
-  where $X \in \mathfrak{p}$. similarly for $X \in \mathfrak{k}$
-  \[\kappa(X,X) = \Tr(\ad X \circ \ad X) = -\Tr(\ad (X)^t\ad X) = -\left(\sum_{i,j}c^2_{ij}\right) \le 0.\]
-  Hence we are done.
+  It can be seen easily that
+  \[\sum_{k=1}^\infty \left|\dfrac{\chi(k)}{k^s}\right|< \sum_{k=1}^\infty \dfrac{1}{k^s}<\infty\]
+  for $s>1$. Thus the series $L(s,\chi)$ converges absolutely. In particular, we can rearrange the term of the series
+  without changing it values. Note that
+  \[L(s,\chi) = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots = 1-\sum_{k=0}\left(\dfrac{1}{(3k+2)^s}-\dfrac{1}{(3k+4)^s}\right) \le 1,\]
+  and
+  \[L(s,\chi) = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots = 1-\dfrac{1}{2^s}+\sum_{k=1}\left(\dfrac{1}{(3k+1)^s}-\dfrac{1}{(3k+2)^s}\right)>1-\dfrac{1}{2^s}\ge \dfrac{1}{2},\]
+  where $s>1$. In conclustion, we have
+  \[1/2 \le L(s,\chi) \le 1 \]
+  Using formulae $(14)$ for the principal character in the note, we get
+  \[ L(s,\chi_0) \ge \dfrac{\Phi(3)}{3^x}\sum_{k=1}^\infty \dfrac{1}{k^s} \longrightarrow \infty,\]
+  as $s \to 1^+$. Moreover, $L(s,\chi)$ is bounded as $s \to 1^+$ as showed above, we can conclude that
+  \[L(s,\chi_0) \cdot L(s,\chi) \to \infty \quad \text{ as } s \to 1^+\]
+  which clearly show that
+  \[\dfrac{1}{2} \log L(s,\chi_0) + \dfrac{1}{2}\log L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\]
+  as desired.
 \end{proof}
-\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 4]
-  Given a parabolic subgroup $P \in \text{SL}_n(\mathbb{R})$ and assume that
-  \[P = M_P \times A_P \times U_P.\]
-  Recall that we have the Iwasawa decomposition
-  \[ \text{SL}_n(\mathbb{R}) \cong K \times A \times N\]
-  Prove that $K \cap P = K \cap M_P$.
-\end{tcolorbox}
+
+
+%Question 3
+\newpage
+\begin{exercise}
+  Show that
+  \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}}\]
+  for $s>1$, where the sum extends over all primes $p$.
+\end{exercise}
 \begin{proof}
-  It is obvious that $K \cap P \supset K \cap M_P$, so we just need to prove the other inclusion. Let $X \in K \cap P$
-  be arbitrary, then it has the form
-  \[X = \begin{bmatrix}
-      A_{n_1} & \star   & \ldots & \star   \\
-      0       & A_{n_2} & \ldots & \star   \\
-      0       & 0       & \ldots & \star   \\
-      \vdots  & \vdots  & \ddots & \vdots  \\
-      0       & 0       & \ldots & A_{n_k} \\
-    \end{bmatrix},\]
-  and satisfies $X^t = X^{-1}$. By comparing the entries, all the entries off the diagonal block matrix $A_{n_i}$
-  must be zero. So we have
-  \[X = \begin{bmatrix}
-      A_{n_1} & 0       & \ldots & 0       \\
-      0       & A_{n_2} & \ldots & 0       \\
-      0       & 0       & \ldots & 0       \\
-      \vdots  & \vdots  & \ddots & \vdots  \\
-      0       & 0       & \ldots & A_{n_k} \\
-    \end{bmatrix}\]
-  But the block matrices themselves also satisfy $A_{n_i}^t = A_{n_i}^{-1}$, thus implies
-  $\det(A_{n_i}) = \pm 1$, which also means $X \in M_P.$
+  Since $\chi$ and $\chi_0$ are real-valued, we can safely taking the logarithm without the need to taking care of
+  complex logarithm. Using the Taylor's expansion for the $\log$, we get
+  \[ \log L(s,\chi) = - \sum_{p} \log(1-\chi(p)p^{-s}) = \sum_{p}\sum_{k=1}^\infty \dfrac{\chi(p^k)p^{-ks}}{k}\]
+  and
+  \[ \log L(s,\chi_0) = - \sum_{p} \log(1-\chi_0(p)p^{-s}) = \sum_{p}\sum_{k=1}^\infty \dfrac{\chi_0(p^k)p^{-ks}}{k}\]
+  As shown above, we have that $\mathbbm{1}= \frac{\chi+\chi_0}{2}$, thus
+  \[\log L(s,\chi_0)+ \log L(s,\chi) =\sum_{p}\sum_{k=1}^\infty \dfrac{[\chi(p^k)+\chi_0(p^k)]p^{-ks}}{k}= \sum_{p}\sum_{k=1}^\infty 2\cdot \dfrac{\mathbbm{1}(p^k)p^{-ks}}{k},\]
+  which implies
+  \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}},\]
+  for $s>1$.
 \end{proof}
-\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Problem 5]
-  Show that the map $d_{q+1} \circ d_q$ in section 1.1 of the note is identically zero.
-\end{tcolorbox}
+
+%Question 4
+\begin{exercise}
+  Put everything together to conclude that the series $$\displaystyle\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p}$$ diverges.
+\end{exercise}
 \begin{proof}
-  Recall that the map $d_q$ is given by
-  \begin{align*}
-    d_q \colon C^q & \to C^{q+1}   \\
-    f              & \mapsto d_q f
-  \end{align*}
-  where $(d_q f)(x_0,\ldots,x_{q+1}) = \sum (-1)^i f(x_0,\ldots \hat{x_i},\ldots,x_{q+1})$. Here the notation
-  $\hat{\cdot}$ means we omit the corresponding variable. Now we have
-  \begin{align*}(d_{q+1} \circ d_q)(f)(x_0,\ldots,x_{q+2}) & = \sum (-1)^i(d_q f)((x_0,\ldots \hat{x_i},\ldots,x_{q+2}))                                                                 \\
-                                                         & = \sum_{i=0}^{q+2} (-1)^i \left[\sum_{j\ne i} (-1)^{a_{i,j}} f(x_0,\ldots \hat{x_i},\ldots,\hat{x_j},\ldots,x_{q+1})\right] \\
-                                                         & =\sum (-1)^{i+a_{i,j}}f(x_0,\ldots \hat{x_i},\ldots,\hat{x_j},\ldots,x_{q+1})
-  \end{align*}
-  Now we fixes some nonnegative integers $u,v$ and consider two cases
-  \begin{itemize}
-    \item $i =u> v = j: $ In this case $a_{i,j} = u$, thus the coefficients of $f(x_0,\ldots \hat{x_u},\ldots,\hat{x_v},\ldots,x_{q+1})$ is $(-1)^{u+v}$.
-    \item $i = v< u  =j: $ In this cases $a_{i,j} = u-1$,  thus the coefficients of $f(x_0,\ldots \hat{x_u},\ldots,\hat{x_v},\ldots,x_{q+1})$ is $(-1)^{u+v-1}$.
-  \end{itemize}
-  This implies that for each pair of distinct $(u,v)$, the function $f$ is evaluated at the same points with different signs, hence canceled out.
-  In particular, the sum will vanish. Therefore $d_{q+1} \circ d_q \equiv 0$.
+  It can be seen easily that the double sum in problem 3 is the Taylor's expansion of the function
+  $\log(L(s,\mathbbm{1}))$ with $s>1$. By problem 2 we have
+  \[ \log(L(s,\mathbbm{1})) \longrightarrow \infty \quad \text{ as } \quad x \to 1^+\]
+  Taking the exponent of $\log(L(s,\mathbbm{1}))$ and use the definition, we get
+  \[ \log L(s,\mathbbm{1}) = \sum_{p=3t+1} \dfrac{1}{p^s} + \underbrace{\sum_{p=3t+1}\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}}}_{E(x)}\]
+  If we can show that the latter double sum is bounded, then we are done. This sum can be estimated in the exactly the same way
+  in the note as follows
+  \[\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}} < \sum_{k=2}^\infty \left(\dfrac{1}{p^s}\right)^s= \dfrac{1}{p^s(p-1)} < \dfrac{1}{p-1}-\dfrac{1}{p} \]
+  Summing over all primes $p \equiv 1 \pmod 3$, we get
+  \[E(x) = \sum_{p=3t+1}\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}} < \sum_{p=3t+1} \left(\dfrac{1}{p-1}-\dfrac{1}{p}\right) < \sum_{n \in \mathbb{Z}_{\ge 1}}\left(\dfrac{1}{n}-\dfrac{1}{n+1}\right)=1\]
+  In particular, we have
+  \[ \log(L(s,\mathbbm{1})) = \sum_{p=3t+1} \dfrac{1}{p^s} + E(x) \longrightarrow \infty \quad \text{ as } \quad x \to 1^+\]
+  As $E(x) \in (0,1)$ letting $s \to 1^+$ yields
+  \[\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p} =\infty,\]
+  which means the series $\displaystyle\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p}$ diverges, as desired.
 \end{proof}
-\end{document} % This is the end of the document
+\end{document}
