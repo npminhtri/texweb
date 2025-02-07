@@ -30,7 +30,7 @@
 % -------------------
 % Commands
 % -------------------
-\newcommand{\homework}[2]{\noindent\textbf{Name: }{Tri Nguyen} \hfill \textbf{} \\  \textbf{Due date: #2} \hfill \textbf{}\\}
+\newcommand{\homework}[2]{\noindent\textbf{Name: }{} \hfill \textbf{} \\  \textbf{Due date: #2} \hfill \textbf{}\\}
 
 \newcommand{\prob}{\noindent\textbf{Problem. }}
 \newcounter{problem}
@@ -87,7 +87,7 @@
 % Content
 % -------------------
 \begin{document}
-\homework{\#}{01/25}
+\homework{\#}{02/14}
 
 
 % Question 1
@@ -143,63 +143,80 @@
 
 % Question 2
 \begin{exercise}\label{ex2}
-  For $s>1$, define the $L$ function
-  \[L(s,\chi):= \sum_{n=1}^\infty \dfrac{\chi(n)}{n^s} = \sum_{k=0}^\infty \dfrac{1}{(3k+1)^s}-\sum_{k=0}^\infty \dfrac{1}{(3k+2)^s} = 1- \dfrac{1}{2^s}+\dfrac{1}{4^s}-\dfrac{1}{5^s}+\ldots \]
-  Show that
-  \[\dfrac{1}{2} \le L(s,\chi) \le 1\]
-  for $s>1$, and hence show that
-  \[\dfrac{1}{2} \log L(s,\chi_0) + \dfrac{1}{2}\log L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\]
-  where
-  \[L(s,\chi_0):= \sum_{n=1}^\infty \dfrac{\chi_0(n)}{n^s}.\]
+  Let $G$ be a finite abelian group. Show that $\#\hat{G} \le \#G$.
 \end{exercise}
 \begin{proof}
-  It can be easily seen that \[\sum_{k=1}^\infty \left|\dfrac{\chi(k)}{k^s}\right|< \sum_{k=1}^\infty \dfrac{1}{k^s}<\infty\] for $s>1$. Thus, the series $L(s,\chi)$ converges absolutely for fixed $s>1$. In particular, we can rearrange the term of the series
-  without changing its values. Note that
-  \[L(s,\chi) = 1- \dfrac{1}{2^s}+\dfrac{1}{4^s}-\dfrac{1}{5^s}+\ldots = 1-\sum_{k=0}\left(\dfrac{1}{(3k+2)^s}-\dfrac{1}{(3k+4)^s}\right) \le 1,\]
-  and
-  \[L(s,\chi) = 1- \dfrac{1}{2^x}+\dfrac{1}{4^x}-\dfrac{1}{5^x}+\ldots = 1-\dfrac{1}{2^s}+\sum_{k=1}\left(\dfrac{1}{(3k+1)^s}-\dfrac{1}{(3k+2)^s}\right)>1-\dfrac{1}{2^s}\ge \dfrac{1}{2},\]
-  where $s>1$. In conclusion, we have \[1/2 \le L(s,\chi) \le 1 \] Using formulae $(14)$ for the principal character of the note, we get
-  \[ L(s,\chi_0) \ge \dfrac{\Phi(3)}{3^x}\sum_{k=1}^\infty \dfrac{1}{k^s} \longrightarrow \infty,\]
-  as $s \to 1^+$. Moreover, $L(s,\chi)$ is bounded as $s \to 1^+$, as shown above, we can conclude that
-  \[L(s,\chi_0) \cdot L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\] which clearly shows that \[\dfrac{1}{2} \log L(s,\chi_0) + \dfrac{1}{2}\log L(s,\chi) \to \infty \quad \text{ as } s \to 1^+,\] as desired.
+  First we will prove that the set $S$ of maps $f\colon G \to \mathbb{C}$ has a vector space structure.
+  The sum and the scalar multiplication of maps are defined as follows
+  \begin{itemize}
+    \item $(\chi_1 + \chi_2)(a) := \chi_1(a)+ \chi_2(a)$ for all $a \in G$.
+    \item $(c\chi)(a):= c\cdot\chi(a)$ for any $\chi \in S$ and $c \in \mathbb{C}$.
+  \end{itemize}
+  But we can check all the axioms for a set being a vector space pointwisely, with the zero
+  beging the zero map. So $S$ have a a structure of vector space. Let's compute the dimension of $S$ as
+  as $\mathbb{C}-$ vector space. Since $G$ is finite, we can assume that, as a set
+  \[G = \left\lbrace a_1,\ldots,a_n \right\rbrace\]
+  Then we can define the map $f_i$ to be the "dual" of $a_i$ in the following sense: $f_i(a_j) =\delta_{ij}$, i.e.
+  $f_i(a_i)=1$ and vanishes at $a_j \ne a_i$. We claim that $\mathfrak{B}= \left\lbrace f_i \right\rbrace$ forms a basis of $S$.
+  Indeed, let $f\colon G \to \mathbb{C}$ be arbitrary. Since $G$ is finite, $f$ is determined by its value at each $a_i \in G$.
+  Assume that $c_i = f(a_i)$. Then for any $1 \le i \le n$, we have
+  \[f(a_i) = c_i = \sum_{i=1}^n c_i f_i(a_i)\]
+  In particular, we can rewrite the following identity as
+  \[f = c_1f_1+c_2f_2+\ldots+c_nf_n,\]
+  which implies $\mathfrak{B}$ spans $S$. On the other hand, if
+  \[ 0 = c_1f_1+\ldots+c_nf(n)\]
+  Applying both sides to $a_i$ yields
+  \[0 = c_if_i(a_i) = c_i\]
+  which means $\mathfrak{B}$ is a set of linearly independent vectors. Thus $\dim S = \#\mathfrak{B} = n$.
+  In the note, we proved that the character $\chi_1,\chi_2,\ldots,\chi_m$ are mutually orthogonal. In particular, they are
+  a subset of $S$ comprising of linearly independent vectors. Thus
+  \[m = \#\hat{G} \le n = \# G. \]
+  \textbf{Remark:} In fact, if we assume the theorem about the structure of finite abelian group, we can prove that
+  the equality always happens, namely $ \#\hat{G} =\# G$
 \end{proof}
 \newpage
+
+
+
+
+
+
 %Question 3
 \begin{exercise}
   \label{ex3}
-  Show that
-  \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}}\]
-  for $s>1$, where the sum extends over all primes $p$.
+  Consider the finite abelian group $G_9$ consisting of the invertible elements of $\mathbb{Z}/9\mathbb{Z}$. Find all the characteres of $G_9$.
+  Make sure you prove that the characters of $G_9$ you find are all distinct and there are no others.
 \end{exercise}
 \begin{proof}
-  Since $\chi$ and $\chi_0$ are real-valued, we can safely taking the logarithm without the need to taking care of
-  complex logarithm. Using the Taylor's expansion for $\log$, we get
-  \[ \log L(s,\chi) = - \sum_{p} \log(1-\chi(p)p^{-s}) = \sum_{p}\sum_{k=1}^\infty \dfrac{\chi(p^k)p^{-ks}}{k}\]
-  and
-  \[ \log L(s,\chi_0) = - \sum_{p} \log(1-\chi_0(p)p^{-s}) = \sum_{p}\sum_{k=1}^\infty \dfrac{\chi_0(p^k)p^{-ks}}{k}\]
-  As shown above, we have that $\mathbbm{1}= \frac{\chi+\chi_0}{2}$, thus
-  \[\log L(s,\chi_0)+ \log L(s,\chi) =\sum_{p}\sum_{k=1}^\infty \dfrac{[\chi(p^k)+\chi_0(p^k)]p^{-ks}}{k}= \sum_{p}\sum_{k=1}^\infty 2\cdot \dfrac{\mathbbm{1}(p^k)p^{-ks}}{k},\]
-  which implies \[\dfrac{1}{2}\log L(s,\chi_0)+ \dfrac{1}{2}\log L(s,\chi) = \sum_{p}\sum_{k=1}^\infty \dfrac{\mathbbm{1}(p^k)}{kp^{ks}},\] for $s>1$.
+  Using the Remark in the previous exercise, we predict that there are $6$ characters in total. It can be checked easily that $2$ generates $G_9$, so it is a
+  cyclic group of order $6$. Indeed, we have
+  \begin{align*}
+    2^1 \equiv 2 \pmod 9 \\
+    2^2 \equiv 4 \pmod 9 \\
+    2^3 \equiv 8 \pmod 9 \\
+    2^4 \equiv 7 \pmod 9 \\
+    2^5 \equiv 5 \pmod 9 \\
+    2^6 \equiv 1 \pmod 9
+  \end{align*}
+  So the character is defined solely by determining where it sends $[2]$ in $\mathbb{C}$. Let $\chi \in \hat{G_9}$ be
+  any character, we then have
+  \[\chi(2)^6=\chi(2^6) = \chi(1) = 1 \in \mathbb{C}\]
+  thus implies $\chi(2)$ must be a $6-th$ root of unity. There are $6$ choices in total, namely
+  \[\chi(2) = e^{\frac{2i\pi k}{6}}, 0 \le k \le 6\]
+  Clearly these are 6 distinct characters, and they are all possible characters of $G_9$.
 \end{proof}
 
 %Question 4
 \begin{exercise}
-  Putting everything together, we conclude that the series $$\displaystyle\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p}$$ diverges.
+  Show that there is exactly one real, non-principal Dirichlet character $\chi \pmod 9$. Find $\chi(916)$.
 \end{exercise}
 \begin{proof}
-  It can be easily seen that the double sum in problem \ref{ex3} is the Taylor expansion of the function $\log(L(s,\mathbbm{1}))$ with $s>1$. By problem \ref{ex2} we have
-  \[ \log(L(s,\mathbbm{1})) \longrightarrow \infty \quad \text{ as } \quad x \to 1^+\]
-  Taking the exponent of $\log(L(s,\mathbbm{1}))$ and use the definition, we get
-  \[ \log L(s,\mathbbm{1}) = \sum_{p=3t+1} \dfrac{1}{p^s} + \underbrace{\sum_{p=3t+1}\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}}}_{E(x)}\]
-  If we can show that the latter double sum is bounded, then we are done. This sum can be estimated in the exactly the same way
-  in the note as follows
-  \[\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}} < \sum_{k=2}^\infty \left(\dfrac{1}{p^s}\right)^s= \dfrac{1}{p^s(p-1)} < \dfrac{1}{p-1}-\dfrac{1}{p} \]
-  Summing over all primes $p \equiv 1 \pmod 3$, we get
-  \[E(x) = \sum_{p=3t+1}\sum_{k=2}^\infty  \dfrac{1}{kp^{ks}} < \sum_{p=3t+1} \left(\dfrac{1}{p-1}-\dfrac{1}{p}\right) < \sum_{n \in \mathbb{Z}_{\ge 1}}\left(\dfrac{1}{n}-\dfrac{1}{n+1}\right)=1\]
-  In particular, we have
-  \[ \log(L(s,\mathbbm{1})) = \sum_{p=3t+1} \dfrac{1}{p^s} + E(x) \longrightarrow \infty \quad \text{ as } \quad x \to 1^+\]
-  As $E(x) \in (0,1)$ letting $s \to 1^+$ yields
-  \[\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p} =\infty,\]
-  which means the series $\displaystyle\sum_{p \equiv 1 \pmod 3} \dfrac{1}{p}$ diverges, as desired.
+  Continueing from the previous exercise, with a note that a character is called real character if its image lies entirely in
+  $\mathbb{R}$, namely  we have a group homomorphism $\chi\colon G_9 \to \mathbb{R}$. Since we know that all character $\chi \in \hat{G}$ satisfy
+  \[|\chi(a)| =1, \text{ for all } a \in G_9,\]
+  we can deduce that a real character $\chi$ must satisfy $\chi(G_9) \subset \left\lbrace \pm 1 \right\rbrace$. Since
+  we want to find a non-principal character, the only choices is that $\chi(G_9) = \left\lbrace \pm 1\right\rbrace$. As shown
+  above, $\chi$ is defined solely by its value at $2$, so we must choose $\chi(2) =-1$. This implies that there is only
+  one non-principal, real Dirichlet character over $G_9$.
 \end{proof}
 \end{document}
