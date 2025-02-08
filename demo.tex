@@ -82,6 +82,7 @@
 \pagestyle{pages}
 
 \DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\Log}{Log}
 
 % -------------------
 % Content
@@ -92,52 +93,47 @@
 
 % Question 1
 \begin{exercise}
-  Let $\chi_0$ be the principal character mod $3$, that is
-  \[\chi_0 (n) = \begin{cases}
-      1 , \quad \gcd(n,3)=1 \\
-      0, \quad \text{otherwise}
-    \end{cases}\]
-  Define
-  \[\chi(n) = \begin{cases}
-      1, \quad  & n \equiv 1 \pmod 3 \\
-      -1, \quad & n \equiv 2 \pmod 3 \\
-      0, \quad  & \text{otherwise}
-    \end{cases}\]
-  Prove that $\chi_0$ and $\chi$ are completely multiplicative functions. Verify the identity
-  \[ \mathbbm{1} = \dfrac{1}{2}(\chi_0 +\chi)\]
+  Let $q \ge 2$ be an integer and let $\chi$ be a Dirichlet character mod $q$. Consider the $L$
+  \[L(z;\chi) := \sum_{i=1}^\infty \dfrac{\chi(n)}{n^z}\]
+  which converges absolutely for $\Re(z)=:x >1$ since
+  \[ \sum_{n\ge 1 }|\chi(n)n^{-z}| \ge \sum_{n\ge 1} n^{-x} <\infty,\]
+  by the $p-$test from FPM. Show that $L(z;\chi)$ defines a holomorphic function on $X = \left\lbrace z \in \mathbb{C}: \Re(z)>1 \right\rbrace$
+  and $L(z;\chi) \ne 0$ for all $z \in X$. Furthermore, show that
+  \[\dfrac{L'(z;\chi)}{L(z;\chi)} = - \sum_p \dfrac{\chi(p)\log(p)}{p^z-\chi(p)};\]
+  for $z \in X$.
 \end{exercise}
 \begin{proof}
   \hfill
+  Using Weierstrass M-test as in the statement in the problem, we have proved that the sequence
+  \[ L_N(z;\chi) = \sum_{n=1}^N \dfrac{\chi(n)}{n^z}\]
+  converges uniformly to the function $L(z;\chi)$. In particular, $L(z;\chi)$ is continuous
+  over the domain $X$. Clearly the sequence of functions $L_N$ are holomorphic on $X$. Thus we have
+  \[\int_{\gamma} L_N(z; \chi)dz = 0,\]
+  for piecewise smooth closed curve inside $X$, by Cauchy's theorem. Furthermore, we have
+  \[\int_{\partial \Delta} L(z;\chi) = \lim_{N \to \infty} \int_{\partial \Delta} L_N(z,\chi) =0\]
+  By Morera's theorem, we can conclude that $L(z,\chi)$ is holomorphic over the domain $X$.
 
-  Let $m,n \in \mathbb{Z}$ be arbitrary integers. We consider the following cases:
-  \begin{enumerate}
-    \item At least one of $m,n$ is divisible by $3$. WLOG, we can assume $3 \mid m$. Then it is clear that $3 \mid mn$.
-          By definition, we must have $\chi_0(m) = \chi(m) =0$ and $\chi_0(mn) =\chi(mn)=0$. Thus we have
-          \[\chi(m)\chi(n) = 0\cdot \chi(n) = 0 = \chi(mn) \quad \text{ and }\chi_0(m)\chi_0(n) = 0\cdot \chi(n) = 0 = \chi(mn).\]
-    \item Both $m,n$ are coprime to $3$. There will be then two subcases
-          \begin{itemize}
-            \item $m \equiv n \pmod 3$. Then clearly we have $\chi_0(m) = \chi_0(n)=1$ and $\chi(m)=\chi(n)$. Moreover
-                  $mn \equiv 1 \pmod 3$, thus $\chi(mn)=\chi_0(mn)=1$. In particular, we have
-                  \[\chi(m)\chi(n) = 1\cdot 1 = 1 = \chi(mn) \quad \text{ and }\chi_0(m)\chi_0(n) = 1\cdot 1 = 1 = \chi(mn).\]
-            \item $m \not\equiv n \pmod 3$. We can further assume that $ m \equiv 1 \pmod 3$ and $n \equiv 2 \pmod 3$. clearly
-                  \[\chi_0(m)\chi_0(n) = 1\cdot 1 = 1 = \chi_0(mn), \]
-                  as $\gcd(mn,3)=1$.
+  Clearly the domain $X$ is simply connected. Using proposition 2.3 in the note, we can rewrite the $L-$ function as
+  \[L(z;\chi ) = \sum_{i=1}^\infty \dfrac{\chi(n)}{n^z} = \prod_p \dfrac{1}{1-\chi(p)p^{-z}}\]
+  Note that over $X= \left\lbrace z \in \mathbb{C}: \Re(z)>1 \right\rbrace$, we have
+  \[\dfrac{1}{1-\chi(p)p^{-z}} = 1+ \chi(p)p^{-z}+ (\chi(p)p^{-z})^2+\ldots = 1+ \sum_{k\ge 1} \chi(p^k)p^{-kz}\]
+  where
+  \[\sum_{k\ge 1} |\chi(p^k)p^{-kz}| \le \sum_{n \ge 1} n^{-\Re z}<\infty\]
+  Let denote $u_p(z)= \sum_{k\ge 1} \chi(p^k)p^{-kz}$, then
+  \[L(z;\chi) = \prod_p \left(1+u_p(z)\right)\]
+  Then $L(z;\chi)=0$ if and only if $u_p(z) =-1$ for some $p$. But this is impossible as
+  \[|u_p(z)| \le \sum_{k\ge 1} |\chi(p^k)p^{-kz}| = \sum_{k\ge 1} p^{-k\Re z} = \dfrac{p^{-\Re (z)}}{1-p^{-\Re z}} =\dfrac{1}{p^{\Re z}-1} <1\]
+  Thus $L(z;\chi)$ never vanishes on the domain $X$.
 
-                  On the other hand, $mn \equiv 1 \cdot (-1)\equiv 2 \pmod 3$, thus
-                  \[\chi(m)\chi(n) = 1\cdot (-1) = -1 = \chi(mn) \]
-          \end{itemize}
-          In conclustion, $\chi$ and $\chi_0$ are completely multiplicative. To verify the given identity, we consider
-          the following cases
-          \begin{enumerate}
-            \item $m \not\equiv 1 \pmod 3$: Then $\mathbbm{1}(m) = 0$. On the other hand, we have
-                  \[\dfrac{1}{2}\left(\chi(m)+\chi_0(m)\right)= \begin{cases}
-                      0+0, \quad m \equiv 0 \pmod 3 \\
-                      -1+1, \quad m \equiv 2 \pmod 3
-                    \end{cases} = 0\]
-            \item $m \equiv 1 \pmod 3$: Then $\mathbbm{1}(m) =1 =1/2(\chi(m)+\chi_0(m))$
-          \end{enumerate}
-  \end{enumerate}
-  Thus we are done.
+  Lastly, we will prove the identity for $\frac{L'(z;\chi)}{L(z;\chi)}$. From the discussion of the note,
+  there exists a branch of the logarithm $\log L(z,\chi)$ on $X$ and satisfies
+  \[\log L(z;\chi) = \sum_p \Log(1-\chi(p)p^{-z})\]
+  We can then define the partial sum $S_m = \sum_{p\le m} \Log(1-\chi(p)p^{-z})$. Clearly this partial sum converges uniformly to
+  $\log L(z;\chi)$ as $m \to \infty$ and are holomorphic. Thus
+  \[S'_m(z) = -\sum_{p \le m} \dfrac{\chi(p)\log(p)}{p^z-\chi(p)} \to \left[\log(L(z;\chi))\right] = \dfrac{L'(z;\chi)}{L(z;\chi)}\]
+  In particular, for $z \in X$, we have
+  \[\dfrac{L'(z;\chi)}{L(z;\chi)}= -\sum_{p } \dfrac{\chi(p)\log(p)}{p^z-\chi(p)},\]
+  where the sum extends over all prime number $p$, as desired.
 \end{proof}
 
 
@@ -219,7 +215,7 @@
       $\chi_6(n)$ & $1$ & $-\omega^{2}$ & $-\omega$    & $\omega$      & $\omega^{2}$ & $-1$ \\
       \hline
     \end{tabular}\]
-  in which $\omega = e^{i\pi/3}$.
+  where  $\omega = e^{i\pi/3}$.
 \end{proof}
 
 %Question 4
