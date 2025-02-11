@@ -130,7 +130,7 @@
   \[\log L(z;\chi) = \sum_p \Log(1-\chi(p)p^{-z})\]
   We can then define the partial sum $S_m = \sum_{p\le m} \Log(1-\chi(p)p^{-z})$. Clearly this partial sum converges uniformly to
   $\log L(z;\chi)$ as $m \to \infty$ and are holomorphic. Thus
-  \[S'_m(z) = -\sum_{p \le m} \dfrac{\chi(p)\log(p)}{p^z-\chi(p)} \to \left[\log(L(z;\chi))\right] = \dfrac{L'(z;\chi)}{L(z;\chi)}\]
+  \[S'_m(z) = -\sum_{p \le m} \dfrac{\chi(p)\log(p)}{p^z-\chi(p)} \to \left[\log(L(z;\chi))\right]' = \dfrac{L'(z;\chi)}{L(z;\chi)}\]
   In particular, for $z \in X$, we have
   \[\dfrac{L'(z;\chi)}{L(z;\chi)}= -\sum_{p } \dfrac{\chi(p)\log(p)}{p^z-\chi(p)},\]
   where the sum extends over all prime number $p$, as desired.
@@ -149,7 +149,25 @@
     \item $(c\chi)(a):= c\cdot\chi(a)$ for any $\chi \in S$ and $c \in \mathbb{C}$.
   \end{itemize}
   But we can check all the axioms for a set being a vector space pointwisely, with the zero
-  beging the zero map. So $S$ have a a structure of vector space. Let's compute the dimension of $S$ as
+  beging the zero map. We can verify as follows
+  \begin{enumerate}
+    \item Additive closure: this is clear from the way we defined the sum of two functions in $S$.
+    \item Commutative: For any $a \in G$, we have $\chi_1(a)+\chi_2(a) = \chi_1(a)+\chi_2(a)$. Since this holds for any $a \in G$, we have $\chi_1 + \chi_2 = \chi_2+\chi_1$.
+    \item Associative: Similarly, for all $a \in G$
+          \[(\chi_1(a) + \chi_2(a))+\chi_3(a) = \chi_1(a)+ (\chi_2(a)+\chi_3(a))\]
+          In general
+          \[(\chi_1 + \chi_2)+\chi_3 = \chi_1+ (\chi_2+\chi_3)\]
+    \item The zero map is just the function $0 \colon G \to \mathbb{C}$ that sends everything to $0$.
+    \item For a map $f \in S$, we can define its additive inverse to be $(-f)\colon G \to \mathbb{C}$ such that $(-f)(a) := -f(a)$. Clearly
+          \[(f+ (-f))(a) = f(a) + (-f(a)) = 0, \forall a \in G\]
+          Thus $f+(-f)$ is the zero map.
+    \item The other axioms on the scalar multiplication can be checked pointwisely in the  exact same way.
+
+  \end{enumerate}
+
+  So $S$ have a a structure of vector space.
+
+  Let's compute the dimension of $S$ as
   as $\mathbb{C}-$ vector space. Since $G$ is finite, we can assume that, as a set
   \[G = \left\lbrace a_1,\ldots,a_n \right\rbrace\]
   Then we can define the map $f_i$ to be the "dual" of $a_i$ in the following sense: $f_i(a_j) =\delta_{ij}$, i.e.
@@ -198,8 +216,8 @@
   any character, we then have
   \[\chi(2)^6=\chi(2^6) = \chi(1) = 1 \in \mathbb{C}\]
   thus implies $\chi(2)$ must be a $6-th$ root of unity. There are $6$ choices in total, namely
-  \[\chi(2) = e^{\frac{2i\pi k}{6}}, 0 \le k \le 6\]
-  Clearly these are 6 distinct characters, and they are all possible characters of $G_9$.
+  \[\chi(2) = e^{\frac{2i\pi k}{6}}, 1 \le k \le 6\]
+  Clearly these are 6 distinct characters - as they have different values at residue class $[2]$ -  and they are all possible characters of $G_9$.
 
   We can further compute a character table as follows:
   $\chi(n)\pmod{9}$ \\
@@ -234,5 +252,8 @@
   Note that $916 \equiv 16 = 2^4 \pmod 9$. Thus
   \[ \chi(916) = \chi (2^4) = (\chi(2)^4) = (-1)^4=1.\]
   And we are done.
+
+  \textbf{Remark:} Note that if we already have the full character table as computed in the previous exercise, it can be deduced immediately that
+  there is a unique non principal real character. In the given table, it is the character $\chi_4$.
 \end{proof}
 \end{document}
