@@ -17,6 +17,7 @@
 }
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{tikz, tabularx}
+\usepackage[table,x11names]{xcolor}
 \usepackage{graphics}
 \usepackage{hyperref}
 \newcolumntype{W}{>{\centering\arraybackslash}X}%Para agilizar las columnas.
@@ -30,7 +31,8 @@
 % -------------------
 % Commands
 % -------------------
-\newcommand{\homework}[2]{\noindent\textbf{Name: }{} \hfill \textbf{} \\  \textbf{Due date: #2} \hfill \textbf{}\\}
+\newcommand{\homework}[2]{\noindent\textbf{Name: Kyra Xian
+}{} \hfill \textbf{} \\  \textbf{Due date: #2} \hfill \textbf{}\\}
 
 \newcommand{\prob}{\noindent\textbf{Problem. }}
 \newcounter{problem}
@@ -107,14 +109,15 @@
   Using Weierstrass M-test as in the statement in the problem, we have proved that the sequence
   \[ L_N(z;\chi) = \sum_{n=1}^N \dfrac{\chi(n)}{n^z}\]
   converges uniformly to the function $L(z;\chi)$. In particular, $L(z;\chi)$ is continuous
-  over the domain $X$. Clearly the sequence of functions $L_N$ are holomorphic on $X$. Thus we have
+  over the domain $X$. Clearly the sequence of functions $L_N$ are holomorphic on $X$, as it is just a finite sum of exponential functions, which are entire. Thus we have
   \[\int_{\gamma} L_N(z; \chi)dz = 0,\]
-  for piecewise smooth closed curve inside $X$, by Cauchy's theorem. Furthermore, we have
+  for piecewise smooth closed curve $\gamma$ inside $X$, by Cauchy's theorem. Furthermore, we have
   \[\int_{\partial \Delta} L(z;\chi) = \lim_{N \to \infty} \int_{\partial \Delta} L_N(z,\chi) =0\]
-  By Morera's theorem, we can conclude that $L(z,\chi)$ is holomorphic over the domain $X$.
+  By Morera's theorem, we can conclude that $L(z,\chi)$ is holomorphic over the domain $X$. Here I used the notation  $\partial \Delta$ to indicate the boundary of a triangle.
 
-  Clearly the domain $X$ is simply connected. Using proposition 2.3 in the note, we can rewrite the $L-$ function as
+  The domain $X$ is simply connected as it is convex. Using proposition 2.3 in the note, we can rewrite the $L-$ function as
   \[L(z;\chi ) = \sum_{i=1}^\infty \dfrac{\chi(n)}{n^z} = \prod_p \dfrac{1}{1-\chi(p)p^{-z}}\]
+  Here proposition 2.3 is just a rephrase of lemma 2.2, so I don't write down the proof again.
   Note that over $X= \left\lbrace z \in \mathbb{C}: \Re(z)>1 \right\rbrace$, we have
   \[\dfrac{1}{1-\chi(p)p^{-z}} = 1+ \chi(p)p^{-z}+ (\chi(p)p^{-z})^2+\ldots = 1+ \sum_{k\ge 1} \chi(p^k)p^{-kz}\]
   where
@@ -123,20 +126,34 @@
   \[L(z;\chi) = \prod_p \left(1+u_p(z)\right)\]
   Then $L(z;\chi)=0$ if and only if $u_p(z) =-1$ for some $p$. But this is impossible as
   \[|u_p(z)| \le \sum_{k\ge 1} |\chi(p^k)p^{-kz}| = \sum_{k\ge 1} p^{-k\Re z} = \dfrac{p^{-\Re (z)}}{1-p^{-\Re z}} =\dfrac{1}{p^{\Re z}-1} <1\]
-  Thus $L(z;\chi)$ never vanishes on the domain $X$.
+  as the smallest prime $p$ is $2$. Thus $L(z;\chi)$ never vanishes on the domain $X$.
 
-  Lastly, we will prove the identity for $\frac{L'(z;\chi)}{L(z;\chi)}$. From the discussion of the note,
+  Lastly, we will prove the identity for $\frac{L'(z;\chi)}{L(z;\chi)}$. Similarly the discussion of the note, we will prove that
   there exists a branch of the logarithm $\log L(z,\chi)$ on $X$ and satisfies
   \[\log L(z;\chi) = \sum_p \Log(1-\chi(p)p^{-z})\]
-  We can then define the partial sum $S_m = \sum_{p\le m} \Log(1-\chi(p)p^{-z})$. Clearly this partial sum converges uniformly to
-  $\log L(z;\chi)$ as $m \to \infty$ and are holomorphic. Thus
-  \[S'_m(z) = -\sum_{p \le m} \dfrac{\chi(p)\log(p)}{p^z-\chi(p)} \to \left[\log(L(z;\chi))\right]' = \dfrac{L'(z;\chi)}{L(z;\chi)}\]
+  We then define the partial sum $S_m = \sum_{p\le m} \Log(1-\chi(p)p^{-z})$. Clearly this partial sum is holomorphic and $S_m$ converges uniformly
+  to a holomorphic function $F(z)$  as $ m \to \infty$. Using the remark - please see below - for $w = \chi(p)p^{-z}$ with $p \ge 5$, we have that
+  \[\left|\Log(1+\chi(p)p^{-z})\right| \le 2|-\chi(p)p^{-z}| =2p^{\Re z} \le 1/2\]
+  and similarly to above, we shown $\sum_{p}2p^{\Re z} <2 \sum_{n\ge 1}n^{\Re z} <\infty$. By Weierstrass M-test, $S_m$ converges uniformly to a holomorphic function $F(z)$ on $X$ as desired.
+
+  This function $F(z)$ is then a branch of the $\log L(z;\chi)$.
+
+  Indeed, first we can check that $S_m$ defines a brach of the function $P_m= \prod_{p \le m} (1-\chi(p)p^{-z})$. As shown above,
+  we already had $P_m \to L(z;\chi)$ as $m \to \infty$. Thus the fact that $S_m \to F$ implies $e^F = L(z;\chi)$. In particular,
+  $F(z)$ defines a branch of the logarithm  $\log L(z;\chi)$, namely
+  \[\log L(z;\chi) = \sum_{p} \Log(1+u_p(z)) = \lim S_m(z)\]
+  Thus
+  \[S'_m(z) = -\sum_{p \le m} \dfrac{\chi(p)\log(p)}{p^z-\chi(p)} \to \frac{d}{dz}\left[\log(L(z;\chi))\right] = \dfrac{L'(z;\chi)}{L(z;\chi)}\]
   In particular, for $z \in X$, we have
   \[\dfrac{L'(z;\chi)}{L(z;\chi)}= -\sum_{p } \dfrac{\chi(p)\log(p)}{p^z-\chi(p)},\]
-  where the sum extends over all prime number $p$, as desired.
+  where the sum extends over all prime number $p$, as we wanted.
+
+  \textbf{Remark: } In order to prove that $S_m$ converges uniformly to a holomorphic function, we actually prove that following exercise:
+  Consider the analytic function $f(w) = \Log(1-w)$, show that $| \Log(1-w)| \le 2|w|$ given $|w|<1/2$. Using the Taylor's series, we have
+  \[ \left|\Log(1-w)\right| =\left| -\sum_{n=1}^\infty \dfrac{w^n}{n}\right| \le |w| \cdot \sum_{n=1}^\infty \dfrac{|w|^{n-1}}{n} \le |w| \left(\sum_{n=1}^\infty (1/2)^{n-1} \right) =2|w|\]
 \end{proof}
 
-
+\newpage
 % Question 2
 \begin{exercise}\label{ex2}
   Let $G$ be a finite abelian group. Show that $\#\hat{G} \le \#G$.
@@ -202,7 +219,7 @@
   Make sure you prove that the characters of $G_9$ you find are all distinct and there are no others.
 \end{exercise}
 \begin{proof}
-  Using the Remark in the previous exercise, we expect $6$ characters in total. It can be checked easily that $2$ generates $G_9$, so it is a
+  Using the Remark in the previous exercise, we expect $6$ characters in total. We will check that $2$ generates $G_9$, so it is a
   cyclic group of order $6$. Indeed, we have
   \begin{align*}
     2^1 \equiv 2 \pmod 9 \\
@@ -219,7 +236,7 @@
   \[\chi(2) = e^{\frac{2i\pi k}{6}}, 1 \le k \le 6\]
   Clearly these are 6 distinct characters - as they have different values at residue class $[2]$ -  and they are all possible characters of $G_9$.
 
-  We can further compute a character table as follows:
+  We can compute a character table as follows:
   $\chi(n)\pmod{9}$ \\
   \[\begin{tabular}{c c c c c c c }
       \hline
@@ -227,7 +244,7 @@
       \hline
       $\chi_1(n)$ & $1$ & $1$           & $1$          & $1$           & $1$          & $1$  \\
       $\chi_2(n)$ & $1$ & $\omega$      & $\omega^{2}$ & $-\omega^{2}$ & $-\omega$    & $-1$ \\
-      $\chi_3(n)$ & $1$ & $\omega^{2}$  & $-\omega$    & $-\omega$     & $\omega^{2}$ & $1$  \\
+      $\chi_3(n)$ & $1$ & $\omega^{2}$  & $-\omega$    & $-\omega$     & $\omega^{2}$ & $1$  \\\rowcolor{lightgray}
       $\chi_4(n)$ & $1$ & $-1$          & $1$          & $-1$          & $1$          & $-1$ \\
       $\chi_5(n)$ & $1$ & $-\omega$     & $\omega^{2}$ & $\omega^{2}$  & $-\omega$    & $1$  \\
       $\chi_6(n)$ & $1$ & $-\omega^{2}$ & $-\omega$    & $\omega$      & $\omega^{2}$ & $-1$ \\
@@ -254,6 +271,6 @@
   And we are done.
 
   \textbf{Remark:} Note that if we already have the full character table as computed in the previous exercise, it can be deduced immediately that
-  there is a unique non principal real character. In the given table, it is the character $\chi_4$.
+  there is a unique non principal real Dirichlet character mod 9.  In the given table, it is the character $\chi_4$ - corresponds to the highlighted row.
 \end{proof}
 \end{document}
