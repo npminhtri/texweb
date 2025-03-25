@@ -26,7 +26,7 @@
 \newtheorem{lemma}{Lemma}[section]
 
 \pagestyle{fancy}
-\fancyhf{}
+\cfoot{\thepage} % this is for the page numbering
 \setlength\parindent{0pt} % noindent for the whole document.
 \renewcommand{\baselinestretch}{1.1} % increase the distance between line.
 
@@ -57,7 +57,7 @@ We define the action of $G= \SL2$ on $\uH$ as follows
   \begin{bmatrix}a & b \\ c & d\end{bmatrix} \circ (z) = \frac{az + b}{cz + d}
 \]
 \begin{prop}
-  The group \(SL_{2}(\mathbb{R})\) stabilizes \(\mathfrak{H}\) and acts transitively on it. In particular,
+  The group $\SL2$ stabilizes \(\mathfrak{H}\) and acts transitively on it. In particular,
   \[
     \begin{bmatrix}1 & x \\ 0 & 1\end{bmatrix}\begin{bmatrix}\sqrt{y} & 0 \\ 0 & \frac{1}{\sqrt{y}}\end{bmatrix}(i) = x + iy \quad (\text{for } x \in \mathbb{R}, \, y > 0)
   \]
@@ -117,7 +117,7 @@ every points on the upper half plane to a domain, under an equivalence given by 
 This is similar to the fundamental domain given by the translation action of $\mathbb{Z}$ to $\mathbb{R}$ is the half-open
 unit interval $[0,1)$. In general, this give a simpler description to the homogenous space of lattice.
 
-Not that when we try to compute the fundamental domain of $\mathbb{Z}\backslash \mathbb{R}$, we have $\mathbb{Z}$ plays a role of
+Note that when we try to compute the fundamental domain of $\mathbb{Z}\backslash \mathbb{R}$, we have $\mathbb{Z}$ plays a role of
 \textit{discrete} subset of $\mathbb{R}$. We give a precise definition of discreteness as follows
 \begin{definition}
   Let a group $G$ act continuously on a topological space $X$. A subset $\Gamma \subset G$ is called \textbf{discrete} if for any two compact subse
@@ -182,5 +182,40 @@ To prove (3), note that Lemma \ref{lm2} implies that $(g \circ R_{r,\delta}) \ca
 \]
 
 which implies $(\alpha \circ R_{r',\delta'}) \cap R_{r,\delta} = \phi$ for $|m|$ sufficiently large.
+Now we are ready to describe the fundamental domain for $\sl2z \backslash \uH$.
+\begin{prop}
+  A fundamental domain for $\sl2z \backslash \uH$ can be given as the region
+  \[\mathfrak{D} = \left\lbrace z=x+iy \in \uH: |z| \ge 1,-1/2 \le x \le 1/2 \right\rbrace \],
+  modulo the congruent boundary points symmetric with respect to the imaginary axis.
+\end{prop}
+\begin{proof}
+  First we eliminated the repeated points on the boundary. Note that the line $x = -1/2$ is the same as
+  the line $x=1/2$ under the transformation $z \mapsto z+1$. Similarly, given a point on the circle
+  $\left\lbrace |z|=1\right\rbrace$, the transformation $z \mapsto -|z|^{-1}$ satisfies
+  \[\dfrac{-1}{x+iy} = \dfrac{-x+iy}{x^2+y^2}=-x+iy,\]
+  which flips the sign of $x$. Thus it identifies the half circle on the right of the imaginary axis with that on the left.
 
+  Now we need to show two things:
+  \begin{enumerate}
+    \item For any $z \in \uH$ we can find an element $g \in \sl2z$ such that $g\circ z \in \mathfrak{D}$.
+    \item If $z \equiv z' \in \mathfrak{D}$ modulor $\sl2z$, then either $\Re(z)=\pm\frac{1}{2}$ and $z'=z\mp 1$, or
+          $|z|=1$ and $z' = \frac{-1}{z} $.
+  \end{enumerate}
+  First we prove for (1): Fix $z \in \uH$. It follows from Lemma \ref{lm2} that for every $\epsilon > 0$, there are at most finitely many $g \in \mathrm{SL}(2, \mathbb{Z})$ such that $g \circ z$ lies in the strip
+  \[
+    D_{\epsilon} := \left\{ w \ \middle|\ -\frac{1}{2} \leq \mathrm{Re}(w) < \frac{1}{2},\ \epsilon \leq \mathrm{Im}(w) \right\}.
+  \]
+  Let $B_{\epsilon}$ denote the finite set of such $g \in \mathrm{SL}(2, \mathbb{Z})$.
+  Clearly, for sufficiently small $\epsilon$, the set $B_{\epsilon}$ contains at least one element. We will show that there is at least one $g \in B_{\epsilon}$ such that $g \circ z \in D$. Among these finitely many $g \in B_{\epsilon}$, choose one such that $\Im(g \circ z)$ is maximal in $D_{\epsilon}$.
+  If $|g \circ z| < 1$, then for $S = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$, $T=\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$
+  we have, for any $m$,
+  \[\Im\left( T^mS g \circ z \right)= \Im\left(\dfrac{-1}{g\circ z}\right)=\dfrac{\Im(g\circ z)}{|g\circ z|^2} > \Im(g\circ z)\]
+  But we can choose $m$ such that $T^m S g\circ z \in D_\epsilon$, which contradicts the maximality of $\Im(g\circ z)$.
+
+  Next we give a proof for (2):Let $z \in D$, $g = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in \mathrm{SL}(2, \mathbb{Z})$, and assume that $g \circ z \in D$. Without loss of generality, we may assume that
+  \[
+    \Im(g \circ z) = \frac{y}{|cz + d|^2} \geq \Im(z),
+  \]
+  (otherwise just interchange $z$ and $g \circ z$ and use $g^{-1}$). This implies that $|cz + d| \leq 1$ which implies that $1 \geq |cy| \geq \frac{1}{\sqrt{3}}|c|$. This is clearly impossible if $|c| \geq 2$. So we only have to consider the cases $c = 0, \pm 1$. If $c = 0$ then $d = \pm 1$ and $g$ is a translation by $b$. Since $-\frac{1}{2} \leq \Re(z), \Re(g \circ z) \leq \frac{1}{2}$, this implies that either $b = 0$ and $z = g \circ z$ or else $b = \pm 1$ and $\Re(z) = \pm \frac{1}{2}$ while $\Re(g \circ z) = \mp \frac{1}{2}$. If $c = 1$, then $|z + d| \leq 1$ implies that $d = 0$ unless $z = e^{2\pi i / 3}$ and $d = 0, -1$. The case $d = 0$ implies that $|z| \leq 1$ which implies $|z| = 1$. Also, in this case, $c = 1$, $d = 0$, we must have $b = -1$ because $ad - bc = 1$. Then $g \circ z = a - \frac{1}{z + 1}$. It follows that $g \circ z = a - e^{2\pi i / 3}$ and $d = 1$, then we must have $a - b = 1$. It follows that $g \circ z = a - \frac{1}{z + 1} = a + e^{2\pi i / 3}$, which implies that $a = 0$ or 1. A similar argument holds when $z = e^{\pi i / 3}$ and $d = -1$. Finally, the case $c = -1$ can be reduced to the previous case $c = 1$ by reversing the signs of $a, b, c, d$.
+\end{proof}
 \end{document} % This is the end of the document
