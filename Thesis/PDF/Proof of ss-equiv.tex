@@ -42,6 +42,7 @@
 
 \DeclareMathOperator{\SLn}{\text{SL}_n(\mathbb{R})}
 \DeclareMathOperator{\slnz}{SL_n(\mathbb{Z})}
+\DeclareMathOperator{\glnz}{GL_n(\mathbb{Z})}
 \DeclareMathOperator{\vol}{vol}
 
 \DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
@@ -70,7 +71,7 @@ The precise definition
 of a lattice is as follows:
 \begin{definition}[\label = Euclidean $\mathbb{Z}$-lattices]
     Let $L$ be a finitely generated $\mathbb{Z}$-module. In particular, it is a free $\mathbb{Z}$-module
-    of finite rank. Suppose that $P$ is endowed with a real-valued symmetric positive definite bilinear form, called $Q$.
+    of finite rank. Suppose that $P$ is endowed with a real-valued symmetric positive definite\footnote{The non-degenerate implicity state that rank L is the same as $dim L_\mathbb{R}$} bilinear form, called $Q$.
     Then the space $L_\mathbb{R}= L \otimes_\mathbb{Z} \mathbb{R}$ equipped with the bilinear form $Q$ forms a real
     inner product space. We will call  the pair $(L,Q)$ a \textbf{Euclidean $\mathbb{Z}$-lattice}.
 \end{definition}
@@ -101,6 +102,20 @@ In particular, we view lattice as a free $\mathbb{Z}-$ module of rank $n$ that i
 to $\mathbb{R}^n$ via base changing.
 In more detail
 \begin{definition}
-
+    A \textit{lattice} in $\mathbb{R}^n$ is a subset $L \subset \mathbb{R}^n$ such that there exists
+    a basis $b_1,\ldots,b_n$ of $\mathbb{R}^n$ such that
+    \[L = \mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n\]
+    If we put the vector $b_1,b_2,\ldots,b_n$ in collumn, with respect to the standard basis, namely
+    \[g = [b_1 | b_2 | \ldots | b_n] ,\]
+    then $L = g\mathbb{Z}^n$.
 \end{definition}
+In the second sense, we can just identify $L$ with the standard lattice $\mathbb{Z}^n$ and the
+symmetric positive definite form is $g^tg$.
+
+Now, the basic problem we want to deal with is to classify "isomorphic" classes of lattice. Here
+we say two lattices $L_1$ and $L_2$ are isomorphic if and only if there is a map $\gamma \in \glnz$ such that
+\[\gamma \cdot g_1 = g_2,\]
+Note that here we use the second point of view, i.e. we identify $L_i$ with the $\mathbb{Z}-$ module
+$\mathbb{Z}^n$ associated to the form $g_i^tg_i$. If we define $X_n$ the space of all
+symmetric positive definite bilinear form, then we are looking at the space $\glnz \backslash X_n$.
 \end{document}
