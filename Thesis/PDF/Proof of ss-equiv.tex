@@ -42,6 +42,7 @@
 
 \DeclareMathOperator{\SLn}{\text{SL}_n(\mathbb{R})}
 \DeclareMathOperator{\slnz}{SL_n(\mathbb{Z})}
+\DeclareMathOperator{\vol}{vol}
 
 \DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
 
@@ -69,10 +70,12 @@ The precise definition
 of a lattice is as follows:
 \begin{definition}[\label = Euclidean $\mathbb{Z}$-lattices]
     Let $L$ be a finitely generated $\mathbb{Z}$-module. In particular, it is a free $\mathbb{Z}$-module
-    of finite rank. Suppose that $P$ is endowed with a real-valued symmetric positive bilinear form, called $Q$.
+    of finite rank. Suppose that $P$ is endowed with a real-valued symmetric positive definite bilinear form, called $Q$.
     Then the space $L_\mathbb{R}= L \otimes_\mathbb{Z} \mathbb{R}$ equipped with the bilinear form $Q$ forms a real
     inner product space. We will call  the pair $(L,Q)$ a \textbf{Euclidean $\mathbb{Z}$-lattice}.
 \end{definition}
+\todo{add proof showing $L$ is a lattice in the second definition}
+
 If there is no further confusion, we can just denote a Euclidean lattice by $L$, without specifying the bilinear form
 $Q$. The lattice $l$ determines a full-rank lattice inside $L_\mathbb{R}$, namely, the rank
 of the lattice $L$ is equal to the dimension of $L_\mathbb{R}$. We first recall the definition of discrete subgroup
@@ -91,6 +94,13 @@ We now can define the notion of covolume of a lattice:
     Then the volume of this lattice is defined to be the volume of the fundamental
     parallepiped. In particular, let $\left\lbrace e_i\right\rbrace$ be any orthonormal
     basis of the vector space $V = L_\mathbb{R}$. Then
-    \[vol(L) := \left|\det Q(l_i,e_j)\right|\]
+    \[\vol(L) := \left|\det Q(l_i,e_j)\right|\]
+\end{definition}
+However, for the sake of computation, we also usually adopt another definition of the lattice.
+In particular, we view lattice as a free $\mathbb{Z}-$ module of rank $n$ that is isomorphic
+to $\mathbb{R}^n$ via base changing.
+In more detail
+\begin{definition}
+
 \end{definition}
 \end{document}
