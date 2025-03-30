@@ -105,7 +105,7 @@ In more detail
     A \textit{lattice} in $\mathbb{R}^n$ is a subset $L \subset \mathbb{R}^n$ such that there exists
     a basis $b_1,\ldots,b_n$ of $\mathbb{R}^n$ such that
     \[L = \mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n\]
-    If we put the vector $b_1,b_2,\ldots,b_n$ in collumn, with respect to the standard basis, namely
+    If we put the vector $b_1,b_2,\ldots,b_n$ in columns, with respect to the standard basis, namely
     \[g = [b_1 | b_2 | \ldots | b_n] ,\]
     then $L = g\mathbb{Z}^n$.
 \end{definition}
@@ -115,7 +115,16 @@ symmetric positive definite form is $g^tg$.
 Now, the basic problem we want to deal with is to classify "isomorphic" classes of lattice. Here
 we say two lattices $L_1$ and $L_2$ are isomorphic if and only if there is a map $\gamma \in \glnz$ such that
 \[\gamma \cdot g_1 = g_2,\]
-Note that here we use the second point of view, i.e. we identify $L_i$ with the $\mathbb{Z}-$ module
+From the first point of view, we identify $L_i$ with the $\mathbb{Z}-$ module
 $\mathbb{Z}^n$ associated to the form $g_i^tg_i$. If we define $X_n$ the space of all
-symmetric positive definite bilinear form, then we are looking at the space $\glnz \backslash X_n$.
+symmetric positive definite bilinear forms, then we are looking at the space $\glnz \backslash X_n$. We can also
+regard $L_i \otimes \mathbb{R} \cong \mathbb{R}^n$. From this point of view,
+the problem of classification isomorphic classes of lattices is the same as looking for discrete
+subgroups of $\mathbb{R}^n$ of rank $n$, modulo rotation. We will interchange these equivalent points of view
+depend on the situation.
+
+As Bill Casselman note in his expository, even if we normalize the lattice to get a unimodular
+lattice, we will still have to work with arbitrary lattices in the smaller rank. This means we are embedding
+several copies of $\text{GL}_m(\mathbb{Z})$ along the diagonal of $\slnz$. Therefore it is not necessary to
+normalize the volume of the lattice.
 \end{document}
