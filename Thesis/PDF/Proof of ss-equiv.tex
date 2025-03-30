@@ -161,4 +161,105 @@ Suppose $L$ has rank $n$, then $L$ has a basis $b_1,b_2,\ldots,b_n$ such that
 where $e_1,e_2,\ldots,e_n$ is the standard basis of $\mathbb{R}^n$. let $\bigwedge^* \mathbb{R}^n$ denote the corresponding exterior algebra. If $\bigwedge^p \mathbb{R}^n$ denotes the $p$th exterior power of $\mathbb{R}^n$, the products $f_v := e_{v_1} \wedge \cdots \wedge e_{v_p}$, where $v$ ranges over the ordered $p$-tuples $(v_1, \ldots, v_p)$ subject to the condition $1 \leq v_1 < \cdots < v_p \leq n$, then form a basis $\{f_v\}$ of $\bigwedge^p \mathbb{R}^n$. In a natural way, $\bigwedge^p \mathbb{R}^n$ permits the Euclidean norm, $\lVert \cdot \rVert$ defined by $\lVert f_v \rVert = 1$ and $\lVert \sum_v \lambda_v f_v \rVert = \left( \sum_v \lambda_v^2 \right)^{1/2}$.
 
 The group $\mathrm{GL}_n(\mathbb{R})$ operates on the exterior power $\bigwedge^p \mathbb{R}^n$, $p = 1, \ldots, n$, via \[g(e_{v_1} \wedge \cdots \wedge e_{v_p}) = g(e_{v_1}) \wedge \cdots \wedge g(e_{v_p})\] and linear extension.
+So if $M$ is a sublattice of $L$ with basis $l_1,\ldots,l_m$ then the volume
+of $M$ is the length of the vector $l_1 \wedge \ldots \wedge l_m$. In other words, it is the square rooot
+of the sume of the squares of the determinants of the $m \times m$ minor matrices in the $n \times m$ matrix whose columns are the coordinate of the $l_i$ with respect to any orthonormal basis of $L_\mathbb{R}$.
+\todo{add a numerical example.}
+Now we are ready to define the \textbf{canonical plot.}
+\begin{definition}[\label = slope]
+    The slope of a non-zero lattice $L$ is the number
+    \[\mu(L) = \dfrac{\log\vol(L)}{\dim L}\]
+\end{definition}
+\begin{definition}
+    Suppose we have a lattice $L$. For any sublattice $M \subset L$, we assign $M$ to a point
+    \[l(M) = \left(\dim M, \log\vol(M)\right)\]
+    in the plane $\mathbb{R}^2$. The collection of all points $l(M)$ where $M$ ranges over
+    all sublattices of $L$ is called \textbf{ the canonical plot} of the lattice $L$. By convention, we assign
+    the lattice of zero rank to the origin of the plane.
+\end{definition}
+For example, if $M$ is of rank 1, then the volume is just the length of the generator.
+The following lemma asserts that, for each vertical axis $x =i$, there is a lowest point.
+\begin{lemma}
+    Given a lattice $L$ and a number $c$, there exists only a finite number of sublattices $M \subset L$ such that
+    $\vol(M)<c$.
+\end{lemma}
+\todo{add a proof}
+\begin{definition}
+    The boundary polygon of the convex hull of the canonical plot is called \textbf{profile} of the lattice $L$.
+\end{definition}
+In theory, we can compute the profile by searching for the shortest vector in each of its exterior product, but this computation
+is infeasible when the dimension of the lattice grows. Since there are lattices with
+arbitrarily large volume of any rank smaller than that of $L$, we add to the side the point $(0,\infty)$ and $(n,\infty)$. The sides
+of the profile are therefore two vertical lines. The bottom is just the convex polygonal connecting the origin with the point
+$l(L) = (n,\log\vol(L))$, where $n$ is the rank of $L$.
+\begin{definition}
+    If the bottom of the profile contains only two points $(0,0)$ and $(n,\log\vol L)$, then the
+    lattice $L$ is said to be \textbf{semi-stable}. Otherwise $L$ is said to be \textbf{unstable}.
+\end{definition}
+Here are the picture of two lattices. The one on the left is semi-stable while the one on the right is unstable.
+\newpage
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.2\textwidth}
+        \begin{tikzpicture}[>=stealth, x=1.1cm, y=1.1cm]
+            % Dashed lines (axes)
+            \draw[help lines, dashed, ->] (-1,0) -- (3,0);
+            \draw[help lines, dashed, ->] (0,-3) -- (0,3);
+            \draw[help lines, dashed, ->] (1,-3) -- (1,3);
+            \draw[help lines, dashed, ->] (2,-3) -- (2,3);
+            \draw[thick] (0,0) -- (0,3);
+            \draw[thick] (0,0) -- (2, -0.5);
+            \draw[thick]  (2,-0.5) -- (2,3);
+            \draw[thick]  (2,-0.5) -- (2,3);
+
+            % Points (all with fill=blue and radius=0.09cm)
+            \filldraw[fill=blue] (2, -0.5) circle[radius=0.09cm];
+            \filldraw[fill=blue] (0, 0) circle[radius=0.09cm]; % Removed duplicate
+            \filldraw[fill=blue] (1, 0.12122108098130914) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 2.28412917072110916) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 2.3729881287610001) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.4) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.5655158711807637) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 2.6445016116606668) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.7481703960405396) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.3282219276898275) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.0912647062501184) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.1603772291700336) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.2) circle[radius=0.09cm];
+        \end{tikzpicture}~
+    \end{minipage} \hspace{3cm} \begin{minipage}{.2\textwidth}
+        \begin{tikzpicture}[>=stealth, x=1.1cm, y=1.1cm]
+            % Dashed lines (axes)
+            \draw[help lines, dashed, ->] (-1,0) -- (3,0);
+            \draw[thick] (0,0) -- (0,3);
+            \draw[thick] (0,0) -- (1, -0.7);
+            \draw[thick] (1,-0.7) -- (2,-0.5);
+            \draw[thick]  (2,-0.5) -- (2,3);
+            \draw[help lines, dashed, ->] (0,-3) -- (0,3);
+            \draw[help lines, dashed, ->] (1,-3) -- (1,3);
+            \draw[help lines, dashed, ->] (2,-3) -- (2,3);
+
+            % Points (all with fill=blue and radius=0.09cm)
+            \filldraw[fill=blue] (2, -0.5) circle[radius=0.09cm];
+            \filldraw[fill=blue] (0, 0) circle[radius=0.09cm]; % Removed duplicate
+            \filldraw[fill=blue] (1, -0.7) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, -0.3230737092181455) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.12122108098130914) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 2.28412917072110916) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 2.3729881287610001) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.4) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.5655158711807637) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 2.6445016116606668) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 0.7481703960405396) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.3282219276898275) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.0912647062501184) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.1603772291700336) circle[radius=0.09cm];
+            \filldraw[fill=blue] (1, 1.2) circle[radius=0.09cm];
+        \end{tikzpicture}~
+    \end{minipage}
+\end{figure}
+Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
+conditions:   If $M$ is an arbitrary sublattice of $L$ then $\mu(M) \ge \mu(L)$.
+
+
 \end{document}
