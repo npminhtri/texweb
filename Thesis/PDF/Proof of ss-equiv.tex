@@ -91,7 +91,7 @@ Thus, using the following Proposition, $L$ has a structure of a discrete subgrou
 \end{prop}
 A proof can be found in \cite{}.
 We now can define the notion of covolume of a lattice:
-\begin{definition}[\label = Volume]
+\begin{definition}[\label = Volume]\label{volume}
     Let's assume that $L$ is a full-rank lattice and has a basis
     \[L = \mathbb{Z}l_1 \oplus \ldots \oplus\mathbb{Z}l_n\]
     Then the volume of this lattice is defined to be the volume of the fundamental
@@ -103,7 +103,7 @@ However, for the sake of computation, we also usually adopt another definition o
 In particular, we view lattice as a free $\mathbb{Z}-$ module of rank $n$ that is isomorphic
 to $\mathbb{R}^n$ via base changing.
 In more detail
-\begin{definition}
+\begin{definition}\label{lattice2}
     A \textit{lattice} in $\mathbb{R}^n$ is a subset $L \subset \mathbb{R}^n$ such that there exists
     a basis $b_1,\ldots,b_n$ of $\mathbb{R}^n$ such that
     \[L = \mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n\]
@@ -148,5 +148,17 @@ following equivalent properties:
 \begin{example}
     If $L = \mathbb{Z}^2$, then a sublattice of $L$ is a primitive vector $u = (a,b)$, i.e
     $\gcd(a,b)=1$.
-\end{example}
+\end{example} \todo{add proof}
+An easy observation is that, if $M \subset L$ is a sublattice, then the space $M_\mathbb{R} = M \otimes \mathbb{R}$
+is a subspace of $L_\mathbb{R}$, equipped with the restriction of the positive definite symmetric form $Q$ of $L$,hence $M$
+is also a lattice of rank not exceeding rank of $L$.
+
+As stated in definition \ref{volume}, we can computed a volume of a lattice by base changing and
+choose an orthonormal basis. However, if we view the lattice $L$ as $\mathbb{Z}^n$ under an action
+of $g \in \text{GL}_n(\mathbb{R})$ as in definition \ref{lattice2}, it is more convenient to define volume use wedge  product.
+Suppose $L$ has rank $n$, then $L$ has a basis $b_1,b_2,\ldots,b_n$ such that
+\[b_i = g \cdot e_i, \quad g \in \text{GL}_n(\mathbb{R}),\]
+where $e_1,e_2,\ldots,e_n$ is the standard basis of $\mathbb{R}^n$. let $\bigwedge^* \mathbb{R}^n$ denote the corresponding exterior algebra. If $\bigwedge^p \mathbb{R}^n$ denotes the $p$th exterior power of $\mathbb{R}^n$, the products $f_v := e_{v_1} \wedge \cdots \wedge e_{v_p}$, where $v$ ranges over the ordered $p$-tuples $(v_1, \ldots, v_p)$ subject to the condition $1 \leq v_1 < \cdots < v_p \leq n$, then form a basis $\{f_v\}$ of $\bigwedge^p \mathbb{R}^n$. In a natural way, $\bigwedge^p \mathbb{R}^n$ permits the Euclidean norm, $\lVert \cdot \rVert$ defined by $\lVert f_v \rVert = 1$ and $\lVert \sum_v \lambda_v f_v \rVert = \left( \sum_v \lambda_v^2 \right)^{1/2}$.
+
+The group $\mathrm{GL}_n(\mathbb{R})$ operates on the exterior power $\bigwedge^p \mathbb{R}^n$, $p = 1, \ldots, n$, via \[g(e_{v_1} \wedge \cdots \wedge e_{v_p}) = g(e_{v_1}) \wedge \cdots \wedge g(e_{v_p})\] and linear extension.
 \end{document}
