@@ -261,7 +261,26 @@ Here are the picture of two lattices. The one on the left is semi-stable while t
 \end{figure}
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
 conditions:   If $M$ is an arbitrary sublattice of $L$ then $\mu(M) \ge \mu(L)$.
-\subsection{$\rho$-definition ofsemi-stability}
-There
+\subsection{$\rho$-definition of semi-stability}
+There is another, more algebraic way to determine whether a given lattice is semi-stable.
+This definition ultilize the notion of parabolic subgroups. We will first recall what
+is a $k-$ parabolic subgroups for the general linear group $\text{GL}_n$ for $n \ge 2$, over an arbitrary
+field $k$. Let $e_1,e_2,\ldots,e_n$ be a standard basis for the vector space $k^n$. From linear algebra,
+we know that each linear map $T \colon k^n \to k^n$ can be identified with a $n \times n$ matrix. In particular
+we obtain an identification between the group $\text{GL}_n(k)$ with $\text{GL}(k^n)$ of $k-$ automorphisms of
+$k^n$.
+\begin{definition}
+    A flag $\mathcal{F}$ of $k^n$ is a chain of linear subspaces
+    \[\mathcal{F} \colon 0 \subset F_1 \subset F_2 \subset \ldots \subset F_r \subset k^n\]
+    Let $d_i = \dim F_i$, then we call the ordered $r$-tuple $(d_1,d_2,\ldots,d_r)$  the \textit{type} of the flag $\mathcal{F}$.
+\end{definition}
+A parabolic subgroup of $\text{Gl}(k^n)$ is the stabilizer $P_\mathcal{F} = P$ of a flag $\mathcal{F}$.
+A parabolic subgroup $P$ is call \textit{minimal} if it stabilizes a flag of type
+$(1,2,\ldots,n)$.
 
+Let \( e_1, \ldots, e_n \) be the standard basis for the \( k \)-vector space \( k^n \). For any \( 1 \leq i \leq n \), define \( V_i \) to be \( e_1 + \cdots + e_i \). We call a flag \( \mathcal{V} \) by the chain
+\[
+    \mathcal{V}: 0 \subset V_{d_1} \subset V_{d_2} \subset \cdots \subset V_{d_r} \subset k^n,
+\]
+a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{r+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, r+1 \). Then \( \rho = (r_1, \ldots, r_{r+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{r+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.
 \end{document}
