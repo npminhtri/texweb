@@ -193,7 +193,7 @@ is infeasible when the dimension of the lattice grows. Since there are lattices 
 arbitrarily large volume of any rank smaller than that of $L$, we add to the side the point $(0,\infty)$ and $(n,\infty)$. The sides
 of the profile are therefore two vertical lines. The bottom is just the convex polygonal connecting the origin with the point
 $l(L) = (n,\log\vol(L))$, where $n$ is the rank of $L$.
-\begin{definition}
+\begin{definition}\label{ss1}
     If the bottom of the profile contains only two points $(0,0)$ and $(n,\log\vol L)$, then the
     lattice $L$ is said to be \textbf{semi-stable}. Otherwise $L$ is said to be \textbf{unstable}.
 \end{definition}
@@ -288,18 +288,63 @@ stabilizer of the flag of type $\rho_i =(i,n-i)$, where $i = 1,\ldots,n-1$ of $n
 further denote $Q_i = P_{\rho_i}$ and $\textbf{MaxParSt}$ the collection of such maximal parabolic subgroups.
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
-\begin{definition}[\label  = $\rho$-definition]
+\begin{definition}[\label  = $\rho$-definition]\label{ss2}
     Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
-    \[\deg_{\text{inst}}(x):= \min_{Q \in MaxParSt, \gamma \in \text{GL}(\mathbb{Q})/P(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
+    \[\deg_{\text{inst}}(x):= \min_{Q \in MaxParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
 \end{definition}
+A simple observation is that - a lattice $x$ is semi - stable if for all maximal standard parabolic subgroups
+$Q_i$, we have
+\[\min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle \ge 0\]
 The above definition in some sense "measures" the volume of the sublattices of the lattice $x$.
 We will illustrate with using Iwasawa's decomposition for $n=3$. Recall that for any $g \in \text{GL}_n(\mathbb{R})$ we have
 \[ g = k_ga_gn_g \in K \times A \times N,\]
 where $K$ is the orthogonal subgroup, $A$ is the set of all diagonal matrices with all positive entries along the diagonal
-and $N$ is the subgroup of unipotent matrices. Let denote $v_i = e_1 \wedge \ldots \wedge e_i$. Clearly we have
-\[||k_g(v)|| = ||v|| \quad \text{ and } \quad n_g(v_i) =v_i\]
-for all $v \in \bigwedge^i \mathbb{R}^n, i = 1,\ldots n$. Thus, in term of volume, the only
-relevant factor is the $A$-component. In particular, we have
-\[||g(v_i)|| =||a_g(v_i)|| = ||a_ge_i\wedge \ldots a_ge_n|| = a_{11}\ldots a_{ii} \]
-Using definition \ref{lattice2}, we have $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$, then
+and $N$ is the subgroup of unipotent matrices. If we let $ x\gamma = g = k_ga_gn_g$ and
+\[a_g = \begin{bmatrix}
+        a_1 & 0   & 0   \\
+        0   & a_2 & 0   \\
+        0   & 0   & a_3
+    \end{bmatrix}\]
+Then
+\begin{align*}
+    \min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_1(\mathbb{Q})}\left\langle \rho_{Q_1}, H_{Q_1}(x\gamma) \right\rangle = \log(a_1) \\ \min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_2(\mathbb{Q})}\left\langle \rho_{Q_2}, H_{Q_2}(x\gamma) \right\rangle = \log(a_1a_2)
+\end{align*}
+So a lattices $x$ in $K \backslash\text{GL}_3(\mathbb{R})$  is semi-stable if and only if the $\log(a_1)$ and $\log(a_1a_2)$ defined as above are nonnegative.
+So far we have two distinct definitions of semi-stability. The following theorem asserts that they are equivalent:
+\begin{theorem}
+    Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$. Then $x$ is semi-stable if one of the following equaivalent
+    conditions holds
+    \begin{enumerate}
+        \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,\log\vol(x))$.
+        \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
+    \end{enumerate}
+\end{theorem}
+\begin{remark}
+    Let denote $v_i = e_1 \wedge \ldots \wedge e_i$. Clearly we have
+    \[||k_g(v)|| = ||v|| \quad \text{ and } \quad n_g(v_i) =v_i\]
+    for all $v \in \bigwedge^i \mathbb{R}^n, i = 1,\ldots n$. Thus, in term of volume, the only
+    relevant factor is the $A$-component. In particular, we have
+    \[||g(v_i)|| =||a_g(v_i)|| = ||a_ge_i\wedge \ldots a_ge_n|| = a_{11}\ldots a_{ii} \]
+\end{remark}
+The above remark suggests that for each maximal standard parabolic subgroups, the degree of instability detects
+for the sublattices with the smallest volume. So if we can prove there is a correspondence between
+$\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
+\begin{proof}
+    \hfill \\
+    We first need a slight reduction - we identified the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
+    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
+
+    We will show the following correspondence
+    \[ \gamma(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
+    Indeed, let $M \subset \mathbb{Z}^n$ be a sublattice with a basis $v_1,v_2,\ldots,v_i$. Since $M$ is a sublattice, we can extend the basis to $
+        \left\lbrace v_1,\ldots,v_i,v_{i+1},\ldots,v_n\right\rbrace$ to get a basis of $\mathbb{Z}^n$. Let $\left\lbrace e_1,\ldots,e_n\right\rbrace$ be the standard basis
+    of $\mathbb{Z}^n$, there clearly there exsists a $\gamma \in \text{GL}_n(\mathbb{Z})$ such that
+    \[\gamma \cdot e_i = v_i \quad \forall i =1,\ldots,n\]
+    If we identify $M$ with the wedge product $v_1\wedge \ldots \wedge v_n$, then $ \gamma \in \text{GL}_n(\mathbb{Z})$ acts on the exterior product via
+    \[\gamma (e_1\wedge \ldots \wedge e_n) = v_1\wedge \ldots \wedge v_n\]
+\end{proof}
+So the set of rank $i$ sublattice of $\mathbb{Z}^n$ is the orbit of $e_1\wedge \ldots \wedge e_n$
+under the action of $ \text{GL}_n(\mathbb{Z})$, with the stabilizer as $(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z}))$.
 \end{document}
+Using definition \ref{lattice2}, we have $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$.
+Clearly for any sublattice of $x$, called $y$ corresponds to a sublattice of $\mathbb{Z}^n$ via
