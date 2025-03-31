@@ -285,9 +285,21 @@ Let \( e_1, \ldots, e_n \) be the standard basis for the \( k \)-vector space \(
 a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{r+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, r+1 \). Then \( \rho = (r_1, \ldots, r_{r+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{r+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.
 The maximal standard parabolic subgroups in $\text{GL}_n(k)$ corresponds to the
 stabilizer of the flag of type $\rho_i =(i,n-i)$, where $i = 1,\ldots,n-1$ of $n$. We will
-further denote $Q_i = P_{\rho_i}$ and $\text{MaxParSt}$ the collection of such maximal parabolic subgroups.
-We are now ready to define the $\rho$-definition of semi-stable lattice.
+further denote $Q_i = P_{\rho_i}$ and $\textbf{MaxParSt}$ the collection of such maximal parabolic subgroups.
+We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
+we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
 \begin{definition}[\label  = $\rho$-definition]
-
+    Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
+    \[\deg_{\text{inst}}(x):= \min_{Q \in MaxParSt, \gamma \in \text{GL}(\mathbb{Q})/P(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
 \end{definition}
+The above definition in some sense "measures" the volume of the sublattices of the lattice $x$.
+We will illustrate with using Iwasawa's decomposition for $n=3$. Recall that for any $g \in \text{GL}_n(\mathbb{R})$ we have
+\[ g = k_ga_gn_g \in K \times A \times N,\]
+where $K$ is the orthogonal subgroup, $A$ is the set of all diagonal matrices with all positive entries along the diagonal
+and $N$ is the subgroup of unipotent matrices. Let denote $v_i = e_1 \wedge \ldots \wedge e_i$. Clearly we have
+\[||k_g(v)|| = ||v|| \quad \text{ and } \quad n_g(v_i) =v_i\]
+for all $v \in \bigwedge^i \mathbb{R}^n, i = 1,\ldots n$. Thus, in term of volume, the only
+relevant factor is the $A$-component. In particular, we have
+\[||g(v_i)|| =||a_g(v_i)|| = ||a_ge_i\wedge \ldots a_ge_n|| = a_{11}\ldots a_{ii} \]
+Using definition \ref{lattice2}, we have $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$, then
 \end{document}
