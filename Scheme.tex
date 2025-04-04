@@ -113,15 +113,32 @@ First we recall the question
                   as a complex Lie algebra, this implies $I=\sl2c$. The restriction of scalar doesn't change anything, which implies
                   $\rsl2c$ is simple.
             \item Assume not, then $\rsl2c$ is a split real Lie algebra. From the previous part, we regconized that
-                  $\rsl2c$ is a real form of the semisimple Lie algebra $\lieg$. We first claim the following
-
-                  \textbf{Claim:} \textit{If a complex Lie algebra $\lieg$ has a real split form, then this split form must be unique, up to isomorphism.}
-
-                  Using the above claim, we can immediate point out that $\s2r \oplus \s2r$ is a split real
-                  form of the $\sl2c \oplus \sl2c$. Since $\s2r \oplus \s2r$ is semisimple but not simple, it is clearly not isomorphic to
-                  $\rsl2c$. So we have proven that $\rsl2c$ is not split. The only thing left we need to prove is the above claim.
-
+                  $\rsl2c$ is a real form of the semisimple Lie algebra $\lieg$. Assume that
+                  the real Lie algebra $\rsl2c$ is split, then we have a root space decomposition
+                  \[\rsl2c = \mathfrak{h}\oplus \bigoplus_{\alpha \in \Delta} \mathfrak{g}_\alpha\]
+                  where $\Delta$ is the set of root with respect to the split Cartan subalgebra $\mathfrak{h}$.
+                  We know that the root space $\mathfrak{g}_\alpha$ has dimension 1, so we can rewwrite the above as
+                  \[\rsl2c = \mathfrak{h}\oplus \bigoplus_{\alpha \in \Delta} \mathbb{R}x_\alpha\]
+                  Under the base changing, we get
+                  \[\sl2c \oplus \sl2c = \rsl2c \otimes \mathbb{C} = \left(\mathfrak{h}\oplus \bigoplus_{\alpha \in \Delta} \mathbb{R}x_\alpha\right)\otimes \mathbb{C} =\left(\mathfrak{h}\otimes \mathbb{C}\right) \oplus\bigoplus_{\alpha \in \Delta}\mathbb{C}x_\alpha\]
       \end{enumerate}
+      In particular, the root system doesn't change after the base changing, and we can see that the corresponding
+      root system to the given Lie algebra is of type $A_1 \times A_1$. But this is a reducible root system, so the
+      corresponding split real Lie algebra must also reducible. We will show that
+      if a root system corresponding to a semisimple Lie algebra is reducible, then the corresponding Lie algebra
+      is not semisimple.
+
+      Indeed, assume that $\Delta = \Delta_1 \sqcup \Delta_2$, then clearly the subalgebra
+      \[\mathfrak{g}_1 = \bigoplus_{\alpha \in \Delta_1^+} \left(\mathfrak{g}_\alpha+\mathfrak{g}_{-\alpha} + [\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]\right)\]
+      is a proper ideal of $\lieg$, as
+      \begin{align*}
+            [\lieg_\alpha,\lieg_\beta]= \begin{cases}
+                                              0                     & \quad \text{ if $\alpha + \beta \notin \Delta$, in particular $\alpha \in \Delta_1, \beta \in \Delta_2$} \\
+                                              \lieg_{\alpha+\beta}, & \quad \text{ otherwise}
+                                        \end{cases}.
+      \end{align*}
+      So the real Lie algebra $\rsl2c$, if it is split, must be semisimple and has a nontrivial simple ideal. But as we proved above
+      $\rsl2c$ is a simple real Lie algebra, so this proves $\rsl2c$ can't not be a split
 \end{proof}
 
 \end{document} % This is the end of the document
