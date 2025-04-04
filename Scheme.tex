@@ -1,93 +1,127 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[utf8]{vietnam}
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
-\usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{amsfonts}
+\documentclass[12pt]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{tikz}\usetikzlibrary{arrows.meta,calc} %library tikz
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{tikz, tabularx}
+\usepackage[table,x11names]{xcolor}
+\usepackage{graphics}
+\usepackage{hyperref}
+\newcolumntype{W}{>{\centering\arraybackslash}X}%Para agilizar las columnas.
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{color,soul} %package for highlining
+\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{fancyhdr}
+\usepackage{hyperref} %creat hyperlink
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    } %set up a hyperlink to be in blue 
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem*{remark}{Remark}
 
-% Remove default section numbering
-\setcounter{secnumdepth}{0}
-
-% Set up page style
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\textbf{TRƯỜNG THCS Chu Văn An}}
-\fancyhead[R]{\textbf{KIỂM TRA GIỮA HỌC KỲ II}}
-\fancyfoot[R]{Trang 1/2}
+\cfoot{\thepage} % this is for the page numbering
+\setlength\parindent{0pt} % noindent for the whole document.
+\renewcommand{\baselinestretch}{1.1} % increase the distance between line.
 
-\begin{document}
+% -------------------
+% Commands
+% -------------------
+\newcommand{\homework}[2]{\noindent\textbf{Name: Kyra Xian
+}{} \hfill \textbf{} \\  \textbf{Due date: #2} \hfill \textbf{}\\}
 
-% Header Section
-\begin{center}
-      \textbf{TRƯỜNG THCS Chu Văn An} \hfill \textbf{KIỂM TRA GIỮA HỌC KỲ II} \\
-      Họ và tên: \dotfill \\
-      Lớp: 9.1 \hfill Năm học: 2023-2024 \\
-      Điểm bằng số: \ldots \quad Điểm bằng chữ: \ldots \hfill Môn: Tiếng Anh 6 \\
-      Lời phê: \dotfill \hfill Thời gian: 60 phút \\
-      Chữ ký GKT1: \ldots \quad Chữ ký GKT2: \ldots \quad Chữ ký GKT3: \ldots \hfill Chữ ký GKT1: \ldots \quad Chữ ký GKT2: \ldots \quad Chữ ký GKT3: \ldots
-\end{center}
+\newcommand{\prob}{\noindent\textbf{Problem. }}
+\newcounter{problem}
+\newcommand{\problem}{
+	\stepcounter{problem}%
+	\noindent \textbf{Problem \theproblem. }%
+}
+\newcommand{\pointproblem}[1]{
+	\stepcounter{problem}%
+	\noindent \textbf{Problem \theproblem.} (#1 points)\,%
+}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\ds}{\displaystyle}
+% -------------------
+% Theorem Environment
+% -------------------
+\mdfdefinestyle{theoremstyle}{%
+	frametitlerule=true,
+	roundcorner=5pt,
+	linecolor=black,
+	outerlinewidth=0.5pt,
+	middlelinewidth=0.5pt
+}
+\mdtheorem[style=theoremstyle]{exercise}{\textbf{Problem}}
+\DeclareMathOperator{\sl2c}{\mathfrak{sl}(2,\mathbb{C})}
+\DeclareMathOperator{\rsl2c}{\mathfrak{sl}(2,\mathbb{C})_{\mathbb{C}\mid \mathbb{R}}}
+\DeclareMathOperator{\lieg}{\mathfrak{g}}
+\DeclareMathOperator{\s2r}{\mathfrak{sl}(2,\mathbb{R})}
 
-\vspace{0.5cm}
+\title{SOLUTION FOR THE BONUS QUESTION} % Sets article title
+\date{\today} % Sets date for date compiled
 
-% Title of the Exam
-\begin{center}
-      \textbf{ĐỀ CHÍNH THỨC: MÃ ĐỀ: A}
-\end{center}
+% The preamble ends with the command \begin{document}
+\begin{document} % All begin commands must be paired with an end command somewhere
+\maketitle
+In this report, I will give a proof for the bonus question for the class MATH 538.
+First we recall the question
+\begin{exercise}
+      Consider the Lie algebra $\lieg = \sl2c$ viewed as a real Lie algebra. We will denote this
+      Lie algebra by $\rsl2c$. Show that
+      \begin{enumerate}
+            \item $\lieg$ is simple as a real Lie algebra.
+            \item $\rsl2c$ is not a split real Lie algebra, i.e. it has no split Cartan subalgebra.
+      \end{enumerate}
+\end{exercise}
+\begin{proof}
+      \hfill \\
 
-\vspace{0.5cm}
+      \begin{enumerate}
+            \item First we will show that $\rsl2c$ is semisimple. Indeed, we have
+                  \[\rsl2c \otimes \mathbb{C} = (\mathfrak{sl}(2,\mathbb{R}) \otimes_\mathbb{R} \mathbb{C}) \otimes_\mathbb{R} \mathbb{C} = \s2r \otimes_\mathbb{R}(\mathbb{C}\otimes_\mathbb{R}\mathbb{C}) \]
+                  Now note that $\mathbb{C} \otimes_\mathbb{R} \mathbb{C} \cong \mathbb{C} \oplus \mathbb{C}$ as rings, so
+                  we clearly reduce to
+                  \[\rsl2c \otimes \mathbb{C} \cong \s2r \otimes_\mathbb{R}(\mathbb{C}\oplus \mathbb{C}) \cong \sl2c \oplus \sl2c\]
+                  This clearly shows that $\rsl2c$ is semi-simple. Now we show that it is in fact simple.
+                  Assume not, then $\rsl2c$ has a nontrivial simple ideal $I$. Then for any $\lambda \in \mathbb{C}\setminus \left\lbrace 0 \right\rbrace$, clearly $\lambda(I)$ is also an ideal as
+                  \[I \supset [I,\lambda(I)] = \lambda[I,I] =\lambda(I) \ne 0\]
+                  Clearly $\dim I = \dim \lambda(I)$, this implies that $I = \lambda(I)$. That means when we allow complex scalar multiplication
+                  the ideal $I$ stays the same. Thus $I$ is in fact an ideal of $\sl2c$. But since $\sl2c$ is simple
+                  as a complex Lie algebra, this implies $I=\sl2c$. The restriction of scalar doesn't change anything, which implies
+                  $\rsl2c$ is simple.
+            \item Assume not, then $\rsl2c$ is a split real Lie algebra. From the previous part, we regconized that
+                  $\rsl2c$ is a real form of the semisimple Lie algebra $\lieg$. We first claim the following
 
-% Section A: Language Component
-\section*{A. LANGUAGE COMPONENT: (3.0pts)}
+                  \textbf{Claim:} \textit{If a complex Lie algebra $\lieg$ has a real split form, then this split form must be unique, up to isomorphism.}
 
-\textbf{QUESTION 1:} Choose the word which has a different sound in the part underlined. (0.5pt) \\
-\begin{enumerate}[label=\arabic*.]
-      \item \textbf{A.} crowd \quad \textbf{B.} cow \quad \textbf{C.} snow \quad \textbf{D.} shower
-\end{enumerate}
+                  Using the above claim, we can immediate point out that $\s2r \oplus \s2r$ is a split real
+                  form of the $\sl2c \oplus \sl2c$. Since $\s2r \oplus \s2r$ is semisimple but not simple, it is clearly not isomorphic to
+                  $\rsl2c$. So we have proven that $\rsl2c$ is not split. The only thing left we need to prove is the above claim.
 
-\textbf{QUESTION 2:} Choose the best answer to complete the sentences. (2.5pts) \\
-\begin{enumerate}[label=\arabic*.]
-      \setcounter{enumi}{1}
-      \item A theatre is \quad \textbf{A.} there \quad \textbf{B.} the \quad \textbf{C.} both \quad \textbf{D.} thing
-      \item I’d like to change the \ldots . Please give me the remote control. \\
-            \textbf{A.} channel \quad \textbf{B.} view \quad \textbf{C.} television \quad \textbf{D.} one
-      \item My mother likes watching \quad \textbf{A.} IV \quad \textbf{B.} mother likes going shopping \quad \textbf{C.} or \quad \textbf{D.} one
-      \item My father \ldots is very famous in Can Tho. \\
-            \textbf{A.} floating market \quad \textbf{B.} Big Ben \quad \textbf{C.} week \quad \textbf{D.} opera house
-      \item \ldots do you watch TV? – Five times a week \\
-            \textbf{A.} How long \quad \textbf{B.} How much \quad \textbf{C.} How often \quad \textbf{D.} How many
-      \item My dad \ldots a lot of tennis some years ago. \\
-            \textbf{A.} play \quad \textbf{B.} has played \quad \textbf{C.} is playing \quad \textbf{D.} played
-      \item You should wear \ldots to protect your eyes from chlorine in the water. \\
-            \textbf{A.} hat \quad \textbf{B.} goggle \quad \textbf{C.} goggles \quad \textbf{D.} glass
-      \item My house is near \ldots house, so I usually go there and play badminton with her. \\
-            \textbf{A.} hers \quad \textbf{B.} her \quad \textbf{C.} your \quad \textbf{D.} you
-      \item She became the world tennis \ldots when he was young. \\
-            \textbf{A.} champion \quad \textbf{B.} marathon \quad \textbf{C.} sports \quad \textbf{D.} game show
-      \item Nick! Yesterday I played with Duy, and I won! – Mai: \ldots \\
-            \textbf{A.} Congratulations \quad \textbf{B.} Thanks \quad \textbf{C.} You’re welcome \quad \textbf{D.} No, I wasn’t
-      \item \ldots can kids learn from TV programmes? – They can watch educational programmes on TV. \\
-            \textbf{A.} Where \quad \textbf{B.} When \quad \textbf{C.} How \quad \textbf{D.} What
-\end{enumerate}
+      \end{enumerate}
+\end{proof}
 
-% Section B: Reading
-\section*{B. READING: (2.5pts)}
-
-\textbf{QUESTION 1:} Read and complete the passage with words in the box. (1.5pts) \\
-\textit{Popular \quad cartoon \quad watching \quad interesting \quad competitions \quad world} \\
-Nowadays, television has become the most (13) \ldots media of human. There are so many programmes for children such as (14) \ldots, series, comedy and music. By sitting at home, (15) \ldots, TV, you can get a whole look all over the (16) \ldots . Through TV, children can see many (17) \ldots people and places. Then can also see many events and (18) \ldots in the world.
-
-\vspace{0.5cm}
-
-\textbf{QUESTION 2:} Read the following passage and choose the correct word A, B, C or D for each blank. (1.0pt) \\
-Nha Trang is a famous seaside city in the central Viet Nam. It attracts a lot of tourists from many countries because it has beautiful beaches and an exciting atmosphere of a young, growing city. Coming to Nha Trang from January to August, you can enjoy wonderful weather: warm and sunny. It is so good for swimming and sunbathing. Visitors can rent a bike and cycle around the city. Nha Trang is also well-known for its delicious seafood. \\
-\begin{enumerate}[label=\arabic*.]
-      \setcounter{enumi}{18}
-      \item Does Nha Trang attract a lot of tourists from many countries? \\
-            \textbf{A.} No, it doesn’t \quad \textbf{B.} Yes, it does \quad \textbf{C.} No, they don’t \quad \textbf{D.} Yes, they do
-      \item When is the weather warm and sunny? \\
-            \textbf{A.} from February to August \quad \textbf{B.} from March to August \quad \textbf{C.} from January to August \quad \textbf{D.} from June to August
-\end{enumerate}
-
-\end{document}
+\end{document} % This is the end of the document
