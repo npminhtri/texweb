@@ -155,9 +155,151 @@
         \caption{Semi-stable locus over $\mathbb{H}$}
     \end{figure}
 \end{frame}
-
+\section{In dimension at least 3}
 \begin{frame}{In higher dimensional}
-We work with the lattices 
+    We work with the lattices of the form $g\mathbb{Z}^n$ for $g \in \text{GL}_n(\mathbb{R})$ or
+    $g \in \text{SL}_n(\mathbb{R})$. The latter is just the lattice with unit volume. However
+    we still need to consider the sublattice of arbitrary volume.
+    \pause
+    \begin{block}{Sublattice}
+        A discrete subgroup $M$ of the lattice $L$ is called \textbf{sublatice} if it satisfies one of the
+        the following equivalent conditions:
+        \begin{enumerate}
+            \item $L/M$ has no torsion part.
+            \item $M$ is a direct summand in $L$.
+            \item Every basis of $M$ can be extended to a basis in $L$.
+            \item The quotient $L/M$ is a free $\mathbb{Z}-$module.
+        \end{enumerate}
+    \end{block}
+\end{frame}
+\begin{frame}{Volume of lattice}
+    The volume of $L = g\mathbb{Z}^n$ is just $\deg(g)$. Assume that $M$ is a sublattice of $L$ of rank $k \le n$
+    with a basis
+    \[\left\lbrace v_1, v_2,\ldots, v_k\right\rbrace\]
+    Let $e_1,e_2,\ldots,e_n$ be the standard basis. We can form a matrix of size $k \times n$
+    \[A = \begin{bmatrix}
+            \left\langle v_i ,e_j\right\rangle
+        \end{bmatrix}\]
+    The volume of $M$ is defined to be the sum of squares of the determinant of $k \times k$ minor matrices in the matrix $A$.
+    %add example on the board here. 
+\end{frame}
+\begin{frame}{Canonical plot in higher dimension}
+    Grayson assigned the lattices $L$ to a canonical plot as follows:
+    \begin{enumerate}
+        \item Assign the point $(0,0)$ to the plot.
+        \item For each sublattice $M \subset L$ we assigne a point of coordinate ${l}(m) =(rank(M),\log(vol(M)))$ to the plot.
+        \item Assign the point $(1,\log(vol(L)))$ to the lattice.
+    \end{enumerate} \pause
+
+    As before, we call the convex hull of this plot its \textbf{profile}.
+\end{frame}
+\begin{frame}
+    We have the following proposition
+    \begin{block}{Sublattice with bounded volume}
+        Fix a lattice $L$ of rank $n$ and a positive number $c$. For each $k \le n$, there are only finite sublattices $M \subset L$ such that
+        $vol(M) <c$.
+    \end{block} \pause
+
+    This guarantees that for each vertical line $x = k$, there exists a lowest points, corresponding to the sublattice of smallest volume of each rank $k$.
+    In particular, the bottom of the profile is bounded below. Hence the following definition makes sense \pause
+    \begin{block}{Semi-stable lattice}
+        Construct the profile of a lattice $L$ as above. If the bottom of the profile is just a line
+        then we call the lattice L \textbf{semi-stable}.
+    \end{block}
+\end{frame}
+\begin{frame}{Example of a higher rank profile}
+    \centering
+    \begin{figure}
+        \includegraphics[width = 0.7\textwidth]{Canonical plot 3 dim.png}
+        \caption{An unstable lattice}
+    \end{figure}
+\end{frame}
+\begin{frame}{Iwasawa decomposition}
+    We recall the Iwasawa decomposition for $G =\text{GL}_n$
+    \[G = K \times A \times N\]
+    where
+    \begin{enumerate}
+        \item $K$ is the orthogonal subgroup.
+        \item $A$ is the group of diagonal matrix with positive entries along the diagonal.
+        \item $N$ is the unipotent subgroup.
+    \end{enumerate}
+\end{frame}
+%give example for GL_2
+\begin{frame}{Parabolic subgroups}
+    For $G =\text{GL}_n$ we have an explicit description of standard parabolic subgroup
+    \pause\begin{block}{Standard Parabolic subgroups of $\text{GL}_n$}
+        For each partition
+        $$n = n_1+n_2+\ldots+n_k$$
+        We denote $P_{n_1,n_2,\ldots,n_k}$ the standard parabolic subgroup of type $(n_1,\ldots, n_k)$ to be the subgroup of
+        matrices of the form
+        \[P_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+                \mathfrak{m}_1 & \ast           & \ldots & \ast           \\
+                0              & \mathfrak{m}_2 & \ldots & \ast           \\
+                \vdots         & \vdots         & \ddots & \vdots         \\
+                0              & 0              & \ldots & \mathfrak{m}_k
+            \end{bmatrix} \right\rbrace\]
+        where $\mathfrak{m_i}$ is of size $n_i \times n_i$.
+    \end{block}
+\end{frame}
+\begin{frame}{Degree of instability}
+    Now we are ready to define the degree of instability
+    \begin{block}{Degree of instability}
+        For each $x \in X = G$, we define its degree of instability to be
+        \[\deg_{\text{inst}}(x):= \min_{P \in \text{ParSt}, \gamma \in G/P}\left\langle\rho_P, H_P(x\gamma) \right\rangle \]
+    \end{block}\pause
+    We define the notion of $\rho$-semistable as follows
+    \begin{block}{$\rho$-semistable}
+        A point $x \in G$ is called \textbf{semi-stable} iff $\deg_{\text{inst}}(x) \ge 0$.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Equivalent between two notions of semi-stable lattices}
+    We have the following Lemma
+    \begin{block}{Lemma A}
+        The following are equivalent:
+        \begin{enumerate}
+            \item \(\deg_Q^i(x) \geq 0\);
+            \item For every parabolic subgroup \( P \subset Q \), every \( \delta \in Q(F)/P(F)\), and every \( \varpi \in \hat{\Delta}_P^Q \), we have:
+                  \[
+                      \langle \varpi, H_P(x\delta ) \rangle \geq 0;
+                  \]
+            \item For every maximal parabolic subgroup \( P \subset Q \), every \( \delta \in Q(F)/P(F) \), and every \( \varpi \in \hat{\Delta}_P^Q \), we have:
+                  \[
+                      \langle \varpi, H_P(x\delta ) \rangle \geq 0.
+                  \]
+        \end{enumerate}
+    \end{block}
+\end{frame}
+\begin{frame}{Equivalent between two notions of semi-stable}
+    Use the previous lemma, we can reduce to consider only maximal parabolic subgroup.We can further replace $H_P$ with $H_B$, where $B$ is the minimal parabolic subgroup in the formula of degree of instability.
+
+    This means for
+    \[\left\langle \rho_{Q_i}, H_B(x\gamma)   \right\rangle = a_1a_2\ldots a_i\]
+    where
+    \[x = kan \in K \times A \times N,\]
+    which
+    \[A = \begin{bmatrix}
+            a_1    & 0      & \ldots & 0      \\
+            0      & a_1    & \ldots & 0      \\
+            \vdots & \vdots & \ddots & \vdots \\
+            0      & 0      & \ldots & a_n
+        \end{bmatrix}\]
+\end{frame}
+
+\begin{frame}
+    This suggests that there should be a connection between the maximal parabolic subgroups of $G$
+    and sublattices of $L$. Indeed we have
+    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
+
+    So we proved the main theorem
+    \begin{block}{Main theorem}
+        Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
+        conditions holds
+        \begin{enumerate}
+            \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
+            \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
+        \end{enumerate}
+    \end{block}
 
 \end{frame}
 \begin{frame}
