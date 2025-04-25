@@ -106,11 +106,11 @@ symmetric positive definite form is $g^tg$. So an Euclidean $\mathbb{Z}$-lattice
 positive definite quadratic form.
 \tpoint{Equivalence between two definitions of lattices}
 In this subsection, we will show that every abstract $\mathbb{Z}$- lattice is isomorphic to an Euclidean $\mathbb{Z}-$ lattice.
-This will be helpful in visualizing the abstract lattices, as we are just looking at conrete lattices with deformation by a linear transformation.
+This will be helpful in visualizing the abstract lattices, as we are just looking at concrete lattices with deformation by a linear transformation.
 
-First we need to specify the notion of isomormorphic lattices - in the first definition
+First we need to specify the notion of isomorphic lattices - in the first definition
 \begin{definition}
-    A map $f \colon (L,Q)   \to (L',Q')$  is an \textbf{isomorhism} between lattices if it is a group isomorhism and
+    A map $f \colon (L,Q)   \to (L',Q')$  is an \textbf{isomorhism} between lattices if it is a group isomorphism and
     for all $x \in L$, we have
     \[Q(x) = Q'(f(x)) \]
 \end{definition}
@@ -127,7 +127,7 @@ First we need to specify the notion of isomormorphic lattices - in the first def
         \left\langle \cdot,\cdot \right\rangle  \colon L_\mathbb{R} \times L_\mathbb{R} & \to      \mathbb{R}                      \\
         (x\otimes a, y \otimes b)                                                       & \mapsto  ab\left\langle x,y\right\rangle
     \end{align*}
-    It is mmediate that the extended bilinear form is inner product. So we have proved that
+    It is immediate that the extended bilinear form is inner product. So we have proved that
     $L_\mathbb{R}$ is a Euclidean space containing $L$. Moreover, $L$ is embedded injectively in $L_\mathbb{R}$
     as $\mathbb{R}$ is a flat $\mathbb{Z}$ module. The condition that
     \[ \# \left\lbrace x \in L: Q(x) \le r\right\rbrace < \infty\]
@@ -149,7 +149,10 @@ $L$ is defined as
     The covolume of $L$ is given by the formulae
     \[\vol(L_\mathbb{R}/L) = \left|\det(b_i\cdot e_j)\right|\]
 \end{definition}
-The rank and covolume are invariant numerical values of $L$, as they don't depend on the choice of basis. \todo{may be add proof.}
+The rank and covolume are invariant numerical values of $L$, as they don't depend on the choice of basis. Indeed, two bases of a rank $n$ lattice $L$
+are related by a transformation $g \in \text{GL}_n(\mathbb{Z})$. Clearly this preserves the volume and the rank as a $\mathbb{Z}-$module.
+
+
 \tpoint{Sublattices}
 To work with semi-stable lattice, we need to consider all the lattices containing inside
 \begin{definition}[\label=sublattice]
@@ -161,9 +164,9 @@ following equivalent properties:
 \begin{enumerate}
     \item $M$ is a summand of $L$.
     \item every basis of $M$ can be extended to a basis of $L$.
-    \item $L/M$ is torsion free.
     \item The group $M$ is an intersection of $L$ with a rational subspace of $L_\mathbb{R}$.
 \end{enumerate}
+We refer to the \cite{} for a proof of these equivalences.
 \begin{example}
     If $L = \mathbb{Z}^2$, then any sublattice of $L$ is a primitive vector $u = (a,b)$, i.e
     $\gcd(a,b)=1$. Indeed, $u=(a,b)$ is a sublattice of $\mathbb{Z}^2$ if and only if there exists a vector $v \in \mathbb{Z}^2$
@@ -176,11 +179,11 @@ following equivalent properties:
     This happens if and only if $\gcd(a,b)=1$.
 \end{example}
 \section{Semi-stable lattices: two definitions}
-\subsection{Grayson's definition of semi-stable lattice}
+\subsection{Grayson's definition }
 In this section, we introduce the idea of Grayson in defining \textit{semi-stable} lattices.
 In particular, he associates every lattices a plot and its convex hull - called \textit{ profiles}.
 An easy observation is that, if $M \subset L$ is a sublattice, then the space $M_\mathbb{R} = M \otimes \mathbb{R}$
-is a subspace of $L_\mathbb{R}$, equipped with the restriction of the positive definite symmetric form $Q$ of $L$,hence $M$
+is a subspace of $L_\mathbb{R}$, equipped with the restriction of the positive definite symmetric form $Q$ of $L$, hence $M$
 is also a lattice of rank not exceeding rank of $L$.
 \begin{definition}[\label = slope]
     The slope of a non-zero lattice $L$ is the number
@@ -193,12 +196,32 @@ is also a lattice of rank not exceeding rank of $L$.
     all sublattices of $L$ is called \textbf{ the canonical plot} of the lattice $L$. By convention, we assign
     the lattice of zero rank to the origin of the plane.
 \end{definition}
+
+\begin{example}
+    Add example about computing the volume of sublattices.
+\end{example}
 The following lemma asserts that, for each vertical axis $x =i$, there is a lowest point.
 \begin{lemma}
     Given a lattice $L$ and a number $c$, there exists only a finite number of sublattices $M \subset L$ such that
     $\vol(M)<c$.
 \end{lemma}
-\todo{add a proof}
+\begin{proof}
+    We will prove by induction on the rank of the sublattices.
+    \begin{itemize}
+        \item For $r =1$, the collection of all rank $1$ sublattices of $L$ is just the set of all vectors in $L$. So we reduce
+              to show that for any $c>0$, the set $B(0,c) \cap L$  has finitely many elements. But this follows immediately from the fact that
+              $L$ is a discrete subset of $L_\mathbb{R}$.
+        \item Assume that the lemma holds for $r >1$. Assume that
+              \[M = \mathbb{Z}m_1\oplus \ldots \mathbb{Z}m_r\]
+              is a sublattice of the lattices $L$ of rank $n$. Consider the wedge product $\bigwedge^r L$, then clearly
+              $m_1\wedge m_2\ldots \wedge m_r$ is a vector in the lattice  $\bigwedge^r L$.
+              By the previous case, there are finitely
+              many vectors with bounded length inside lattice. So we only need to show that the map
+              \[ M \mapsto \bigwedge^r M \]
+              is finite to one, then we are done. But this is clear.
+    \end{itemize}
+    So the canonical plot is bounded below.
+\end{proof}
 \begin{definition}
     The boundary polygon of the convex hull of the canonical plot is called \textbf{profile} of the lattice $L$.
 \end{definition}
@@ -275,9 +298,8 @@ Here are the picture of two lattices. The one on the left is semi-stable while t
 \end{figure}
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
 conditions:   If $M$ is an arbitrary sublattice of $L$ then $\mu(M) \ge \mu(L)$.
-\subsection{$\rho$-definition of semi-stability}
-There is another, more algebraic way to determine whether a given lattice is semi-stable.
-This definition ultilize the notion of parabolic subgroups. We will first recall what
+\tpoint{ Parabolic $k$-subgroups}
+We will first recall what
 is a $k-$ parabolic subgroups for the general linear group $\text{GL}_n$ for $n \ge 2$, over an arbitrary
 field $k$. Let $e_1,e_2,\ldots,e_n$ be a standard basis for the vector space $k^n$. From linear algebra,
 we know that each linear map $T \colon k^n \to k^n$ can be identified with a $n \times n$ matrix. In particular
@@ -288,27 +310,185 @@ $k^n$.
     \[\mathcal{F} \colon 0 \subset F_1 \subset F_2 \subset \ldots \subset F_r \subset k^n\]
     Let $d_i = \dim F_i$, then we call the ordered $r$-tuple $(d_1,d_2,\ldots,d_r)$  the \textit{type} of the flag $\mathcal{F}$.
 \end{definition}
-A parabolic subgroup of $\text{Gl}(k^n)$ is the stabilizer $P_\mathcal{F} = P$ of a flag $\mathcal{F}$.
+A parabolic subgroup of $\text{GL}(k^n)$ is the stabilizer $P_\mathcal{F} = P$ of a flag $\mathcal{F}$.
 A parabolic subgroup $P$ is call \textit{minimal} if it stabilizes a flag of type
 $(1,2,\ldots,n)$.
 
 Let \( e_1, \ldots, e_n \) be the standard basis for the \( k \)-vector space \( k^n \). For any \( 1 \leq i \leq n \), define \( V_i \) to be \( e_1 + \cdots + e_i \). We call a flag \( \mathcal{V} \) by the chain
 \[
-    \mathcal{V}: 0 \subset V_{d_1} \subset V_{d_2} \subset \cdots \subset V_{d_r} \subset k^n,
+    \mathcal{V}: 0 \subset V_{d_1} \subset V_{d_2} \subset \cdots \subset V_{d_s} \subset k^n,
 \]
-a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{r+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, r+1 \). Then \( \rho = (r_1, \ldots, r_{r+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{r+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.
-The maximal standard parabolic subgroups in $\text{GL}_n(k)$ corresponds to the
-stabilizer of the flag of type $\rho_i =(i,n-i)$, where $i = 1,\ldots,n-1$ of $n$. We will
-further denote $Q_i = P_{\rho_i}$ and $\textbf{MaxParSt}$ the collection of such maximal parabolic subgroups.
+a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{s+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, s+1 \). Then \( \rho = (r_1, \ldots, r_{s+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{s+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.
+\begin{definition}
+    The maximal standard parabolic subgroups in $\text{GL}_n(k)$ corresponds to the
+    stabilizer of the flag of type $\rho_i =(i,n-i)$, where $i = 1,\ldots,n-1$ of $n$. We will
+    further denote $Q_i = P_{\rho_i}$ and $\textbf{MaxParSt}$ the collection of such maximal parabolic subgroups.
+\end{definition}
+\begin{example}
+    Below we list all the standard parabolic subgroup in $\text{GL}_3(\mathbb{R})$ and $\text{GL}_4(\mathbb{R})$.
+    \begin{itemize}
+        \item For $\text{GL}_3(\mathbb{R})$, there are three standard parabolic subgroups corresponding to
+              three partitions of $3$, namely
+              \[ 3 = 1+ 1+ 1, \quad 3 =1+2 , \quad 3 = 2+1\]
+              For a partition $(r_1,\ldots,r_{s+1})$, we denote $P_{(r_1,\ldots,r_{s+1})}$ the corresponding parabolic subgroups. Thus we have
+              \begin{align*}
+                   & P_{1,1,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast \\
+                                                  0    & \ast & \ast \\
+                                                  0    & 0    & \ast
+                                              \end{bmatrix}\right\rbrace, \quad P_{1,2} =\left\lbrace \begin{bmatrix}
+                                                                                                          \ast & \ast & \ast \\
+                                                                                                          0    & \ast & \ast \\
+                                                                                                          0    & \ast & \ast
+                                                                                                      \end{bmatrix}\right\rbrace \\
+                   & P_{2,1} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast \\
+                                                \ast & \ast & \ast \\
+                                                0    & 0    & \ast
+                                            \end{bmatrix}\right\rbrace
+              \end{align*}
+              Clearly $\textbf{MaxParSt} = \left\lbrace P_{2,1}, P_{1,2}\right\rbrace$.
+        \item For  $\text{GL}_4(\mathbb{R})$, there are seven standard parabolic subgroups for seven partitions
+              \[ 4 = 1+ 1+1+1, \quad 4 =1+1+2, \quad 4 = 1+2+1\]
+              \[4 =2+1+1, \quad 4 = 1+3, \quad 4 = 2+1, \quad 4 = 3+1\]
+              Explicitly, we have the following subgroups
+              \begin{align*}
+                   & P_{1,1,1,1} = \left\lbrace \begin{bmatrix}
+                                                    \ast & \ast & \ast & \ast \\
+                                                    0    & \ast & \ast & \ast \\
+                                                    0    & 0    & \ast & \ast \\
+                                                    0    & 0    & 0    & \ast \\
+                                                \end{bmatrix} \right\rbrace, \quad & P_{1,1,2} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,2,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & 0    & 0    & \ast \\
+                                              \end{bmatrix} \right\rbrace, \quad   & P_{2,1,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & 0    & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,2,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & 0    & 0    & \ast \\
+                                              \end{bmatrix} \right\rbrace, \quad   & P_{2,1,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & 0    & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,3} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                            \end{bmatrix} \right\rbrace, \quad     & P_{3,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                0    & 0    & 0    & \ast \\
+                                                                                                            \end{bmatrix} \right\rbrace   \\
+                   & P_{2,2} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast & \ast \\
+                                                \ast & \ast & \ast & \ast \\
+                                                0    & 0    & \ast & \ast \\
+                                                0    & 0    & \ast & \ast \\
+                                            \end{bmatrix} \right\rbrace
+              \end{align*}
+              Clearly $\textbf{MaxParSt} = \left\lbrace P_{1,3},P_{3,1},P_{2,2}\right\rbrace.$
+    \end{itemize}
+\end{example}
+\tpoint{On the function $H_P$}
+\todo{Ask professor Manish about how to transfer $H_P$ to $H_B$}
+\tpoint{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
 \begin{definition}[\label  = $\rho$-definition]\label{ss2}
     Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
-    \[\deg_{\text{inst}}(x):= \min_{Q \in MaxParSt, \gamma \in \text{SL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
+    \[\deg_{\text{inst}}(x):= \min_{Q \in MaxParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
 \end{definition}
 A simple observation is that - a lattice $x$ is semi - stable if for all maximal standard parabolic subgroups
 $Q_i$, we have
-\[\min_{\gamma \in \text{SL}_n(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle \ge 0\]
+\[\min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle \ge 0\]
+Note that, in the definition of degree of instability, we can further replace $H_Q$ with $H_B$. This implies that, if
+\[ x = kan, \quad k \in K, a \in A, n \in N,\]
+as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particular, if
+\[a = \begin{bmatrix}
+        a_1    & 0      & \ldots & 0      \\
+        0      & a_2    & \ldots & 0      \\
+        \vdots & \vdots & \vdots & \vdots \\
+        0      & 0      & \ldots & a_n
+    \end{bmatrix}\]
+then
+\[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = a_1a_2\ldots a_i.\]
+Thus, to check for the semi-stability of a lattice $x$, we just need to look at the
+$A$-coordinate of $x$, and verify whether the system
+\begin{align*}
+    \begin{cases}
+        a_1 \ge 0   \\
+        a_1a_2\ge 0 \\
+        \ldots      \\
+        a_1a_2\ldots a_n \ge 0
+    \end{cases}
+\end{align*}
+\tpoint{The equivalent between definitions of semi-stable lattices}
+So far we have two distinct definitions of semi-stability. The following theorem asserts that they are equivalent:
+\begin{prop}
+    Let $x \in X_n = K \backslash \text{SL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
+    conditions holds
+    \begin{enumerate}
+        \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
+        \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    \hfill \\
+    If we can prove there is a correspondence between
+    $\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
+    We first need a slight reduction - we identified the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
+    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
+
+    We will first show the following correspondence
+    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
+    We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: For any sublattice $M \subset \mathbb{Z}^n$, there exists
+    a basis of $M$, denoted by
+    \[\left\lbrace v_1,v_2,\ldots, v_i \right\rbrace \]
+    we can extend this basis to get a basis of $\mathbb{Z}^n$
+    \[\mathfrak{B'} = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace \]
+    Clearly in $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $. Clearly there
+    exists a map $\gamma \in \glnz$ such that
+    \[\gamma \cdot e_k = v_k \quad \forall k = 1,2,\ldots, n\]
+    So we define the map
+    \begin{align*}
+        \varphi \colon \left\lbrace\text{sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
+        M                                                                                        & \mapsto [\gamma]
+    \end{align*}
+    where $[\gamma]$ denoted the equaivalent class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, Assume that we extend
+    the basis $\mathfrak{B'}$ in a different way to get the basis
+    \[ \mathfrak{B}_1 = \left\lbrace v_1,\ldots, v_k, v'_{k+1},\ldots,v'_n \right\rbrace\]
+    As above, there also exists $\gamma' \in \glnz$ such that
+    \[\gamma' e_k = v_k \quad \forall k \le i, \quad \text{ and } \quad \gamma'e_k = v'_k \quad \forall k > i\]
+    But this implies that
+    \[(\gamma^{-1})\gamma ' \cdot e_k = \gamma^{-1} v_k = e_k \quad \forall k \le i\]
+    So in particular, we have $[\gamma] = [\gamma']$. The inverse map is given by
+    \[[\gamma] \mapsto \bigoplus_{k=1}^i\mathbb{Z} (\gamma \cdot e_i) = M\]
+    This generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
+    the map
+    \begin{align*}
+        \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $g\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
+        M_g = gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
+    \end{align*}
+    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
+\end{proof}
 \end{document}
 
 
@@ -316,7 +496,9 @@ $Q_i$, we have
 
 
 
-
+\subsection{$\rho$-definition of semi-stability}
+There is another, more algebraic way to determine whether a given lattice is semi-stable.
+This definition ultilize the notion of parabolic subgroups.
 
 
 
@@ -493,3 +675,21 @@ $\gamma \in \text{SL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i
     % Label the origin
     \node[below left] at (0,0) {$O$};
 \end{tikzpicture}
+
+
+
+
+
+\begin{remark} %about the volume of sublattice
+
+    If we view the lattice $L$ as $\mathbb{Z}^n$ under an action
+    of $g \in \text{GL}_n(\mathbb{R})$ as in definition \ref{lattice2}, it is more convenient to define volume use wedge  product.
+    Suppose $L$ has rank $n$, then $L$ has a basis $b_1,b_2,\ldots,b_n$ such that
+    \[b_i = g \cdot e_i, \quad g \in \text{GL}_n(\mathbb{R}),\]
+    where $e_1,e_2,\ldots,e_n$ is the standard basis of $\mathbb{R}^n$. let $\bigwedge^* \mathbb{R}^n$ denote the corresponding exterior algebra. If $\bigwedge^p \mathbb{R}^n$ denotes the $p$th exterior power of $\mathbb{R}^n$, the products $f_v := e_{v_1} \wedge \cdots \wedge e_{v_p}$, where $v$ ranges over the ordered $p$-tuples $(v_1, \ldots, v_p)$ subject to the condition $1 \leq v_1 < \cdots < v_p \leq n$, then form a basis $\{f_v\}$ of $\bigwedge^p \mathbb{R}^n$. In a natural way, $\bigwedge^p \mathbb{R}^n$ permits the Euclidean norm, $\lVert \cdot \rVert$ defined by $\lVert f_v \rVert = 1$ and $\lVert \sum_v \lambda_v f_v \rVert = \left( \sum_v \lambda_v^2 \right)^{1/2}$.
+
+    The group $\mathrm{GL}_n(\mathbb{R})$ operates on the exterior power $\bigwedge^p \mathbb{R}^n$, $p = 1, \ldots, n$, via \[g(e_{v_1} \wedge \cdots \wedge e_{v_p}) = g(e_{v_1}) \wedge \cdots \wedge g(e_{v_p})\] and linear extension.
+    So if $M$ is a sublattice of $L$ with basis $l_1,\ldots,l_m$ then the volume
+    of $M$ is the length of the vector $l_1 \wedge \ldots \wedge l_m$. In other words, it is the square root
+    of the sum of the squares of the determinants of the $m \times m$ minor matrices in the $n \times m$ matrix whose columns are the coordinate of the $l_i$ with respect to any orthonormal basis of $L_\mathbb{R}$.
+\end{remark}
