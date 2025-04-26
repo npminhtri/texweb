@@ -1,9 +1,0 @@
-# Fdb version 4
-["pdflatex"] 0 "e:/texweb/Tikz.tex" "PDF/Tikz.pdf" "Tikz" 0 -1
-  "PDF/Tikz.aux" 0 -1 0 "pdflatex"
-  "e:/texweb/Tikz.tex" 0 -1 0 ""
-  (generated)
-  "PDF/Tikz.aux"
-  "PDF/Tikz.log"
-  "PDF/Tikz.pdf"
-  (rewritten before read)
