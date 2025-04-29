@@ -106,7 +106,22 @@
   \end{enumerate}
 \end{exercise}
 \begin{proof}
-
+  \hfill \\
+  \begin{enumerate}
+    \item This is the hardest part: Let's denote $b=\alpha^p - \alpha \in F$. Consider the
+          polynomial $$f(x) = x^p - x - b.$$
+          Clearly from the hint, we can see that $\alpha+k, k = 0,1,\ldots,p-1$ are roots of $f(x)$. They are all distinct.
+          Thus
+          \[f(x) = \prod_{k=0}^{p-1}(x-\alpha-k)\]
+          If this polynomial is reducible over $F$, then there exists $n < p$ such that
+          \[g(x) = \prod_{i=0}^{n-1}(x-\alpha-k_i) \in F[x]\]
+          But this implies that the coefficient of $x^{p-1}$ in $g(x)$ is
+          \[n\alpha + k_0+k_1+\ldots+k_{n-1} \in F\]
+          which implies $\alpha \in F$, a contradiction. Thus $f(x)$ is irreducible over $F$.
+    \item This follows immediate from part 1 that $f$ is irreducible and has $p$ distinct roots. Thus the splitting field of $f$ is $E$ and $E=F(\alpha)$
+          is separable as $\alpha$ is separable over $F$. Thus $E/F$ is a Galois extension.
+    \item The Galois group is a group of order $p$, thus it is isomorphism to $\mathbb{Z}/p\mathbb{Z}$.
+  \end{enumerate}
 \end{proof}
 \begin{exercise}
   Let $\zeta := e^{2\pi i/7}$ be a primitive 7th root of unity. Let $K = \mathbb{Q}(\zeta)$.
@@ -126,7 +141,7 @@
   otherwise it is inside the intersection of two intermediate fields of degree $2$ and $3$, thus is rational.
   Hence we can conclude that this is the desired element.
 \end{proof}
-\textbf{Remark:} A sage code for this problem is given below.
+\textbf{Remark:} A Sage code for this problem is given below.
 \begin{verbatim}
   k = CyclotomicField(7); k 
   zeta=k.gen(); a = zeta+zeta^2+zeta^4
