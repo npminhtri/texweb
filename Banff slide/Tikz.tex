@@ -1,6 +1,7 @@
 \documentclass[pdf]{beamer}
 \usetheme{Madrid} % You can change this to other themes like Madrid, Copenhagen, etc.
 \usecolortheme{default}
+\usepackage{beamerthemesplit}
 \usepackage{tabularx}
 \usepackage{lscape}
 \usepackage{graphicx}
@@ -9,6 +10,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx} % For including images if needed
 \usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
 
 % Title slide information
 \title{Semi-stable lattices in higher rank}
@@ -30,14 +32,14 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Historical motivation}
-    Serre [1977] and Quillen [see Grayson, 1982] used the notion of semistable vector
+\begin{frame}{Historical motivation - \cite{grayson1984reduction}}
+    Serre and Quillen used the notion of semistable vector
     bundle on an algebraic curve to study $\text{SL}_n(\mathcal{O})$ when $\mathcal{O}$ is a Dedekind domain finitely generated over a finite field. Stuhler
     then realized he can used the same method to adapt some work of Harder and Narasimhan on stable vector bundles to yields new facts
     about lattices in a Euclidean space.
 \end{frame}
 \begin{frame}
-    Due to \cite{} , it is heuristical that the semi-stable lattices are the lattices in which the successive minima are closed.
+    Due to \cite{borek2005successive} , it is heuristic that the semi-stable lattices are the lattices in which the successive minima are closed.
 \end{frame}
 \begin{frame}{Definition of two-dimensional lattices}
     \begin{block}{Lattice}
@@ -46,7 +48,7 @@
         where $e_1,e_2$ are linearly independent over $\mathbb{R}$.
     \end{block}
 \end{frame}
-\begin{frame}{Example of a lattice}
+\begin{frame}{Example of a 2-dim lattice}
     \begin{figure}[h]
         \centering
         \resizebox{70mm}{70mm}{\begin{tikzpicture}
@@ -78,7 +80,7 @@
 
 \section{In 2 dimensional}
 \begin{frame}{Classification of lattices}
-    Do we know all the possible 2 dimensional "lattice shape"?\vspace{3em}
+    Do we know all the possible 2 dimensional "lattice shapes"?\vspace{3em}
 
     \pause
     \textbf{Answer:} Up to maginifcation, rotation and change of basis, the answer is yes.
@@ -113,7 +115,7 @@
 \end{frame}
 
 \begin{frame}{Canonical plot}
-    Grayson associated each lattice $L$ to some kind of \textbf{Newton polygon}. \pause
+    Grayson \cite{grayson1984reduction} associated each lattice $L$ to some kind of \textbf{Newton polygon}. \pause
 
     The process is as follows:
     \begin{enumerate}
@@ -125,14 +127,14 @@
 \begin{frame}{Canonical plot}
     \begin{figure}[h]
         \includegraphics[width = \textwidth]{Canonical plot.png}
-        \caption{The figure on the left corresponds to $z = -2/5 +3i/2$ and on the right corresponds to $z = 7/16+15i/16$}
+        \caption{\cite{casselman2004stability} - The figure on the left corresponds to $z = -2/5 +3i/2$ and on the right corresponds to $z = 7/16+15i/16$ }
     \end{figure}
 \end{frame}
 \begin{frame}{Canonical plot}
-    Since the lattice is discrete, there is a shortest primitive vector - on the plot we have the lowest point.\pause\vspace{3em}
+    Since the lattice is discrete, there is a shortest primitive vector - on the plot we have the lowest point on the vertical line $x=1$.\pause\vspace{3em}
 
-    Grayson called the set of points plotted above as \textbf{Canonical plot}. The convex hull of the collection
-    of the plot point is called \textbf{profile}.
+    Grayson called the set of points plotted above as \textbf{canonical plot}. The convex hull of the collection
+    of the plot points is called \textbf{profile}.
 \end{frame}
 \begin{frame}
     For any $z \in \mathbb{H} = \left\lbrace \text{Im}(z)>0 \right\rbrace$, we can assign to it a unit lattices
@@ -145,7 +147,7 @@
     vertical line $x=1$ lies below the $x$-axis is called \textbf{semi-stable}, otherwise it is called \textbf{unstable}.
 \end{frame}
 \begin{frame}{Semi-stable locus in fundamental domain}
-    \[
+    \begin{figure}{h}
         \begin{tikzpicture}[scale=2]
             \draw[densely dashed] (1,0) arc (0:60:1) (-1,0) arc (180:120:1);
             \draw[very thick, fill=gray!30] (.5,1.5) --node[right, pos=1]{$e^{2\pi i/6}=\rho$} (60:1) arc (60:120:1)
@@ -155,8 +157,13 @@
             \path(-1,0) --node[below, pos=0]{$-1$}node[below right, pos=.5]{0}node[below, pos=1]{1} (1,0)
             (0,1)node[below right]{$i$};
             \draw(-.5,.02)--(-.5,-.02)node[below]{$-\frac{1}{2}$}(.5,.02)--(.5,-.02)node[below]{$\frac{1}{2}$};
-            \draw[very thick, fill=red!30] (-0.5,1) -- (0.5,1);
-        \end{tikzpicture}\]
+            \draw[red,thin,fill=blue] (-0.5,1) -- (0.5,1);
+            \draw[very thick, fill = Turquoise](.5,1) -- (60:1) arc (60:120:1)
+            -- (-.5,1);
+        \end{tikzpicture}
+        \caption{The blue part is the semistable locus in the fundamental domain}
+    \end{figure}
+
 \end{frame}
 \begin{frame}
     Since the semi-stability is preserved under the action of $\text{SL}_2(\mathbb{Z})$, the semi-stable locus in the
@@ -166,20 +173,20 @@
 \begin{frame}
     \begin{figure}[h]
         \includegraphics[width = \textwidth]{ss-locus.png}
-        \caption{Semi-stable locus over $\mathbb{H}$}
+        \caption{\cite{casselman2004stability} - Semi-stable locus over $\mathbb{H}$ - it is the complement of the union of the gray area }
     \end{figure}
 \end{frame}
 \section{In dimension at least 3}
 \begin{frame}{In higher dimensional}
     We work with the lattices of the form $g\mathbb{Z}^n$ for $g \in \text{GL}_n(\mathbb{R})$ or
-    $g \in \text{SL}_n(\mathbb{R})$. The latter is just the lattice with unit volume. However
-    we still need to consider the sublattice of arbitrary volume.
+    $g \in \text{SL}_n(\mathbb{R})$. The latter is just the lattice with unit volume. Even if we want to work with unit lattices,
+    we still need to consider the sublattices of arbitrary volumes.
     \pause
     \begin{block}{Sublattice}
         A discrete subgroup $M$ of the lattice $L$ is called \textbf{sublatice} if it satisfies one of the
         the following equivalent conditions:
         \begin{enumerate}
-            \item $L/M$ has no torsion part.
+            \item $L/M$ is torsion-free.
             \item $M$ is a direct summand in $L$.
             \item Every basis of $M$ can be extended to a basis in $L$.
             \item The quotient $L/M$ is a free $\mathbb{Z}-$module.
@@ -187,38 +194,38 @@
     \end{block}
 \end{frame}
 \begin{frame}{Volume of lattice}
-    The volume of $L = g\mathbb{Z}^n$ is just $\deg(g)$. Assume that $M$ is a sublattice of $L$ of rank $k \le n$
+    The volume of $L = g\mathbb{Z}^n$ is just $\det(g)$. Assume that $M$ is a sublattice of $L$ of rank $k \le n$
     with a basis
     \[\left\lbrace v_1, v_2,\ldots, v_k\right\rbrace\]
-    Let $e_1,e_2,\ldots,e_n$ be the standard basis. We can form a matrix of size $k \times n$
+    Let $e_1,e_2,\ldots,e_n$ be the standard basis in $L \otimes \mathbb{R} \cong \mathbb{R}^n$. We can form a matrix of size $k \times n$
     \[A = \begin{bmatrix}
             \left\langle v_i ,e_j\right\rangle
         \end{bmatrix}\]
-    The volume of $M$ is defined to be the sum of squares of the determinant of $k \times k$ minor matrices in the matrix $A$.
-    %add example on the board here. 
+    The volume of $M$ is defined to be the sum of the squares of the determinants of the $k \times k$ minor matrices in the matrix $A$.
+    % Add an example on the board here. 
 \end{frame}
 \begin{frame}{Canonical plot in higher dimension}
-    Grayson assigned the lattices $L$ to a canonical plot as follows:
+    Grayson assigns the lattice $L$ to a canonical plot as follows:
     \begin{enumerate}
         \item Assign the point $(0,0)$ to the plot.
-        \item For each sublattice $M \subset L$ we assigne a point of coordinate ${l}(m) =(rank(M),\log(vol(M)))$ to the plot.
-        \item Assign the point $(1,\log(vol(L)))$ to the lattice.
+        \item For each sublattice $M \subset L$, assign a point with coordinates ${l}(M) = (\text{rank}(M), \log(\text{vol}(M)))$ to the plot.
+        \item Assign the point $(n, \log(\text{vol}(L)))$ to the lattice.
     \end{enumerate} \pause
 
     As before, we call the convex hull of this plot its \textbf{profile}.
 \end{frame}
 \begin{frame}
-    We have the following proposition
-    \begin{block}{Sublattice with bounded volume}
-        Fix a lattice $L$ of rank $n$ and a positive number $c$. For each $k \le n$, there are only finite sublattices $M \subset L$ such that
-        $vol(M) <c$.
+    We have the following proposition:
+    \begin{block}{Lemma 1.15 \cite{grayson1984reduction}}
+        Fix a lattice $L$ of rank $n$ and a positive number $c$. For each $k \leq n$, there are only finitely many sublattices $M \subset L$ such that
+        $\text{vol}(M) < c$.
     \end{block} \pause
 
-    This guarantees that for each vertical line $x = k$, there exists a lowest points, corresponding to the sublattice of smallest volume of each rank $k$.
-    In particular, the bottom of the profile is bounded below. Hence the following definition makes sense \pause
+    This guarantees that for each vertical line $x = k$, there exists a lowest point corresponding to the sublattice of smallest volume of each rank $k$.
+    In particular, the bottom of the profile is bounded below. Hence, the following definition makes sense: \pause
     \begin{block}{Semi-stable lattice}
-        Construct the profile of a lattice $L$ as above. If the bottom of the profile is just a line
-        then we call the lattice L \textbf{semi-stable}.
+        Construct the profile of a lattice $L$ as above. If the bottom of the profile is just a line,
+        then we call the lattice $L$ \textbf{semi-stable}.
     \end{block}
 \end{frame}
 \begin{frame}{Example of a higher rank profile}
@@ -229,18 +236,18 @@
     \end{figure}
 \end{frame}
 \begin{frame}{Iwasawa decomposition}
-    We recall the Iwasawa decomposition for $G =\text{GL}_n$
+    We recall the Iwasawa decomposition for $G = \text{GL}_n$:
     \[G = K \times A \times N\]
-    where
+    where:
     \begin{enumerate}
         \item $K$ is the orthogonal subgroup.
-        \item $A$ is the group of diagonal matrix with positive entries along the diagonal.
+        \item $A$ is the group of diagonal matrices with positive entries along the diagonal.
         \item $N$ is the unipotent subgroup.
     \end{enumerate}
 \end{frame}
 %give example for GL_2
 \begin{frame}{Parabolic subgroups}
-    For $G =\text{GL}_n$ we have an explicit description of standard parabolic subgroup
+    For $G =\text{GL}_n$ we have an explicit description of standard parabolic subgroups
     \pause\begin{block}{Standard Parabolic subgroups of $\text{GL}_n$}
         For each partition
         $$n = n_1+n_2+\ldots+n_k$$
@@ -252,13 +259,13 @@
                 \vdots         & \vdots         & \ddots & \vdots         \\
                 0              & 0              & \ldots & \mathfrak{m}_k
             \end{bmatrix} \right\rbrace\]
-        where $\mathfrak{m_i}$ is of size $n_i \times n_i$.
+        where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$.
     \end{block}
 \end{frame}
 \begin{frame}{Degree of instability}
     Now we are ready to define the degree of instability
-    \begin{block}{Degree of instability}
-        For each $x \in X = G$, we define its degree of instability to be
+    \begin{block}{Degree of instability, \cite{chaudouard2016variante}}
+        For each $x \in G$, we define its degree of instability to be
         \[\deg_{\text{inst}}(x):= \min_{P \in \text{ParSt}, \gamma \in G/P}\left\langle\rho_P, H_P(x\gamma) \right\rangle \]
     \end{block}\pause
     We define the notion of $\rho$-semistable as follows
@@ -269,10 +276,10 @@
 
 \begin{frame}{Equivalent between two notions of semi-stable lattices}
     We have the following Lemma
-    \begin{block}{Lemma A}
+    \begin{block}{Lemma 2.2.1, \cite{chaudouard2016variante}}
         The following are equivalent:
         \begin{enumerate}
-            \item \(\deg_Q^i(x) \geq 0\);
+            \item \(\deg^Q_{\text{inst}}(x) \geq 0\);
             \item For every parabolic subgroup \( P \subset Q \), every \( \delta \in Q(F)/P(F)\), and every \( \varpi \in \hat{\Delta}_P^Q \), we have:
                   \[
                       \langle \varpi, H_P(x\delta ) \rangle \geq 0;
@@ -285,14 +292,14 @@
     \end{block}
 \end{frame}
 \begin{frame}{Equivalent between two notions of semi-stable}
-    Use the previous lemma, we can reduce to consider only maximal parabolic subgroup.We can further replace $H_P$ with $H_B$, where $B$ is the minimal parabolic subgroup in the formula of degree of instability.
+    Use the previous lemma, we can reduce to consider only maximal parabolic subgroups. We can further replace $H_P$ with $H_B$, where $B$ is the minimal parabolic subgroup in the formula of degree of instability.
 
-    This means for
-    \[\left\langle \rho_{Q_i}, H_B(x\gamma)   \right\rangle = a_1a_2\ldots a_i\]
+    This means we have
+    \[\left\langle \rho_{Q_i}, H_B(x\gamma)   \right\rangle = a_1a_2\ldots a_i\]\pause
     where
-    \[x = kan \in K \times A \times N,\]
-    which
-    \[A = \begin{bmatrix}
+    \[x = k_xa_xn_x \in K \times A \times N,\]
+    in which
+    \[a_x = \begin{bmatrix}
             a_1    & 0      & \ldots & 0      \\
             0      & a_1    & \ldots & 0      \\
             \vdots & \vdots & \ddots & \vdots \\
@@ -303,19 +310,23 @@
 \begin{frame}
     This suggests that there should be a connection between the maximal parabolic subgroups of $G$
     and sublattices of $L$. Indeed we have
-    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
+    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
 
-    So we proved the main theorem
+    So we have the main theorem
     \begin{block}{Main theorem}
         Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
         conditions holds
         \begin{enumerate}
             \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
-            \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
+            \item The degree of instability of $x$ is nonnegative, namely, $\deg_{\text{inst}}(x) \ge 0$.
         \end{enumerate}
     \end{block}
 
 \end{frame}
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{refs} % Entries are in the refs.bib file
+
+
 \begin{frame}
     \begin{center}
         \textit{THANK YOU FOR YOUR ATTENTION.}
