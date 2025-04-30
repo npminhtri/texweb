@@ -38,14 +38,12 @@
     then realized he can used the same method to adapt some work of Harder and Narasimhan on stable vector bundles to yields new facts
     about lattices in a Euclidean space.
 \end{frame}
-\begin{frame}
-    Due to \cite{borek2005successive} , it is heuristic that the semi-stable lattices are the lattices in which the successive minima are closed.
-\end{frame}
+
 \begin{frame}{Definition of two-dimensional lattices}
     \begin{block}{Lattice}
         A lattice $L \subset \mathbb{R}^2$ is a set of the form
         \[L = \mathbb{Z}e_1\oplus\mathbb{Z}e_2\]
-        where $e_1,e_2$ are linearly independent over $\mathbb{R}$.
+        where $e_1,e_2 \in \mathbb{R}^2$ are linearly independent over $\mathbb{R}$.
     \end{block}
 \end{frame}
 \begin{frame}{Example of a 2-dim lattice}
@@ -78,27 +76,27 @@
 
 
 
-\section{In 2 dimensional}
+\section{In 2 dimensions}
 \begin{frame}{Classification of lattices}
     Do we know all the possible 2 dimensional "lattice shapes"?\vspace{3em}
 
     \pause
-    \textbf{Answer:} Up to maginifcation, rotation and change of basis, the answer is yes.
+    \textbf{Answer:} Up to rescaling, rotation and change of basis, the answer is yes.
 \end{frame}
 \begin{frame}{Fundamental domain}
-    Up to rorations and magnifications, we can reduce a lattice
-    \[L = \mathbb{Z}\omega_1 \oplus \mathbb{Z}\omega_2\]
+    Up to rotations and rescaling, we can reduce a lattice
+    \[L = \mathbb{Z}e_1 \oplus \mathbb{Z}e_2\]
     to a lattice of the form
     \[L_z = \mathbb{Z}z\oplus\mathbb{Z}, \quad \Im(z)>0\]
     So the upper half-plane parametrizes the 2 dimensional lattices.
     \begin{block}{Classification of unit lattices}
-        The map $z \mapsto \mathbb{Z}z\oplus\mathbb{Z}$ induces a bijection
+        The map $z \mapsto L_z = \mathbb{Z}z\oplus\mathbb{Z}$ induces a bijection
         \[\text{SL}_2(\mathbb{Z}) \backslash\mathbb{H} \cong \left\lbrace \text{ lattices}\right\rbrace/\mathbb{C^\times}\]
     \end{block}
 
 \end{frame}
 \begin{frame}{Fundamental domain}
-    So we reduce to study the space of lattices by looking the action of $\text{SL}_2(\mathbb{Z})$ on the upper half plane. Geometrically, the domain is given by
+    So we reduce the study of the space of lattices by looking the action of $\text{SL}_2(\mathbb{Z})$ on the upper half plane. Geometrically, the fundamental domain is given by
     \[\mathfrak{D} = \left\lbrace z=x+iy \in \mathbb{H}: |z| \ge 1,-1/2 \le x \le 1/2 \right\rbrace \],
     \pause
     \[
@@ -115,13 +113,13 @@
 \end{frame}
 
 \begin{frame}{Canonical plot}
-    Grayson \cite{grayson1984reduction} associated each lattice $L$ to some kind of \textbf{Newton polygon}. \pause
+    Grayson associated each lattice $L$  some kind of \textbf{Newton polygon}. \pause
 
     The process is as follows:
     \begin{enumerate}
-        \item Put $(0,0)$ to the plot.
+        \item Put $(0,0)$ in the plot.
         \item For each primitive vector $v \in L$, he assigns the point $(1,\log(||v||))$ to the plot.
-        \item Put the point $(2,\log(vol(L)))$ to the plot.
+        \item Put the point $(2,\log(vol(L)))$ in the plot.
     \end{enumerate}
 \end{frame}
 \begin{frame}{Canonical plot}
@@ -137,14 +135,14 @@
     of the plot points is called \textbf{profile}.
 \end{frame}
 \begin{frame}
-    For any $z \in \mathbb{H} = \left\lbrace \text{Im}(z)>0 \right\rbrace$, we can assign to it a unit lattices
+    For any $z \in \mathbb{H} = \left\lbrace \text{Im}(z)>0 \right\rbrace$, we can assign to it a lattice of covolume $1$ as follows
     \[z \mapsto L_z = \mathbb{Z}\dfrac{e_1}{\sqrt{y}} + \mathbb{Z}\left(\dfrac{x}{\sqrt{y}}e_1+\sqrt{y}e_2 \right)\]
     The shortest vector is then $ e_1/\sqrt{y}$, with length $\dfrac{1}{\sqrt{y}}$. So for $y<1$, the lowest
     point is below the horizontal axis.
     \pause \vspace{2em}
 
-    The element $z$ corresponds to the lattice $L_z$ such that its lowest point on the
-    vertical line $x=1$ lies below the $x$-axis is called \textbf{semi-stable}, otherwise it is called \textbf{unstable}.
+    The element $z$ corresponds to a lattice $L_z$ such that its lowest point on the
+    vertical line $x=1$ lies below the $x$-axis is called \textbf{semi-stable}, otherwise $z$ is called \textbf{unstable}.
 \end{frame}
 \begin{frame}{Semi-stable locus in fundamental domain}
     \begin{figure}{h}
@@ -177,9 +175,9 @@
     \end{figure}
 \end{frame}
 \section{In dimension at least 3}
-\begin{frame}{In higher dimensional}
+\begin{frame}{In higher dimensions}
     We work with the lattices of the form $g\mathbb{Z}^n$ for $g \in \text{GL}_n(\mathbb{R})$ or
-    $g \in \text{SL}_n(\mathbb{R})$. The latter is just the lattice with unit volume. Even if we want to work with unit lattices,
+    $g \in \text{SL}_n(\mathbb{R})$. The latter yields lattices with unit volumes. Even if we want to work with unit lattices,
     we still need to consider the sublattices of arbitrary volumes.
     \pause
     \begin{block}{Sublattice}
@@ -205,27 +203,26 @@
     % Add an example on the board here. 
 \end{frame}
 \begin{frame}{Canonical plot in higher dimension}
-    Grayson assigns the lattice $L$ to a canonical plot as follows:
+    Grayson assigns to the lattice $L$ a canonical plot as follows:
     \begin{enumerate}
-        \item Assign the point $(0,0)$ to the plot.
+        \item Put the point $(0,0)$ in the plot.
         \item For each sublattice $M \subset L$, assign a point with coordinates ${l}(M) = (\text{rank}(M), \log(\text{vol}(M)))$ to the plot.
-        \item Assign the point $(n, \log(\text{vol}(L)))$ to the lattice.
+        \item Put the point $(n, \log(\text{vol}(L)))$ in the lattice.
     \end{enumerate} \pause
 
     As before, we call the convex hull of this plot its \textbf{profile}.
 \end{frame}
 \begin{frame}
     We have the following proposition:
-    \begin{block}{Lemma 1.15 \cite{grayson1984reduction}}
+    \begin{block}{Lemma - Grayson}
         Fix a lattice $L$ of rank $n$ and a positive number $c$. For each $k \leq n$, there are only finitely many sublattices $M \subset L$ such that
         $\text{vol}(M) < c$.
     \end{block} \pause
 
-    This guarantees that for each vertical line $x = k$, there exists a lowest point corresponding to the sublattice of smallest volume of each rank $k$.
+    This guarantees that on each vertical line $x = k$, there exists a lowest point corresponding to the sublattice of smallest volume of each rank $k$.
     In particular, the bottom of the profile is bounded below. Hence, the following definition makes sense: \pause
     \begin{block}{Semi-stable lattice}
-        Construct the profile of a lattice $L$ as above. If the bottom of the profile is just a line,
-        then we call the lattice $L$ \textbf{semi-stable}.
+        A lattice $L$ is called \textbf{semi-stable} if the bottom of the profile is just a line.
     \end{block}
 \end{frame}
 \begin{frame}{Example of a higher rank profile}
@@ -266,35 +263,16 @@
     Now we are ready to define the degree of instability
     \begin{block}{Degree of instability, \cite{chaudouard2016variante}}
         For each $x \in G$, we define its degree of instability to be
-        \[\deg_{\text{inst}}(x):= \min_{P \in \text{ParSt}, \gamma \in G/P}\left\langle\rho_P, H_P(x\gamma) \right\rangle \]
+        \[\deg_{\text{inst}}(x):= \min_{P \in \text{ParSt}, \gamma \in G/P}\left\langle\rho_P, H_B(x\gamma) \right\rangle \]
     \end{block}\pause
     We define the notion of $\rho$-semistable as follows
     \begin{block}{$\rho$-semistable}
         A point $x \in G$ is called \textbf{semi-stable} iff $\deg_{\text{inst}}(x) \ge 0$.
     \end{block}
 \end{frame}
-
-\begin{frame}{Equivalent between two notions of semi-stable lattices}
-    We have the following Lemma
-    \begin{block}{Lemma 2.2.1, \cite{chaudouard2016variante}}
-        The following are equivalent:
-        \begin{enumerate}
-            \item \(\deg^Q_{\text{inst}}(x) \geq 0\);
-            \item For every parabolic subgroup \( P \subset Q \), every \( \delta \in Q(F)/P(F)\), and every \( \varpi \in \hat{\Delta}_P^Q \), we have:
-                  \[
-                      \langle \varpi, H_P(x\delta ) \rangle \geq 0;
-                  \]
-            \item For every maximal parabolic subgroup \( P \subset Q \), every \( \delta \in Q(F)/P(F) \), and every \( \varpi \in \hat{\Delta}_P^Q \), we have:
-                  \[
-                      \langle \varpi, H_P(x\delta ) \rangle \geq 0.
-                  \]
-        \end{enumerate}
-    \end{block}
-\end{frame}
 \begin{frame}{Equivalent between two notions of semi-stable}
-    Use the previous lemma, we can reduce to consider only maximal parabolic subgroups. We can further replace $H_P$ with $H_B$, where $B$ is the minimal parabolic subgroup in the formula of degree of instability.
 
-    This means we have
+    We have
     \[\left\langle \rho_{Q_i}, H_B(x\gamma)   \right\rangle = a_1a_2\ldots a_i\]\pause
     where
     \[x = k_xa_xn_x \in K \times A \times N,\]
@@ -306,6 +284,24 @@
             0      & 0      & \ldots & a_n
         \end{bmatrix}\]
 \end{frame}
+\begin{frame}{Equivalent between two notions of semi-stable lattices}
+    We have the following Lemma
+    \begin{block}{Lemma 2.2.1, \cite{chaudouard2016variante}}
+        The following are equivalent:
+        \begin{enumerate}
+            \item \(\deg_{\text{inst}}(x) \geq 0\);
+            \item For every parabolic subgroup \( P \subset G \), every \( \delta \in G(\mathbb{Q})/P(\mathbb{Q})\), and every \( \varpi \in \hat{\Delta}_P^G \), we have:
+                  \[
+                      \langle \varpi, H_B(x\delta ) \rangle \geq 0;
+                  \]
+            \item For every maximal parabolic subgroup \( P \subset G \), every \( \delta \in  G(\mathbb{Q})/P(\mathbb{Q})\) , and every \( \varpi \in \hat{\Delta}_P^G \), we have:
+                  \[
+                      \langle \varpi, H_B(x\delta ) \rangle \geq 0.
+                  \]
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
 
 \begin{frame}
     This suggests that there should be a connection between the maximal parabolic subgroups of $G$
@@ -314,10 +310,10 @@
 
     So we have the main theorem
     \begin{block}{Main theorem}
-        Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
+        Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ - the space of lattices . Then $x$ is semi-stable if one of the following equaivalent
         conditions holds
         \begin{enumerate}
-            \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
+            \item The bottom of the profile of the lattice corresponding to $x$ is a straight line that connects the origin and $(n,\log(\text{vol}(L)))$.
             \item The degree of instability of $x$ is nonnegative, namely, $\deg_{\text{inst}}(x) \ge 0$.
         \end{enumerate}
     \end{block}
@@ -332,4 +328,8 @@
         \textit{THANK YOU FOR YOUR ATTENTION.}
     \end{center}
 \end{frame}
+
 \end{document}
+\begin{frame}
+    Due to \cite{borek2005successive} , it is heuristic that the semi-stable lattices are the lattices in which the successive minima are closed.
+\end{frame}
