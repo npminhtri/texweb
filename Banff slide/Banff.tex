@@ -11,7 +11,10 @@
 \usepackage{graphicx} % For including images if needed
 \usepackage[utf8]{inputenc}
 \usepackage[dvipsnames]{xcolor}
+\usepackage[numbers]{natbib}
 
+\newcommand\Mycite[1]{%
+  \citeauthor{#1}~}
 % Title slide information
 \title{Semi-stable lattices in higher rank}
 
@@ -171,7 +174,7 @@
 \begin{frame}
     \begin{figure}[h]
         \includegraphics[width = \textwidth]{ss-locus.png}
-        \caption{\cite{casselman2004stability} - Semi-stable locus over $\mathbb{H}$ - it is the complement of the union of the gray area }
+        \caption{ Semi-stable locus over $\mathbb{H}$ - it is the complement of the union of the gray area }
     \end{figure}
 \end{frame}
 \section{In dimension at least 3}
@@ -214,7 +217,7 @@
 \end{frame}
 \begin{frame}
     We have the following proposition:
-    \begin{block}{Lemma - Grayson}
+    \begin{block}{Lemma - \Mycite{grayson1984reduction}}
         Fix a lattice $L$ of rank $n$ and a positive number $c$. For each $k \leq n$, there are only finitely many sublattices $M \subset L$ such that
         $\text{vol}(M) < c$.
     \end{block} \pause
@@ -261,9 +264,9 @@
 \end{frame}
 \begin{frame}{Degree of instability}
     Now we are ready to define the degree of instability
-    \begin{block}{Degree of instability, \cite{chaudouard2016variante}}
+    \begin{block}{Degree of instability, \Mycite{chaudouard2016variante}}
         For each $x \in G$, we define its degree of instability to be
-        \[\deg_{\text{inst}}(x):= \min_{P \in \text{ParSt}, \gamma \in G/P}\left\langle\rho_P, H_B(x\gamma) \right\rangle \]
+        \[\deg_{\text{inst}}(x):= \min_{P \in \text{ParSt}, \gamma \in G(\mathbb{Q})/P(\mathbb{Q})}\left\langle\rho_P, H_B(x\gamma) \right\rangle \]
     \end{block}\pause
     We define the notion of $\rho$-semistable as follows
     \begin{block}{$\rho$-semistable}
@@ -286,7 +289,7 @@
 \end{frame}
 \begin{frame}{Equivalent between two notions of semi-stable lattices}
     We have the following Lemma
-    \begin{block}{Lemma 2.2.1, \cite{chaudouard2016variante}}
+    \begin{block}{Lemma 2.2.1, \Mycite{chaudouard2016variante}}
         The following are equivalent:
         \begin{enumerate}
             \item \(\deg_{\text{inst}}(x) \geq 0\);
@@ -320,7 +323,7 @@
 
 \end{frame}
 \begin{frame}{References}
-    \bibliographystyle{plain} % We choose the "plain" reference style
+    \bibliographystyle{plainnat} % We choose the "plain" reference style
     \bibliography{refs} % Entries are in the refs.bib file
 
 \end{frame}
