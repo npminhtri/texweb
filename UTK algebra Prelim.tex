@@ -66,7 +66,7 @@
 \usepackage{fancyhdr}
 
 \fancypagestyle{pages}{
-	%Headers
+
 	\fancyhead[L]{}
 	\fancyhead[C]{}
 	\fancyhead[R]{}
@@ -91,7 +91,7 @@
 \begin{document}
 
 
-
+\section{Galois Theory}
 % Question 1
 \begin{exercise}\label{Galois theory }
   Let $F$ be a field of prime characteristic $p$. Suppose $E = F(\alpha)$ such that
@@ -140,6 +140,12 @@
   Clearly $\alpha \notin \mathbb{Q}$, since $\zeta$ has degree $6$ over $\mathbb{Q}$. Moreover, $\alpha$ can't have degree $3$ over $\mathbb{Q}$,
   otherwise it is inside the intersection of two intermediate fields of degree $2$ and $3$, thus is rational.
   Hence we can conclude that this is the desired element.
+
+  Another way  to do this problem is as follows. We have
+  \[\alpha^2 = \zeta^2+\zeta^4+\zeta + 2(\zeta^3+\zeta^6+\zeta^5)=\zeta^2+\zeta^4+\zeta-2(1+\zeta^2+\zeta^4+\zeta)=-2-\alpha\]
+  Thus we have the polynomial $x^2+x+2$ which is irreducible over $\mathbb{Q}$, since it has no rational roots. Thus we can conclude that $[\mathbb{Q}(\alpha):\mathbb{Q}] = 2$.
+  \[\alpha^2 + \alpha + 2 = 0\]
+  This yields the desired element $\alpha$.
 \end{proof}
 \textbf{Remark:} A Sage code for this problem is given below.
 \begin{verbatim}
@@ -147,4 +153,21 @@
   zeta=k.gen(); a = zeta+zeta^2+zeta^4
   a.minpoly()
 \end{verbatim}
+\begin{exercise}
+  Let \( K \) be a finite field of characteristic \( p \) with \( p^k \) elements. Suppose that \( F, L \) are subfields of \( K \) with \( |F| = p^n \) and \( |L| = p^m \). Also, suppose that \( |F \cap L| = p \). Prove that \( K = FL \) if and only if \( nm = k \).
+\end{exercise}
+\begin{proof}
+  Since every finite extension of a finite field is Galois, and we have that
+  \[\text{Gal}(FL/F) \cong \text{Gal}(L/L\cap F) = m\]
+  In particular, we have $[FL:F] = m$. Thus
+  \[[FL:L \cap F] = [FL:F][F:L\cap F ] = mn\]
+  Hence $K = FL$ if and only if $mn = k$.  \footnote{  We can also prove this by using the uniqueness of finite extension of finite field of given order.}
+\end{proof}
+\begin{exercise}
+  Let $E$ be a Galois extension of $\mathbb{Q}$ of order $2022$. Show that there exists 
+  a cubic polynomial $f \in \mathbb{Q}[x]$ such that $f$ is irreducible and and has 3 distinct roots in $E$.
+\end{exercise}
+\begin{proof}
+  
+\end{proof}
 \end{document}
