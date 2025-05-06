@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.5)  5 MAY 2025 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.5)  6 MAY 2025 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/texweb/UTK algebra Prelim.tex"
-(e:/texweb/UTK algebra Prelim.tex
+**"e:/texweb/UTK prelim/UTK algebra Prelim.tex"
+(e:/texweb/UTK prelim/UTK algebra Prelim.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -850,14 +850,14 @@ Package rerunfilecheck Info: File `"UTK algebra Prelim".out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  23295 strings out of 474486
- 434951 string characters out of 5745172
+ 435056 string characters out of 5745172
  1948542 words of memory out of 5000000
  45126 multiletter control sequences out of 15000+600000
  594318 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,11n,115p,582b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,11n,115p,593b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "UTK algebra Prelim.pdf" (2 pages, 133711 bytes).
+Output written on "UTK algebra Prelim.pdf" (2 pages, 134146 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
