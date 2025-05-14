@@ -1,0 +1,101 @@
+\documentclass[12pt]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+
+\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+
+\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{tikz}\usetikzlibrary{arrows.meta,calc} %library tikz
+\usepackage{subcaption}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{color,soul} %package for highlining
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{fancyhdr}
+\usepackage{hyperref} %creat hyperlink
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    } %set up a hyperlink to be in blue 
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{example}[definition]{Example}
+
+\newtheorem*{remark}{Remark}
+
+\pagestyle{fancy}
+\cfoot{\thepage} % this is for the page numbering
+\setlength\parindent{0pt} % noindent for the whole document.
+\renewcommand{\baselinestretch}{1.1} % increase the distance between line.
+
+\DeclareMathOperator{\SLn}{\text{SL}_n(\mathbb{R})}
+\DeclareMathOperator{\GLn}{\text{GL}_n(\mathbb{R})}
+\DeclareMathOperator{\slnz}{SL_n(\mathbb{Z})}
+\DeclareMathOperator{\glnz}{GL_n(\mathbb{Z})}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\fg}{\mathfrak{g}}
+\DeclareMathOperator{\fh}{\mathfrak{h}}
+\DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
+\DeclareMathOperator{\slnr}{\mathfrak{sl}_n(\mathbb{R})}
+\newcommand{\tpoint}[1]{\subsection{#1}}
+
+\newcommand{\spoint}{\subsection{}}
+
+
+
+\title{CHAPTER II :ROOTS AND WEIGHTS FOR $\SLn$} % Sets article title
+\date{\today} % Sets date for date compiled
+\begin{document}
+\maketitle
+In this chapter, we review some basis theory of roots and weight. We will first recall the 
+general theory and compute explicitly the exammples for $\SLn$/$\GLn$.
+\section{Structure theory}
+\subsection{The Cartan subalgebra}
+First we need the notion of Cartan subalgebra
+\begin{definition}
+    For any Lie algebra $\mathfrak{g}$, a subalgebra $\mathfrak{h}$ of $\fg$ is said to be \textit{Cartan algebra} if it is 
+    \begin{itemize}
+        \item $\fh$ is a nilpotent subalgebra.
+        \item It is self normalizing. In particular, we have $\fh = \left\lbrace x \in \fg : [x,\fg] \subset \fg\right\rbrace$.
+    \end{itemize}
+\end{definition}
+when $\fg$ is a semisimple Lie algebra, we have the following theorem
+\begin{theorem}
+    Let $\fg$ be a semisimple Lie algebra over an algebraically closed field $k$ of charateristic $0$ with a subalgebra $\fh$.
+    Then $\fh$ is a Cartan subalgebra of $\fg$ if and only if it is a maximal toral subalgebra, i.e. is is maximal among all subalgebras
+    contanining only semisimple elements. 
+\end{theorem}\todo{add citation.}
+\subsection{Root space decomposition}
+With respect to some choice of Cartan subalgebra, we have a root space decomposition. In particular, there is a finite set 
+$\Phi \subset \fh^{*}$ of linear forms on $H$, whose elements are called \textbf{roots}, such that 
+\[\fg = \fh \oplus \left(\bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha\right),\]
+where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$. 
+\subsection{A specific example: root space decomposition for $\mathfrak{sl}_n(\mathbb{R})$}
+For the semisimple Lie algebra $\slnr$, a typical choice of the Cartan subalgebra is the set 
+\[\fh = \left\lbrace H= \begin{bmatrix}
+    a_1 &  0 & \ldots & 0 \\
+    0 &  a_2 & \ldots & 0 \\
+    \vdots & \vdots    &\ddots & \vdots\\
+    0 & 0 & \cdots & a_n
+\end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
+With respect to this Cartan subalgebra, we can define the linear function 
+\[L_i \colon \fh \to \mathbb{R}, \quad H \mapsto L_i(H)= a_i\]
+Then the roots are given by $\alpha_{ij} :=L_i - L_j$ for distinct $i,j$. We have the root space decomposition for $\slnr$ as follows
+\[\fg = \fh \oplus \left(\bigoplus\fg_{\alpha_{ij}}\right).\]
+For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$. At the group level, the roots over the 
+
+\end{document}
