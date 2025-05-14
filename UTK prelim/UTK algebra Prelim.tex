@@ -170,6 +170,31 @@
 \begin{proof}
 Note that we have 
 \[2022 = 337 \times 2 \times 3\]
-We will show that  the group of order $337$ is a normal subgroup. Indeed 
+\textbf{to be added}
+\end{proof}
+\section{Group theory}
+\begin{exercise}
+  Let $G$ be a finite group and $H$ be a proper subgroup. Suppose that $\gcd(|H|,[G:H])>1$. Show that there exists some $g \in G \setminus H$ such that $gHg^{-1} \cap H \ne \left\lbrace e\right\rbrace$. \end{exercise}
+\begin{proof}
+  \footnote{this solution is originally asked by me here: https://math.stackexchange.com/a/5063992/1231540}Anyway, one way to think about this problem is to consider the action of $H$ on $G/H$ by left multiplication.
+
+The stabilizer of an element $gH \in G/H$ is equal to
+\begin{align*}
+\{h \in H : hgH = gH \} &= \{h \in H : g^{-1}hgH = H\} \\
+&= \{h \in H : g^{-1}hg \in H \} \\
+&= \{h \in H : h \in gHg^{-1}\} \\
+&= gHg^{-1} \cap H,
+\end{align*}
+so we simply wish to show that some element of $G/H$, besides the trivial coset $eH$, has nontrivial stabilizer.
+
+Well, suppose for contradiction that this is not the case, i.e. the stabilizer of $gH$ is $\{e\}$ whenever $g \notin H$. Then by the orbit-stabilizer theorem we have at most two types of orbits in the $H$-set $G/H$:
+\begin{itemize}
+  \item A single orbit of cardinality $1$, namely $\{eH\}$.
+  \item Some number (say, $n$) of orbits of cardinality $\lvert H \rvert$
+\end{itemize}
+
+Since every $H$-set is the disjoint union of its orbits, we conclude that
+$$[G : H] = \lvert G / H \rvert = 1 + n \lvert H \rvert$$
+for some integer $n \geq 0$. This implies that $\gcd(\lvert H \rvert, [G:H]) = 1$, which is a contradiction.
 \end{proof}
 \end{document}
