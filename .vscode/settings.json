@@ -1,4 +1,4 @@
-{
+{"latex-workshop.formatting.latex": "latexindent",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
