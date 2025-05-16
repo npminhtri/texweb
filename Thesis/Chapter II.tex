@@ -48,6 +48,7 @@
 \DeclareMathOperator{\slnz}{SL_n(\mathbb{Z})}
 \DeclareMathOperator{\glnz}{GL_n(\mathbb{Z})}
 \DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\fg}{\mathfrak{g}}
 \DeclareMathOperator{\fh}{\mathfrak{h}}
 \DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
@@ -108,12 +109,12 @@ behave at group level. The analog for the Cartan subalgebra is the maximal torus
         \vdots & \vdots & \ddots & \vdots \\
         0      & 0      & \cdots & a_n
     \end{bmatrix} :  a_i \ne 0\right\rbrace,\]
-Then $T$ acts on $\fg$ by conjugation. Explicitly, we can check that 
+Then $T$ acts on $\fg$ by conjugation. Explicitly, we can check that
 \[\Ad(t)(E_{ij}) = t_it_j^{-1}E_{ij}\]
 Therefore, at the group level, the character $\alpha_{ij}(\text{diag}(t_1,\ldots,t_n))=t_it_j^{-1}$
-is a root whenever $i \ne j$. The set 
+is a root whenever $i \ne j$. The set
 \[\Delta = \left\lbrace \alpha_i\mid i =\overline{1,n}\right\rbrace\]
-where 
+where
 \[\alpha_i \colon T \mapsto \mathbb{R}, t \mapsto \dfrac{t_i}{t_{i+1}}\]
 is the set of \textbf{simple roots}.
 We can decompose the set of root into to disjoint subsets, namely
@@ -128,46 +129,74 @@ where the set $\Phi_+$ comprises of $\alpha_{ij}$ for $i<j$ and the remaining ro
 \subsection{Weights}
 \todo{define in term of Lie algebra}
 Another class of linear forms that we are interested in are the \textbf{fundamental weights}. For each fundamental
-weights $\lambda_i$, we define 
+weights $\lambda_i$, we define
 \[\lambda_i \colon T \to \mathbb{R}, \quad\lambda_i(t) = a_1\ldots a_i\]
-We have the following 
-\begin{lemma}
-    We can write 
+We have the following
+\begin{lemma}\label{linear-comb-of-weights}
+    We can write
     \[\lambda_i := r_1\alpha_1 + r_2\alpha_2+\ldots + r_d\alpha_d\]
     where $r_i$'s are rational number such that $r_i \ge 0$.\textcolor{red}{add proof}
 \end{lemma}
 \begin{example}
-    When $n=3$, we have the following relations\textcolor{red}{add picture}
+    When $n=3$, we have the following relations \textcolor{red}{add picture}
     \[\lambda_1 = \dfrac{2}{3}\alpha_1+\dfrac{1}{3}\alpha_2, \quad \lambda_2 = \dfrac{1}{3}\alpha_1+\dfrac{2}{3}\alpha_2\]
 \end{example}
 \begin{definition}
     A weight $\lambda$ is called \textbf{dominant} if it satisfies $\left\langle \lambda,\alpha^{\vee} \right\rangle \in \mathbb{Z}_{\ge 0}$ for all $\alpha$
 \end{definition}
-Clearly by lemma \ref{linear-comb-of-roots}, the weight $\lambda$ is dominant if and only if $\left\langle\lambda,\alpha_i^\vee\right\rangle$ for all 
+Clearly by lemma \ref{linear-comb-of-roots}, the weight $\lambda$ is dominant if and only if $\left\langle\lambda,\alpha_i^\vee\right\rangle$ for all
 fundamental root $\alpha_i$. It is also clearly that the set of fundamental weight is given by addition of the fundamental weights, namely
 \[\Lambda^+ := \left\lbrace c_1\lambda_1+\ldots+c_d\lambda_d \mid c_i \in \mathbb{Z}_{\ge 0}\right\rbrace\]
 The set of dominant weights is denoted $\Lambda^+$. A weight $\lambda = \sum n_i \lambda_i$ is called strongly dominant if $n_i > 0$ for all $i$. One important example is the minimal strongly dominant weight given by
 \[
-\rho = \sum \lambda_i
+    \rho = \sum \lambda_i
 \]
 This is called \textbf{Weyl vector} and is characterized in several ways:
 
 \begin{enumerate}
     \item $\left\langle\rho,\alpha_i^\vee\right\rangle = 1$ for all $i$.
     \item
-    \[
-    \rho = \frac{1}{2} \sum_{\alpha \in \Phi^+} \alpha
-    \]
+          \[
+              \rho = \frac{1}{2} \sum_{\alpha \in \Phi^+} \alpha
+          \]
 \end{enumerate}
 
 To prove the last equation we use the action of the Weyl group $W$. Let $\mu = \frac{1}{2} \sum \alpha$. Apply the simple reflection $s_i$ given by
 \[
-s_i(x) = x - \left\langle x, \alpha_i^\vee\right\rangle \alpha_i
+    s_i(x) = x - \left\langle x, \alpha_i^\vee\right\rangle \alpha_i
 \]
 We know that $s_i$ sends $\alpha_i$ to $-\alpha_i$ and permutes the other positive roots. So:
 \[
-s_i(\mu) = \mu -  \left\langle x, \alpha_i^\vee\right\rangle  \alpha_i
+    s_i(\mu) = \mu -  \left\langle x, \alpha_i^\vee\right\rangle  \alpha_i
 \]
 Therefore, $(\mu, \alpha_i) = \mu(h_i) = 1$ for all $i$. So, $\mu = \rho$.
-\subsection{Weyl groups}
+
+Unlike lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in term of the fundamental roots, we don't always
+get positive coefficients. However, it is true that all the coefficients must be integer. In particular, we have
+\[\alpha_j = \sum_{n_j}\lambda_j, \quad n_j \in \mathbb{Z}.\]
+To put it another way, the root lattice $\mathbb{Z}\Delta$ is contained inside the weight lattice.
+\subsection{Weyl group}
+We only define the Weyl group explicitly for the group $\SLn$ or $\GLn$. It is a fact that the Weyl groups for
+these two Lie groups are the same and equal to $W = S_n$ - the permutation group of $n$ letters.  We recall some basis
+observation about this group
+\begin{enumerate}
+    \item Every $\sigma \in W$ can be written (non-uniquely) as a product of $w_{i_1} \cdots w_{i_k}$ for some integer $k$. Such a sequence is said to have length $k.$ If $k$ is the minimum, over all such writings, it is called the length of $\sigma$ and written $\ell(\sigma)$. Any expression of length $\ell(\sigma)$ for $\sigma$ is called a reduced expression.
+
+    \item The group $S_n$ is generated by $S$ subject to the following two types of relations:
+          \begin{itemize}
+              \item (Reflection) $w_i^2=1$ for $i \in I$.
+              \item (Braid relations) $w_i \, w_{i+1} \, w_i = w_{i+1}w_i w_{i+1}$ for $i = 1, \ldots, n-2$ and $w_i w_j = w_j w_i$ for $|j -i |\geq 2$.
+          \end{itemize}
+\end{enumerate}
+Note that $W$ acts on $\Hom(H, \mathbb{R}^*)$ in the natural way: $w . \varphi(h) = \varphi(w^{-1} h)$. More explicitly,  $\sigma$ sens $\alpha:= \alpha_{ij}$ to $\alpha_{\sigma(i), \sigma(j)}$. Hence we find that
+\[w_i \alpha_j = \begin{cases} - \alpha_i          & \mbox{if } i=j           \\
+              \alpha_j            & \mbox{ if } |j - i | > 1 \\
+              \alpha_i + \alpha_j & \mbox{ if } |j-i|=1\end{cases} \]
+We of course also have an action of $W$ on the weights.  For example, one can verify that
+\[ \begin{array}{lcr} s_i(\lambda_i) = \lambda_i - \alpha_i & \text{ and } & s_j(\lambda_i) = \lambda_i \mbox{ for } i \neq j \end{array}.\]
+Recall the definition of Weyl vector $\rho$, we have the following generalized action of Weyl group of $\rho$:
+\[ w \rho = \rho - \sum_{\alpha \in \Delta_{w^{-1}}} \alpha,\]
+where \textcolor{red}{check this explicitly}
+\[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
+\section{Parabolic subgroups}
 \end{document}_
