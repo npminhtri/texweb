@@ -6,6 +6,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{mathabx}
 \usepackage{lscape}
 \usepackage{graphicx}
 \usepackage{tikz}\usetikzlibrary{arrows.meta,calc} %library tikz
@@ -51,6 +52,7 @@
 \DeclareMathOperator{\fh}{\mathfrak{h}}
 \DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
 \DeclareMathOperator{\slnr}{\mathfrak{sl}_n(\mathbb{R})}
+\DeclareMathOperator{\Ad}{\text{Ad}}
 \newcommand{\tpoint}[1]{\subsection{#1}}
 
 \newcommand{\spoint}{\subsection{}}
@@ -61,49 +63,111 @@
 \date{\today} % Sets date for date compiled
 \begin{document}
 \maketitle
-In this chapter, we review some basis theory of roots and weight. We will first recall the 
-general theory and compute explicitly the exammples for $\SLn$/$\GLn$.
+In this chapter, we review some basis theory of roots and weight. We will first recall the
+general theory and compute explicitly the examples for $\SLn$/$\GLn$.
 \section{Structure theory}
 \subsection{The Cartan subalgebra}
 First we need the notion of Cartan subalgebra
 \begin{definition}
-    For any Lie algebra $\mathfrak{g}$, a subalgebra $\mathfrak{h}$ of $\fg$ is said to be \textit{Cartan algebra} if it is 
+    For any Lie algebra $\mathfrak{g}$, a subalgebra $\mathfrak{h}$ of $\fg$ is said to be \textit{Cartan algebra} if it is
     \begin{itemize}
         \item $\fh$ is a nilpotent subalgebra.
         \item It is self normalizing. In particular, we have $\fh = \left\lbrace x \in \fg : [x,\fg] \subset \fg\right\rbrace$.
     \end{itemize}
 \end{definition}
-when $\fg$ is a semisimple Lie algebra, we have the following theorem
+When $\fg$ is a semisimple Lie algebra, we have the following theorem
 \begin{theorem}
     Let $\fg$ be a semisimple Lie algebra over an algebraically closed field $k$ of charateristic $0$ with a subalgebra $\fh$.
     Then $\fh$ is a Cartan subalgebra of $\fg$ if and only if it is a maximal toral subalgebra, i.e. is is maximal among all subalgebras
-    contanining only semisimple elements. 
+    contanining only semisimple elements.
 \end{theorem}\todo{add citation.}
 \subsection{Root space decomposition}
-With respect to some choice of Cartan subalgebra, we have a root space decomposition. In particular, there is a finite set 
-$\Phi \subset \fh^{*}$ of linear forms on $H$, whose elements are called \textbf{roots}, such that 
+With respect to some choice of Cartan subalgebra, we have a root space decomposition. In particular, there is a finite set
+$\Phi \subset \fh^{*}$ of linear forms on $H$, whose elements are called \textbf{roots}, such that
 \[\fg = \fh \oplus \left(\bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha\right),\]
-where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$. 
+where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$.
 \subsection{A specific example: root space decomposition for $\mathfrak{sl}_n(\mathbb{R})$}
-For the semisimple Lie algebra $\slnr$, a typical choice of the Cartan subalgebra is the set 
+For the semisimple Lie algebra $\slnr$, a typical choice of the Cartan subalgebra is the set
 \[\fh = \left\lbrace H= \begin{bmatrix}
-    a_1 &  0 & \ldots & 0 \\
-    0 &  a_2 & \ldots & 0 \\
-    \vdots & \vdots    &\ddots & \vdots\\
-    0 & 0 & \cdots & a_n
-\end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
-With respect to this Cartan subalgebra, we can define the linear function 
+        a_1    & 0      & \ldots & 0      \\
+        0      & a_2    & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \cdots & a_n
+    \end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
+With respect to this Cartan subalgebra, we can define the linear function
 \[L_i \colon \fh \to \mathbb{R}, \quad H \mapsto L_i(H)= a_i\]
 Then the roots are given by $\alpha_{ij} :=L_i - L_j$ for distinct $i,j$. We have the root space decomposition for $\slnr$ as follows
 \[\fg = \fh \oplus \left(\bigoplus\fg_{\alpha_{ij}}\right).\]
-For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$ - these are called \textbf{fundamental roots}.
+For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$ - these are called \textbf{simple roots}.
 \subsection{Roots at group level}
-Since the main object in this thesis is the Lie groups, we want to understand how the roots 
-behave at group level. The analog for the Cartan subalgebra is the maximal torus 
-\[T = \left\lbrace \begin{bmatrix}
-    a_1 &  0 & \ldots & 0 \\
-    0 &  a_2 & \ldots & 0 \\
-    \vdots & \vdots    &\ddots & \vdots\\
-    0 & 0 & \cdots & a_n
-\end{bmatrix} \right\rbrace \]
-what the heck\end{document}
+Since the main object in this thesis is the Lie groups, we want to understand how the roots
+behave at group level. The analog for the Cartan subalgebra is the maximal torus
+\[T = \left\lbrace t= \begin{bmatrix}
+        a_1    & 0      & \ldots & 0      \\
+        0      & a_2    & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \cdots & a_n
+    \end{bmatrix} :  a_i \ne 0\right\rbrace,\]
+Then $T$ acts on $\fg$ by conjugation. Explicitly, we can check that 
+\[\Ad(t)(E_{ij}) = t_it_j^{-1}E_{ij}\]
+Therefore, at the group level, the character $\alpha_{ij}(\text{diag}(t_1,\ldots,t_n))=t_it_j^{-1}$
+is a root whenever $i \ne j$. The set 
+\[\Delta = \left\lbrace \alpha_i\mid i =\overline{1,n}\right\rbrace\]
+where 
+\[\alpha_i \colon T \mapsto \mathbb{R}, t \mapsto \dfrac{t_i}{t_{i+1}}\]
+is the set of \textbf{simple roots}.
+We can decompose the set of root into to disjoint subsets, namely
+\[\Phi = \left\lbrace \alpha_{ij}, i \ne j\right\rbrace = \Phi_+ \coprod \Phi_{-}\]
+where the set $\Phi_+$ comprises of $\alpha_{ij}$ for $i<j$ and the remaining roots are in $\Phi_{-}$. The former comprises of
+\textbf{positive roots} while the latter contains \textbf{negative roots}. We have the following lemma
+\begin{lemma}\label{linear-comb-of-roots}
+    Each $\alpha \in \Phi$ can be written uniquely as a linear combination
+    \[\alpha = m_1\alpha_1+\ldots+m_{d}\alpha_{d}\]
+    with all $m_i \in \mathbb{Z}_{\ge 0}$ or $m_i \in \mathbb{Z}_{\le 0}$. If $\alpha \in \Phi_+$ then all $m_i \ge 0$, otherwise $m_i \le 0$ for all $i$.
+\end{lemma}
+\subsection{Weights}
+\todo{define in term of Lie algebra}
+Another class of linear forms that we are interested in are the \textbf{fundamental weights}. For each fundamental
+weights $\lambda_i$, we define 
+\[\lambda_i \colon T \to \mathbb{R}, \quad\lambda_i(t) = a_1\ldots a_i\]
+We have the following 
+\begin{lemma}
+    We can write 
+    \[\lambda_i := r_1\alpha_1 + r_2\alpha_2+\ldots + r_d\alpha_d\]
+    where $r_i$'s are rational number such that $r_i \ge 0$.\textcolor{red}{add proof}
+\end{lemma}
+\begin{example}
+    When $n=3$, we have the following relations\textcolor{red}{add picture}
+    \[\lambda_1 = \dfrac{2}{3}\alpha_1+\dfrac{1}{3}\alpha_2, \quad \lambda_2 = \dfrac{1}{3}\alpha_1+\dfrac{2}{3}\alpha_2\]
+\end{example}
+\begin{definition}
+    A weight $\lambda$ is called \textbf{dominant} if it satisfies $\left\langle \lambda,\alpha^{\vee} \right\rangle \in \mathbb{Z}_{\ge 0}$ for all $\alpha$
+\end{definition}
+Clearly by lemma \ref{linear-comb-of-roots}, the weight $\lambda$ is dominant if and only if $\left\langle\lambda,\alpha_i^\vee\right\rangle$ for all 
+fundamental root $\alpha_i$. It is also clearly that the set of fundamental weight is given by addition of the fundamental weights, namely
+\[\Lambda^+ := \left\lbrace c_1\lambda_1+\ldots+c_d\lambda_d \mid c_i \in \mathbb{Z}_{\ge 0}\right\rbrace\]
+The set of dominant weights is denoted $\Lambda^+$. A weight $\lambda = \sum n_i \lambda_i$ is called strongly dominant if $n_i > 0$ for all $i$. One important example is the minimal strongly dominant weight given by
+\[
+\rho = \sum \lambda_i
+\]
+This is called \textbf{Weyl vector} and is characterized in several ways:
+
+\begin{enumerate}
+    \item $\left\langle\rho,\alpha_i^\vee\right\rangle = 1$ for all $i$.
+    \item
+    \[
+    \rho = \frac{1}{2} \sum_{\alpha \in \Phi^+} \alpha
+    \]
+\end{enumerate}
+
+To prove the last equation we use the action of the Weyl group $W$. Let $\mu = \frac{1}{2} \sum \alpha$. Apply the simple reflection $s_i$ given by
+\[
+s_i(x) = x - \left\langle x, \alpha_i^\vee\right\rangle \alpha_i
+\]
+We know that $s_i$ sends $\alpha_i$ to $-\alpha_i$ and permutes the other positive roots. So:
+\[
+s_i(\mu) = \mu -  \left\langle x, \alpha_i^\vee\right\rangle  \alpha_i
+\]
+Therefore, $(\mu, \alpha_i) = \mu(h_i) = 1$ for all $i$. So, $\mu = \rho$.
+\subsection{Weyl groups}
+\end{document}_
