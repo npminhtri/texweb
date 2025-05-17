@@ -1,0 +1,25 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Casselman(2004)]{casselman2004stability}
+Bill Casselman.
+\newblock Stability of lattices and the partition of arithmetic quotients.
+\newblock 2004.
+
+\bibitem[Chaudouard(2016)]{chaudouard2016variante}
+Pierre-Henri Chaudouard.
+\newblock Sur une variante des troncatures d’arthur.
+\newblock In \emph{Simons Symposium on the Trace Formula}, pages 85--120.
+  Springer, 2016.
+
+\bibitem[Grayson(1984)]{grayson1984reduction}
+Daniel~R Grayson.
+\newblock Reduction theory using semistability.
+\newblock \emph{Commentarii Mathematici Helvetici}, 59\penalty0 (1):\penalty0
+  600--634, 1984.
+
+\end{thebibliography}

@@ -198,5 +198,62 @@ Recall the definition of Weyl vector $\rho$, we have the following generalized a
 \[ w \rho = \rho - \sum_{\alpha \in \Delta_{w^{-1}}} \alpha,\]
 where \textcolor{red}{check this explicitly}
 \[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
+\subsection{Cartan matrix}
+to be added.
 \section{Parabolic subgroups}
+\subsection{Parabolic sets and parabolic subalgebras}
+to be added
+\subsection{Parabolic subgroups}
+to be added
+\subsection{Langlands decomposition}
+We fix a partition of $n$ as
+\[n=n_1+n_2+\ldots+n_k\]
+and consider the parabolic subgroup of this type, i.e. the subgroup
+\[P_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        \mathfrak{m}_1 & \ast           & \ldots & \ast           \\
+        0              & \mathfrak{m}_2 & \ldots & \ast           \\
+        \vdots         & \vdots         & \ddots & \vdots         \\
+        0              & 0              & \ldots & \mathfrak{m}_k
+    \end{bmatrix} \right\rbrace\]
+where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$.
+
+This group can be factored as
+\[P_{n_1,\ldots, n_k} =M_{n_1,\ldots, n_k}N_{n_1,\ldots, n_k}\]
+where
+\[N_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        I_1    & \ast   & \ldots & \ast   \\
+        0      & I_2    & \ldots & \ast   \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & I_k
+    \end{bmatrix} \right\rbrace \quad \left(I_k \text{ is the $n_k\times n_k$ identity matrix}\right)\]
+and
+\[M_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        \mathfrak{m}_1 & 0              & \ldots & 0              \\
+        0              & \mathfrak{m}_2 & \ldots & 0              \\
+        \vdots         & \vdots         & \ddots & \vdots         \\
+        0              & 0              & \ldots & \mathfrak{m}_k
+    \end{bmatrix} \right\rbrace\]
+
+The subgroup $M_{n_1,\ldots, n_k}$ is called \textbf{Levi component}. We can further factor this subgroup as
+\[M_{n_1,\ldots, n_k} = M'_{n_1,\ldots, n_k} \cdot A_{n_1,\ldots, n_k}\]
+with $A_{n_1,\ldots, n_k}$ plays the role of the connected center of $M_{n_1,\ldots, n_k}$:
+\[A_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        t_1I_1 & 0      & \ldots & 0      \\
+        0      & t_2I_k & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & t_kI_k
+    \end{bmatrix} : t_i \ne 0\right\rbrace \]
+and
+\[M'_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        \mathfrak{m}'_1 & 0               & \ldots & 0               \\
+        0               & \mathfrak{m}'_2 & \ldots & 0               \\
+        \vdots          & \vdots          & \ddots & \vdots          \\
+        0               & 0               & \ldots & \mathfrak{m}'_k
+    \end{bmatrix} \right\rbrace,\]
+where $\det(\mathfrak{m}'_i) = \pm 1$. 
+\begin{definition}
+    For a given parabolic subgroup $P$, the factorization 
+    \[P = M_P \times A_P \times N_P\]
+    as above is called \textbf{Langlands decomposition}. 
+\end{definition}
 \end{document}_
