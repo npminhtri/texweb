@@ -199,7 +199,25 @@ Recall the definition of Weyl vector $\rho$, we have the following generalized a
 where \textcolor{red}{check this explicitly}
 \[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
 \subsection{Cartan matrix}
-to be added.
+We fix a set of simple roots $\Delta = \left\lbrace \alpha_1,\ldots,\alpha_d \right\rbrace$ is define to be the matrix
+\[A = \begin{bmatrix} \left\langle \alpha_i,\alpha_j^\vee  \right\rangle
+    \end{bmatrix}\]
+If we let $a_{ij}=  \left\langle \alpha_i,\alpha_j^\vee\right\rangle$ then the Cartan matrix has the following simple properties:
+\begin{lemma}
+    \hfill
+    \begin{itemize}
+        \item For any $i$, we have $a_{ii}=2$.
+        \item For any $i \ne j$, $a_{ij}$ is a non-positive integer, i.e. $a_{ij} \in \mathbb{Z}_{\le 0}$.
+    \end{itemize}
+\end{lemma}
+We give an explicit example for $\slnr$, which has the root system $A_n$. The corresponding Cartan matrix is
+\[A = \begin{bmatrix}
+        2      & -1     & 0      & 0      & \ldots & 0      \\
+        -1     & 2      & -1     & 0      & \ldots & 0      \\
+        \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & -1     & 2      & -1     \\
+        0      & 0      & \ldots & 0     & -1      & 2     \\
+    \end{bmatrix}\]
 \section{Parabolic subgroups}
 \subsection{Parabolic sets and parabolic subalgebras}
 to be added
@@ -250,10 +268,10 @@ and
         \vdots          & \vdots          & \ddots & \vdots          \\
         0               & 0               & \ldots & \mathfrak{m}'_k
     \end{bmatrix} \right\rbrace,\]
-where $\det(\mathfrak{m}'_i) = \pm 1$. 
+where $\det(\mathfrak{m}'_i) = \pm 1$.
 \begin{definition}
-    For a given parabolic subgroup $P$, the factorization 
+    For a given parabolic subgroup $P$, the factorization
     \[P = M_P \times A_P \times N_P\]
-    as above is called \textbf{Langlands decomposition}. 
+    as above is called \textbf{Langlands decomposition}.
 \end{definition}
 \end{document}_
