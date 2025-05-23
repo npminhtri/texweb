@@ -251,7 +251,115 @@ The parabolic set parametrizes the parabolic subalgebra with the root system $\D
     \end{align*}
 \end{example}
 \subsection{Parabolic subgroups}
-For our purpose, it is enough to define the standard parabolic subgroups. 
+For our purpose, it is enough to define the standard parabolic subgroups. Similar to the parabolic subalgebras, which is formed 
+by adding some "negative" roots, we have the same situation for parabolic subgroups. It can be seen that 
+the parabolic subalgebra contains elements in the form of block-upper triangular. 
+
+Therefore, each parabolic subalgebra of $\mathfrak{g} = \slnr$ corresponds to 
+a partition of $n$. In the same manner, there exists a bijection between each parabolic subgroup of $\SLn$
+and each partition of $n$. We can therefore define the parabolic subgroup explicitly as follows: 
+\begin{definition}
+    The standard parabolic subgroup associated to the partition $n = n_1 + n_2 + \cdots + n_r$ is denoted $P_{n_1,\ldots,n_r}$ and is defined to be the group of all matrices of the form
+\[
+\begin{pmatrix}
+m_{n_1} & * & \cdots & * \\
+0 & m_{n_2} & \cdots & * \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & m_{n_r}
+\end{pmatrix},
+\]
+where $m_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The integer $r$ is termed the rank of the parabolic subgroup $P_{n_1,\ldots,n_r}$.
+\end{definition}
+
+\begin{definition}
+    The maximal standard parabolic subgroups in $\text{GL}_n(k)$ corresponds to the
+    stabilizer of the flag of type $\rho_i =(i,n-i)$, where $i = 1,\ldots,n-1$ of $n$. We will
+    further denote $Q_i = P_{\rho_i}$ and $\textbf{MaxParSt}$ the collection of such maximal parabolic subgroups.
+\end{definition}
+
+\begin{example}
+    Below we list all the standard parabolic subgroup in $\text{GL}_3(\mathbb{R})$ and $\text{GL}_4(\mathbb{R})$.
+    \begin{itemize}
+        \item For $\text{GL}_3(\mathbb{R})$, there are three standard parabolic subgroups corresponding to
+              three partitions of $3$, namely
+              \[ 3 = 1+ 1+ 1, \quad 3 =1+2 , \quad 3 = 2+1\]
+              For a partition $(r_1,\ldots,r_{s+1})$, we denote $P_{(r_1,\ldots,r_{s+1})}$ the corresponding parabolic subgroups. Thus we have
+              \begin{align*}
+                   & P_{1,1,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast \\
+                                                  0    & \ast & \ast \\
+                                                  0    & 0    & \ast
+                                              \end{bmatrix}\right\rbrace, \quad P_{1,2} =\left\lbrace \begin{bmatrix}
+                                                                                                          \ast & \ast & \ast \\
+                                                                                                          0    & \ast & \ast \\
+                                                                                                          0    & \ast & \ast
+                                                                                                      \end{bmatrix}\right\rbrace \\
+                   & P_{2,1} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast \\
+                                                \ast & \ast & \ast \\
+                                                0    & 0    & \ast
+                                            \end{bmatrix}\right\rbrace
+              \end{align*}
+              Clearly $\textbf{MaxParSt} = \left\lbrace P_{2,1}, P_{1,2}\right\rbrace$.
+        \item For  $\text{GL}_4(\mathbb{R})$, there are seven standard parabolic subgroups for seven partitions
+              \[ 4 = 1+ 1+1+1, \quad 4 =1+1+2, \quad 4 = 1+2+1\]
+              \[4 =2+1+1, \quad 4 = 1+3, \quad 4 = 2+1, \quad 4 = 3+1\]
+              Explicitly, we have the following subgroups
+              \begin{align*}
+                   & P_{1,1,1,1} = \left\lbrace \begin{bmatrix}
+                                                    \ast & \ast & \ast & \ast \\
+                                                    0    & \ast & \ast & \ast \\
+                                                    0    & 0    & \ast & \ast \\
+                                                    0    & 0    & 0    & \ast \\
+                                                \end{bmatrix} \right\rbrace, \quad & P_{1,1,2} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,2,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & 0    & 0    & \ast \\
+                                              \end{bmatrix} \right\rbrace, \quad   & P_{2,1,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & 0    & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,2,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & 0    & 0    & \ast \\
+                                              \end{bmatrix} \right\rbrace, \quad   & P_{2,1,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & 0    & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,3} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                            \end{bmatrix} \right\rbrace, \quad     & P_{3,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                0    & 0    & 0    & \ast \\
+                                                                                                            \end{bmatrix} \right\rbrace   \\
+                   & P_{2,2} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast & \ast \\
+                                                \ast & \ast & \ast & \ast \\
+                                                0    & 0    & \ast & \ast \\
+                                                0    & 0    & \ast & \ast \\
+                                            \end{bmatrix} \right\rbrace
+              \end{align*}
+              Clearly $\textbf{MaxParSt} = \left\lbrace P_{1,3},P_{3,1},P_{2,2}\right\rbrace.$
+    \end{itemize}
+\end{example}
 \subsection{Langlands decomposition}
 We fix a partition of $n$ as
 \[n=n_1+n_2+\ldots+n_k\]
