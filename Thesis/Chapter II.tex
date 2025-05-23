@@ -60,7 +60,7 @@
 
 
 
-\title{CHAPTER II :ROOTS AND WEIGHTS FOR $\SLn$} % Sets article title
+\title{CHAPTER II :ROOTS AND WEIGHTS FOR $\SLn$/$\GLn$} % Sets article title
 \date{\today} % Sets date for date compiled
 \begin{document}
 \maketitle
@@ -220,7 +220,36 @@ We give an explicit example for $\slnr$, which has the root system $A_n$. The co
     \end{bmatrix}\]
 \section{Parabolic subgroups}
 \subsection{Parabolic sets and parabolic subalgebras}
-to be added
+\begin{definition}
+    Given a root system $\Delta$. A \textbf{parabolic subset} $\Delta_P$ is a subset of $\Delta$ such that 
+    it satisfies the following conditions:
+    \begin{enumerate}
+        \item It contains every positive root with respect to some choice of basis $\Pi$ of $\Delta$.
+        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Delta_P$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Delta_P$.
+    \end{enumerate}
+\end{definition}
+The parabolic set parametrizes the parabolic subalgebra with the root system $\Delta$, as given in the following theorem
+\begin{theorem}
+    Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Delta$. There exists a correspondence between 
+    parabolic subset of $\Delta_P$ of $\Delta$ and the subalgebra of $\mathfrak{g}$ containing the 
+    Borel subalgebra $\mathfrak{b}$. The correspondence is given by 
+    \[ \Delta_P \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{\alpha \in \Delta \setminus \Delta_P} g_{\alpha}\]
+\end{theorem}
+\begin{proof}
+    We refer to \cite{} for a proof of this fact.
+\end{proof}
+\begin{example}
+    We consider the case $\mathfrak{g} = \mathfrak{sl}_3(\mathbb{R})$. Let's denote 
+    $\Pi = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. It is clear that 
+    the set of positive root is $\Delta_+\left\lbrace \alpha,\beta,\gamma \right\rbrace$. There are 
+    4 parabolic sets, corresponding to 4 parabolic subalgebra given as follows
+    \begin{align*}
+        \Delta_P = \Delta_+ &\longleftrightarrow \mathfrak{p} = \mathfrak{b}\\
+        \Delta_{P} =\Delta \cup \{-\alpha\} &\longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha}\\
+        \Delta_{P}= \Delta \cup \{-\beta\} &\longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta}\\
+        \Delta_P= \Delta &\longleftrightarrow \mathfrak{p} = \mathfrak{g}
+    \end{align*}
+\end{example}
 \subsection{Parabolic subgroups}
 to be added
 \subsection{Langlands decomposition}
@@ -233,7 +262,7 @@ and consider the parabolic subgroup of this type, i.e. the subgroup
         \vdots         & \vdots         & \ddots & \vdots         \\
         0              & 0              & \ldots & \mathfrak{m}_k
     \end{bmatrix} \right\rbrace\]
-where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$.
+where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$
 
 This group can be factored as
 \[P_{n_1,\ldots, n_k} =M_{n_1,\ldots, n_k}N_{n_1,\ldots, n_k}\]
