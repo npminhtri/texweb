@@ -178,8 +178,8 @@ We refer to the \cite{} for a proof of these equivalences.
         \end{bmatrix} = ad-bc\]
     This happens if and only if $\gcd(a,b)=1$.
 \end{example}
-\section{Semi-stable lattices: two definitions}
-\subsection{Grayson's definition }
+\section{Semi-stable lattices in Grayson's sense}
+\subsection{Grayson's definition}
 In this section, we introduce the idea of Grayson in defining \textit{semi-stable} lattices.
 In particular, he associates every lattices a plot and its convex hull - called \textit{ profiles}.
 An easy observation is that, if $M \subset L$ is a sublattice, then the space $M_\mathbb{R} = M \otimes \mathbb{R}$
@@ -298,31 +298,9 @@ Here are the picture of two lattices. The one on the left is semi-stable while t
 \end{figure}
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
 conditions:   If $M$ is an arbitrary sublattice of $L$ then $\mu(M) \ge \mu(L)$.
-\tpoint{ Parabolic $k$-subgroups}\todo{move to chapter II?}
-We will first recall what
-is a $k-$ parabolic subgroups for the general linear group $\text{GL}_n$ for $n \ge 2$, over an arbitrary
-field $k$. Let $e_1,e_2,\ldots,e_n$ be a standard basis for the vector space $k^n$. From linear algebra,
-we know that each linear map $T \colon k^n \to k^n$ can be identified with a $n \times n$ matrix. In particular
-we obtain an identification between the group $\text{GL}_n(k)$ with $\text{GL}(k^n)$ of $k-$ automorphisms of
-$k^n$.
-\begin{definition}
-    A flag $\mathcal{F}$ of $k^n$ is a chain of linear subspaces
-    \[\mathcal{F} \colon 0 \subset F_1 \subset F_2 \subset \ldots \subset F_r \subset k^n\]
-    Let $d_i = \dim F_i$, then we call the ordered $r$-tuple $(d_1,d_2,\ldots,d_r)$  the \textit{type} of the flag $\mathcal{F}$.
-\end{definition}
-A parabolic subgroup of $\text{GL}(k^n)$ is the stabilizer $P_\mathcal{F} = P$ of a flag $\mathcal{F}$.
-A parabolic subgroup $P$ is call \textit{minimal} if it stabilizes a flag of type
-$(1,2,\ldots,n)$.
+\subsection{Canonical filtration}
 
-Let \( e_1, \ldots, e_n \) be the standard basis for the \( k \)-vector space \( k^n \). For any \( 1 \leq i \leq n \), define \( V_i \) to be \( e_1 + \cdots + e_i \). We call a flag \( \mathcal{V} \) by the chain
-\[
-    \mathcal{V}: 0 \subset V_{d_1} \subset V_{d_2} \subset \cdots \subset V_{d_s} \subset k^n,
-\]
-a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{s+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, s+1 \). Then \( \rho = (r_1, \ldots, r_{s+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{s+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.
-
-\tpoint{On the function $H_P$}
-\todo{Add an alternative part on how to compare $H_P$}
-\tpoint{$\rho$- definition of semi-stability}
+\section{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
 \begin{definition}[\label  = $\rho$-definition]\label{ss2}
@@ -341,16 +319,16 @@ as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particula
         \vdots & \vdots & \vdots & \vdots \\
         0      & 0      & \ldots & a_n
     \end{bmatrix}\]
-then \todo{this is not true, check the exponent}
-\[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = a_1a_2\ldots a_i.\]
+then 
+\[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]\todo{Compute this}
 Thus, to check for the semi-stability of a lattice $x$, we just need to look at the
 $A$-coordinate of $x$, and verify whether the system
 \begin{align*}
     \begin{cases}
-        a_1 \ge 0   \\
-        a_1a_2\ge 0 \\
+        a_1 \ge 1   \\
+        a_1a_2\ge 1 \\
         \ldots      \\
-        a_1a_2\ldots a_n \ge 0
+        a_1a_2\ldots a_n \ge 1
     \end{cases}
 \end{align*}
 \tpoint{The equivalent between definitions of semi-stable lattices}
@@ -608,3 +586,26 @@ $\gamma \in \text{SL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i
     of $M$ is the length of the vector $l_1 \wedge \ldots \wedge l_m$. In other words, it is the square root
     of the sum of the squares of the determinants of the $m \times m$ minor matrices in the $n \times m$ matrix whose columns are the coordinate of the $l_i$ with respect to any orthonormal basis of $L_\mathbb{R}$.
 \end{remark}
+
+%%Parabolic 
+\tpoint{ Parabolic $k$-subgroups}\todo{move to chapter II?}
+We will first recall what
+is a $k-$ parabolic subgroups for the general linear group $\text{GL}_n$ for $n \ge 2$, over an arbitrary
+field $k$. Let $e_1,e_2,\ldots,e_n$ be a standard basis for the vector space $k^n$. From linear algebra,
+we know that each linear map $T \colon k^n \to k^n$ can be identified with a $n \times n$ matrix. In particular
+we obtain an identification between the group $\text{GL}_n(k)$ with $\text{GL}(k^n)$ of $k-$ automorphisms of
+$k^n$.
+\begin{definition}
+    A flag $\mathcal{F}$ of $k^n$ is a chain of linear subspaces
+    \[\mathcal{F} \colon 0 \subset F_1 \subset F_2 \subset \ldots \subset F_r \subset k^n\]
+    Let $d_i = \dim F_i$, then we call the ordered $r$-tuple $(d_1,d_2,\ldots,d_r)$  the \textit{type} of the flag $\mathcal{F}$.
+\end{definition}
+A parabolic subgroup of $\text{GL}(k^n)$ is the stabilizer $P_\mathcal{F} = P$ of a flag $\mathcal{F}$.
+A parabolic subgroup $P$ is call \textit{minimal} if it stabilizes a flag of type
+$(1,2,\ldots,n)$.
+
+Let \( e_1, \ldots, e_n \) be the standard basis for the \( k \)-vector space \( k^n \). For any \( 1 \leq i \leq n \), define \( V_i \) to be \( e_1 + \cdots + e_i \). We call a flag \( \mathcal{V} \) by the chain
+\[
+    \mathcal{V}: 0 \subset V_{d_1} \subset V_{d_2} \subset \cdots \subset V_{d_s} \subset k^n,
+\]
+a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{s+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, s+1 \). Then \( \rho = (r_1, \ldots, r_{s+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{s+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.

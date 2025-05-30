@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1747976764.87129 "e:/texweb/Thesis/Proof of ss-equiv.tex" "Proof of ss-equiv.pdf" "Proof of ss-equiv" 1747976769.1358 0
+["pdflatex"] 1748645737.53069 "e:/texweb/Thesis/Proof of ss-equiv.tex" "Proof of ss-equiv.pdf" "Proof of ss-equiv" 1748645740.71015 0
   "C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747366638 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/Hi/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1747265158 14064 7f44ce55259b761b982f341db43bf3a1 ""
   "C:/Users/Hi/AppData/Local/MiKTeX/fonts/pk/ljfour/public/mathabx/dpi600/matha12.pk" 1747265159 29292 a6f1f39e64717a9fde975b591da4aa1d ""
@@ -61,12 +61,10 @@
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
-  "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb" 1247596666 34586 5a65dc15601f9c74fe3fb3f37b3b8b6f ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1247596667 36118 fad905eba93cff5bce1e185fe980a177 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1247596666 35660 fb24af7afbadb71801619f1415838111 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1335366146 21098 d4aee7c0aac232caac5688b586b9363c ""
@@ -266,10 +264,10 @@
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Proof of ss-equiv.aux" 1747976768 3976 590adea1175a4a49ec00fd86f628bf62 "pdflatex"
-  "Proof of ss-equiv.out" 1747976768 2535 ad8a5b48e4796429bd65a8cc37cfe082 "pdflatex"
-  "Proof of ss-equiv.tex" 1747976760 40014 2ad39d1c5996d9e5d8c56d9707d3cc98 ""
-  "e:/texweb/Thesis/Proof of ss-equiv.tex" 1747976760 40014 2ad39d1c5996d9e5d8c56d9707d3cc98 ""
+  "Proof of ss-equiv.aux" 1748645740 3213 dec3ef2f49ceea37f1aba8789b1c7bac "pdflatex"
+  "Proof of ss-equiv.out" 1748645740 2356 c693e1f8c1aec407c057931d6f48ebb7 "pdflatex"
+  "Proof of ss-equiv.tex" 1748645732 39638 3bbd6c114522971289912bd63eb93b19 ""
+  "e:/texweb/Thesis/Proof of ss-equiv.tex" 1748645732 39638 3bbd6c114522971289912bd63eb93b19 ""
   (generated)
   "Proof of ss-equiv.aux"
   "Proof of ss-equiv.log"
