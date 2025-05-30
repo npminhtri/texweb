@@ -219,56 +219,22 @@ We give an explicit example for $\slnr$, which has the root system $A_n$. The co
         0      & 0      & \ldots & 0     & -1      & 2     \\
     \end{bmatrix}\]
 \section{Parabolic subgroups}
-\subsection{Parabolic sets and parabolic subalgebras}
-\begin{definition}
-    Given a root system $\Delta$. A \textbf{parabolic subset} $\Delta_P$ is a subset of $\Delta$ such that 
-    it satisfies the following conditions:
-    \begin{enumerate}
-        \item For any $\alpha \in \Delta$, at most one of the two elements $\alpha, - \alpha$ is contained in $\Delta_P$.
-        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Delta_P$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Delta_P$.
-    \end{enumerate}
-\end{definition}
-The parabolic set parametrizes the parabolic subalgebra with the root system $\Delta$, as given in the following theorem
-\begin{theorem}
-    Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Delta$. There exists a correspondence between 
-    parabolic subset of $\Delta_P$ of $\Delta$ and the subalgebra of $\mathfrak{g}$ containing the 
-    Borel subalgebra $\mathfrak{b}$. The correspondence is given by 
-    \[ \Delta_P \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{\alpha \in \Delta \setminus \Delta_P} g_{\alpha}\]
-\end{theorem}
-\begin{proof}
-    We refer to \cite{} for a proof of this fact.
-\end{proof}
-\begin{example}
-    We consider the case $\mathfrak{g} = \mathfrak{sl}_3(\mathbb{R})$. Let's denote 
-    $\Pi = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. It is clear that 
-    the set of positive root is $\Delta_+\left\lbrace \alpha,\beta,\gamma \right\rbrace$. There are 
-    4 parabolic sets, corresponding to 4 parabolic subalgebra given as follows
-    \begin{align*}
-        \Delta_P = \Delta_+ &\longleftrightarrow \mathfrak{p} = \mathfrak{b}\\
-        \Delta_{P} =\Delta \cup \{-\alpha\} &\longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha}\\
-        \Delta_{P}= \Delta \cup \{-\beta\} &\longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta}\\
-        \Delta_P= \Delta &\longleftrightarrow \mathfrak{p} = \mathfrak{g}
-    \end{align*}
-\end{example}
-\subsection{Parabolic subgroups}
-For our purpose, it is enough to define the standard parabolic subgroups. Similar to the parabolic subalgebras, which is formed 
-by adding some "negative" roots, we have the same situation for parabolic subgroups. It can be seen that 
-the parabolic subalgebra contains elements in the form of block-upper triangular. 
-
-Therefore, each parabolic subalgebra of $\mathfrak{g} = \slnr$ corresponds to 
-a partition of $n$. In the same manner, there exists a bijection between each parabolic subgroup of $\SLn$
+We shall provide two equivalent viewpoints on parabolic subgroups. They will play different roles in defining 
+different notions of semi-stability in the next chapter. 
+\subsection{Parabolic subgroups I: An explicit description }
+For our purpose, it is enough to define the standard parabolic subgroups.  There exists a bijection between each parabolic subgroup of $\SLn$
 and each partition of $n$. We can therefore define the parabolic subgroup explicitly as follows: 
 \begin{definition}
     The standard parabolic subgroup associated to the partition $n = n_1 + n_2 + \cdots + n_r$ is denoted $P_{n_1,\ldots,n_r}$ and is defined to be the group of all matrices of the form
 \[
-\begin{pmatrix}
-m_{n_1} & * & \cdots & * \\
-0 & m_{n_2} & \cdots & * \\
-\vdots & \vdots & \ddots & \vdots \\
-0 & 0 & \cdots & m_{n_r}
-\end{pmatrix},
+ \begin{bmatrix}
+        \mathfrak{m}_1 & 0              & \ldots & 0              \\
+        0              & \mathfrak{m}_2 & \ldots & 0              \\
+        \vdots         & \vdots         & \ddots & \vdots         \\
+        0              & 0              & \ldots & \mathfrak{m}_k
+    \end{bmatrix} ,
 \]
-where $m_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The integer $r$ is termed the rank of the parabolic subgroup $P_{n_1,\ldots,n_r}$.
+where $m_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The integer $r$ is called the rank of the parabolic subgroup $P_{n_1,\ldots,n_r}$.
 \end{definition}
 
 \begin{definition}
@@ -360,6 +326,40 @@ where $m_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The inte
               Clearly $\textbf{MaxParSt} = \left\lbrace P_{1,3},P_{3,1},P_{2,2}\right\rbrace.$
     \end{itemize}
 \end{example}
+\subsection{Parabolic subgroups II: Using Bruhat decomposition}
+
+\subsection{Parabolic sets and parabolic subalgebras}
+\begin{definition}
+    Given a root system $\Delta$. A \textbf{parabolic subset} $\Delta_P$ is a subset of $\Delta$ such that 
+    it satisfies the following conditions:
+    \begin{enumerate}
+        \item For any $\alpha \in \Delta$, at most one of the two elements $\alpha, - \alpha$ is contained in $\Delta_P$.
+        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Delta_P$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Delta_P$.
+    \end{enumerate}
+\end{definition}
+The parabolic set parametrizes the parabolic subalgebra with the root system $\Delta$, as given in the following theorem
+\begin{theorem}
+    Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Delta$. There exists a correspondence between 
+    parabolic subset of $\Delta_P$ of $\Delta$ and the subalgebra of $\mathfrak{g}$ containing the 
+    Borel subalgebra $\mathfrak{b}$. The correspondence is given by 
+    \[ \Delta_P \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{\alpha \in \Delta \setminus \Delta_P} g_{\alpha}\]
+\end{theorem}
+\begin{proof}
+    We refer to \cite{} for a proof of this fact.
+\end{proof}
+\begin{example}
+    We consider the case $\mathfrak{g} = \mathfrak{sl}_3(\mathbb{R})$. Let's denote 
+    $\Pi = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. It is clear that 
+    the set of positive root is $\Delta_+\left\lbrace \alpha,\beta,\gamma \right\rbrace$. There are 
+    4 parabolic sets, corresponding to 4 parabolic subalgebra given as follows
+    \begin{align*}
+        \Delta_P = \Delta_+ &\longleftrightarrow \mathfrak{p} = \mathfrak{b}\\
+        \Delta_{P} =\Delta \cup \{-\alpha\} &\longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha}\\
+        \Delta_{P}= \Delta \cup \{-\beta\} &\longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta}\\
+        \Delta_P= \Delta &\longleftrightarrow \mathfrak{p} = \mathfrak{g}
+    \end{align*}
+\end{example}
+
 \subsection{Langlands decomposition}
 We fix a partition of $n$ as
 \[n=n_1+n_2+\ldots+n_k\]
@@ -411,4 +411,6 @@ where $\det(\mathfrak{m}'_i) = \pm 1$.
     \[P = M_P \times A_P \times N_P\]
     as above is called \textbf{Langlands decomposition}.
 \end{definition}
+\subsection{On the function $H_P$}
+
 \end{document}_
