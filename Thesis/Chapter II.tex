@@ -79,7 +79,7 @@ First we need the notion of Cartan subalgebra
 When $\fg$ is a semisimple Lie algebra, we have the following theorem
 \begin{theorem}
     Let $\fg$ be a semisimple Lie algebra over an algebraically closed field $k$ of charateristic $0$ with a subalgebra $\fh$.
-    Then $\fh$ is a Cartan subalgebra of $\fg$ if and only if it is a maximal toral subalgebra, i.e. is is maximal among all subalgebras
+    Then $\fh$ is a Cartan subalgebra of $\fg$ if and only if it is a maximal toral subalgebra, i.e. is maximal among all subalgebras
     contanining only semisimple elements.
 \end{theorem}\todo{add citation.}
 \subsection{Root space decomposition}
@@ -119,7 +119,7 @@ where
 is the set of \textbf{simple roots}.
 We can decompose the set of root into to disjoint subsets, namely
 \[\Phi = \left\lbrace \alpha_{ij}, i \ne j\right\rbrace = \Phi_+ \coprod \Phi_{-}\]
-where the set $\Phi_+$ comprises of $\alpha_{ij}$ for $i<j$ and the remaining roots are in $\Phi_{-}$. The former comprises of
+where the set $\Phi_+$ comprises $\alpha_{ij}$ for $i<j$ and the remaining roots are in $\Phi_{-}$. The former consists of
 \textbf{positive roots} while the latter contains \textbf{negative roots}. We have the following lemma
 \begin{lemma}\label{linear-comb-of-roots}
     Each $\alpha \in \Phi$ can be written uniquely as a linear combination
@@ -127,7 +127,7 @@ where the set $\Phi_+$ comprises of $\alpha_{ij}$ for $i<j$ and the remaining ro
     with all $m_i \in \mathbb{Z}_{\ge 0}$ or $m_i \in \mathbb{Z}_{\le 0}$. If $\alpha \in \Phi_+$ then all $m_i \ge 0$, otherwise $m_i \le 0$ for all $i$.
 \end{lemma}
 \subsection{Weights}
-\todo{define in term of Lie algebra}
+\todo{define in terms of Lie algebra}
 Another class of linear forms that we are interested in are the \textbf{fundamental weights}. For each fundamental
 weights $\lambda_i$, we define
 \[\lambda_i \colon T \to \mathbb{R}, \quad\lambda_i(t) = a_1\ldots a_i\]
@@ -171,7 +171,7 @@ We know that $s_i$ sends $\alpha_i$ to $-\alpha_i$ and permutes the other positi
 \]
 Therefore, $(\mu, \alpha_i) = \mu(h_i) = 1$ for all $i$. So, $\mu = \rho$.
 
-Unlike lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in term of the fundamental roots, we don't always
+Unlike lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in terms of the fundamental roots, we don't always
 get positive coefficients. However, it is true that all the coefficients must be integer. In particular, we have
 \[\alpha_j = \sum_{n_j}\lambda_j, \quad n_j \in \mathbb{Z}.\]
 To put it another way, the root lattice $\mathbb{Z}\Delta$ is contained inside the weight lattice.
@@ -199,7 +199,7 @@ Recall the definition of Weyl vector $\rho$, we have the following generalized a
 where \textcolor{red}{check this explicitly}
 \[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
 \subsection{Cartan matrix}
-We fix a set of simple roots $\Delta = \left\lbrace \alpha_1,\ldots,\alpha_d \right\rbrace$ is define to be the matrix
+We fix a set of simple roots $\Delta = \left\lbrace \alpha_1,\ldots,\alpha_d \right\rbrace$ is defined to be the matrix
 \[A = \begin{bmatrix} \left\langle \alpha_i,\alpha_j^\vee  \right\rangle
     \end{bmatrix}\]
 If we let $a_{ij}=  \left\langle \alpha_i,\alpha_j^\vee\right\rangle$ then the Cartan matrix has the following simple properties:
@@ -218,7 +218,7 @@ We give an explicit example for $\slnr$, which has the root system $A_n$. The co
         0      & 0      & \ldots & -1     & 2      & -1     \\
         0      & 0      & \ldots & 0      & -1     & 2      \\
     \end{bmatrix}\]
-The Cartan matrix provides a linear combination presentation of the fundamental roots $\alpha_j$'s in term of fundamental weights $\lambda_i$,
+The Cartan matrix provides a linear combination presentation of the fundamental roots $\alpha_j$'s in terms of fundamental weights $\lambda_i$,
 as stated in the following lemma
 \begin{lemma}\label{weight-root-comb}
     Fix a number $n$ and consider the set of fundamental roots $\alpha_j$ as well as the set of weights $\lambda_i$ of $\SLn$, we have the following relations
@@ -268,7 +268,7 @@ and each partition of $n$. We can therefore define the parabolic subgroup explic
         \item For $\text{GL}_3(\mathbb{R})$, there are three standard parabolic subgroups corresponding to
               three partitions of $3$, namely
               \[ 3 = 1+ 1+ 1, \quad 3 =1+2 , \quad 3 = 2+1\]
-              For a partition $(r_1,\ldots,r_{s+1})$, we denote $P_{(r_1,\ldots,r_{s+1})}$ the corresponding parabolic subgroups. Thus we have
+              For a partition $(r_1,\ldots,r_{s+1})$, we denote $P_{(r_1,\ldots,r_{s+1})}$ the corresponding parabolic subgroups. Thus, we have
               \begin{align*}
                    & P_{1,1,1} = \left\lbrace \begin{bmatrix}
                                                   \ast & \ast & \ast \\
@@ -349,7 +349,7 @@ and each partition of $n$. We can therefore define the parabolic subgroup explic
 We first introduce the BN-pairs
 \begin{definition}[BN-pairs]
     A \textbf{BN-pairs} is a 4-tuple $(G,B,N,R)$ where $G$ is a group generated by subgroups $B$ and $N$.
-    The subgroup $H = B \cap N$, $R$ is a finite set of involutions which generate the \textit{Weyl group} $W= N/H$. Moreover
+    The subgroup $H = B \cap N$, $R$ is a finite set of involutions which generate the \textit{Weyl group} $W= N/H$. Moreover,
     the following theorem holds
     \begin{itemize}
         \item If $ r \in R$ and $w \in W$, then $rBw \subset BwB \cup BrwB$.
@@ -366,7 +366,7 @@ For our purpose, it is enough to concentrate on the following example
         \item It can be shown that $W = N/H \cong S_n$, thus $R = \left\lbrace (i,i-1)\right\rbrace $ - the set of transpositions.
     \end{itemize}
 \end{example}
-Let $J \subset R$, we define $W_J$ to be the subgroup of $W$ generated by the invlutions
+Let $J \subset R$, we define $W_J$ to be the subgroup of $W$ generated by the involutions
 $r \in R$. We call it \textbf{standard parabolic subgroup} of $W$. Set $P_J = BW_JB$ as in the notation of
 BN-pairs. We have the following theorem
 \begin{theorem}
@@ -376,7 +376,7 @@ BN-pairs. We have the following theorem
               \[G = BWB,\]
               which is called \textbf{Bruhat decomposition} of $G$.
         \item If $P_I=P_J$ then we have $I=J$.
-        \item All subgroups of $G$ containing $B$ arises in this way. \textcolor{red}{add proofs?}
+        \item All subgroups of $G$ containing $B$ arises in this way. \textcolor{red}{Add proofs?}
     \end{itemize}
 \end{theorem}
 The above theorem leads to the following definition of parabolic subgroups
@@ -396,7 +396,7 @@ We would like to explicitly describe the parabolic subgroup for $\SLn$.
                     & 1 & 0  &           \\
                     &   &    & I_{n-i-1}
         \end{bmatrix}\]
-    Via the identification $s_i \mapsto (i,i+1)$, we identity the Weyl group $W = N/H \cong S_n$. So 
+    Via the identification $s_i \mapsto (i,i+1)$, we identify  the Weyl group $W = N/H \cong S_n$. So 
     $R = \left\lbrace (i,i+1)| i = 1,2,\ldots,n\right\rbrace $. We consider the set 
     $I = R \setminus \{r_i\}$ for some $i<n$. The associated parabolic subgroup of 
     $W$ is 
@@ -492,8 +492,7 @@ where $\det(\mathfrak{m}'_i) = \pm 1$.
     as above is called \textbf{Langlands decomposition}.
 \end{definition}
 \subsection{On the function $H_P$}
-Recall that for the Lie group $\SLn$, we attach to it a 
-a root system $\Phi = \left\lbrace \alpha_{i,j}\right\rbrace$ with 
+Recall that for the Lie group $\SLn$, we attach to it a root system $\Phi = \left\lbrace \alpha_{i,j}\right\rbrace$ with 
 \[\Delta = \left\lbrace \alpha_i\mid i \in I \right\rbrace, \quad I = \{1,2,\ldots,n-1\}\]
 as the set of fundamental roots. It is a fact that the Weyl group $W$ satisfies
 \[W = \left\langle r_{\alpha_i} \right\rangle\]
