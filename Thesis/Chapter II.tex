@@ -55,6 +55,7 @@
 \DeclareMathOperator{\fg}{\mathfrak{g}}
 \DeclareMathOperator{\fh}{\mathfrak{h}}
 \DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
+\DeclareMathOperator{\On}{O_n(\mathbb{R})}
 \DeclareMathOperator{\slnr}{\mathfrak{sl}_n(\mathbb{R})}
 \DeclareMathOperator{\Ad}{\text{Ad}}
 \newcommand{\tpoint}[1]{\subsection{#1}}
@@ -535,14 +536,45 @@ where $\det(\mathfrak{m}'_i) = \pm 1$.
     \[P = M_P \times A_P \times N_P\]
     as above is called \textbf{Langlands decomposition}.
 \end{definition}
-\subsection{P-horospherical decomposition}
+\subsection{Iwasawa decomposition and P-horospherical decomposition}
+We introduce two important ways to decompose a matrix in $\GLn$ into simple parts. This will be frequently used
+in the remaining part of this thesis.
+\begin{prop}
+Let \begin{align*}
+K=\On, \quad A = \left\lbrace\begin{bmatrix}
+    a_1    & 0      & \ldots & 0      \\
+    0      & a_2    & \ldots & 0      \\
+    \vdots & \vdots & \vdots & \vdots \\
+    0      & 0      & \ldots & a_n
+\end{bmatrix}: a_i >0\right\rbrace, \quad
+U = \left\lbrace  \begin{bmatrix}
+    1      & \ast   & \ldots & \ast           \\
+    0      & 1      & \ldots & \ast           \\
+    \vdots & \vdots & \vdots & \vdots         \\
+    0      & 0      & \ldots & 1\end{bmatrix}
+\right\rbrace
+    \end{align*}
+Then the natural product map \[p \colon K \times A \times U \to \GLn, \quad p(k,a,n)=kan\]
+is an isomorhism.
+\end{prop}
+Thus, the following decomposition makes sense 
+\begin{definition}
+    The decomposition of $g = kan$ for $k \in K, a \in A$ and $n \in N$ is called \textbf{Iwasawa} decomposition.
+\end{definition}
 Using the Langlands decomposition as well as the Iwasawa decomposition $G= ANK = BK$, we observation
 the decomposition
 \[G = KP = M_PA_PN_PK \cong M_P \times A_P \times N_P\]
 As a consequence, we get
 \[X_G  = G/K = X_{M_P} \times A_P \times N_P\]
-for $X_{M_P} := M_{P}/(K\cap M_P)$. This is \textbf{P-horospherical} decomposition of the lattice space $X_G$. In this way,
-we can identify  $x \in X_G$ with the triple $(m_P(x), a_P(x),n_P(x))$.
+for $X_{M_P} := M_{P}/(K\cap M_P)$. 
+
+This is \textbf{ $P$-horospherical} decomposition of the lattice space $X_G$. In this way,
+we can identify  $x \in X_G$ with the triple $(m_P(x), a_P(x),n_P(x))$. 
+
+Furthermore, if $Q\supset P$ is also a parabolic subgroup, it gives rise to a parabolic subgroup $\ast P := P \cap M_Q$ of $M_Q$.
+The space $X_{M_Q}$ itself has the decomposition
+\[X_{M_Q} = X_{\ast P} \times A(Q)_{\ast P} \times N(Q)_{\ast P}\]
+where $$ X_{\ast P} = X_P, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_Q=N_P$$. This is called \textbf{relative $P$}-horospherical decomposition with respect to $Q$.  
 \subsection{On the function $H_P$}
 Recall that for the Lie group $\SLn$, we attach to it a root system $\Phi = \left\lbrace \alpha_{i,j}\right\rbrace$ with
 \[\Delta = \left\lbrace \alpha_i\mid i \in I \right\rbrace, \quad I = \{1,2,\ldots,n-1\}\]
@@ -574,7 +606,7 @@ the following easy lemma
 We know from previous section that for each standard parabolic subgroup of $G$, it must be of the form
 $P_J$ for some subset $J \subset \{1,\ldots,n-1\}$. Therefore, we can define $\fh(P):= \fh(J)$ and $
     (\fh)_P:= \fh_J$. we now define the function $H_P$ as follows:
-\begin{definition}
+\begin{definition}\label{H-function}
     Assume that for $x \in X$,
     we have a $P$-horospherical decomposition
     \[x = (m_P(x),a_P(x),n_P(x))\]
@@ -588,15 +620,16 @@ $P_J$ for some subset $J \subset \{1,\ldots,n-1\}$. Therefore, we can define $\f
 This definition is well-defined since $\log(a_P(x))$ is an element of $\fh(P)$ by definition.
 We prove the following lemma
 \begin{lemma}\label{H_P-decomp}
-Let $B$ the Borel standard subgroup of $G$, i.e. the minimal standard parabolic subgroup and $P$ is any parabolic subgroup of $G$.
-Then we have 
-\[H_B(x) = H_P(x)+ H(B)(x)\]
-for all $x \in X$. 
+    Let $B$ the Borel standard subgroup of $G$, i.e. the minimal standard parabolic subgroup and $P$ is any parabolic subgroup of $G$.
+    Then we have
+    \[H_B(x) = H_P(x)+ H_{\ast B}(\text{pr}_{M_P}(x))\]
+    where $\text{pr}_{M_P}(x)$ stands for the natural projection of $x \in X$ on $M_P$
 \end{lemma}
 \begin{proof}
-    
+This follows immediately from the observation that 
+\[A_B = A_PA(P)_{\ast B}\]
+and the definition \ref{H-function} of the function $H_P$ for parabolic subgroup $P$. 
 \end{proof}
-\subsection{The functional $\rho^Q_P$}
 
 
-\end{document}
+\end{document}\subsection{The functional $\rho^Q_P$}
