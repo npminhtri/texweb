@@ -1,7 +1,7 @@
 PWD e:\texweb\Thesis
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\texweb\Thesis\Chapter II.tex
-OUTPUT Chapter II.log
+INPUT e:\texweb\Thesis\test.tex
+OUTPUT test.log
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
@@ -318,7 +318,7 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\ti
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfadings.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
-OUTPUT Chapter II.pdf
+OUTPUT test.pdf
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshadings.code.tex
@@ -396,10 +396,10 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfi
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
-INPUT .\Chapter II.aux
-INPUT .\Chapter II.aux
-INPUT Chapter II.aux
-OUTPUT Chapter II.aux
+INPUT .\test.aux
+INPUT .\test.aux
+INPUT test.aux
+OUTPUT test.aux
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -408,13 +408,13 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\Chapter II.out
-INPUT .\Chapter II.out
-INPUT Chapter II.out
-INPUT Chapter II.out
-INPUT .\Chapter II.out
-INPUT .\Chapter II.out
-OUTPUT Chapter II.out
+INPUT .\test.out
+INPUT .\test.out
+INPUT test.out
+INPUT test.out
+INPUT .\test.out
+INPUT .\test.out
+OUTPUT test.out
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -516,9 +516,9 @@ INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha5.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb5.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
-INPUT Chapter II.aux
-INPUT .\Chapter II.out
-INPUT .\Chapter II.out
+INPUT test.aux
+INPUT .\test.out
+INPUT .\test.out
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk

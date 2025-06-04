@@ -147,14 +147,14 @@ Let $\left\lbrace e_1,e_2,\ldots,e_n \right\rbrace$ be an orthonormal basis of $
 $L$ is defined as
 \begin{definition}
     The covolume of $L$ is given by the formulae
-    \[\vol(L_\mathbb{R}/L) = \left|\det(b_i\cdot e_j)\right|\]
+    \[\vol(L) = \left|\det(b_i\cdot e_j)\right|\]
 \end{definition}
 The rank and covolume are invariant numerical values of $L$, as they don't depend on the choice of basis. Indeed, two bases of a rank $n$ lattice $L$
 are related by a transformation $g \in \text{GL}_n(\mathbb{Z})$. Clearly this preserves the volume and the rank as a $\mathbb{Z}-$module.
 
 
 \tpoint{Sublattices}
-To work with semi-stable lattice, we need to consider all the lattices containing inside
+To work with semi-stable lattice $L$, we need to consider all the sublattices contained inside $L$.
 \begin{definition}[\label=sublattice]
     Let $(L,Q)$ be a Euclidean $\mathbb{Z}$-lattice. We say that a $\mathbb{Z}-$submodule $M$ of
     $L$ a \textbf{sublattice} if and only if $L/M$ is torsion free.
@@ -299,6 +299,44 @@ Here are the picture of two lattices. The one on the left is semi-stable while t
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
 conditions:   If $M$ is an arbitrary sublattice of $L$ then $\mu(M) \ge \mu(L)$.
 \subsection{Canonical filtration}
+Given a lattice $L$ and a sublattice $M \subset L$, the quotient group $L/M$ have the structure of
+a lattice. Indeed, consider the exact sequence of lattices
+\[0\rightarrow M\rightarrow L\rightarrow L/M\rightarrow 0\]
+By tensoring with $\mathbb{R}$ we get a short exact sequence of $\mathbb{R}$-vector subspaces
+\[0\rightarrow M_\mathbb{R} \rightarrow L_\mathbb{R} \rightarrow (L/M)_\mathbb{R}\rightarrow 0,\]
+which is split. Thus we have the isomorphisms
+\[(L/M)_\mathbb{R} \cong L_\mathbb{R}/M_\mathbb{R} \cong M^\perp_\mathbb{R}\]
+Therefore, by restriction of the inner product over $L_\mathbb{R}$ to $M^\perp_\mathbb{R}$, we clearly see that
+$L/M$ also inherits an inner product. In particular, it is a lattice.
+\begin{definition}
+    Given a lattice $L$ containing a sublattice $M$, then $L/M$ is a lattice. We call this lattice \textbf{quotient lattice}.
+\end{definition}
+\begin{lemma}\label{volume-of-lattice}
+    If $L$ is a lattice and $M\subset L$ is a sublattice, we have
+    \[\vol(L) = \vol(M)\cdot \vol(L/M)\]
+\end{lemma}
+\begin{proof}
+    Assume that $\{m_i\}$ is a basis for the lattice $M$ and $\{e_i\}$ be an orthonormal basis for the vector space
+    $M_\mathbb{R}$. Since $M$ is a sublattice of $L$, we can extend the basis $\{m_i\}$ to get a
+    basis $\{m_i\} \cup \{n_j\}$ for the lattice $L$. Similarly, we can extend  $\{e_i\}$ to get an orthonormal
+    basis $\{e_i\} \cup \{f_j\}$ for the vector space $L_\mathbb{R}$. In particular, we would have
+    $\left\langle m_i,f_j \right\rangle =0$ for all $i,j$.
+    By definition, we have
+    \begin{align*}
+        vol(L) & = \det\begin{bmatrix}
+                           \left\langle m_i,e_i\right\rangle  & \left\langle n_j,e_i\right\rangle \\
+                           \left\langle m_i,f_J \right\rangle & \left\langle n_j,f_j\right\rangle
+                       \end{bmatrix} \\
+               & = \det\begin{bmatrix}
+                           \left\langle m_i,e_i\right\rangle & \left\langle n_j,e_i\right\rangle \\
+                           0                                 & \left\langle n_j,f_j\right\rangle
+                       \end{bmatrix}  \\
+               & =\vol(M)\cdot \vol(L/M)
+    \end{align*}
+    Hence we are done.
+\end{proof}
+In the canonical plot, this 
+
 
 \section{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
@@ -319,7 +357,7 @@ as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particula
         \vdots & \vdots & \vdots & \vdots \\
         0      & 0      & \ldots & a_n
     \end{bmatrix}\]
-then 
+then
 \[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]\todo{Compute this}
 Thus, to check for the semi-stability of a lattice $x$, we just need to look at the
 $A$-coordinate of $x$, and verify whether the system
@@ -381,7 +419,7 @@ So far we have two distinct definitions of semi-stability. The following theorem
     where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
 \end{proof}
 \todo{Check the map in the generalization carefully - You must show tickmarkheight=
-for the corresponding $\gamma$, it actually compute the volume of the sublattice}
+    for the corresponding $\gamma$, it actually compute the volume of the sublattice}
 \end{document}
 
 
