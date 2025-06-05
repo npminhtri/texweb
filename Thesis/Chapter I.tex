@@ -1,59 +1,4 @@
-\documentclass[12pt]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
-
-\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
-
-\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
-\usepackage{lscape}
-\usepackage{graphicx}
-\usepackage{tikz}\usetikzlibrary{arrows.meta,calc} %library tikz
-\usepackage{subcaption}
-
-
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.15}
-\usepackage{mathrsfs}
-\usetikzlibrary{arrows}
-
-\usepackage{color,soul} %package for highlining
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage{fancyhdr}
-\usepackage{hyperref} %creat hyperlink
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdftitle={Overleaf Example},
-    pdfpagemode=FullScreen,
-    } %set up a hyperlink to be in blue 
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{prop}[definition]{Proposition}
-\newtheorem{lemma}[definition]{Lemma}
-\newtheorem*{remark}{Remark}
-
-\pagestyle{fancy}
-\cfoot{\thepage} % this is for the page numbering
-\setlength\parindent{0pt} % noindent for the whole document.
-\renewcommand{\baselinestretch}{1.1} % increase the distance between line.
-
-\DeclareMathOperator{\SL2}{\text{SL}_2(\mathbb{R})}
-\DeclareMathOperator{\sl2z}{SL_2(\mathbb{Z})}
-
-\DeclareMathOperator{\SO}{SO_2(\mathbb{R})}
-\DeclareMathOperator{\uH}{\mathfrak{H}}
-
-
-
-\title{CHAPTER I : $\SL2$} % Sets article title
-\date{\today} % Sets date for date compiled
-
-% The preamble ends with the command \begin{document}
-\begin{document} % All begin commands must be paired with an end command somewhere
-\maketitle % creates a title using the information in the preamble (title, author, date)
+\chapter{$\SL2$} % Sets article title
 
 In this chapter, I will give an exposition on the structure of $\SL2$ as the spaces of lattice, this space
 plays the role of a toy model before exploring the space of lattice in the higher rank. The exposition follows
@@ -62,12 +7,12 @@ the paper \cite{} and  \cite{} closely.
 A priori, the upper half plane
 \[\uH = \left\lbrace z: \Im z >0 \right\rbrace \subset \mathbb{C}\]
 has no group structure on its. However, we will show below that it can identify topologically with the space
-with the space of cosets $\SO\backslash\SL2$, and thus we can study the spaces $\uH$ via the spac of lattices $\SO\backslash\SL2$.
+with the space of cosets $\SO22\backslash\SL2$, and thus we can study the spaces $\uH$ via the spac of lattices $\SO2\backslash\SL2$.
 We define the action of $G= \SL2$ on $\uH$ as follows
 \[
   \begin{bmatrix}a & b \\ c & d\end{bmatrix} \circ (z) = \frac{az + b}{cz + d}
 \]
-\begin{prop}
+\begin{prop}\label{h-as-matrices}
   The group $\SL2$ stabilizes \(\mathfrak{H}\) and acts transitively on it. In particular,
   \[
     \begin{bmatrix}1 & x \\ 0 & 1\end{bmatrix}\begin{bmatrix}\sqrt{y} & 0 \\ 0 & \frac{1}{\sqrt{y}}\end{bmatrix}(i) = x + iy \quad (\text{for } x \in \mathbb{R}, \, y > 0)
@@ -87,7 +32,7 @@ We define the action of $G= \SL2$ on $\uH$ as follows
   \]
   since \( ad - bc = 1 \).
 \end{proof}
-The point $z = i$ is special, in the sense that its stability group is the orthogonal group $K =\SO$. Indeed, for any \(g = \begin{bmatrix}a & b \\ c & d\end{bmatrix} \in SL_{2}(\mathbb{R})\)  we have
+The point $z = i$ is special, in the sense that its stability group is the orthogonal group $K =\SO2$. Indeed, for any \(g = \begin{bmatrix}a & b \\ c & d\end{bmatrix} \in SL_{2}(\mathbb{R})\)  we have
 that
 \[g \circ i = i \Leftrightarrow \dfrac{ai+b}{ci+d }=i \Leftrightarrow a=d \text{ and } b = -c \]
 Combinining with the fact that $ad-bc=1$, we must have $a^2 + b^2=1$. This implies that there is a $\theta$ such that $a = \cos\theta$ and $b = \sin \theta$.
@@ -96,17 +41,17 @@ $\text{Stab}(i)$ in $G$ and the orbits of $i$. In particular
 \begin{prop}
   We have an isomorphism of \(SL_{2}(\mathbb{R})\)-spaces
   \[
-    \SO\backslash\SL2 \approx \mathfrak{H} \quad \text{via} \quad  SO(2)g \to g^{-1}(i)
+    \SO2\backslash\SL2 \cong \mathfrak{H} \quad \text{via} \quad  SO(2)g \to g^{-1}(i)
   \]
-  That is, the map respects the action of \(SL_{2}(\mathbb{R})\), in the sense that
+  That is, the map respects the action of \(\text{SL}_{2}(\mathbb{R})\), in the sense that
   \[
-    (\SO g)\cdot h \;\longrightarrow\; h^{-1}(g^{-1}i)
+    (\SO2 g)\cdot h \;\longrightarrow\; h^{-1}(g^{-1}i)
   \]
 \end{prop}
 \begin{proof}
   This is because of \textit{associativity}:
   \[
-    (\SO g)\cdot h  = (\SO)\cdot (gh)  \;\longrightarrow\; (gh)^{-1}(i) = h^{-1}(g^{-1}(i))
+    (\SO2 g)\cdot h  = (\SO2)\cdot (gh)  \;\longrightarrow\; (gh)^{-1}(i) = h^{-1}(g^{-1}(i))
   \]
   giving the result.
 \end{proof}
@@ -172,7 +117,7 @@ stability group of $\infty$ in $\mathfrak{H}$.
   \]
   and the total number of such pairs (not counting $(c, d) = (0, \pm 1), (\pm 1, 0)$) is at most $\frac{4(r+1)} {(\epsilon \delta)}$. This proves the lemma.
 \end{proof}
-It follows from Lemma \ref{lm2} that $\Gamma = SL(2, \mathbb{Z})$ is a discrete subgroup of $SL(2, \mathbb{R})$. This is because:
+It follows from Lemma \ref{lm2} that $\Gamma = \text{SL}(2, \mathbb{Z})$ is a discrete subgroup of $SL(2, \mathbb{R})$. This is because:
 
 \begin{enumerate}
   \item It is enough to show that for any compact subset $A \subset \mathfrak{H}$ there are only finitely many $g \in SL(2, \mathbb{Z})$ such that $(g \circ A) \cap A \neq \phi$;
@@ -196,7 +141,7 @@ which implies $(\alpha \circ R_{r',\delta'}) \cap R_{r,\delta} = \phi$ for $|m|$
 Now we are ready to describe the fundamental domain for $\sl2z \backslash \uH$.
 \begin{prop}\label{prop2}
   A fundamental domain for $\sl2z \backslash \uH$ can be given as the region
-  \[\mathfrak{D} = \left\lbrace z=x+iy \in \uH: |z| \ge 1,-1/2 \le x \le 1/2 \right\rbrace \],
+  \[\mathfrak{D} = \left\lbrace z=x+iy \in \uH: |z| \ge 1,-1/2 \le x \le 1/2 \right\rbrace ,\]
   modulo the congruent boundary points symmetric with respect to the imaginary axis.
 \end{prop}
 \begin{proof}
@@ -267,7 +212,7 @@ it can be phrased as follows:
 \begin{remark}
   Here the primitive vector is the vector such that it is not the multiple of any other vector in the lattice.
 \end{remark}
-An image to illustrate the above theorem \todo{Add figure}
+\includegraphics{Shortest vector.png}
 
 To see why every point $z \in \uH$ can be transformed into a point inside $\mathfrak{D}$,
 we start with a lattice generated by the $\mathbb{Z}$-linear combination of $1,z$ and
@@ -284,8 +229,8 @@ We will set up a graph coordinate in the following way:
   \item First we construct a two dimensional coordinate, say $Oxy$
   \item We highlight the origin.
   \item If we are dealing with the lattice $L$, compute the area of the fundamental domain of $L$
-  \item Assign the point $(2, \log(vol(L)))$ to the line $x=2$ in the coordinate.
-  \item If $v$ is any primitive vector, we put the point $(1,\log(v))$ in the set.
+  \item Assign the point $(2, \log(\vol(L)))$ to the line $x=2$ in the coordinate.
+  \item If $v$ is any primitive vector, we put the point $(1,\log(||v||))$ in the set.
 \end{enumerate}
 Note that the lattice is discrete, so we can find a shortest vector $v$ of the lattice $L$. This will
 correspond to the lowest point on the axis $x=1$ in the diagram. Note the that $x$-coordinate
@@ -293,7 +238,6 @@ of each of these point reflects its dimension.
 
 As an example, let's consider the lattice of the following shape - with the shortest vector
 $u$ has the length $||u||<1$.
-\newpage
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}
@@ -399,43 +343,43 @@ prove a simple observation
   \[ a^2 -|ab|+b^2 < 1\]
   Since the above expression are symmetric, we can assume $|a| \ge |b|$ and completing the square yields
   \[\left(\dfrac{\sqrt{3}b}{2}\right)^2 \ge a^2-ab+b^2 <1 \Rightarrow b^2<4/3 \Rightarrow b \le 1\]
-  Subtituting $|b|=1$ yields $|a|^2-|a|<0$. There is no non-zero integer $a$ satifying this condition.
+  Substituting $|b|=1$ yields $|a|^2-|a|<0$. There is no non-zero integer $a$ satisfying this condition.
 \end{proof}
-Note that the area of the lattice $L_z$ is given by $\det\begin{bmatrix}
+The area of the lattice $L_z$ is given by $\det\begin{bmatrix}
     y & x \\
     0 & 1
-  \end{bmatrix} = y$. Note that we can scale the basis by a factor $a=\sqrt{y}$ so that we get a unique lattice.
-So the lowest point with respect to the axis $x = 0,1,2$ are $(0,0), (1,-\log(a))$ and $(2,0)$.
-The points of the interesting part of $\mathfrak{D}$ where $y\le 1$. This corresponds to the lattice
-that has the canonical plot lying entirely on or above the $x-$axis. In particular, the profile of such lattice
-only has the vertices at the origin and $(2,0)$. Grayson and Stuhler call these kind of lattice
-\textbf{semi-stable}. If we don't normalize the area of such lattice then a semi-stable
+  \end{bmatrix} = y$. Note that we can scale the basis by a factor $a=\sqrt{y}$ so that we get a lattice of volume $1$.
+So the lowest points with respect to the axes $x = 0,1,2$ are $(0,0), (1,-\log(a))$, and $(2,0)$.
+The interesting part of $\mathfrak{D}$ is where $y\le 1$. This corresponds to the lattice
+that has the canonical plot lying entirely on or above the $x$-axis. In particular, the profile of such a lattice
+only has the vertices at the origin and $(2,0)$. Grayson and Stuhler call this kind of lattice
+\textbf{semi-stable}. If we don't normalize the area of such a lattice, then a semi-stable
 lattice has the bottom of the profile as a straight line.
 \vspace{\baselineskip}
 \todo{add the description of $\rho-$ -definition, the lattice flag in two dimension and how they move under parabolic action}
 
-Conversely, the lattice assigned to the points $z \in \uH$ with $\Im(z)>1$ correspond to the lattices
-that has the canonical plot breaking at the lowest point on the axis $x=1$. In general case, this reflect the fact that
-a non semi-stable lattice has the shortest vector $u$ satisfying $||u||<\sqrt{vol(L_z)}$. Follow Casselman,
-we call such lattice \textbf{unstable}. In some sense, we can see that \textit{the degree of instability} is measured
-by the shortest vector compared to it volume. In the above lemma, we just find the semi-stable locus inside the fudamental domain.
+Conversely, the lattices assigned to the points $z \in \uH$ with $\Im(z)>1$ correspond to lattices
+that have the canonical plot breaking at the lowest point on the axis $x=1$. In the general case, this reflects the fact that
+a non semi-stable lattice has the shortest vector $u$ satisfying $||u||<\sqrt{\vol(L_z)}$. Following Casselman,
+we call such a lattice \textbf{unstable}. In some sense, we can see that \textit{the degree of instability} is measured
+by the shortest vector compared to its volume. In the above lemma, we only find the semi-stable locus inside the fundamental domain.
 To find the semi-stable locus for the whole upper half plane $\uH$, we use the following lemma:
 \begin{lemma}
-  If $L_z$ is semi-stable, then so is the lattice $L_{g \circ z}$, where $g \in \sl2z$.
+  If $L_z$ is semi-stable, then so is the lattice $L_{g \circ z}$, where $g \in \SL2$.
 \end{lemma}
 \begin{proof}
   If we denote $L_z=\text{span}_\mathbb{Z}\left\lbrace 1,z\right\rbrace$, then $L_{\gamma\circ z} = cL_z$ for some complex number $c$.
-  Indeed, we just need to check for $\gamma$ be an inversion or translation, since these two transformations generate $\sl2z$, but this is easy.
+  Indeed, we just need to check for $\gamma$ being an inversion or translation, since these two transformations generate $\SL2(\mathbb{Z})$, but this is easy.
   Now let $c = re^{it}$. Multiplying by $e^{it}$ doesn't change the length, hence doesn't change the semi-stability. Multiplying by a positive number
-  $r$ will shift $(1,\log|u|)$ to $(1,\log|u|+\log r)$ and $(2,\log(vol(A)))$ to $(2,\log(vol(A))+2\log r)$.
+  $r$ will shift $(1,\log|u|)$ to $(1,\log|u|+\log r)$ and $(2,\log(\vol(A)))$ to $(2,\log(\vol(A))+2\log r)$.
 
-  \todo{I think in 2 dimensional case, c is 1}
+  \todo{I think in 2-dimensional case, c is 1}
 
-  The line segment $d$ connecting origin with the final point intersect the line $x=1$ at $(1,\log(vol(A))+\log r)$. By the semi-stability of the original lattice
+  The line segment $d$ connecting the origin with the final point intersects the line $x=1$ at $(1,\log(\vol(A))+\log r)$. By the semi-stability of the original lattice,
   the point $(1,\log|u|+\log r)$ is above the line segment $d$.
 \end{proof}
-From this lemma, we could see that the semi-stable locus is the complement of the Farey balls in the upper half plane, as illustrated in the
-following figure - with the blue part is the semi-stable locus and the gray part is the unstable one.
+From this lemma, we can see that the semi-stable locus is the complement of the Farey balls in the upper half plane, as illustrated in the
+following figure, where the blue part is the semi-stable locus and the gray part is the unstable one.
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}[scale =3]
@@ -499,9 +443,54 @@ following figure - with the blue part is the semi-stable locus and the gray part
     \drawCircle{3}{5}
     \drawCircle{4}{5}
   \end{tikzpicture}
+  \caption{Semistable locus in upper half plane}
+\end{figure}\newpage
+\section{$\rho$-semi-stability of lattice}
+The semi-stability can be defined in a more Lie-theoretic way. First we recall the Iwasawa decomposition
+for $\SL2$.
+\begin{prop}
+  We have
+  \[\SL2 \cong K \times A \times N\]
+  where
+  \begin{itemize}
+    \item $K=\SO2$: the special orthogonal group.
+    \item $A = \left\lbrace \begin{bmatrix}
+              a & 0      \\
+              0 & a^{-1}
+            \end{bmatrix}: a >0 \right\rbrace$.
+    \item  $N = \left\lbrace \begin{bmatrix}
+              1 & b \\
+              0 & 1
+            \end{bmatrix}\right\rbrace$.
+  \end{itemize}
+\end{prop}
+Combinining with Proposition \ref{h-as-matrices}, we have the following identification
+\[\uH \cong A \times N\]
+via the map
+\[x+iy \mapsto \begin{bmatrix}
+    1/\sqrt{y} & 0        \\
+    0          & \sqrt{y}
+  \end{bmatrix}\begin{bmatrix}
+    1 & x \\
+    0 & 1
+  \end{bmatrix} = a\left(y\right)n(x)\]
+Let's denote $\sl2$ the Lie algebra of the Lie group $\SL2$ - the vector space of traceless matrices of size $2 \times 2$. We denote
+$\mathfrak{h} = \mathbb{R}H$ where $H =\begin{bmatrix}
+    1 & 0  \\
+    0 & -1
+  \end{bmatrix}$ its standard Cartan subalgebra. We then have the map
+\begin{align*}
+  H_B \colon \uH \to \mathfrak{h}, \quad
+  z = x+iy \mapsto \log(a(y))H = \frac{-1}{2}\log(\Im(z))
+\end{align*}
+Let $\alpha\colon \mathfrak{h} \to \mathbb{R}$ be the unique linear function such that
+$\alpha(H)=2$. If we let $\rho = \dfrac{1}{2}\alpha$, then we define
+\[\deg_{\text{inst}}(z):= \min_{\gamma \in  \Gamma/\Gamma \cap B} \left\langle \rho,H_B(x\gamma) \right\rangle\]
+where $B$ is the group of upper triangular matrices with invertible entries along the diagonal. 
+\begin{definition}
+  The lattice $L_z$ corresponds to the point $z \in \uH$ is called \textbf{$\rho$-semistable} or just \textbf{semi-stable}
+  if $\deg_{inst}(z) \ge 0$.
+\end{definition}
+We shall use this definition to find the semi-stable locus in the upper half plane $\uH$. 
 
-\end{figure}
 
-
-
-\end{document} % This is the end of the document

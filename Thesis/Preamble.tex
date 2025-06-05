@@ -1,0 +1,65 @@
+\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+
+\usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
+\usepackage{mathabx}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{tikz}\usetikzlibrary{arrows.meta,calc} %library tikz
+\usepackage{subcaption}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{pstricks}
+\usepackage{multido}
+\usepackage{pst-plot}
+\usepackage{rank-2-roots}
+
+
+\usepackage{color,soul} %package for highlining
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{fancyhdr}
+\usepackage{hyperref} %creat hyperlink
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    } %set up a hyperlink to be in blue 
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{example}[definition]{Example}
+
+\newtheorem*{remark}{Remark}
+
+\pagestyle{fancy}
+\cfoot{\thepage} % this is for the page numbering
+\setlength\parindent{0pt} % noindent for the whole document.
+\renewcommand{\baselinestretch}{1.2} % increase the distance between line.
+
+\DeclareMathOperator{\SLn}{\text{SL}_n(\mathbb{R})}
+\DeclareMathOperator{\GLn}{\text{GL}_n(\mathbb{R})}
+\DeclareMathOperator{\slnz}{SL_n(\mathbb{Z})}
+\DeclareMathOperator{\glnz}{GL_n(\mathbb{Z})}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\fg}{\mathfrak{g}}
+\DeclareMathOperator{\fh}{\mathfrak{h}}
+\DeclareMathOperator{\SO}{SO_n(\mathbb{R})}
+\DeclareMathOperator{\On}{O_n(\mathbb{R})}
+\DeclareMathOperator{\slnr}{\mathfrak{sl}_n(\mathbb{R})}
+\DeclareMathOperator{\Ad}{\text{Ad}}
+\DeclareMathOperator{\SL2}{\text{SL}_2(\mathbb{R})}
+\DeclareMathOperator{\sl2z}{SL_2(\mathbb{Z})}
+\DeclareMathOperator{\sl2}{\mathfrak{sl}_2(\mathbb{R})}
+\DeclareMathOperator{\SO2}{SO_2(\mathbb{R})}
+\DeclareMathOperator{\uH}{\mathfrak{H}}
