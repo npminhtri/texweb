@@ -38,7 +38,7 @@ that
 Combinining with the fact that $ad-bc=1$, we must have $a^2 + b^2=1$. This implies that there is a $\theta$ such that $a = \cos\theta$ and $b = \sin \theta$.
 Since $G$ acts on $\uH$ transitively, we know from group theory that there is a bijection between the collection of cosets of
 $\text{Stab}(i)$ in $G$ and the orbits of $i$. In particular
-\begin{prop}
+\begin{prop}\label{upper-group}
   We have an isomorphism of \(SL_{2}(\mathbb{R})\)-spaces
   \[
     \SO2\backslash\SL2 \cong \mathfrak{H} \quad \text{via} \quad  SO(2)g \to g^{-1}(i)
@@ -68,7 +68,7 @@ Here is a picture of the fundamental domain $\mathfrak{H}/\Gamma$.
     (0,1)node[below right]{$i$};
     \draw(-.5,.02)--(-.5,-.02)node[below]{$-\frac{1}{2}$}(.5,.02)--(.5,-.02)node[below]{$\frac{1}{2}$};
   \end{tikzpicture}\]
-The goal of this section is to prove that under the action of the $\Gamma = \sl2z$, we can "move"
+The goal of this section is to prove that under the action of the $\Gamma = \slz$, we can "move"
 every points on the upper half plane to a domain, under an equivalence given by a specific action.
 This is similar to the fundamental domain given by the translation action of $\mathbb{Z}$ to $\mathbb{R}$ is the half-open
 unit interval $[0,1)$. In general, this give a simpler description to the homogenous space of lattice.
@@ -80,7 +80,7 @@ Note that when we try to compute the fundamental domain of $\mathbb{Z}\backslash
   $A,B$ in $X$, there are only finitely many $g \in \Gamma$ such that $g \circ A \cap B \ne \emptyset$.
 \end{definition}
 We will prove that the set
-\[\Gamma = \sl2z = \left\lbrace \begin{bmatrix}
+\[\Gamma = \slz = \left\lbrace \begin{bmatrix}
     a & b \\
     c & d
   \end{bmatrix} \in \SL2: a, b, c, d \in \mathbb{Z}\right\rbrace\]
@@ -138,9 +138,9 @@ To prove (3), note that Lemma \ref{lm2} implies that $(g \circ R_{r,\delta}) \ca
 \]
 
 which implies $(\alpha \circ R_{r',\delta'}) \cap R_{r,\delta} = \phi$ for $|m|$ sufficiently large.
-Now we are ready to describe the fundamental domain for $\sl2z \backslash \uH$.
+Now we are ready to describe the fundamental domain for $\slz \backslash \uH$.
 \begin{prop}\label{prop2}
-  A fundamental domain for $\sl2z \backslash \uH$ can be given as the region
+  A fundamental domain for $\slz \backslash \uH$ can be given as the region
   \[\mathfrak{D} = \left\lbrace z=x+iy \in \uH: |z| \ge 1,-1/2 \le x \le 1/2 \right\rbrace ,\]
   modulo the congruent boundary points symmetric with respect to the imaginary axis.
 \end{prop}
@@ -153,8 +153,8 @@ Now we are ready to describe the fundamental domain for $\sl2z \backslash \uH$.
 
   Now we need to show two things:
   \begin{enumerate}
-    \item For any $z \in \uH$ we can find an element $g \in \sl2z$ such that $g\circ z \in \mathfrak{D}$.
-    \item If $z \equiv z' \in \mathfrak{D}$ modulor $\sl2z$, then either $\Re(z)=\pm\frac{1}{2}$ and $z'=z\mp 1$, or
+    \item For any $z \in \uH$ we can find an element $g \in \slz$ such that $g\circ z \in \mathfrak{D}$.
+    \item If $z \equiv z' \in \mathfrak{D}$ modulor $\slz$, then either $\Re(z)=\pm\frac{1}{2}$ and $z'=z\mp 1$, or
           $|z|=1$ and $z' = \frac{-1}{z} $.
   \end{enumerate}
   First we prove for (1): Fix $z \in \uH$. It follows from Lemma \ref{lm2} that for every $\epsilon > 0$, there are at most finitely many $g \in \mathrm{SL}(2, \mathbb{Z})$ such that $g \circ z$ lies in the strip
@@ -445,7 +445,7 @@ following figure, where the blue part is the semi-stable locus and the gray part
   \end{tikzpicture}
   \caption{Semistable locus in upper half plane}
 \end{figure}\newpage
-\section{$\rho$-semi-stability of lattice}
+\section{$\rho$-semi-stability of lattices}
 The semi-stability can be defined in a more Lie-theoretic way. First we recall the Iwasawa decomposition
 for $\SL2$.
 \begin{prop}
@@ -471,7 +471,7 @@ via the map
     1/\sqrt{y} & 0        \\
     0          & \sqrt{y}
   \end{bmatrix}\begin{bmatrix}
-    1 & x \\
+    1 & -x \\
     0 & 1
   \end{bmatrix} = a\left(y\right)n(x)\]
 Let's denote $\sl2$ the Lie algebra of the Lie group $\SL2$ - the vector space of traceless matrices of size $2 \times 2$. We denote
@@ -485,12 +485,34 @@ $\mathfrak{h} = \mathbb{R}H$ where $H =\begin{bmatrix}
 \end{align*}
 Let $\alpha\colon \mathfrak{h} \to \mathbb{R}$ be the unique linear function such that
 $\alpha(H)=2$. If we let $\rho = \dfrac{1}{2}\alpha$, then we define
-\[\deg_{\text{inst}}(z):= \min_{\gamma \in  \Gamma/\Gamma \cap B} \left\langle \rho,H_B(x\gamma) \right\rangle\]
+\[\deg_{\text{inst}}(z):= \min_{\gamma \in  \Gamma/\Gamma \cap B} \left\langle \rho,H_B(z\gamma) \right\rangle\]
 where $B$ is the group of upper triangular matrices with invertible entries along the diagonal. 
 \begin{definition}
   The lattice $L_z$ corresponds to the point $z \in \uH$ is called \textbf{$\rho$-semistable} or just \textbf{semi-stable}
   if $\deg_{inst}(z) \ge 0$.
 \end{definition}
 We shall use this definition to find the semi-stable locus in the upper half plane $\uH$. 
-
-
+\begin{prop}
+  The locus of $\rho$-semistable points in the upper half plane $\uH$ is the 
+  complement of the Farey balls. 
+\end{prop}
+\begin{proof}
+  We first make simple observation: If $\deg_{\text{inst}}(z)$ is achieved at some 
+  $\gamma_0 \in \Gamma$ and $z$ is $\rho$-semistable, then 
+  \[\left\langle \rho, H_B(z\gamma)\right\rangle \ge 0 \mbox{ for all } \gamma \in \Gamma\]
+  From this observation, the $\rho$-semistable locus must be the set 
+  \[ \left\lbrace z \in \uH: \left\langle \rho, H_B(z\gamma)\right\rangle \ge 0 \mbox{ for all } \gamma \in \Gamma \right\rbrace\]
+We identify $z=x+iy$ with the product $a(y)n(x)$ as above. Under the identification \ref{upper-group}, we must have 
+\[\left\langle \rho, H_B(z\gamma) = -\log(a(\gamma^{-1} \circ z)) \right\rangle\]
+Assume that $\gamma^{-1} = 
+\begin{bmatrix}
+  a & b\\
+  c & d
+\end{bmatrix}$, then $\gamma^{-1} \circ z$ satisfies
+\[\Im(\gamma^{-1}\circ z) = \dfrac{\Im(z)}{(cx+d)^2+(cy)^2}\]
+Thus, $z$ is semistable if and only if it satifies the inequalities
+\[y \le(cx+d)^2+(cy)^2  \Leftrightarrow \left(x+\dfrac{c}{d}\right)^2+\left(y-\dfrac{1}{2c^2}\right)^2 \ge \left(\dfrac{1}{2c^2}\right)^2 \]
+for any $c,d$ coprime. Since the above equation is exactly the equation for Farey balls, we are done.
+\end{proof}
+In particular, we just proved that the $\rho$-semistablility and the semistablility in Grayson's sense 
+are equivalent. 
