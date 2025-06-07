@@ -1,21 +1,21 @@
-\chapter{$\SL2$} % Sets article title
+\chapter{$\SLR$} % Sets article title
 
-In this chapter, I will give an exposition on the structure of $\SL2$ as the spaces of lattice, this space
+In this chapter, I will give an exposition on the structure of $\SLR$ as the spaces of lattice, this space
 plays the role of a toy model before exploring the space of lattice in the higher rank. The exposition follows
 the paper \cite{} and  \cite{} closely.
-\section{$\SL2$ and its action on the upper half plane $\uH$}
+\section{$\SLR$ and its action on the upper half plane $\uH$}
 A priori, the upper half plane
 \[\uH = \left\lbrace z: \Im z >0 \right\rbrace \subset \mathbb{C}\]
 has no group structure on its. However, we will show below that it can identify topologically with the space
-with the space of cosets $\SO22\backslash\SL2$, and thus we can study the spaces $\uH$ via the spac of lattices $\SO2\backslash\SL2$.
-We define the action of $G= \SL2$ on $\uH$ as follows
+with the space of cosets $\SO22\backslash\SLR$, and thus we can study the spaces $\uH$ via the spac of lattices $\SO2\backslash\SLR$.
+We define the action of $G= \SLR$ on $\uH$ as follows
 \[
-  \begin{bmatrix}a & b \\ c & d\end{bmatrix} \circ (z) = \frac{az + b}{cz + d}
+  \begin{bmatrix}a & b \\ c & d\end{bmatrix} \circ (z) = \frac{dz -b}{-cz + a}
 \]
 \begin{prop}\label{h-as-matrices}
-  The group $\SL2$ stabilizes \(\mathfrak{H}\) and acts transitively on it. In particular,
+  The group $\SLR$ stabilizes \(\mathfrak{H}\) and acts transitively on it. In particular,
   \[
-    \begin{bmatrix}1 & x \\ 0 & 1\end{bmatrix}\begin{bmatrix}\sqrt{y} & 0 \\ 0 & \frac{1}{\sqrt{y}}\end{bmatrix}(i) = x + iy \quad (\text{for } x \in \mathbb{R}, \, y > 0)
+    \begin{bmatrix}\frac{1}{\sqrt{y}} & 0 \\ 0 & \sqrt{y}\end{bmatrix}\begin{bmatrix}1 & -x \\ 0 & 1\end{bmatrix}(i) = x + iy \quad (\text{for } x \in \mathbb{R}, \, y > 0)
   \]
   Further, for \(g = \begin{bmatrix}a & b \\ c & d\end{bmatrix} \in SL_{2}(\mathbb{R})\) and \(z \in \mathfrak{H}\),
   \[
@@ -25,14 +25,14 @@ We define the action of $G= \SL2$ on $\uH$ as follows
 \begin{proof}
   The first formula is clear. The second formula would imply that the upper half-plane is stabilized. Compute directly:
   \[
-    2i \cdot \text{$\Im$} \left( \begin{pmatrix} a & b \\ c & d \end{pmatrix} (z) \right) = \frac{az + b}{cz + d} - \frac{d\overline{z} + b}{c\overline{z} + d} = \frac{(az + b)(c\overline{z} + d) - (a\overline{z} + b)(cz + d)}{|cz + d|^2}
+    2i \cdot \text{$\Im$} \left( \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \circ(z) \right) = \frac{az + b}{cz + d} - \frac{d\overline{z} + b}{c\overline{z} + d} = \frac{(az + b)(c\overline{z} + d) - (a\overline{z} + b)(cz + d)}{|cz + d|^2}
   \]
   \[
     = \frac{adz - bc\overline{z} - bcz + ad\overline{z}}{|cz + d|^2} = \frac{z - \overline{z}}{|cz + d|^2}
   \]
   since \( ad - bc = 1 \).
 \end{proof}
-The point $z = i$ is special, in the sense that its stability group is the orthogonal group $K =\SO2$. Indeed, for any \(g = \begin{bmatrix}a & b \\ c & d\end{bmatrix} \in SL_{2}(\mathbb{R})\)  we have
+The point $z = i$ is special, in the sense that its stability group is the orthogonal group $K =\SO2$. Indeed, for any \(g = \begin{bmatrix}d & -b \\ -c & a\end{bmatrix} \in SL_{2}(\mathbb{R})\)  we have
 that
 \[g \circ i = i \Leftrightarrow \dfrac{ai+b}{ci+d }=i \Leftrightarrow a=d \text{ and } b = -c \]
 Combinining with the fact that $ad-bc=1$, we must have $a^2 + b^2=1$. This implies that there is a $\theta$ such that $a = \cos\theta$ and $b = \sin \theta$.
@@ -41,7 +41,7 @@ $\text{Stab}(i)$ in $G$ and the orbits of $i$. In particular
 \begin{prop}\label{upper-group}
   We have an isomorphism of \(SL_{2}(\mathbb{R})\)-spaces
   \[
-    \SO2\backslash\SL2 \cong \mathfrak{H} \quad \text{via} \quad  SO(2)g \to g^{-1}(i)
+    \SO2\backslash\SLR \cong \mathfrak{H} \quad \text{via} \quad  SO(2)g \to g^{-1}(i)
   \]
   That is, the map respects the action of \(\text{SL}_{2}(\mathbb{R})\), in the sense that
   \[
@@ -83,8 +83,8 @@ We will prove that the set
 \[\Gamma = \slz = \left\lbrace \begin{bmatrix}
     a & b \\
     c & d
-  \end{bmatrix} \in \SL2: a, b, c, d \in \mathbb{Z}\right\rbrace\]
-is a discrete subgroup of $G = \SL2$.
+  \end{bmatrix} \in \SLR: a, b, c, d \in \mathbb{Z}\right\rbrace\]
+is a discrete subgroup of $G = \SLR$.
 To prove this, we first need the following lemma
 \begin{lemma}\label{lm2}
   Fix a real number $r>0$ and $0<\delta<1$. We denote $R_{r,\delta}$ the rectangle
@@ -212,7 +212,10 @@ it can be phrased as follows:
 \begin{remark}
   Here the primitive vector is the vector such that it is not the multiple of any other vector in the lattice.
 \end{remark}
-\includegraphics{Shortest vector.png}
+\begin{figure}[hbt!]
+  \includegraphics[width=0.9\textwidth]{Shortest vector.png}
+  \caption{}
+\end{figure}
 
 To see why every point $z \in \uH$ can be transformed into a point inside $\mathfrak{D}$,
 we start with a lattice generated by the $\mathbb{Z}$-linear combination of $1,z$ and
@@ -365,11 +368,11 @@ we call such a lattice \textbf{unstable}. In some sense, we can see that \textit
 by the shortest vector compared to its volume. In the above lemma, we only find the semi-stable locus inside the fundamental domain.
 To find the semi-stable locus for the whole upper half plane $\uH$, we use the following lemma:
 \begin{lemma}
-  If $L_z$ is semi-stable, then so is the lattice $L_{g \circ z}$, where $g \in \SL2$.
+  If $L_z$ is semi-stable, then so is the lattice $L_{g \circ z}$, where $g \in \SLR$.
 \end{lemma}
 \begin{proof}
   If we denote $L_z=\text{span}_\mathbb{Z}\left\lbrace 1,z\right\rbrace$, then $L_{\gamma\circ z} = cL_z$ for some complex number $c$.
-  Indeed, we just need to check for $\gamma$ being an inversion or translation, since these two transformations generate $\SL2(\mathbb{Z})$, but this is easy.
+  Indeed, we just need to check for $\gamma$ being an inversion or translation, since these two transformations generate $\SLR(\mathbb{Z})$, but this is easy.
   Now let $c = re^{it}$. Multiplying by $e^{it}$ doesn't change the length, hence doesn't change the semi-stability. Multiplying by a positive number
   $r$ will shift $(1,\log|u|)$ to $(1,\log|u|+\log r)$ and $(2,\log(\vol(A)))$ to $(2,\log(\vol(A))+2\log r)$.
 
@@ -444,13 +447,14 @@ following figure, where the blue part is the semi-stable locus and the gray part
     \drawCircle{4}{5}
   \end{tikzpicture}
   \caption{Semistable locus in upper half plane}
-\end{figure}\newpage
+  \label{P-partition}
+\end{figure}
 \section{$\rho$-semi-stability of lattices}
 The semi-stability can be defined in a more Lie-theoretic way. First we recall the Iwasawa decomposition
-for $\SL2$.
+for $\SLR$.
 \begin{prop}
   We have
-  \[\SL2 \cong K \times A \times N\]
+  \[\SLR \cong K \times A \times N\]
   where
   \begin{itemize}
     \item $K=\SO2$: the special orthogonal group.
@@ -474,7 +478,7 @@ via the map
     1 & -x \\
     0 & 1
   \end{bmatrix} = a\left(y\right)n(x)\]
-Let's denote $\sl2$ the Lie algebra of the Lie group $\SL2$ - the vector space of traceless matrices of size $2 \times 2$. We denote
+Let's denote $\sl2$ the Lie algebra of the Lie group $\SLR$ - the vector space of traceless matrices of size $2 \times 2$. We denote
 $\mathfrak{h} = \mathbb{R}H$ where $H =\begin{bmatrix}
     1 & 0  \\
     0 & -1
@@ -516,3 +520,54 @@ for any $c,d$ coprime. Since the above equation is exactly the equation for Fare
 \end{proof}
 In particular, we just proved that the $\rho$-semistablility and the semistablility in Grayson's sense 
 are equivalent. 
+\subsection{Unstable lattices}
+Consider an unstable lattice $L$ with a shortest vectur $u$, then the bottom 
+of the profile of $L$ has a break at the point $(1,\log(||u||))$. Clearly $u$ is a primitive vector, so $L_1 = \mathbb{Z}u$ 
+is a sublattice of $L$. This determines a \textbf{lattice flag} 
+\[\mathcal{F}: 0 \subset L_1 \subset L_2 = L\]
+And this is called the \textbf{canonical flag} associated to $L$. By tensoring with $\mathbb{R}$ we get 
+a flag of rational subspaces 
+\[0 \subset V_1 = L_1 \otimes \mathbb{R} \subset V_2 = L_2 \otimes \mathbb{R}\]
+Conversely, for any rational flag $\mathcal{F}$ in $\mathbb{R}^2$, we can denote $\mathcal{H}_\mathcal{F}$ the set of all 
+unstable lattices that gives rise to the flag $\mathcal{F}$. What can we say about the set 
+$\mathcal{H}_\mathcal{F}$? 
+
+\begin{prop}
+   Given a flag of rational vector space 
+   \[\mathcal{F}: 0 \subset V_1 \subset V_2 =\mathbb{R}^2\]
+   Assume that $V_1 = \text{span}(pe_1+qe_2)$ for some coprime integers $p,q$. Then 
+   the set $\mathcal{H}_\mathcal{F}$ corresponds to the Farey balls that is tangent to the $x-axis$ at the fraction $-q/p$.
+   Morever, each Farey circle corresponds to the set of lattices with the same profiles. 
+\end{prop}
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale =10]
+  % Draw the x-axis
+  \draw[->] (-0.1,0) -- (0.7,0) node[right] {$x$};
+ 
+  % Draw the enlarged Ford circle for 1/3
+  % Original radius: 1/(2*3^2) = 0.0556, scaled by 2: 0.1112
+  % Center: (1/3, 0.1112) ≈ (0.333, 0.1112)
+  \node[below] at (0.333,0) {};
+
+  % Draw four additional enlarged circles tangent at (1/3, 0)
+  % Circle 2: original radius 0.02, scaled to 0.04, center (0.333, 0.04)
+  \draw[red, thick] (0.333,0.04) circle (0.04);
+  % Circle 3: original radius 0.04, scaled to 0.08, center (0.333, 0.08)
+  \draw[green, thick] (0.333,0.08) circle (0.08);
+  % Circle 4: original radius 0.06, scaled to 0.12, center (0.333, 0.12)
+  \draw[purple, thick] (0.333,0.12) circle (0.12);
+  % Circle 5: original radius 0.08, scaled to 0.16, center (0.333, 0.16)
+  \draw[orange, thick] (0.333,0.16) circle (0.16);
+
+  % Mark the tangency point
+  \fill (0.333,0) circle (0.009);
+  \node[below] at (0.333,0) {$\frac{-q}{p}$};
+\end{tikzpicture}
+  \caption{The points correspond to the same rational flag}
+  \label{P-coordinate}
+\end{figure}
+\begin{proof}
+
+\end{proof}
+
