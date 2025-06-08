@@ -159,7 +159,7 @@ The following lemma asserts that, for each vertical axis $x =i$, there is a lowe
               By the previous case, there are finitely
               many vectors with bounded length inside lattice. So we only need to show that the map
               \[ M \mapsto \bigwedge^r M \]
-              is finite to one, then we are done. But this is clear.
+              is finite to one, then we are done. But this is due to the observation of $\bigwedge^r M$ determines the lattice $L \cap (M \otimes \mathbb{Q})$ and the index of $M$ inside this lattice.
     \end{itemize}
     So the canonical plot is bounded below.
 \end{proof}
@@ -276,9 +276,33 @@ $L/M$ also inherits an inner product. In particular, it is a lattice.
     \end{align*}
     Hence we are done.
 \end{proof}
-In the canonical plot, this 
+In the canonical plot, the import of lemma \ref{volume-of-lattice} is that the slope of the quotient lattice $L/M$ appears as 
+the slope of the line segment connecting the points corresponding to the sublattice $M$ and the lattice $L$. This is due to the geometry fact that 
+\[(\rk(M),\log(\vol(M))+ (\rk(L/M),\log\vol(L/M)))= (\rk(L),\log\vol(L))\]
+\begin{figure}[ht]
+    \centering\begin{tikzpicture}
+  % Draw axes
+  \draw[->] (0,0) -- (3,0) node[right] {$dim$};
+  \draw[->] (0,0) -- (0,3) node[above] {$\log vol$};
+  \draw[->] (0,0) -- (0,-1);
+  % Plot points L and M
+  \fill (2,2) circle (0.1) node[above right] {$L$};
+  \fill (1,-1) circle (0.1) node[below left] {$M$};
 
+  % Draw lines from origin to L and M with colors
+  \draw[thick, blue] (0,0) -- (2,2);
+  \draw[thick, red] (0,0) -- (1,-1);
 
+  % Draw line between M and L with color
+  \draw[thick, green] (1,-1) -- (2,2);
+
+  % Add mu annotations with matching colors
+  \draw[->, blue] (1.5,1.5) -- (1.7,1.7) node[above left] {$\mu_L$};
+  \draw[->, red] (0.3,-0.3) -- (0.5,-0.5) node[left] {$\mu_M$};
+  \draw[->, green] (1.5,0.5) -- (1.6,0.8) node[above right] {$\mu_{L/M}$};
+\end{tikzpicture}
+\caption{Geometric meaning of slope in canonical plot}
+\end{figure}
 \section{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
@@ -359,5 +383,4 @@ So far we have two distinct definitions of semi-stability. The following theorem
     \end{align*}
     where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
 \end{proof}
-\todo{Check the map in the generalization carefully - You must show tickmarkheight=
-    for the corresponding $\gamma$, it actually compute the volume of the sublattice}
+\todo{Check the map in the generalization carefully }
