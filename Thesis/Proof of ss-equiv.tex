@@ -1,4 +1,4 @@
-\chapter{SEMI-STABLE LATTICE IN HIGHER RANK} 
+\chapter{SEMI-STABLE LATTICE IN HIGHER RANK}
 In this chapter, we will establish the notion of semi-stable lattice. Heuristically,
 this is the lattice that achieve all the successive minima at the same time, see \cite{}.
 
@@ -119,7 +119,7 @@ We refer to the \cite{} for a proof of these equivalences.
         \end{bmatrix} = ad-bc\]
     This happens if and only if $\gcd(a,b)=1$.
 \end{example}
-\section{Semi-stable lattices in Grayson's sense}
+\section{Grayson's definition of semistablility}
 \subsection{Grayson's definition}
 In this section, we introduce the idea of Grayson in defining \textit{semi-stable} lattices.
 In particular, he associates every lattices a plot and its convex hull - called \textit{ profiles}.
@@ -132,8 +132,8 @@ is also a lattice of rank not exceeding rank of $L$.
 \end{definition}
 \begin{definition}
     Suppose we have a lattice $L$. For any sublattice $M \subset L$, we assign $M$ to a point
-    \[l(M) = \left(\dim M, \log\vol(M)\right)\]
-    in the plane $\mathbb{R}^2$. The collection of all points $l(M)$ where $M$ ranges over
+    \[\ell(M) = \left(\dim M, \log\vol(M)\right)\]
+    in the plane $\mathbb{R}^2$. The collection of all points $\ell(M)$ where $M$ ranges over
     all sublattices of $L$ is called \textbf{ the canonical plot} of the lattice $L$. By convention, we assign
     the lattice of zero rank to the origin of the plane.
 \end{definition}
@@ -170,7 +170,7 @@ In theory, we can compute the profile by searching for the shortest vector in ea
 is infeasible when the dimension of the lattice grows. Since there are lattices with
 arbitrarily large volume of any rank smaller than that of $L$, we add to the side the point $(0,\infty)$ and $(n,\infty)$. The sides
 of the profile are therefore two vertical lines. The bottom is just the convex polygonal connecting the origin with the point
-$l(L) = (n,\log\vol(L))$, where $n$ is the rank of $L$.
+$\ell(L) = (n,\log\vol(L))$, where $n$ is the rank of $L$.
 \begin{definition}\label{ss1}
     If the bottom of the profile contains only two points $(0,0)$ and $(n,\log\vol L)$, then the
     lattice $L$ is said to be \textbf{semi-stable}. Otherwise $L$ is said to be \textbf{unstable}.
@@ -255,6 +255,8 @@ $L/M$ also inherits an inner product. In particular, it is a lattice.
 \begin{lemma}\label{volume-of-lattice}
     If $L$ is a lattice and $M\subset L$ is a sublattice, we have
     \[\vol(L) = \vol(M)\cdot \vol(L/M)\]
+    and if $N$ is any sublattice of $L$ that satisfies $N+M=L$ then
+    \[\vol(N) \ge \vol(L/M)\]
 \end{lemma}
 \begin{proof}
     Assume that $\{m_i\}$ is a basis for the lattice $M$ and $\{e_i\}$ be an orthonormal basis for the vector space
@@ -274,35 +276,190 @@ $L/M$ also inherits an inner product. In particular, it is a lattice.
                        \end{bmatrix}  \\
                & =\vol(M)\cdot \vol(L/M)
     \end{align*}
-    Hence we are done.
+    Hence we are done. The latter inequality follows from the fact that the volume decrease under the orthogonal projection and the observation that
+    $N_\mathbb{R} \supset (L/M)_\mathbb{R}$.
 \end{proof}
-In the canonical plot, the import of lemma \ref{volume-of-lattice} is that the slope of the quotient lattice $L/M$ appears as 
-the slope of the line segment connecting the points corresponding to the sublattice $M$ and the lattice $L$. This is due to the geometry fact that 
+In the canonical plot, the import of lemma \ref{volume-of-lattice} is that the slope of the quotient lattice $L/M$ appears as
+the slope of the line segment connecting the points corresponding to the sublattice $M$ and the lattice $L$. This is due to the geometry fact that
 \[(\rk(M),\log(\vol(M))+ (\rk(L/M),\log\vol(L/M)))= (\rk(L),\log\vol(L))\]
 \begin{figure}[ht]
     \centering\begin{tikzpicture}
-  % Draw axes
-  \draw[->] (0,0) -- (3,0) node[right] {$dim$};
-  \draw[->] (0,0) -- (0,3) node[above] {$\log vol$};
-  \draw[->] (0,0) -- (0,-1);
-  % Plot points L and M
-  \fill (2,2) circle (0.1) node[above right] {$L$};
-  \fill (1,-1) circle (0.1) node[below left] {$M$};
+        % Draw axes
+        \draw[->] (0,0) -- (3,0) node[right] {$dim$};
+        \draw[->] (0,0) -- (0,3) node[above] {$\log vol$};
+        \draw[->] (0,0) -- (0,-1);
+        % Plot points L and M
+        \fill (2,2) circle (0.1) node[above right] {$L$};
+        \fill (1,-1) circle (0.1) node[below left] {$M$};
 
-  % Draw lines from origin to L and M with colors
-  \draw[thick, blue] (0,0) -- (2,2);
-  \draw[thick, red] (0,0) -- (1,-1);
+        % Draw lines from origin to L and M with colors
+        \draw[thick, blue] (0,0) -- (2,2);
+        \draw[thick, red] (0,0) -- (1,-1);
 
-  % Draw line between M and L with color
-  \draw[thick, green] (1,-1) -- (2,2);
+        % Draw line between M and L with color
+        \draw[thick, green] (1,-1) -- (2,2);
 
-  % Add mu annotations with matching colors
-  \draw[->, blue] (1.5,1.5) -- (1.7,1.7) node[above left] {$\mu_L$};
-  \draw[->, red] (0.3,-0.3) -- (0.5,-0.5) node[left] {$\mu_M$};
-  \draw[->, green] (1.5,0.5) -- (1.6,0.8) node[above right] {$\mu_{L/M}$};
-\end{tikzpicture}
-\caption{Geometric meaning of slope in canonical plot}
+        % Add mu annotations with matching colors
+        \draw[->, blue] (1.5,1.5) -- (1.7,1.7) node[above left] {$\mu_L$};
+        \draw[->, red] (0.3,-0.3) -- (0.5,-0.5) node[left] {$\mu_M$};
+        \draw[->, green] (1.5,0.5) -- (1.6,0.8) node[above right] {$\mu_{L/M}$};
+    \end{tikzpicture}
+    \caption{Geometric meaning of slope in canonical plot}
 \end{figure}
+
+Given two sublattices $M_1,M_2 \subset L$, if we apply lemma \ref{volume-of-lattice} to the sublattices
+$M_1/M_1\cap M_2$ and $M_2/M_1\cap M_2$ in $M_1+M_2/M_1\cap M_2$, we get
+\[\vol(M_1/M_1 \cap M_2)\vol(M_2/M_1\cap M_2) \ge \vol(M_1+M_2/M_1\cap M_2)\]
+or equivalently
+\begin{lemma}
+    \[\vol(M_1+M_2)\vol(M_1\cap M_2) \le \vol(M_1)\vol(M_2)\]
+\end{lemma}
+Grayson used the logarithm to express the above inequality in additive terms:
+\begin{prop}\label{parallelogram-rule}
+    Suppose $M_1,M_2$ are sublattices of $L$ then
+    \[\log\vol(M_1)+\log(\vol(M_2)) \ge \log(\vol(M_1+M_2))+\log\vol(M_1\cap M_2)\]
+\end{prop}
+\begin{proof}
+    It follows immediately from the fact that $\log$ is an increasing function over $(0,\infty)$.
+\end{proof}
+Grayson called this parallelogram rule, as the geometric meaning of  proposition \ref{paralellogram-rule} is
+illustrated in the following picture
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        % Coordinates
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4,2);
+        \coordinate (C) at (6,0);
+        \coordinate (D) at (2,-2);
+        \coordinate (F) at (4,2.5);
+        % Drawing the parallelogram
+        \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+        % Labels
+        \node at (A) [above left] {$M_1 \cap M_2$};
+        \node at (F) [above] {$M_1$};
+        \node at (C) [above right] {$M_1 + M_2$};
+        \node at (D) [below] {$M_2$};
+
+        % Points
+        \fill[cyan] (A) circle (2pt);
+        \fill[cyan] (B) circle (2pt);
+        \fill[cyan] (C) circle (2pt);
+        \fill[cyan] (D) circle (2pt);
+        \fill[cyan] (F) circle (2pt);
+    \end{tikzpicture}
+    \caption{\textbf{Grason's parallelogram  rule}}
+\end{figure}
+
+The \textbf{vertices} of the profile are the extremal/lowest points of the plot. Clearly the two points
+$(0,0)$ and $(n,\log\vol(L))$ are vertices of the plot of the lattices $L$ with $\rk(L)=n$. The following lemma states the situation for other vertices
+of the profile
+\begin{lemma}
+    Suppose that $M_\ast$ is a lattice with with the point $\ell(M_\ast)$ as a vertex of the profile. If $M$ is any other sublattice such that
+    $\ell(M)$ is also a vertex of the profile, then we must have either $M \subset M_\ast$ or $M_\ast \subset M$.
+\end{lemma}
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        % Coordinates
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4,2);
+        \coordinate (C) at (6,0);
+        \coordinate (D) at (2,-2);
+        \coordinate (F) at (4,2.5);
+        \coordinate (E) at (5,-1.5);
+        \coordinate (G) at (-1,0);
+        \coordinate (H) at (8,-0.5);
+
+        % Drawing the parallelogram
+        \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+        % Labels
+        \node at (A) [above left] {$M \cap M_*$};
+        \node at (F) [above] {$M$};
+        \node at (C) [above right] {$M + M_*$};
+        \node at (D) [below] {$M_*$};
+        % Points
+        \fill[cyan] (A) circle (2pt);
+        \fill[cyan] (B) circle (2pt);
+        \fill[cyan] (C) circle (2pt);
+        \fill[cyan] (D) circle (2pt);
+        \fill[cyan] (F) circle (2pt);
+        \fill[cyan] (E) circle (2pt);
+
+        % draw additional lines
+        \draw[gray] (G) -- (D)-- (E) -- (H);
+    \end{tikzpicture}
+    \caption{}
+    \label{figure33}
+\end{figure}
+\begin{proof}
+    We refer to figure \ref{figure33}. Clearly we can see that the point $\ell(M\cap M_*$) lies somewhere on the left of both
+    $\ell(M)$ and $\ell(M_*)$. Similarly, the point $\ell(M+M_*)$ lies somewhere inclusively to the right of $\ell(M)$ and $\ell(M_*)$. 
+    By the paralellogram rule, the point $ell(M)$ will therefore be above the boundary points 
+    $\ell(M\cap M_*)$, $\ell(M_*)$ and $\ell(M+M_*)$. If $M$ is also a vertex of the profile, the parallelogram must degenerate. In particular we either have 
+    $M \cap _M*=M$, in which $M\subset M_*$, or $M+M_* = M$, in which $M_* \subset M$.
+\end{proof}
+An immediate consequence is that 
+\begin{theorem}\label{filtration}
+    The vertices of the profile of a lattice $L$ are represented by unique sublattices, and they form a chain.
+\end{theorem}
+For a given lattice $L$, we call the chain of sublattices in theorem \ref{filtration} the \textbf{canonical filtration} of $L$. Assume that the canonical filtration for $L$ 
+is 
+\[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
+then it can be seen from the diagram that 
+\begin{enumerate}
+    \item $L_i/L_{i-1}$ is semistable for all $1 \le i \le k$.
+    \item $\mu(L_i/L_{i-1}) \le \mu(L_{i+1}/L_i)$ for all $1 \le i \le k-1$.
+\end{enumerate}
+These two conditions is also sufficent for a chain to be a canonical filtration
+\begin{theorem}\label{Grayson's criterion}
+Suppose
+\[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
+is a chain of lattices such that $L_i/L_{i-1}$ is semistable and the slope $L_i/L_{i-1}$ is not larger than the slope of $L_{i+1}/L_i$. 
+Then this chain is the canonical filtration.
+\end{theorem}
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        % Coordinates
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4,2);
+        \coordinate (C) at (6,0);
+        \coordinate (D) at (2,-2);
+        \coordinate (F) at (4,2.5);
+        \coordinate (E) at (5,-1.5);
+        \coordinate (G) at (-1,0);
+        \coordinate (H) at (8,-0.5);
+
+        % Drawing the parallelogram
+        \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+        % Labels
+        \node at (A) [above left] {$M \cap L_{i-1}$};
+        \node at (F) [above] {$M$};
+        \node at (C) [above right] {$M + L_{i-1}$};
+        \node at (D) [below] {$L_{i-1}$};
+        \node at (E) [below] {$L_i$};
+        
+        % Points
+        \fill[cyan] (A) circle (2pt);
+        \fill[cyan] (B) circle (2pt);
+        \fill[cyan] (C) circle (2pt);
+        \fill[cyan] (D) circle (2pt);
+        \fill[cyan] (F) circle (2pt);
+        \fill[cyan] (E) circle (2pt);
+
+        % draw additional lines
+        \draw[gray] (G) -- (D)-- (E) -- (H);
+    \end{tikzpicture}
+    \caption{}
+    \label{figure34}
+\end{figure}
+\begin{proof}
+
+\end{proof}
 \section{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
@@ -323,7 +480,7 @@ as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particula
         0      & 0      & \ldots & a_n
     \end{bmatrix}\]
 then
-\[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]\todo{Compute this}
+\[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]
 Thus, to check for the semi-stability of a lattice $x$, we just need to look at the
 $A$-coordinate of $x$, and verify whether the system
 \begin{align*}
