@@ -442,7 +442,7 @@ Then this chain is the canonical filtration.
         \node at (C) [above right] {$M + L_{i-1}$};
         \node at (D) [below] {$L_{i-1}$};
         \node at (E) [below] {$L_i$};
-        
+
         % Points
         \fill[cyan] (A) circle (2pt);
         \fill[cyan] (B) circle (2pt);
@@ -458,7 +458,16 @@ Then this chain is the canonical filtration.
     \label{figure34}
 \end{figure}
 \begin{proof}
-
+Suppose $M$ to be any other sublattice of $L$. We want to know that $\ell(M)$ lies 
+above the plot $P$ of the $\ell(L_i)$. We prove by induction on the index $i$ that if $M \subset L_i$, then $\ell(M)$ lies above the 
+plot $P$. 
+\begin{itemize}
+    \item If $i=1$ then $M\subset L_1$. Since $L_1 $is semistable, we must have $\ell(M)$ lies above the line connecting $(0,0)$ and $\ell(L_1)$. Hence $\ell(M)$ lies above the plot $P$.
+    \item Suppose that $M\subset L_i$ for $i>1$. Then $M+L_{i-1} \subset L_i$ contains $L_{i-1}$. Therefore, it corresponds to the point lies above the line connecting $\ell(L_{i-1})$ and $\ell(L_i)$, thus lies above $P$
+    By induction, the fact that $(M\cap L_{i-1}) \subset L_{i-1}$ implies $\ell(M\cap L_{i-1})$ lies above the plot $P$. 
+    Using the parallelogram rule, the point $\ell(M)$ must then also lie above the plot $P$
+\end{itemize}
+Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
 \end{proof}
 \section{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
