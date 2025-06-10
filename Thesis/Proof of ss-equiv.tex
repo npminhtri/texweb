@@ -175,9 +175,8 @@ $\ell(L) = (n,\log\vol(L))$, where $n$ is the rank of $L$.
     If the bottom of the profile contains only two points $(0,0)$ and $(n,\log\vol L)$, then the
     lattice $L$ is said to be \textbf{semi-stable}. Otherwise $L$ is said to be \textbf{unstable}.
 \end{definition}
-Here are the picture of two lattices. The one on the left is semi-stable while the one on the right is unstable.
-
-\begin{figure}[h]
+Below are the picture of two lattices.
+\begin{figure}[hbt]
     \centering
     \begin{minipage}{.2\textwidth}
         \begin{tikzpicture}[>=stealth, x=1.1cm, y=1.1cm]
@@ -205,7 +204,7 @@ Here are the picture of two lattices. The one on the left is semi-stable while t
             \filldraw[fill=blue] (1, 1.0912647062501184) circle[radius=0.09cm];
             \filldraw[fill=blue] (1, 1.1603772291700336) circle[radius=0.09cm];
             \filldraw[fill=blue] (1, 1.2) circle[radius=0.09cm];
-        \end{tikzpicture}~
+        \end{tikzpicture}~ \caption{This is a semistable lattice}
     \end{minipage} \hspace{3cm} \begin{minipage}{.2\textwidth}
         \begin{tikzpicture}[>=stealth, x=1.1cm, y=1.1cm]
             % Dashed lines (axes)
@@ -235,6 +234,7 @@ Here are the picture of two lattices. The one on the left is semi-stable while t
             \filldraw[fill=blue] (1, 1.1603772291700336) circle[radius=0.09cm];
             \filldraw[fill=blue] (1, 1.2) circle[radius=0.09cm];
         \end{tikzpicture}~
+        \caption{This is an unstable lattice}
     \end{minipage}
 \end{figure}
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
@@ -322,9 +322,9 @@ Grayson used the logarithm to express the above inequality in additive terms:
 \begin{proof}
     It follows immediately from the fact that $\log$ is an increasing function over $(0,\infty)$.
 \end{proof}
-Grayson called this parallelogram rule, as the geometric meaning of  proposition \ref{paralellogram-rule} is
-illustrated in the following picture
-\begin{figure}[ht]
+Grayson called this parallelogram rule, as the geometric meaning of  proposition \ref{parallelogram-rule} is
+illustrated in the figure \ref{Grason's parallelogram rule}.
+\begin{figure}[hbt!]
     \centering
     \begin{tikzpicture}
         % Coordinates
@@ -350,8 +350,8 @@ illustrated in the following picture
         \fill[cyan] (F) circle (2pt);
     \end{tikzpicture}
     \caption{\textbf{Grason's parallelogram  rule}}
+    \label{Grason's parallelogram  rule}
 \end{figure}
-
 The \textbf{vertices} of the profile are the extremal/lowest points of the plot. Clearly the two points
 $(0,0)$ and $(n,\log\vol(L))$ are vertices of the plot of the lattices $L$ with $\rk(L)=n$. The following lemma states the situation for other vertices
 of the profile
@@ -359,7 +359,7 @@ of the profile
     Suppose that $M_\ast$ is a lattice with with the point $\ell(M_\ast)$ as a vertex of the profile. If $M$ is any other sublattice such that
     $\ell(M)$ is also a vertex of the profile, then we must have either $M \subset M_\ast$ or $M_\ast \subset M$.
 \end{lemma}
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
         % Coordinates
@@ -396,29 +396,29 @@ of the profile
 \end{figure}
 \begin{proof}
     We refer to figure \ref{figure33}. Clearly we can see that the point $\ell(M\cap M_*$) lies somewhere on the left of both
-    $\ell(M)$ and $\ell(M_*)$. Similarly, the point $\ell(M+M_*)$ lies somewhere inclusively to the right of $\ell(M)$ and $\ell(M_*)$. 
-    By the paralellogram rule, the point $ell(M)$ will therefore be above the boundary points 
-    $\ell(M\cap M_*)$, $\ell(M_*)$ and $\ell(M+M_*)$. If $M$ is also a vertex of the profile, the parallelogram must degenerate. In particular we either have 
+    $\ell(M)$ and $\ell(M_*)$. Similarly, the point $\ell(M+M_*)$ lies somewhere inclusively to the right of $\ell(M)$ and $\ell(M_*)$.
+        By the paralellogram rule, the point $ell(M)$ will therefore be above the boundary points
+    $\ell(M\cap M_*)$, $\ell(M_*)$ and $\ell(M+M_*)$. If $M$ is also a vertex of the profile, the parallelogram must degenerate. In particular we either have
     $M \cap _M*=M$, in which $M\subset M_*$, or $M+M_* = M$, in which $M_* \subset M$.
 \end{proof}
-An immediate consequence is that 
+An immediate consequence is that
 \begin{theorem}\label{filtration}
     The vertices of the profile of a lattice $L$ are represented by unique sublattices, and they form a chain.
 \end{theorem}
-For a given lattice $L$, we call the chain of sublattices in theorem \ref{filtration} the \textbf{canonical filtration} of $L$. Assume that the canonical filtration for $L$ 
-is 
+For a given lattice $L$, we call the chain of sublattices in theorem \ref{filtration} the \textbf{canonical filtration} of $L$. Assume that the canonical filtration for $L$
+is
 \[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
-then it can be seen from the diagram that 
+then it can be seen from the diagram that
 \begin{enumerate}
     \item $L_i/L_{i-1}$ is semistable for all $1 \le i \le k$.
     \item $\mu(L_i/L_{i-1}) \le \mu(L_{i+1}/L_i)$ for all $1 \le i \le k-1$.
 \end{enumerate}
 These two conditions is also sufficent for a chain to be a canonical filtration
 \begin{theorem}\label{Grayson's criterion}
-Suppose
-\[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
-is a chain of lattices such that $L_i/L_{i-1}$ is semistable and the slope $L_i/L_{i-1}$ is not larger than the slope of $L_{i+1}/L_i$. 
-Then this chain is the canonical filtration.
+    Suppose
+    \[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
+    is a chain of lattices such that $L_i/L_{i-1}$ is semistable and the slope $L_i/L_{i-1}$ is not larger than the slope of $L_{i+1}/L_i$.
+    Then this chain is the canonical filtration.
 \end{theorem}
 \begin{figure}[ht]
     \centering
@@ -458,28 +458,46 @@ Then this chain is the canonical filtration.
     \label{figure34}
 \end{figure}
 \begin{proof}
-Suppose $M$ to be any other sublattice of $L$. We want to know that $\ell(M)$ lies 
-above the plot $P$ of the $\ell(L_i)$. We prove by induction on the index $i$ that if $M \subset L_i$, then $\ell(M)$ lies above the 
-plot $P$. 
-\begin{itemize}
-    \item If $i=1$ then $M\subset L_1$. Since $L_1 $is semistable, we must have $\ell(M)$ lies above the line connecting $(0,0)$ and $\ell(L_1)$. Hence $\ell(M)$ lies above the plot $P$.
-    \item Suppose that $M\subset L_i$ for $i>1$. Then $M+L_{i-1} \subset L_i$ contains $L_{i-1}$. Therefore, it corresponds to the point lies above the line connecting $\ell(L_{i-1})$ and $\ell(L_i)$, thus lies above $P$
-    .By induction, the fact that $(M\cap L_{i-1}) \subset L_{i-1}$ implies $\ell(M\cap L_{i-1})$ lies above the plot $P$. 
-    Using the parallelogram rule, the point $\ell(M)$ must then also lie above the plot $P$
-\end{itemize}
-Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
+    Suppose $M$ to be any other sublattice of $L$. We want to know that $\ell(M)$ lies
+    above the plot $P$ of the $\ell(L_i)$. We prove by induction on the index $i$ that if $M \subset L_i$, then $\ell(M)$ lies above the
+    plot $P$.
+    \begin{itemize}
+        \item If $i=1$ then $M\subset L_1$. Since $L_1 $is semistable, we must have $\ell(M)$ lies above the line connecting $(0,0)$ and $\ell(L_1)$. Hence $\ell(M)$ lies above the plot $P$.
+        \item Suppose that $M\subset L_i$ for $i>1$. Then $M+L_{i-1} \subset L_i$ contains $L_{i-1}$. Therefore, it corresponds to the point lies above the line connecting $\ell(L_{i-1})$ and $\ell(L_i)$, thus lies above $P$
+              .By induction, the fact that $(M\cap L_{i-1}) \subset L_{i-1}$ implies $\ell(M\cap L_{i-1})$ lies above the plot $P$.
+              Using the parallelogram rule, the point $\ell(M)$ must then also lie above the plot $P$
+    \end{itemize}
+    Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
 \end{proof}
 \section{$\rho$- definition of semi-stability}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
 \begin{definition}[\label  = $\rho$-definition]\label{ss2}
     Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
-    \[\deg_{\text{inst}}(x):= \min_{Q \in MaxParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
+    \[\deg_{\text{inst}}(x):= \min_{Q \in ParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
 \end{definition}
+We first have an elementary lemma
+\begin{lemma}\label{ss-equiv}
+    Given $x \in X_n$, then the following are equivalent
+    \begin{enumerate}
+        \item $\deg_{\text{inst}}(x) \ge 0$.
+        \item For every stsandard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
+        \item For every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G_\mathbb{Q}/Q_\mathbb{Q}$
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \textcolor{red}{to be added.}
+\end{proof}
+From lemma \ref{ss-equiv}, to check whether $x \in G$ is semistable, we just need to verify whether $\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0$.
 A simple observation is that - a lattice $x$ is semi - stable if for all maximal standard parabolic subgroups
 $Q_i$, we have
 \[\min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle \ge 0\]
-Note that, in the definition of degree of instability, we can further replace $H_Q$ with $H_B$. This implies that, if
+From lemma \ref{coeff-H(J)}
+\[H_B = H_Q+H(B)\]
+where $H_Q$ is a scalar multiple of $\lambda_i^\vee$ for $Q = Q_i$ and $H(B)$ is a linear combination of $\alpha_j^\vee$ for $ j \ne i$.
+On the other hand, since $Q$ is a maximal standard parabolic subgroup of $G$, 
+$\rho_Q$ is proportional to $\lambda_i.$ Thus $$\left\langle \rho_Q,H(B)(x\gamma)\right\rangle =0.$$ In particular, we can replace $H_Q$ by $H_B$ in verifying the semistablility.
+This implies that, if
 \[ x = kan, \quad k \in K, a \in A, n \in N,\]
 as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particular, if
 \[a = \begin{bmatrix}
@@ -500,53 +518,4 @@ $A$-coordinate of $x$, and verify whether the system
         a_1a_2\ldots a_n \ge 1
     \end{cases}
 \end{align*}
-\subsection{The equivalent between definitions of semi-stable lattices}
-So far we have two distinct definitions of semi-stability. The following theorem asserts that they are equivalent:
-\begin{prop}
-    Let $x \in X_n = K \backslash \text{SL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
-    conditions holds
-    \begin{enumerate}
-        \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
-        \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
-    \end{enumerate}
-\end{prop}
-\begin{proof}
-    \hfill \\
-    If we can prove there is a correspondence between
-    $\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
-    We first need a slight reduction - we identified the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
-    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
 
-    We will first show the following correspondence
-    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
-    We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: For any sublattice $M \subset \mathbb{Z}^n$, there exists
-    a basis of $M$, denoted by
-    \[\left\lbrace v_1,v_2,\ldots, v_i \right\rbrace \]
-    we can extend this basis to get a basis of $\mathbb{Z}^n$
-    \[\mathfrak{B'} = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace \]
-    Clearly in $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $. Clearly there
-    exists a map $\gamma \in \glnz$ such that
-    \[\gamma \cdot e_k = v_k \quad \forall k = 1,2,\ldots, n\]
-    So we define the map
-    \begin{align*}
-        \varphi \colon \left\lbrace\text{sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
-        M                                                                                        & \mapsto [\gamma]
-    \end{align*}
-    where $[\gamma]$ denoted the equaivalent class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, Assume that we extend
-    the basis $\mathfrak{B'}$ in a different way to get the basis
-    \[ \mathfrak{B}_1 = \left\lbrace v_1,\ldots, v_k, v'_{k+1},\ldots,v'_n \right\rbrace\]
-    As above, there also exists $\gamma' \in \glnz$ such that
-    \[\gamma' e_k = v_k \quad \forall k \le i, \quad \text{ and } \quad \gamma'e_k = v'_k \quad \forall k > i\]
-    But this implies that
-    \[(\gamma^{-1})\gamma ' \cdot e_k = \gamma^{-1} v_k = e_k \quad \forall k \le i\]
-    So in particular, we have $[\gamma] = [\gamma']$. The inverse map is given by
-    \[[\gamma] \mapsto \bigoplus_{k=1}^i\mathbb{Z} (\gamma \cdot e_i) = M\]
-    This generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
-    the map
-    \begin{align*}
-        \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $g\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
-        M_g = gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
-    \end{align*}
-    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
-\end{proof}
-\todo{Check the map in the generalization carefully }

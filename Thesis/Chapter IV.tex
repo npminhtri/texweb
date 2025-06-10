@@ -1,0 +1,50 @@
+\chapter{Different notions of semistablility are equivalent}
+\section{The equivalent between definitions of semi-stable lattices}
+So far we have two distinct definitions of semi-stability. The following theorem asserts that they are equivalent:
+\begin{prop}
+    Let $x \in X_n = K \backslash \text{SL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
+    conditions holds
+    \begin{enumerate}
+        \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
+        \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    \hfill \\
+    If we can prove there is a correspondence between
+    $\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
+    We first need a slight reduction - we identified the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
+    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
+
+    We will first show the following correspondence
+    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
+    We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: For any sublattice $M \subset \mathbb{Z}^n$, there exists
+    a basis of $M$, denoted by
+    \[\left\lbrace v_1,v_2,\ldots, v_i \right\rbrace \]
+    we can extend this basis to get a basis of $\mathbb{Z}^n$
+    \[\mathfrak{B'} = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace \]
+    Clearly in $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $. Clearly there
+    exists a map $\gamma \in \glnz$ such that
+    \[\gamma \cdot e_k = v_k \quad \forall k = 1,2,\ldots, n\]
+    So we define the map
+    \begin{align*}
+        \varphi \colon \left\lbrace\text{sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
+        M                                                                                        & \mapsto [\gamma]
+    \end{align*}
+    where $[\gamma]$ denoted the equaivalent class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, Assume that we extend
+    the basis $\mathfrak{B'}$ in a different way to get the basis
+    \[ \mathfrak{B}_1 = \left\lbrace v_1,\ldots, v_k, v'_{k+1},\ldots,v'_n \right\rbrace\]
+    As above, there also exists $\gamma' \in \glnz$ such that
+    \[\gamma' e_k = v_k \quad \forall k \le i, \quad \text{ and } \quad \gamma'e_k = v'_k \quad \forall k > i\]
+    But this implies that
+    \[(\gamma^{-1})\gamma ' \cdot e_k = \gamma^{-1} v_k = e_k \quad \forall k \le i\]
+    So in particular, we have $[\gamma] = [\gamma']$. The inverse map is given by
+    \[[\gamma] \mapsto \bigoplus_{k=1}^i\mathbb{Z} (\gamma \cdot e_i) = M\]
+    This generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
+    the map
+    \begin{align*}
+        \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $g\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
+        M_g = gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
+    \end{align*}
+    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
+\end{proof}\todo{Check the map in the generalization carefully }

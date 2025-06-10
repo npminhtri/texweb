@@ -185,6 +185,8 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
@@ -411,6 +413,9 @@ INPUT ChapterII-fixed typos.aux
 INPUT .\Proof of ss-equiv.aux
 INPUT .\Proof of ss-equiv.aux
 INPUT Proof of ss-equiv.aux
+INPUT .\Chapter IV.aux
+INPUT .\Chapter IV.aux
+INPUT Chapter IV.aux
 OUTPUT Thesis.aux
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -579,6 +584,12 @@ OUTPUT Proof of ss-equiv.aux
 INPUT .\Proof of ss-equiv.tex
 INPUT .\Proof of ss-equiv.tex
 INPUT Proof of ss-equiv.tex
+INPUT .\Chapter IV.tex
+INPUT .\Chapter IV.tex
+OUTPUT Chapter IV.aux
+INPUT .\Chapter IV.tex
+INPUT .\Chapter IV.tex
+INPUT Chapter IV.tex
 INPUT Thesis.aux
 INPUT .\Chapter I.aux
 INPUT .\Chapter I.aux
@@ -589,6 +600,9 @@ INPUT ChapterII-fixed typos.aux
 INPUT .\Proof of ss-equiv.aux
 INPUT .\Proof of ss-equiv.aux
 INPUT Proof of ss-equiv.aux
+INPUT .\Chapter IV.aux
+INPUT .\Chapter IV.aux
+INPUT Chapter IV.aux
 INPUT .\Thesis.out
 INPUT .\Thesis.out
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk
