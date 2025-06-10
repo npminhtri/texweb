@@ -584,6 +584,8 @@ OUTPUT Proof of ss-equiv.aux
 INPUT .\Proof of ss-equiv.tex
 INPUT .\Proof of ss-equiv.tex
 INPUT Proof of ss-equiv.tex
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT .\Chapter IV.tex
 INPUT .\Chapter IV.tex
 OUTPUT Chapter IV.aux

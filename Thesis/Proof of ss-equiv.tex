@@ -463,9 +463,7 @@ These two conditions is also sufficent for a chain to be a canonical filtration
     plot $P$.
     \begin{itemize}
         \item If $i=1$ then $M\subset L_1$. Since $L_1 $is semistable, we must have $\ell(M)$ lies above the line connecting $(0,0)$ and $\ell(L_1)$. Hence $\ell(M)$ lies above the plot $P$.
-        \item Suppose that $M\subset L_i$ for $i>1$. Then $M+L_{i-1} \subset L_i$ contains $L_{i-1}$. Therefore, it corresponds to the point lies above the line connecting $\ell(L_{i-1})$ and $\ell(L_i)$, thus lies above $P$
-              .By induction, the fact that $(M\cap L_{i-1}) \subset L_{i-1}$ implies $\ell(M\cap L_{i-1})$ lies above the plot $P$.
-              Using the parallelogram rule, the point $\ell(M)$ must then also lie above the plot $P$
+        \item Suppose that $M\subset L_i$ for $i>1$. Then $M+L_{i-1} \subset L_i$ contains $L_{i-1}$. Therefore, it corresponds to the point lies above the line connecting $\ell(L_{i-1})$ and $\ell(L_i)$, thus lies above $P$.         By induction, the fact that $(M\cap L_{i-1}) \subset L_{i-1}$ implies $\ell(M\cap L_{i-1})$ lies above the plot $P$. Using the parallelogram rule, the point $\ell(M)$ must then also lie above the plot $P$
     \end{itemize}
     Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
 \end{proof}
@@ -481,8 +479,8 @@ We first have an elementary lemma
     Given $x \in X_n$, then the following are equivalent
     \begin{enumerate}
         \item $\deg_{\text{inst}}(x) \ge 0$.
-        \item For every stsandard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
-        \item For every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G_\mathbb{Q}/Q_\mathbb{Q}$
+        \item For every stsandard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
+        \item For every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -495,10 +493,10 @@ $Q_i$, we have
 From lemma \ref{coeff-H(J)}
 \[H_B = H_Q+H(B)\]
 where $H_Q$ is a scalar multiple of $\lambda_i^\vee$ for $Q = Q_i$ and $H(B)$ is a linear combination of $\alpha_j^\vee$ for $ j \ne i$.
-On the other hand, since $Q$ is a maximal standard parabolic subgroup of $G$, 
+On the other hand, since $Q$ is a maximal standard parabolic subgroup of $G$,
 $\rho_Q$ is proportional to $\lambda_i.$ Thus $$\left\langle \rho_Q,H(B)(x\gamma)\right\rangle =0.$$ In particular, we can replace $H_Q$ by $H_B$ in verifying the semistablility.
 This implies that, if
-\[ x = kan, \quad k \in K, a \in A, n \in N,\]
+\[ x\gamma = kan, \quad k \in K, a \in A, n \in N,\]
 as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particular, if
 \[a = \begin{bmatrix}
         a_1    & 0      & \ldots & 0      \\
@@ -507,9 +505,9 @@ as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particula
         0      & 0      & \ldots & a_n
     \end{bmatrix}\]
 then
-\[\left\langle \rho_{Q_i}, H_B(x) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]
+\[\left\langle \rho_{Q_i}, H_B(x\gamma) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]
 Thus, to check for the semi-stability of a lattice $x$, we just need to look at the
-$A$-coordinate of $x$, and verify whether the system
+$A$-coordinate of $x\gamma$ for every $\gamma \in G(\mathbb{Q})/Q_i(\mathbb{Q})$, and verify whether the following system holds
 \begin{align*}
     \begin{cases}
         a_1 \ge 1   \\
@@ -518,4 +516,39 @@ $A$-coordinate of $x$, and verify whether the system
         a_1a_2\ldots a_n \ge 1
     \end{cases}
 \end{align*}
+\section{Canonical pair}
+Consider a pair $(P,\delta)$ of a standard parabolic subgroup $P \subsetneq G$ and $\delta \in G(\mathbb{Q})/P(\mathbb{Q})$. Such a pair is called \textbf{destabilizing} for $x$ if
+\[\left\langle \rho_P, H_P(x\delta)\right\rangle = \deg_{\text{inst}}(x)\]
+Such a pair is called \textbf{extremal} for $x$ if for any standard parabolic $Q \subset P$ such that
+\[\left\langle \rho_Q, H_Q(x\delta)\right\rangle = \left\langle \rho_P, H_P(x\delta)\right\rangle\]
+then $Q=P$.
+\begin{definition}
+    A pair $(P,\delta)$ that is both \textit{destabilizing} and \textit{extremal} for $x$ is called a \textbf{canonical pair} for $x$.
+\end{definition}
+A canonical pair for $x$, if exists, will be denoted by $\cpx:=(P,\delta)$. A priori, it is not clear whether $\cpx$ exists or not.
+We will show that it is in fact equivalent to the notion of canonical filtration introduced in the previous sections, and deduce that
+$\cpx$ must exist and it is unique.
 
+We obtain the following lemma as a consequence of the definition of canonical pair
+\begin{lemma}\label{canonical-pair}
+    Let $x \in X_n$  and $(P,\delta)$ be a pair with $P \subsetneq G$ be standard parabolic subgroup and
+    $\delta \in G(\mathbb{Q})/P(\mathbb{Q})$. Then
+    \begin{enumerate}
+        \item If $(P,\delta)$ is destabilizing for $x$, then $\deg_{inst}^P(x\delta) \ge 0$.
+        \item If $(P,\delta) $ is extremal for $x$, then $\left\langle \alpha, H_P(x\delta)\right\rangle <0$ for any $\alpha \in \Delta_P$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    For the first part, let $Q \subset P$ be any standard parabolic, then
+    \[\rho_Q = \rho_P + \rho_Q^P\]
+    Thus, for any $\eta \in P(\mathbb{Q})/Q(\mathbb{Q})$
+    \begin{align*}
+        \left\langle \rho_Q^P,H_Q(x\gamma\eta)\right\rangle & = \left\langle\rho_Q,H_Q(x\gamma\eta)\right\rangle - \left\langle\rho_P,H_P(x\gamma\eta)\right\rangle \\                                                 & = \left\langle\rho_Q,H_Q(x\gamma\eta)\right\rangle -\deg_{inst}(x) \ge 0
+    \end{align*}
+    For the second part, we can pick a standard parabolic $Q \subset G$ containing $P$ such that $P$ is maximal in $Q$. In particular, we have
+    $\Delta^{Q}_P = \{\alpha\}$. Then
+    \begin{align*}
+        \left\langle\rho_P^Q,H_P(x\delta)\right\rangle & = \left\langle\rho_P,H_P(x\gamma)\right\rangle - \left\langle\rho_Q,H_Q(x\gamma\eta)\right\rangle \\
+                                                       & = \deg_{inst}(x) - \left\langle\rho_Q,H_Q(x\gamma\eta)\right\rangle <0
+    \end{align*}
+    Since $\rho_P^Q$ and $\alpha$ are proportional by a positive number, the result follows immediately.\end{proof}
