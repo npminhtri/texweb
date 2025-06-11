@@ -410,9 +410,9 @@ INPUT Chapter I.aux
 INPUT .\ChapterII-fixed typos.aux
 INPUT .\ChapterII-fixed typos.aux
 INPUT ChapterII-fixed typos.aux
-INPUT .\Proof of ss-equiv.aux
-INPUT .\Proof of ss-equiv.aux
-INPUT Proof of ss-equiv.aux
+INPUT .\Chapter III.aux
+INPUT .\Chapter III.aux
+INPUT Chapter III.aux
 INPUT .\Chapter IV.aux
 INPUT .\Chapter IV.aux
 INPUT Chapter IV.aux
@@ -578,12 +578,12 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT .\Proof of ss-equiv.tex
-INPUT .\Proof of ss-equiv.tex
-OUTPUT Proof of ss-equiv.aux
-INPUT .\Proof of ss-equiv.tex
-INPUT .\Proof of ss-equiv.tex
-INPUT Proof of ss-equiv.tex
+INPUT .\Chapter III.tex
+INPUT .\Chapter III.tex
+OUTPUT Chapter III.aux
+INPUT .\Chapter III.tex
+INPUT .\Chapter III.tex
+INPUT Chapter III.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT .\Chapter IV.tex
@@ -599,9 +599,9 @@ INPUT Chapter I.aux
 INPUT .\ChapterII-fixed typos.aux
 INPUT .\ChapterII-fixed typos.aux
 INPUT ChapterII-fixed typos.aux
-INPUT .\Proof of ss-equiv.aux
-INPUT .\Proof of ss-equiv.aux
-INPUT Proof of ss-equiv.aux
+INPUT .\Chapter III.aux
+INPUT .\Chapter III.aux
+INPUT Chapter III.aux
 INPUT .\Chapter IV.aux
 INPUT .\Chapter IV.aux
 INPUT Chapter IV.aux

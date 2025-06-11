@@ -484,9 +484,15 @@ We first have an elementary lemma
     \end{enumerate}
 \end{lemma}
 \begin{proof}
-    \textcolor{red}{to be added.}
+    \hfill\\
+    First we prove $1 \Rightarrow 3$: This follows immediately as $\rho_Q = c\omega$ for some positive number $c$ and $\omega \in \widehat{\Delta}_Q$. In particular
+    \[\left\langle \omega,H_Q(x\delta) \right\rangle = \dfrac{1}{c}\left\langle \rho_Q,H_Q(x\delta) \right\rangle \ge \dfrac{1}{c}\deg_{\text{inst}}(x) \ge 0\]
+    For $2 \Rightarrow 3$: We can choose a maximal standard parabolic $Q$ such that 
+    $P \subset Q \subset G$. But then 
+    \[\left\langle \omega,H_P(x\delta) \right\rangle =\left\langle \omega,H_Q(x\delta) \right\rangle \ge 0\]
+    Finally, we have $2 \Rightarrow 1$ as $\rho_P$ is a positive linear combination of elements contained in $\widehat{\Delta}_P$.
 \end{proof}
-From lemma \ref{ss-equiv}, to check whether $x \in G$ is semistable, we just need to verify whether $\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0$.
+From lemma \ref{ss-equiv}, to check whether $x \in G$ is semistable, we just need to verify whether $$\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0.$$
 A simple observation is that - a lattice $x$ is semi - stable if for all maximal standard parabolic subgroups
 $Q_i$, we have
 \[\min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle \ge 0\]
