@@ -1,12 +1,62 @@
 
 
-\chapter{ROOTS AND WEIGHTS FOR $\SLn$/$\GLn$}
- % Sets article title
-In this chapter, we review some basic theory of roots and weight. We will first recall the
-general theory and compute explicitly the examples for $\SLn$/$\GLn$.
+\chapter{BASIS LIE THEORY FOR  $\SLn\& \GLn$}
+% Sets article title
+In this chapter, we review the basic theory of roots and weights for Lie groups. We will first recall the
+general theory and then compute explicitly the examples for $\SLn\& \GLn$.
 \section{Structure theory}
-\subsection{The Cartan subalgebra}
-First we need the notion of Cartan subalgebra
+Throughout this section, the ground field is $k=\mathbb{R}$.
+\subsection{Lie algebras}
+A Lie algebra $\mathfrak{g}$ is a vector space over $k$ such that the Lie bracket
+\begin{align*}
+    [\cdot,\cdot] \colon \mathfrak{g} \times \mathfrak{g} & \to \mathfrak{g} \\
+    (x,y   )                                              & \mapsto [x,y]
+\end{align*}
+satisfies the following axioms
+\begin{enumerate}
+    \item $[x,y]$ is bilinear.
+    \item $[x,x]=0$ for all $x \in \mathfrak{g}$.
+    \item $[x,[y,z]]+ [z,[x,y]] + [y,[z,x]] =0$
+\end{enumerate}
+The last property is called \textit{Jacobi's identity}.
+\begin{example}
+    The first example is the set of all matrices of size $n \times n$, denoted by $\glnr$. We
+    define the Lie bracket by
+    \[[A,B] :=AB-BA,\]
+    for arbitrary matrices $A,B \in \glnr$. It is clearly that $[A,B]$ is bilinear and $[A,A]=0$ for all matrices $A$.
+    We need to verify the Jacobi's identity. Note that
+    \begin{align*}
+        [A,[B,C]] & = A(BC-CB)-(BC-CB)A     \\
+                  & = ABC - ACB - BCA + CBA
+    \end{align*}
+    It follows that
+    \begin{align*}
+        &[A,[B,C]]+[C,[A,B]] + [B,[C,A]]\\
+        = &ABC - ACB - BCA + CBA\\
+        +&CAB-CBA-ABC+BAC\\
+        +&BCA-BAC-CAB+ABC\\
+        =&0
+    \end{align*}
+Therefore this is a Lie algebra.
+\end{example}
+\begin{example}\label{slnr-example}
+    A less trivial example is the subspace $\slnr$ of $\glnr$, defined by 
+    \[\slnr = \left\lbrace A \in \glnr : tr(A) = 0\right\rbrace\]
+    The Lie bracket over $\slnr$ is just the restriction of the Lie bracket over $\glnr$. Indeed, for 
+    any $A,B \in slnr$ we have 
+    \[tr[A,B] = tr(AB-BA)= tr(AB)-tr(BA)=0\]
+    Hence the restriction of the Lie bracket over $\glnr$ is a Lie bracket over $\slnr$. The 3 axioms for the Lie bracket is automatically satisfied. 
+\end{example}
+\begin{definition}\label{ideal}
+    An ideal $I \subset \mathfrak{g}$ is a subspace of $\mathfrak{g}$ such that $[I,\mathfrak{g}] \subset \mathfrak{g}$.
+\end{definition}
+\begin{definition}\label{simple-lie algebra}
+    A Lie algebra $\mathfrak{g}$ is called \textbf{simple} if it has no nontrivial ideals.
+\end{definition}
+From the computation in \ref{slnr-example}, it is immediate that $\slnr$ is an ideal of $\glnr$. This implies that $\glnr$ 
+is not a simple Lie algebra. However, the Lie algebra $\slnr$ is simple. 
+\subsection{Cartan subalgebras}
+First we need the notion of Cartan subalgebras
 \begin{definition}
     For any Lie algebra $\mathfrak{g}$, a subalgebra $\mathfrak{h}$ of $\fg$ is said to be a \textit{Cartan algebra} if it is
     \begin{itemize}
@@ -14,19 +64,35 @@ First we need the notion of Cartan subalgebra
         \item It is self normalizing. In particular, we have $\fh = \left\lbrace x \in \fg : [x,\fg] \subset \fg\right\rbrace$.
     \end{itemize}
 \end{definition}
-When $\fg$ is a semisimple Lie algebra, we have the following theorem
-\begin{theorem}
-    Let $\fg$ be a semisimple Lie algebra over an algebraically closed field $k$ of characteristic $0$ with a subalgebra $\fh$.
-    Then $\fh$ is a Cartan subalgebra of $\fg$ if and only if it is a maximal toral subalgebra, i.e. is maximal among all subalgebras
-    containing only semisimple elements.
-\end{theorem}\todo{add citation.}
+\begin{example}
+    For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is the set
+\[\fh = \left\lbrace H= \begin{bmatrix}
+        a_1    & 0      & \ldots & 0      \\
+        0      & a_2    & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \cdots & a_n
+    \end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
+\end{example}
+\begin{proof}
+    Indeed, it is obvious that $[\mathfrak{h},\mathfrak{h}]=0$, thus the Lie algebra $\mathfrak{h}$ is nilpotent. To show the 
+    self-normalizing property, we pick an any element $\sum_{i,j}a_{ij}E_{ij}$ such that
+    \[\left[\sum_{i,j}a_{ij}E_{ij},\mathfrak{h}\right]\subset \mathfrak{h}\]
+    Here $E_{ij}$ denotes the matrix that has 1 at the $ij$ entry and 0 otherwise. Clearly the matrix
+    $E_{pp}-E_{qq} \in \mathfrak{h}$ for $p \ne q$. We then have 
+    \[\left[\sum_{i,j}a_{ij}E_{ij},E_{pp}-E_{qq}\right] \in \mathfrak{h}\]
+    or equivalently
+    \[\sum_{i}a_{ip}E_{ip}-\sum_{i}a_{iq}E_{iq}-\sum_j a_{pj}E_{pj}-\sum_j a_{qj}E_{qj} \in \mathfrak{h}\]
+    The coefficients of $E_{pq}$ in the above sum is $-2a_{pq}$. By our choice of $\mathfrak{h}$ it must be the case that $a_{pq}=0$. Thus,
+    only the coefficients of $E_{pq}$ for $p=q$ survive. Hence 
+    $\sum_{i,j}a_{ij}E_{ij} \in \mathfrak{h}$  and $\mathfrak{h}$ is then a Cartan subalgebra of $\slnr$.
+\end{proof}
 \subsection{Root space decomposition}
-With respect to some choice of Cartan subalgebra, we have a root space decomposition. In particular, there is a finite set
+With respect to a choice of Cartan subalgebra $\mathfrak{h}$, we have a root space decomposition. In particular, there is a finite set
 $\Phi \subset \fh^{*}$ of linear forms on $\fh$, whose elements are called \textbf{roots}, such that
 \[\fg = \fh \oplus \left(\bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha\right),\]
 where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x, \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$.
 \subsection{A specific example: root space decomposition for $\mathfrak{sl}_n(\mathbb{R})$}
-For the semisimple Lie algebra $\slnr$, a typical choice of the Cartan subalgebra is the set
+For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is the set
 \[\fh = \left\lbrace H= \begin{bmatrix}
         a_1    & 0      & \ldots & 0      \\
         0      & a_2    & \ldots & 0      \\
@@ -34,41 +100,79 @@ For the semisimple Lie algebra $\slnr$, a typical choice of the Cartan subalgebr
         0      & 0      & \cdots & a_n
     \end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
 With respect to this Cartan subalgebra, we can define the linear function
-\[L_i \colon \fh \to \mathbb{R}, \quad H \mapsto L_i(H)= a_i\]
+\[L_i \colon \fh \to \mathbb{R}, \quad H \mapsto  a_i\]
 Then the roots are given by $\alpha_{ij} :=L_i - L_j$ for distinct $i,j$. We have the root space decomposition for $\slnr$ as follows
-\[\fg = \fh \oplus \left(\bigoplus\fg_{\alpha_{ij}}\right).\]
+\[\fg = \fh \oplus \left(\bigoplus\fg_{\alpha_{ij}}\right) = \mathfrak{h}\oplus \left(\bigoplus \mathbb{R}E_{ij}\right)\]
 For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$ - these are called \textbf{simple roots}.
+\subsection{Killing form}
+\textcolor{red}{to be added}.
+\subsection{Co-roots}
+In previous section, we showed that the Killing form gives rise to an inner product over 
+the dual space $\mathfrak{h}^* = \Hom(\mathfrak{h}, \mathbb{R})$. For each root $\alpha \in \mathfrak{h}^*$, we define the 
+corresponding co-root $\alpha^\vee$ to be the linear functional over $\mathfrak{h}^*$ such that
+\[\left\langle \beta, \alpha^\vee\right\rangle:= \dfrac{2(\beta,\alpha)}{(\alpha,\alpha)}\]
+On the other hand, since $\alpha^\vee$ is the dual space of $\mathfrak{h}^*$, it can be regarded 
+as an element $h_\alpha$ of $\mathfrak{h}$. So we have 
+\[\beta(h_\alpha)=\left\langle \beta, \alpha^\vee\right\rangle:= \dfrac{2(\beta,\alpha)}{(\alpha,\alpha)} \]
+\begin{example}
+    We compute explicitly the fundamental coroot $\alpha_i\vee$ of the fundamental root $\alpha_i$ for the Lie algebra 
+    $\slnr$. In previous section, we defined the fundamental roots to be $\alpha_{ij} = L_i-L_j$. It can be 
+    verified directly that $\alpha_{ij}^\vee = E_i-E_{j}$ as 
+    \[\left\langle \alpha_{ij}, \alpha_{ij}^\vee \right\rangle = (L_i-L_J)(E_i-E_j)=2\]
+    Similarly, we can also define the $\lambda_i$ such that 
+    \[\left\langle \lambda_i,\alpha_j^\vee\right\rangle = \delta_{ij} = \begin{cases}
+        1, i =j\\
+        0, i \ne j
+    \end{cases}\]
+    Explicitly, it can be checked that $\lambda_i = L_1+L_2+\ldots+L_i$.
+\end{example}
 \subsection{Roots at group level}
-Since the main object in this thesis is the Lie groups, we want to understand how the roots
-behave at group level. The analog for the Cartan subalgebra is the maximal torus
+We want to understand how the roots behave at group level. The analog for the Cartan subalgebra is the maximal torus
 \[T = \left\lbrace t= \begin{bmatrix}
         a_1    & 0      & \ldots & 0      \\
         0      & a_2    & \ldots & 0      \\
         \vdots & \vdots & \ddots & \vdots \\
         0      & 0      & \cdots & a_n
-    \end{bmatrix} :  a_i \ne 0\right\rbrace,\]
+    \end{bmatrix} :  \prod_{i=1}^na_i =1\right\rbrace,\]
 Then $T$ acts on $\fg$ by conjugation. Explicitly, we can check that
 \[\Ad(t)(E_{ij}) = t_it_j^{-1}E_{ij}\]
 Therefore, at the group level, the character $\alpha_{ij}(\text{diag}(t_1,\ldots,t_n))=t_it_j^{-1}$
-is a root whenever $i \ne j$. The set
-\[\Delta = \left\lbrace \alpha_i\mid i =\overline{1,n}\right\rbrace\]
+is a root whenever $i \ne j$. We define the set of  \textbf{simple roots} as
+\[\Delta = \left\lbrace \alpha_i\mid i =1,\ldots,n \right\rbrace\]
 where
-\[\alpha_i \colon T \mapsto \mathbb{R}, t \mapsto \dfrac{t_i}{t_{i+1}}\]
-is the set of \textbf{simple roots}.
-We can decompose the set of root into to disjoint subsets, namely
+\[\alpha_i \colon T \mapsto \mathbb{R}, t \mapsto \dfrac{t_i}{t_{i+1}}.\]
+
+We can decompose the set of roots into disjoint subsets, namely
 \[\Phi = \left\lbrace \alpha_{ij}, i \ne j\right\rbrace = \Phi_+ \coprod \Phi_{-}\]
-where the set $\Phi_+$ comprises $\alpha_{ij}$ for $i<j$ and the remaining roots are in $\Phi_{-}$. The former consists of
-\textbf{positive roots} while the latter contains \textbf{negative roots}. We have the following lemma
+where the positive set of roots $\Phi_+$  comprises $\alpha_{ij}$ for $i<j$ and the remaining roots are in the negative set of roots $\Phi_{-}$. We have the following lemma
 \begin{lemma}\label{linear-comb-of-roots}
     Each $\alpha \in \Phi$ can be written uniquely as a linear combination
     \[\alpha = m_1\alpha_1+\ldots+m_{d}\alpha_{d}\]
     with all $m_i \in \mathbb{Z}_{\ge 0}$ or $m_i \in \mathbb{Z}_{\le 0}$. If $\alpha \in \Phi_+$ then all $m_i \ge 0$, otherwise $m_i \le 0$ for all $i$.
 \end{lemma}
-\subsection{Weights}
+\subsection{Weyl group}
+We only define the Weyl group explicitly for the group $\SLn$ or $\GLn$. It is a fact that the Weyl groups for
+these two Lie groups are the same and equal to $W = S_n$ - the permutation group of $n$ letters.  We recall some basis
+observation about this group
+\begin{enumerate}
+    \item Every $\sigma \in W$ can be written (non-uniquely) as a product of $w_{i_1} \cdots w_{i_k}$ for some integer $k$. Such a sequence is said to have length $k.$ If $k$ is the minimum, over all such writings, it is called the length of $\sigma$ and written $\ell(\sigma)$. Any expression of length $\ell(\sigma)$ for $\sigma$ is called a reduced expression.
+
+    \item The group $S_n$ is generated by $S$ subject to the following two types of relations:
+          \begin{itemize}
+              \item (Reflection) $w_i^2=1$ for $i \in I$.
+              \item (Braid relations) $w_i \, w_{i+1} \, w_i = w_{i+1}w_i w_{i+1}$ for $i = 1, \ldots, n-2$ and $w_i w_j = w_j w_i$ for $|j -i |\geq 2$.
+          \end{itemize}
+\end{enumerate}
+Note that $W$ acts on $\Hom(T, \mathbb{R}^*)$ in the natural way: $w . \varphi(h) = \varphi(w^{-1} h)$. More explicitly,  $\sigma$ sends $\alpha:= \alpha_{ij}$ to $\alpha_{\sigma(i), \sigma(j)}$. Hence we find that
+\[w_i \alpha_j = \begin{cases} - \alpha_i          & \mbox{if } i=j           \\
+              \alpha_j            & \mbox{ if } |j - i | > 1 \\
+              \alpha_i + \alpha_j & \mbox{ if } |j-i|=1\end{cases} \]
+
+
 \todo{define in terms of Lie algebra}
-Another class of linear forms that we are interested in are the \textbf{fundamental weights}. For each fundamental
-weights $\lambda_i$, we define
-\[\lambda_i \colon T \to \mathbb{R}, \quad\lambda_i(t) = a_1\ldots a_i\]
+\subsection{Weights}
+Another class of linear forms that we are interested in are the \textbf{fundamental weights}. For each $i \in I$, we define
+\[\lambda_i \colon T \to \mathbb{R}^*, \quad\lambda_i(t) = a_1\ldots a_i\]
 We have the following
 \begin{lemma}\label{linear-comb-of-weights}
     We can write
@@ -78,7 +182,7 @@ We have the following
 This coefficients $r_i$'s is determined by inverting the Cartan matrix of $\slnr$. Hence we postpone a proof
 of this until reviewing the notion of Cartan matrices.
 \begin{example}
-    When $n=3$, we have the following relations 
+    When $n=3$, we have the following relations
     \[\lambda_1 = \dfrac{2}{3}\alpha_1+\dfrac{1}{3}\alpha_2, \quad \lambda_2 = \dfrac{1}{3}\alpha_1+\dfrac{2}{3}\alpha_2\]
 \end{example}
 \begin{figure}[h]
@@ -103,10 +207,10 @@ of this until reviewing the notion of Cartan matrices.
 
 
 \begin{definition}
-    A weight $\lambda$ is called \textbf{dominant} if it satisfies $\left\langle \lambda,\alpha^{\vee} \right\rangle \in \mathbb{Z}_{\ge 0}$ for all $\alpha$
+    A weight $\lambda$ is called \textbf{dominant} if it satisfies $\left\langle \lambda,\alpha^{\vee} \right\rangle \in \mathbb{Z}_{\ge 0}$ for all $\alpha$.
 \end{definition}
 Clearly by lemma \ref{linear-comb-of-roots}, the weight $\lambda$ is dominant if and only if $\left\langle\lambda,\alpha_i^\vee\right\rangle$ for all
-fundamental root $\alpha_i$. It is also clearly that the set of fundamental weight is given by addition of the fundamental weights, namely
+fundamental root $\alpha_i$. It is also clearl that the set of dominant weight is given by
 \[\Lambda^+ := \left\lbrace c_1\lambda_1+\ldots+c_d\lambda_d \mid c_i \in \mathbb{Z}_{\ge 0}\right\rbrace\]
 The set of dominant weights is denoted $\Lambda^+$. A weight $\lambda = \sum n_i \lambda_i$ is called strongly dominant if $n_i > 0$ for all $i$. One important example is the minimal strongly dominant weight given by
 \[
@@ -132,33 +236,19 @@ We know that $s_i$ sends $\alpha_i$ to $-\alpha_i$ and permutes the other positi
 \]
 Therefore, $(\mu, \alpha_i) = \mu(h_i) = 1$ for all $i$. So, $\mu = \rho$.
 
-Unlike lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in terms of the fundamental roots, we don't always
-get positive coefficients. However, it is true that all the coefficients must be integer. In particular, we have
-\[\alpha_j = \sum_{n_j}\lambda_j, \quad n_j \in \mathbb{Z}.\]
-To put it another way, the root lattice $\mathbb{Z}\Delta$ is contained inside the weight lattice.
-\subsection{Weyl group}
-We only define the Weyl group explicitly for the group $\SLn$ or $\GLn$. It is a fact that the Weyl groups for
-these two Lie groups are the same and equal to $W = S_n$ - the permutation group of $n$ letters.  We recall some basis
-observation about this group
-\begin{enumerate}
-    \item Every $\sigma \in W$ can be written (non-uniquely) as a product of $w_{i_1} \cdots w_{i_k}$ for some integer $k$. Such a sequence is said to have length $k.$ If $k$ is the minimum, over all such writings, it is called the length of $\sigma$ and written $\ell(\sigma)$. Any expression of length $\ell(\sigma)$ for $\sigma$ is called a reduced expression.
-
-    \item The group $S_n$ is generated by $S$ subject to the following two types of relations:
-          \begin{itemize}
-              \item (Reflection) $w_i^2=1$ for $i \in I$.
-              \item (Braid relations) $w_i \, w_{i+1} \, w_i = w_{i+1}w_i w_{i+1}$ for $i = 1, \ldots, n-2$ and $w_i w_j = w_j w_i$ for $|j -i |\geq 2$.
-          \end{itemize}
-\end{enumerate}
-Note that $W$ acts on $\Hom(H, \mathbb{R}^*)$ in the natural way: $w . \varphi(h) = \varphi(w^{-1} h)$. More explicitly,  $\sigma$ sens $\alpha:= \alpha_{ij}$ to $\alpha_{\sigma(i), \sigma(j)}$. Hence we find that
-\[w_i \alpha_j = \begin{cases} - \alpha_i          & \mbox{if } i=j           \\
-              \alpha_j            & \mbox{ if } |j - i | > 1 \\
-              \alpha_i + \alpha_j & \mbox{ if } |j-i|=1\end{cases} \]
 We of course also have an action of $W$ on the weights.  For example, one can verify that
 \[ \begin{array}{lcr} s_i(\lambda_i) = \lambda_i - \alpha_i & \text{ and } & s_j(\lambda_i) = \lambda_i \mbox{ for } i \neq j \end{array}.\]
-Recall the definition of Weyl vector $\rho$, we have the following generalized action of Weyl group of $\rho$:
+We have the following generalized action of Weyl group of $\rho$:
 \[ w \rho = \rho - \sum_{\alpha \in \Delta_{w^{-1}}} \alpha,\]
 where \textcolor{red}{check this explicitly}
 \[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
+Unlike Lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in terms of the fundamental roots, we don't always
+get positive coefficients. However, it is true that all the coefficients must be integer. In particular, we have
+\[\alpha_j = \sum_{n_j}n_j\lambda_j, \quad n_j \in \mathbb{Z}.\]
+To put it another way, the root lattice $\mathbb{Z}\Delta$ is contained inside the weight lattice.
+
+
+
 \subsection{Cartan matrix}
 We fix a set of simple roots $\Delta = \left\lbrace \alpha_1,\ldots,\alpha_d \right\rbrace$ is defined to be the matrix
 \[A = \begin{bmatrix} \left\langle \alpha_i,\alpha_j^\vee  \right\rangle
@@ -226,13 +316,13 @@ and each partition of $n$. We can therefore define the parabolic subgroup explic
     The standard parabolic subgroup associated to the partition $n = n_1 + n_2 + \cdots + n_r$ is denoted $P_{n_1,\ldots,n_r}$ and is defined to be the group of all matrices of the form
     \[
         \begin{bmatrix}
-            \mathfrak{m}_1 & 0              & \ldots & 0              \\
-            0              & \mathfrak{m}_2 & \ldots & 0              \\
-            \vdots         & \vdots         & \ddots & \vdots         \\
-            0              & 0              & \ldots & \mathfrak{m}_k
+            M_{n_1} & 0       & \ldots & 0       \\
+            0       & M_{n_2} & \ldots & 0       \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0       & 0       & \ldots & M_{n_k}
         \end{bmatrix} ,
     \]
-    where $m_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The integer $r$ is called the rank of the parabolic subgroup $P_{n_1,\ldots,n_r}$.
+    where $M_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The integer $r-1$ is called the rank of the parabolic subgroup $P_{n_1,\ldots,n_r}$.
     We denote the collection of such subgroups \textbf{ParSt}.
 \end{definition}
 
@@ -388,6 +478,97 @@ We would like to explicitly describe the parabolic subgroup for $\SLn$.
               & B
         \end{bmatrix} \in \SLn: A \in \text{GL}_i, B \in \text{GL}_{n-i}\right\rbrace \]
 \end{example}
+
+\subsection{Langlands decomposition}
+We fix a partition of $n$ as
+\[n=n_1+n_2+\ldots+n_k\]
+and consider the parabolic subgroup of this type, i.e. the subgroup
+\[P_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        \mathfrak{m}_1 & \ast           & \ldots & \ast           \\
+        0              & \mathfrak{m}_2 & \ldots & \ast           \\
+        \vdots         & \vdots         & \ddots & \vdots         \\
+        0              & 0              & \ldots & \mathfrak{m}_k
+    \end{bmatrix} \right\rbrace\]
+where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$.
+
+This group can be factored as
+\[P_{n_1,\ldots, n_k} =M_{n_1,\ldots, n_k}\ltimes N_{n_1,\ldots, n_k}\]
+where
+\[N_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        I_1    & \ast   & \ldots & \ast   \\
+        0      & I_2    & \ldots & \ast   \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & I_k
+    \end{bmatrix} \right\rbrace \quad \left(I_k \text{ is the $n_k\times n_k$ identity matrix}\right)\]
+and
+\[M_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        M_1    & 0      & \ldots & 0      \\
+        0      & M_2    & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & M_k
+    \end{bmatrix} \right\rbrace\]
+
+The subgroup $M_{n_1,\ldots, n_k}$ is called \textbf{Levi component}. We can further factor this subgroup as
+\[M_{n_1,\ldots, n_k} = M'_{n_1,\ldots, n_k} \cdot A_{n_1,\ldots, n_k}\]
+with $A_{n_1,\ldots, n_k}$ plays the role of the connected center of $M_{n_1,\ldots, n_k}$:
+\[A_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        t_1I_1 & 0      & \ldots & 0      \\
+        0      & t_2I_k & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & t_kI_k
+    \end{bmatrix} : t_i > 0\right\rbrace \]
+and
+\[M'_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+        \mathfrak{m}'_1 & 0               & \ldots & 0               \\
+        0               & \mathfrak{m}'_2 & \ldots & 0               \\
+        \vdots          & \vdots          & \ddots & \vdots          \\
+        0               & 0               & \ldots & \mathfrak{m}'_k
+    \end{bmatrix} \right\rbrace,\]
+where $\det(\mathfrak{m}'_i) = \pm 1$.
+\begin{definition}
+    For a given parabolic subgroup $P$, the factorization
+    \[P = M_P \times A_P \times N_P\]
+    as above is called \textbf{Langlands decomposition}.
+\end{definition}
+\subsection{Iwasawa decomposition and P-horospherical decomposition}
+We introduce two important ways to decompose a matrix in $\GLn$ into simple parts. This will be frequently used
+in the remaining part of this thesis.
+\begin{prop}
+    Let \begin{align*}
+        K=\On, \quad A = \left\lbrace\begin{bmatrix}
+                                         a_1    & 0      & \ldots & 0      \\
+                                         0      & a_2    & \ldots & 0      \\
+                                         \vdots & \vdots & \vdots & \vdots \\
+                                         0      & 0      & \ldots & a_n
+                                     \end{bmatrix}: a_i >0\right\rbrace, \quad
+        U = \left\lbrace  \begin{bmatrix}
+                              1      & \ast   & \ldots & \ast   \\
+                              0      & 1      & \ldots & \ast   \\
+                              \vdots & \vdots & \vdots & \vdots \\
+                              0      & 0      & \ldots & 1\end{bmatrix}
+        \right\rbrace
+    \end{align*}
+    Then the natural product map \[p \colon K \times A \times U \to \GLn, \quad p(k,a,n)=kan\]
+    is an isomorphism.
+\end{prop}
+Thus, the following decomposition makes sense
+\begin{definition}
+    The decomposition of $g = kan$ for $k \in K, a \in A$ and $n \in N$ is called \textbf{Iwasawa} decomposition.
+\end{definition}
+Using the Langlands decomposition as well as the Iwasawa decomposition $G= ANK = BK$, we observation
+the decomposition
+\[G = PK = M_PA_PN_PK \cong M_P \times A_P \times N_PK\]
+As a consequence, we get
+\[X_G  = G/K = X_{M_P} \times A_P \times N_P\]
+for $X_{M_P} := M_{P}/(K\cap M_P)$.
+
+This is \textbf{$P$-horospherical} decomposition of the lattice space $X_G$. In this way,
+we can identify  $x \in X_G$ with the triple $(m_P(x), a_P(x),n_P(x))$.
+
+Furthermore, if $Q\supset P$ is also a parabolic subgroup, it gives rise to a parabolic subgroup $\ast P := P \cap M_Q$ of $M_Q$.
+The space $X_{M_Q}$ itself has the decomposition
+\[X_{M_Q} = X_{\ast P} \times A(Q)_{\ast P} \times N(Q)_{\ast P}\]
+where $$ X_{\ast P} = X_P, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_Q=N_P.$$ This is called \textbf{relative $P$}-horospherical decomposition with respect to $Q$.
 \subsection{Parabolic sets and parabolic subalgebras}
 \begin{definition}
     Given a root system $\Delta$. A \textbf{parabolic subset} $\Delta_P$ is a subset of $\Delta$ such that
@@ -400,7 +581,7 @@ We would like to explicitly describe the parabolic subgroup for $\SLn$.
 The parabolic set parametrizes the parabolic subalgebra with the root system $\Delta$, as given in the following theorem
 \begin{theorem}
     Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Delta$. There exists a correspondence between
-    parabolic subset of $\Delta_P$ of $\Delta$ and the subalgebra of $\mathfrak{g}$ containing the
+    parabolic subset of $\Delta_P$ of $\Delta$ and subalgebras of $\mathfrak{g}$ containing the
     Borel subalgebra $\mathfrak{b}$. The correspondence is given by
     \[ \Delta_P \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{\alpha \in \Delta \setminus \Delta_P} g_{\alpha}\]
 \end{theorem}
@@ -420,96 +601,6 @@ The parabolic set parametrizes the parabolic subalgebra with the root system $\D
     \end{align*}
 \end{example}
 
-\subsection{Langlands decomposition}
-We fix a partition of $n$ as
-\[n=n_1+n_2+\ldots+n_k\]
-and consider the parabolic subgroup of this type, i.e. the subgroup
-\[P_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        \mathfrak{m}_1 & \ast           & \ldots & \ast           \\
-        0              & \mathfrak{m}_2 & \ldots & \ast           \\
-        \vdots         & \vdots         & \ddots & \vdots         \\
-        0              & 0              & \ldots & \mathfrak{m}_k
-    \end{bmatrix} \right\rbrace\]
-where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$
-
-This group can be factored as
-\[P_{n_1,\ldots, n_k} =M_{n_1,\ldots, n_k}N_{n_1,\ldots, n_k}\]
-where
-\[N_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        I_1    & \ast   & \ldots & \ast   \\
-        0      & I_2    & \ldots & \ast   \\
-        \vdots & \vdots & \ddots & \vdots \\
-        0      & 0      & \ldots & I_k
-    \end{bmatrix} \right\rbrace \quad \left(I_k \text{ is the $n_k\times n_k$ identity matrix}\right)\]
-and
-\[M_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        \mathfrak{m}_1 & 0              & \ldots & 0              \\
-        0              & \mathfrak{m}_2 & \ldots & 0              \\
-        \vdots         & \vdots         & \ddots & \vdots         \\
-        0              & 0              & \ldots & \mathfrak{m}_k
-    \end{bmatrix} \right\rbrace\]
-
-The subgroup $M_{n_1,\ldots, n_k}$ is called \textbf{Levi component}. We can further factor this subgroup as
-\[M_{n_1,\ldots, n_k} = M'_{n_1,\ldots, n_k} \cdot A_{n_1,\ldots, n_k}\]
-with $A_{n_1,\ldots, n_k}$ plays the role of the connected center of $M_{n_1,\ldots, n_k}$:
-\[A_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        t_1I_1 & 0      & \ldots & 0      \\
-        0      & t_2I_k & \ldots & 0      \\
-        \vdots & \vdots & \ddots & \vdots \\
-        0      & 0      & \ldots & t_kI_k
-    \end{bmatrix} : t_i \ne 0\right\rbrace \]
-and
-\[M'_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        \mathfrak{m}'_1 & 0               & \ldots & 0               \\
-        0               & \mathfrak{m}'_2 & \ldots & 0               \\
-        \vdots          & \vdots          & \ddots & \vdots          \\
-        0               & 0               & \ldots & \mathfrak{m}'_k
-    \end{bmatrix} \right\rbrace,\]
-where $\det(\mathfrak{m}'_i) = \pm 1$.
-\begin{definition}
-    For a given parabolic subgroup $P$, the factorization
-    \[P = M_P \times A_P \times N_P\]
-    as above is called \textbf{Langlands decomposition}.
-\end{definition}
-\subsection{Iwasawa decomposition and P-horospherical decomposition}
-We introduce two important ways to decompose a matrix in $\GLn$ into simple parts. This will be frequently used
-in the remaining part of this thesis.
-\begin{prop}
-Let \begin{align*}
-K=\On, \quad A = \left\lbrace\begin{bmatrix}
-    a_1    & 0      & \ldots & 0      \\
-    0      & a_2    & \ldots & 0      \\
-    \vdots & \vdots & \vdots & \vdots \\
-    0      & 0      & \ldots & a_n
-\end{bmatrix}: a_i >0\right\rbrace, \quad
-U = \left\lbrace  \begin{bmatrix}
-    1      & \ast   & \ldots & \ast           \\
-    0      & 1      & \ldots & \ast           \\
-    \vdots & \vdots & \vdots & \vdots         \\
-    0      & 0      & \ldots & 1\end{bmatrix}
-\right\rbrace
-    \end{align*}
-Then the natural product map \[p \colon K \times A \times U \to \GLn, \quad p(k,a,n)=kan\]
-is an isomorphism.
-\end{prop}
-Thus, the following decomposition makes sense 
-\begin{definition}
-    The decomposition of $g = kan$ for $k \in K, a \in A$ and $n \in N$ is called \textbf{Iwasawa} decomposition.
-\end{definition}
-Using the Langlands decomposition as well as the Iwasawa decomposition $G= ANK = BK$, we observation
-the decomposition
-\[G = PK = M_PA_PN_PK \cong M_P \times A_P \times N_PK\]
-As a consequence, we get
-\[X_G  = G/K = X_{M_P} \times A_P \times N_P\]
-for $X_{M_P} := M_{P}/(K\cap M_P)$. 
-
-This is \textbf{$P$-horospherical} decomposition of the lattice space $X_G$. In this way,
-we can identify  $x \in X_G$ with the triple $(m_P(x), a_P(x),n_P(x))$. 
-
-Furthermore, if $Q\supset P$ is also a parabolic subgroup, it gives rise to a parabolic subgroup $\ast P := P \cap M_Q$ of $M_Q$.
-The space $X_{M_Q}$ itself has the decomposition
-\[X_{M_Q} = X_{\ast P} \times A(Q)_{\ast P} \times N(Q)_{\ast P}\]
-where $$ X_{\ast P} = X_P, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_Q=N_P$$. This is called \textbf{relative $P$}-horospherical decomposition with respect to $Q$.  
 \subsection{On the function $H_P$}
 Recall that for the Lie group $\SLn$, we attach to it a root system $\Phi = \left\lbrace \alpha_{i,j}\right\rbrace$ with
 \[\Delta = \left\lbrace \alpha_i\mid i \in I \right\rbrace, \quad I = \{1,2,\ldots,n-1\}\]
@@ -518,12 +609,20 @@ as the set of fundamental roots. It is a fact that the Weyl group $W$ satisfies
 For the sake of brevity, we denote $r_{\alpha_i}:=r_i$. Then for each subset $J \subset I$,
 we define the following subset of the Cartan subalgebra $\fh$ of $\slnr$
 \begin{align*}
-    \fh(J) & :=\text{span}\{ \alpha^\vee_i, i \in J\}                                       \\
+    \fh(J) & :=\text{span}\{ \alpha^\vee_i: i \in J\}                                       \\
     \fh_J  & := \{H \in \fh: \left\langle \alpha_i,H\right\rangle=0 \mbox{ for } i \in J \}
 \end{align*}
 By the definition of weights, i.e. $\left\langle \lambda_i,\alpha^\vee_j \right\rangle = \delta_{ij}$, it is immediate
-that the subspace $\fh_J$ of $\fh$ is orthogonal to $\fh(J)$ and is generated by the set
-\[\fh_J = \text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace \]
+that the subspace $\fh_J$ of $\fh$ contains the subspace
+\[\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace \]
+It is also clear that the dimension of $\mathfrak{h}(J)$ is $|J|$ as the set $\{ \alpha^\vee_i: i \in J\}  $
+is a linearly independent set. Assume that
+\[\sum_{i \notin J}c_i\lambda_i^\vee =0\]
+Pairing both sides with $\alpha_i$, we deduce that $c_i=0$ for all $i \notin J$. In particular, the set $\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace $ contains linearly independent vectors and thus spans
+a subspace of $\mathfrak{h}_J$ of dimension $|I|-|J|$. Therefore
+\[\mathfrak{h}_J=\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace\]
+To put it another way, we have a direct sum decomposition
+\[\mathfrak{h} = \mathfrak{h}(J) \oplus \mathfrak{h}_J\]
 We also write $\lambda^{\vee}_{j,J}$ for the basis of $\fh(J)$ containing the fundamental
 weight, namely $\left\langle \alpha_k,\lambda^{\vee}_{j,J}\right\rangle = \delta_{kj}$ for $j,k \in J$. We have
 the following easy lemma
@@ -540,19 +639,19 @@ the following easy lemma
 \end{proof}
 We know from previous section that for each standard parabolic subgroup of $G$, it must be of the form
 $P_J$ for some subset $J \subset \{1,\ldots,n-1\}$. Therefore, we can define $\fh(P):= \fh(J)$ and $
-    (\fh)_P:= \fh_J$. we now define the function $H_P$ as follows:
+    \fh_P:= \fh_J$. we now define the function $H_P$ as follows:
 \begin{definition}\label{H-function}
     Assume that for $x \in X$,
     we have a $P$-horospherical decomposition
     \[x = (m_P(x),a_P(x),n_P(x))\]
     Then we define
     \begin{align*}
-        H_P \colon X & \to \fh(P)                     \\
+        H_P \colon X & \to \fh_P                      \\
         x            & \mapsto H_P(x) = \log(a_P(x)),
     \end{align*}
     where $\log$ means we  take the logarithm of the diagonal entries of $a_P(x)$.
 \end{definition}
-This definition is well-defined since $\log(a_P(x))$ is an element of $\fh(P)$ by definition.
+This definition is well-defined since $\log(a_P(x))$ is an element of $\fh_P$ by definition.
 We prove the following lemma
 \begin{lemma}\label{H_P-decomp}
     Let $B$ the Borel standard subgroup of $G$, i.e. the minimal standard parabolic subgroup and $P$ is any parabolic subgroup of $G$.
@@ -561,9 +660,9 @@ We prove the following lemma
     where $\text{pr}_{M_P}(x)$ stands for the natural projection of $x \in X$ on $M_P$
 \end{lemma}
 \begin{proof}
-This follows immediately from the observation that 
-\[A_B = A_PA(P)_{\ast B}\]
-and the definition \ref{H-function} of the function $H_P$ for parabolic subgroup $P$. 
+    This follows immediately from the observation that
+    \[A_B = A_PA(P)_{\ast B}\]
+    and the definition \ref{H-function} of the function $H_P$ for parabolic subgroup $P$.
 \end{proof}
 
 
