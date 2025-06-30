@@ -418,3 +418,62 @@ Let \( e_1, \ldots, e_n \) be the standard basis for the \( k \)-vector space \(
     \mathcal{V}: 0 \subset V_{d_1} \subset V_{d_2} \subset \cdots \subset V_{d_s} \subset k^n,
 \]
 a standard flag in \( k^n \). Let \( d_0 = 0 \) and \( d_{s+1} = n \). We define \( r_j := d_j - d_{j-1} \), where \( j = 1, \ldots, s+1 \). Then \( \rho = (r_1, \ldots, r_{s+1}) \) is an ordered partition of \( n \) into positive integers, i.e., an ordered sequence of positive integers so that \( r_1 + \cdots + r_{s+1} = n \). The corresponding standard parabolic subgroup \( P_{\mathcal{V}} := P_{\rho} \) consists of all matrices in \( \text{GL}_n(k) \) admitting a block decomposition whose diagonal blocks are \( (r_j \times r_j) \)-matrices in \( \text{GL}_{r_j}(k) \), \( j = 1, \ldots, r+1 \), the lower entries are 0, and the other entries are arbitrary. Every parabolic subgroup of \( \text{GL}_n(k) \) is conjugate to a subgroup of this type.
+
+
+\item For  $\text{GL}_4(\mathbb{R})$, there are seven standard parabolic subgroups for seven partitions
+              \[ 4 = 1+ 1+1+1, \quad 4 =1+1+2, \quad 4 = 1+2+1\]
+              \[4 =2+1+1, \quad 4 = 1+3, \quad 4 = 2+1, \quad 4 = 3+1\]
+              Explicitly, we have the following subgroups
+              \begin{align*}
+                   & P_{1,1,1,1} = \left\lbrace \begin{bmatrix}
+                                                    \ast & \ast & \ast & \ast \\
+                                                    0    & \ast & \ast & \ast \\
+                                                    0    & 0    & \ast & \ast \\
+                                                    0    & 0    & 0    & \ast \\
+                                                \end{bmatrix} \right\rbrace, \quad & P_{1,1,2} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,2,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & 0    & 0    & \ast \\
+                                              \end{bmatrix} \right\rbrace, \quad   & P_{2,1,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & 0    & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,2,1} = \left\lbrace \begin{bmatrix}
+                                                  \ast & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & \ast & \ast & \ast \\
+                                                  0    & 0    & 0    & \ast \\
+                                              \end{bmatrix} \right\rbrace, \quad   & P_{2,1,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  \ast & \ast & \ast & \ast \\
+                                                                                                                  0    & 0    & \ast & \ast \\
+                                                                                                                  0    & 0    & 0    & \ast \\
+                                                                                                              \end{bmatrix} \right\rbrace \\
+                   & P_{1,3} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                                0    & \ast & \ast & \ast \\
+                                            \end{bmatrix} \right\rbrace, \quad     & P_{3,1} = \left\lbrace \begin{bmatrix}
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                \ast & \ast & \ast & \ast \\
+                                                                                                                0    & 0    & 0    & \ast \\
+                                                                                                            \end{bmatrix} \right\rbrace   \\
+                   & P_{2,2} = \left\lbrace \begin{bmatrix}
+                                                \ast & \ast & \ast & \ast \\
+                                                \ast & \ast & \ast & \ast \\
+                                                0    & 0    & \ast & \ast \\
+                                                0    & 0    & \ast & \ast \\
+                                            \end{bmatrix} \right\rbrace
+              \end{align*}
+              Clearly $\textbf{MaxParSt} = \left\lbrace P_{1,3},P_{3,1},P_{2,2}\right\rbrace.$
