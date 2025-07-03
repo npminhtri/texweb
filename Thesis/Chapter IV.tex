@@ -52,7 +52,7 @@ So far we have two distinct definitions of semi-stability. The following theorem
 We can further prove that, the equivalence between different notions of semistability
 comes from the equivalence between the notion of canonical pair and the bottom of the
 profile of a lattice - the canonical filtration. The main result is the following proposition
-\begin{prop}
+\begin{prop}\label{cp-equiv}
     Given an $x \in X_n = K\backslash G$. Then $(P,\delta)$ is the canonical pair for $x$ if and only if $P$
     is the stabilizer of the canonical filtration for the lattice $L_x = x\mathbb{Z}^n$.
 \end{prop}
@@ -71,7 +71,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \end{enumerate}
 \end{lemma}
 \begin{proof}
-    
+
     We first prove (1) implies (2). Assume that $(P,\delta)$ is the canonical pair for $x$ and
     \[a(x\delta) = \begin{bmatrix}
             a_1    & 0      & \ldots & 0      \\
@@ -82,7 +82,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     in the Iwasawa decomposition of $x\delta$. We further assume that the standard parabolic
     $P$ in the canonical pair is of type $(n_1,\ldots, n_k)$. Let
     \[d_i = n_1+n_2+\ldots +n_k\]
-     Then from the chain of standard lattice
+    Then from the chain of standard lattice
     \[0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}\]
     we obtain a chain of sublattices of $L_x$ as follows
     \[0 \subset M_1 \subset M_2 \subset \cdots \subset M_k\]
@@ -143,20 +143,45 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     We want to write $\lambda_{i,J}^\vee$ as linear combination of $\alpha_j^\vee$'s. To do this, we use
     the theorem \ref{cartaininverse}.
 
-    Let
+    Note that we can write $H_P(x\delta)$ in two ways
     \begin{align*}
         H_P(x\delta) & = H_B(x\delta) - H_{\star B}(x\delta)                                     \\
-                     & = \sum_{k=1}^{n-1}t_k\alpha_k^\vee                                        \\
+                     & = \sum_{j=1}^{n-1}t_j\alpha_j^\vee                                        \\
                      & =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k}
     \end{align*}
     Then by \ref{weight-root-comb}, we must have
     \[m_i = 2t_{d_i}-t_{d_{i}-1}+t_{d_i+1}\]
-    for $1<i<k$. It can be computed easily that
+    for $1<i<k$. To compute $t_{d_i}$, we find the coefficient of $\alpha_{d_i}^\vee$. But this
+    is just the coefficient of $\alpha_{d_i}^\vee$ in the linear combination of $H_B(x\delta)$. Thus
+    \[t_{d_i} = \log(a_1\cdots a_{d_i})  \]
+    The value of $t_{d_i-1}$ and $t_{d_i+1}$ is slightly more complicated. For $t_{d_i-1}$, it is the difference between
+    the coefficient of $\alpha_{d_i-1}^\vee$ in $H_B(x\delta)$ and that of $\alpha_{d_i-1}^\vee$ in $H_{\star B}(x\delta)$.
+    By lemma \ref{cartaininverse}, we have
     \begin{align*}
-        \begin{cases}\displaystyle
-            t_{d_i} = \log(a_1\cdots a_{d_i})                                                                             \\
-            t_{d_i-1} = \log(a_1\cdots a_{d_i-1})-\sum_{u}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right) \\
-            t_{d_i+1}= \log(a_1\cdots a_{d_i+1})-\sum_{u}^{n_{i+1}-1}\log\left(\dfrac{a_{d_{i}+u}}{a_{d_{i}+u+1}}\right)  \\
+        \sum_{s=p}^q\log\left(\dfrac{a_s}{a_{s+1}}\right)\lambda^\vee_s
+         & =\begin{bmatrix}
+                \log\left(\dfrac{a_p}{a_{p+1}}\right) & \cdots & \log\left(\dfrac{a_q}{a_{q+1}}\right)
+            \end{bmatrix}
+        \begin{bmatrix}
+            \lambda_p^\vee \\
+            \vdots         \\
+            \lambda_q^\vee
+        \end{bmatrix}                                                                                                                                     \\
+         & =\begin{bmatrix}
+                \log\left(\dfrac{a_p}{a_{p+1}}\right) & \cdots & \log\left(\dfrac{a_q}{a_{q+1}}\right)
+            \end{bmatrix}  A^{-1} \begin{bmatrix}
+                                      \lambda_p^\vee \\
+                                      \vdots         \\
+                                      \lambda_q^\vee
+                                  \end{bmatrix}
+    \end{align*}
+    So the coefficient of $\alpha_{d_i-1}^\vee$ in $H_{\star B} (x\delta)$ is
+    \[\sum_{u=1}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right)\left(\min\{u,n_i-1\}-\dfrac{u(n_i-1)}{n_i}\right)=\sum_{u=1}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right)\dfrac{u}{n_i}\]
+    Argue similarly, we can also find the value of $t_{d_i+1}$. Overall, we have
+    \begin{align*}
+        \begin{cases}
+            \displaystyle  t_{d_i-1} = \log(a_1\cdots a_{d_i-1})-\sum_{u=1}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right)\dfrac{u}{n_i}                  \\
+            \displaystyle t_{d_i+1}= \log(a_1\cdots a_{d_i+1})-\sum_{u=1}^{n_{i+1}-1}\log\left(\dfrac{a_{d_{i}+u}}{a_{d_{i}+u+1}}\right)\left(1-\dfrac{u}{n_{i+1}}\right) \\
         \end{cases}
     \end{align*}
     which simplify to $m_i = \dfrac{\log(a_{d_{i-1}}\cdots a_{d_i})}{n_i}-\dfrac{\log(a_{d_i+1}\cdots a_{d_{i+1}})}{n_{i+1}}$ as desired.
@@ -200,15 +225,15 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     Q must be of the type $(n_1,\ldots, n_{i,1},n_{i,2},\ldots,n_k)$ where $n_{i,1}+n_{i,2} = n_i$
     for some $1 \le i \le k$.  Argue as in lemma \ref{increasing-slope}, we obtain a chain of sublattices of $L_x$
     \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
-    where $\rk(M_j)=d_j$ for $j \ne i$ and $\rk(M') = d_{i-1}+n_{i,1} =r$. 
+    where $\rk(M_j)=d_j$ for $j \ne i$ and $\rk(M') = d_{i-1}+n_{i,1} =r$.
 
-    Using the same computation as in lemma \ref{increasing-slope}, it can be seen that 
+    Using the same computation as in lemma \ref{increasing-slope}, it can be seen that
     \[0 > \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right) \]
     In particular
     \[\mu(M'/M_{i-1})-\mu(M_{i+1}/M') < 0 \Leftrightarrow \mu(M'/M_{i-1})<\mu(M_{i+1}/M')\]
-    But this contradicts the fact that $M_i/M_{i-1}$ is a semistable for all $i$, i.e. 
-    there are no sublattices $M'$ such that $\ell(M')$ lies below the line connectings 
-    $\ell(M_i)$ and $\ell(M_{i-1})$ for all $i$. 
+    But this contradicts the fact that $M_i/M_{i-1}$ is a semistable for all $i$, i.e.
+    there are no sublattices $M'$ such that $\ell(M')$ lies below the line connectings
+    $\ell(M_i)$ and $\ell(M_{i-1})$ for all $i$.
     \begin{figure}[hbt]
         \centering
         \begin{tikzpicture}
@@ -237,5 +262,35 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
         \label{figureproof}
     \end{figure}
 
-Conversely, to prove $2 \Rightarrow 1$,
+    Conversely, to prove $2 \Rightarrow 1$, we also prove by contradiction.
+    Assume that $M_i/M_{i-1}$ is unstable for some index $i$. Then there exists
+    a flag
+    \[ 0 \subset M^\ast \subset M_i/M_{i-1}\]
+    such that $\mu(M^\ast) <\mu(M_i/M_{i-1})$. Let $M':= M^\ast \oplus M_{i-1}$, then
+    $M'$ is a sublattice of $M_i$ containing $M_{i-1}$ such that
+    \[\mu(M'/M_{i-1}) < \mu (M_i/M_{i-1}) = \dfrac{rk (M'/M_{i-1})}{\rk(M_i/M_{i-1})}\mu(M'/M_{i-1})+\dfrac{rk (M_i/M')}{\rk(M_i/M_{i-1})}\mu(M_i/M') \]
+    which implies that
+    \[\mu(M'/M_{i-1})<\mu(M_i/M')\]
+    Since the chain
+    \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
+    is a refinement of the flag $\mathcal{F}$, this gives rise to a pair $(Q,\delta')$ where $Q\subset P$
+    is a maximal standard parabolic subgroup of $P$ and $\delta'P=\delta P$. But then again we have
+    \[ \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right)<0 \]
+    which is a contradiction.
 \end{proof}
+Combinining Lemmas \ref{ss-slope} and \ref{increasing-slope}, we get a proof
+for proposotion \ref{cp-equiv} as follows
+\begin{proof}
+    Assume that $(P,\delta)$ is a canonical pair for $x$, then there exists a
+    flag
+    \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
+    that corresponds to $x\delta$ and admits $P_\mathbb{Q}$ as its stabilizer. Lemmas \ref{increasing-slope}
+    and \ref{ss-slope} guarantees that this flag satisfies two condition in Grayson's criterion \ref{Grayson's criterion}, thus
+    $\mathcal{F}$ is the canonical filtration. Conversely, let $\mathcal{F}$ be the canonical
+    filtration for $x$ and denote $Q$ the stabilizer of $\mathcal{F}$. If $(P,\delta)$ is the canonical pair, it also gives
+    rise to a canonical flag $\mathcal{F'}$. Theorem \ref{filtration} ensures that the canonical filtration is unique, thus
+    $\mathcal{F} \equiv \mathcal{F'}$. Consenquently, we must have $Q=P$.
+\end{proof}
+\begin{remark}
+    The construction above also shows that the canonical pair, must be unique and determined by the canonical filtration.
+\end{remark}
