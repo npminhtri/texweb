@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\input{Preamble.tex}
+\title{A short note on Arthur's combinatorial lemma}
+
+\begin{document}
+\maketitle
+% ...
+\section{Some basis notations}
+In this section, we introduce some notations for the geometry of roots and weights. It should be noted that
+these lemma can be generalized to a more broad setting. For the sake of simplicity, we
+let $G = \SLn$. The set of roots and weights of $\SLn$ is the corresponding roots and weight of the
+Lie algebera $\slnr$. In particular, we have a Cartan subalgebra
+\[\mathfrak{a}:= a =\left\lbrace  \begin{bmatrix}
+        a_1    & 0      & \ldots & 0      \\
+        0      & a_2    & \ldots & 0      \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0      & 0      & \ldots & a_n
+    \end{bmatrix}: a_1 + a_2 + \ldots + a_n = 0\right\rbrace\]
+Let $A \subset G$ be the set of diagonal matrices. Consider the exponential map
+\[e^X: = I+X+\dfrac{X^2}{2!}+\cdots = \sum_{i=0}^\infty \dfrac{X^i}{i!}\]
+It can be checked easily that, for any $X \in \mathfrak{a}$, $e^X$ is an element of $A$. Recall that, for any $g \in G$,
+we have the Isawasa decomposition
+\[g = n(g)a(g)k(g),\quad n(g) \in N, a(g) \in A, k(g) \in \SOn\]
+where $n$ is the set of unipotent of matrix. Now where define the map
+\[H_0 \colon G \to \mathfrak{a}\]
+satisfying
+\[e^{H_0(g)} = a(g)\]
+Any element of $\mathfrak{a}_0^\asterisk = \Hom(\mathfrak{a_0},\mathbb{R})$ of the form $\alpha_{ij}(a)=a_i-a_j$ is called a \textit{root}.
+In our particular situtation, a root is called \textit{positive} if $i<j$, and \textit{negative} otherwise. It can be show that the set
+\[\Delta_0 = \left\lbrace \alpha_{i,i+1}: 1 \le i \le n-1\right\rbrace \]
+is a basis for $\mathfrak{a}_0^*$. These elements are called \textit{simple roots}. Using the theory of Killing form, the vector space $\mathfrak{a}_0^\ast$ can be endowed
+with an inner product $(\cdot,\cdot)$. Using this inner product, we define a pairing
+\[\left\langle \cdot,\cdot \right\rangle \colon \mathfrak{a}^\ast_0 \times \mathfrak{a}_0 \to \mathbb{R} \]
+given by
+\[\left\langle \omega,\alpha^\vee \right\rangle:= \dfrac{2(\omega,\alpha)}{(\alpha,\alpha)}\]
+We then have the notation
+\[\widehat{\Delta}_0 = \{\omega_i \in a_0^\ast:\left\langle \omega_i,\alpha_{i}^\vee \right\rangle= \delta_{ij}  \}\]
+The set $\widehat{\Delta}_0$ is referred as the set of \textit{fundamental} weight. In a more general settings, they arise from the set of
+minimal parabolic subgroup $B= P_0$ - the set of upper triangular matrices in $\SLn$.
+
+Generally speaking, given a parabolic subgroup $P:= P_J$ of the matrices that
+stabilizes the flag
+\[0 \subset E_{i_1} \subset \ldots \subset E_{i_k} \subset \mathbb{R}^n\]
+where $I\setminus J = \{i_1,\ldots,i_k\}$, we define the following sets
+\[\Delta^G_P = \Delta_P:= \{\alpha_i \in \Delta_0: i \notin J\}\]
+and
+\[\Delta^P_0 := \left\{\alpha_i \in \Delta_0: i \in J\right\}\]
+Similarly we can define the corresponding set of weights as follows
+\[\widehat{\Delta}^P_0:= \left\{\omega_i \in \widehat{\Delta}_0: i \notin J\right\} \quad \text{ and } \quad \widehat{\Delta}_P:= \left\{\omega_i \in \widehat{\Delta}_0: i \in J\right\}\]
+\section{Arthur's partition lemma}
+Given these notatition, we can prove the following combinatorial lemma of Arthur. This lemma plays a keyrole in his theory of
+truncation of automorphic forms.
+\begin{lemma}\label{partition}
+    We have the identity holds for two standard parabolic subgroups $P\subset Q$.
+    \[\sum_{ Q\subset G }\phi^{Q}_P(H)\tau_Q(H)=1\]
+\end{lemma}
+The goal of this note is to explain the lemma \ref{partition} and give an intuitively geometric description of
+how the lemma works. First we need to understand the notations in the theorem. Using the same notations in the previous section, we define the following characteristic
+functions: The function $\tau_P$ is the characteristic function over the set
+\[\{H \in \mathfrak{a}_0: \alpha(H)> 0 \quad \forall \alpha \in \Delta_P\}\]
+and the "dual" characteristic function $\widehat{\tau}_P$ is also a characteristic function over
+\[\{H \in \mathfrak{a}_0: \omega(H)>0 \quad \forall \omega \in \widehat{\Delta}_P \}\]
+The function $\phi^Q_P$ is defined to be the alternating sum
+\[\phi^Q_P(H) := \sum_{S \subset Q}(-1)^{\#\Delta^Q_S}\widehat{\tau}^Q_S\]
+In the case $G = \text{SL}_3(\mathbb{R})$ and $P = P_0$, the sum in the lemma \ref{partition} can be written as
+\[1 = \phi^G_0(H)\tau^G_G(H)+\phi^1_0(H)\tau_1(H)+\phi^2_0(H)\tau_2(H)+\phi_0^0(H)\tau_0(H)\]
+We analyze each summand as follows
+\begin{itemize}
+    \item $\phi^G_0(H)\tau^G_G(H) = \phi^G_0(H)$: By definition, we have \[\phi^G_0 = 1-\widehat{\tau}^1_0-\widehat{\tau}^2_0+\widehat{\tau}^G_0\]
+          Using picture, we can illustrate the images of the above functions the first partition 
+          on the leftmost column of the picture \ref{Arthur's combinatorial lemma}
+    \item $\phi^1_0(H)\tau_1(H):$ Similarly, we have 
+    \[\phi^1_0\tau_1 = \tau_1-\widehat{\tau}^1_0\tau_1\]
+\end{itemize}
+\begin{center}
+            \includegraphics{alternate sum.png}
+            \label{Arthur's combinatorial lemma}
+          \end{center}
+\end{document}
+

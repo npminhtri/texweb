@@ -1,12 +1,12 @@
 PWD e:\texweb\Thesis
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\texweb\Thesis\Thesis.tex
-OUTPUT Thesis.log
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT e:\texweb\Thesis\Arthur's Combinatorial lemma.tex
+OUTPUT Arthur's Combinatorial lemma.log
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT .\Preamble.tex
 INPUT .\Preamble.tex
@@ -323,7 +323,7 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\ti
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfadings.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
-OUTPUT Thesis.pdf
+OUTPUT Arthur's Combinatorial lemma.pdf
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshadings.code.tex
@@ -401,22 +401,10 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfi
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
-INPUT .\Thesis.aux
-INPUT .\Thesis.aux
-INPUT Thesis.aux
-INPUT .\Chapter I.aux
-INPUT .\Chapter I.aux
-INPUT Chapter I.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT ChapterII-fixed typos.aux
-INPUT .\Chapter III.aux
-INPUT .\Chapter III.aux
-INPUT Chapter III.aux
-INPUT .\Chapter IV.aux
-INPUT .\Chapter IV.aux
-INPUT Chapter IV.aux
-OUTPUT Thesis.aux
+INPUT .\Arthur's Combinatorial lemma.aux
+INPUT .\Arthur's Combinatorial lemma.aux
+INPUT Arthur's Combinatorial lemma.aux
+OUTPUT Arthur's Combinatorial lemma.aux
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -425,18 +413,47 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\Thesis.out
-INPUT .\Thesis.out
-INPUT Thesis.out
-INPUT Thesis.out
-INPUT .\Thesis.out
-INPUT .\Thesis.out
-OUTPUT Thesis.out
+INPUT .\Arthur's Combinatorial lemma.out
+INPUT .\Arthur's Combinatorial lemma.out
+INPUT Arthur's Combinatorial lemma.out
+INPUT Arthur's Combinatorial lemma.out
+INPUT .\Arthur's Combinatorial lemma.out
+INPUT .\Arthur's Combinatorial lemma.out
+OUTPUT Arthur's Combinatorial lemma.out
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\Thesis.toc
-INPUT .\Thesis.toc
-INPUT Thesis.toc
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha12.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha10.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha7.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb12.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb10.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb7.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -449,15 +466,9 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
@@ -470,9 +481,6 @@ INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb6.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
@@ -482,188 +490,50 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\ueuf.fd
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-OUTPUT Thesis.toc
-INPUT .\Chapter I.tex
-INPUT .\Chapter I.tex
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl12.tfm
-OUTPUT Chapter I.aux
-INPUT .\Chapter I.tex
-INPUT .\Chapter I.tex
-INPUT Chapter I.tex
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm5.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha5.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb5.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT .\Shortest vector.png
-INPUT .\Shortest vector.png
-INPUT .\Shortest vector.png
-INPUT .\Shortest vector.png
-INPUT .\Shortest vector.png
-INPUT .\Shortest vector.png
-INPUT .\Shortest vector.png
+INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\ChapterII-fixed typos.tex
-INPUT .\ChapterII-fixed typos.tex
-OUTPUT ChapterII-fixed typos.aux
-INPUT .\ChapterII-fixed typos.tex
-INPUT .\ChapterII-fixed typos.tex
-INPUT ChapterII-fixed typos.tex
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl8.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl8.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm7.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha7.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb12.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb7.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT .\Chapter III.tex
-INPUT .\Chapter III.tex
-OUTPUT Chapter III.aux
-INPUT .\Chapter III.tex
-INPUT .\Chapter III.tex
-INPUT Chapter III.tex
-INPUT .\Chapter IV.tex
-INPUT .\Chapter IV.tex
-OUTPUT Chapter IV.aux
-INPUT .\Chapter IV.tex
-INPUT .\Chapter IV.tex
-INPUT Chapter IV.tex
-INPUT Thesis.aux
-INPUT .\Chapter I.aux
-INPUT .\Chapter I.aux
-INPUT Chapter I.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT ChapterII-fixed typos.aux
-INPUT .\Chapter III.aux
-INPUT .\Chapter III.aux
-INPUT Chapter III.aux
-INPUT .\Chapter IV.aux
-INPUT .\Chapter IV.aux
-INPUT Chapter IV.aux
-INPUT .\Thesis.out
-INPUT .\Thesis.out
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl12.tfm
+INPUT Arthur's Combinatorial lemma.aux
+INPUT .\Arthur's Combinatorial lemma.out
+INPUT .\Arthur's Combinatorial lemma.out
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\mathx10.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\mathx10.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi864\matha12.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi864\matha12.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi1244\matha12.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi1244\matha12.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha12.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha12.pk
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsl12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsl12.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti8.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti8.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\euler\eufm10.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\euler\eufm10.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm7.pfb
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm7.pfb

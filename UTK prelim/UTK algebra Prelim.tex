@@ -197,6 +197,35 @@ Since every $H$-set is the disjoint union of its orbits, we conclude that
 $$[G : H] = \lvert G / H \rvert = 1 + n \lvert H \rvert$$
 for some integer $n \geq 0$. This implies that $\gcd(\lvert H \rvert, [G:H]) = 1$, which is a contradiction.
 \end{proof}
+\newpage
+\begin{exercise}
+  Given $z=-1+i$, show that 
+  \[2^n+1-z^n-\overline{z}^n\]
+  is an integral multiple of 5.
+\end{exercise}
+\begin{proof}
+First we make an elementary observation
+\[z^8 = \overline{z}^8= 16 \equiv 1 \pmod 5\]
+So, to check for the remainder when divided by 5 of $z^n+\overline{z}^n$, it is sufficient to look for the first seven value modulo 5. Let's look at the table
+\begin{center}
+\begin{tabular}{ c |c c c c c c c c  }
+ n & 0 & 1 & 2 & 3 & 4 &5 & 6 & 7 \\ 
+ \hline
+ $z^n+\overline{z}^n \pmod 5$ & 2 & 3 & 0 & 4 & 2 & 3  &0 &4     
+\end{tabular}
+\end{center}
+From the table, we can see a finer description - it is enough to consider $n$ modulo 4 to find the remainder when divided by 5. From Fermat's little theorem, for $n=4k+l$ with $0 \le l \le 3$
+\[2^n+1 \equiv 2^l+1 \pmod 5\]
+It is easy to check that 
+\begin{center}
+\begin{tabular}{ c |c c c c  }
+ l & 0 & 1 & 2 & 3 \\ 
+ \hline
+ $2^l+1 \pmod 5$ & 2 & 3 & 0 & 4   
+\end{tabular}
+\end{center}
+The two tables have the same values for $n$ modulo 4, thus the given expression must be divisible by 5.
+\end{proof}
 \end{document}
 \subsection{$\rho$-definition of semi-stability}
 There is another, more algebraic way to determine whether a given lattice is semi-stable.
