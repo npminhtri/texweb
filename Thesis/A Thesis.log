@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  26 NOV 2025 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  26 NOV 2025 18:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/texweb2/Thesis/Thesis.tex
-(d:/texweb2/Thesis/Thesis.tex
+**"d:/texweb2/Thesis/A Thesis.tex"
+(d:/texweb2/Thesis/A Thesis.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
@@ -1087,7 +1087,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 35.
 \c@definition=\count379
 LaTeX Info: Redefining \sl2 on input line 68.
 LaTeX Info: Redefining \SO2 on input line 69.
-) (Thesis.aux (Chapter I.aux
+) (A Thesis.aux (Chapter I.aux
 
 LaTeX Warning: Label `=' multiply defined.
 
@@ -1103,7 +1103,7 @@ LaTeX Warning: Label `=' multiply defined.
 LaTeX Warning: Label `figureproof' multiply defined.
 
 ))
-\openout1 = `Thesis.aux'.
+\openout1 = `"A Thesis.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -1190,11 +1190,11 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 4.
 
 Package hyperref Info: Link coloring ON on input line 4.
-(Thesis.out) (Thesis.out)
+(A Thesis.out) (A Thesis.out)
 \@outlinefile=\write4
-\openout4 = `Thesis.out'.
+\openout4 = `"A Thesis.out"'.
 
- (Thesis.toc
+ (A Thesis.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1239,7 +1239,7 @@ Non-PDF special ignored!
 
 {C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
 \tf@toc=\write5
-\openout5 = `Thesis.toc'.
+\openout5 = `"A Thesis.toc"'.
 
 
 
@@ -2226,7 +2226,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
 
 
-] (Thesis.aux (Chapter I.aux) (ChapterII-fixed typos.aux) (Chapter III.aux) (Chapter IV.aux))
+] (A Thesis.aux (Chapter I.aux) (ChapterII-fixed typos.aux) (Chapter III.aux) (Chapter IV.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2238,19 +2238,19 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
+Package rerunfilecheck Info: File `"A Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: C9E4AA56F3954B4046C2852EA5445A6B;9106.
  ) 
 Here is how much of TeX's memory you used:
- 41641 strings out of 474486
- 930404 string characters out of 5745171
+ 41644 strings out of 474486
+ 930536 string characters out of 5745171
  2018542 words of memory out of 5000000
- 62950 multiletter control sequences out of 15000+600000
+ 62953 multiletter control sequences out of 15000+600000
  591059 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,18n,96p,1252b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,18n,96p,1256b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha6.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi864\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi1244\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (44 pages, 601735 bytes).
+Output written on "A Thesis.pdf" (44 pages, 601735 bytes).
 PDF statistics:
  921 PDF objects out of 1000 (max. 8388607)
  227 named destinations out of 1000 (max. 500000)
