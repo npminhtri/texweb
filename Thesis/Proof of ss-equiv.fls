@@ -1,8 +1,0 @@
-PWD e:\texweb\Thesis
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\texweb\Thesis\Proof of ss-equiv.tex
-OUTPUT Proof of ss-equiv.log
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-OUTPUT Proof of ss-equiv.pdf
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
