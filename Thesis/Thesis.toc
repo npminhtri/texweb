@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.1.5}Killing form}{19}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Co-roots}{19}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Roots at group level}{20}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Weyl group}{20}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.8}Weyl group}{21}{subsection.2.1.8}%
 \contentsline {subsection}{\numberline {2.1.9}Weights}{21}{subsection.2.1.9}%
 \contentsline {subsection}{\numberline {2.1.10}Cartan matrix}{23}{subsection.2.1.10}%
 \contentsline {section}{\numberline {2.2}Parabolic subgroups}{24}{section.2.2}%

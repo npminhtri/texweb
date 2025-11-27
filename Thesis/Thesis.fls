@@ -1,6 +1,6 @@
-PWD e:\texweb\Thesis
+PWD d:\texweb2\Thesis
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\texweb\Thesis\Thesis.tex
+INPUT d:\texweb2\Thesis\Thesis.tex
 OUTPUT Thesis.log
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
