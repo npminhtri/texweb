@@ -59,13 +59,16 @@ Now we give a proof for theorem \ref{semi-stable-equiv}
     the map
     \begin{align*}
         \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $x\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
-        L_x = gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
+     gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
     \end{align*}
-    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_x^{-1}([\gamma]) = x \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
+    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
 
-    Now apply lemma \ref{ss-equiv}, we have that $\deg_{\text{inst}}(x) \ge 0$ if and only if, for every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$. Note that for 
+    Now apply lemma \ref{ss-equiv}, we have that $\deg_{\text{inst}}(x) \ge 0$ if and only if, for every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$. Let $M = \phi_g([\delta])$. Note that for 
     $\omega \in \widehat{\Delta}_Q$, we have 
-    \[\left\langle \omega, H_Q(x\delta)\right\rangle = \left\langle \omega, H_B(x\delta)\right\rangle\]
+    \[\left\langle \omega, H_Q(x\delta)\right\rangle = \left\langle \omega, H_B(x\delta)\right\rangle = \dfrac{n}{2}\log(a_1\cdots a_i)\]
+    by equation \ref{volume - H_P}. Hence 
+    \[\left\langle \omega, H_B(x\delta) \right\rangle = c\left\langle \rho_{Q_i}, H_B(x\gamma) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i) = c\vol(M)\]
+    for some positive integer $c$. Using the remark as in section \ref{semi-stable-verified}, we have the desired conclusion. 
 \end{proof}
 \todo{Check the map in the generalization carefully }
 
@@ -75,7 +78,7 @@ We can further prove that, the equivalence between different notions of semistab
 comes from the equivalence between the notion of canonical pair and the bottom of the
 profile of a lattice - the canonical filtration. The main result is the following proposition
 \begin{prop}\label{cp-equiv}
-    Given an $x \in X_n = K\backslash G$. Then $(P,\delta)$ is the canonical pair for $x$ if and only if $P$
+    Given an $x \in X_n = K\backslash G$. Then $(P,\delta)$ is the canonical pair for $x$ if and only if $\delta P\delta^{-1}$
     is the stabilizer of the canonical filtration for the lattice $L_x = x\mathbb{Z}^n$.
 \end{prop}
 Recall that, from theorem \ref{Grayson's criterion} and lemma \ref{canonical-pair}, both canonical

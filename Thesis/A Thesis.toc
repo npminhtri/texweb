@@ -35,6 +35,9 @@
 \contentsline {subsection}{\numberline {3.1.1}Grayson's definition}{30}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Canonical filtration}{32}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}$\rho $- definition of semi-stability}{35}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}$\rho $-definition}{35}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Some basis properties}{35}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Check for semistablility}{36}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Canonical pair}{36}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Equivalence between Grayson's semistability and $\rho $-semistability}{38}{chapter.4}%
 \contentsline {section}{\numberline {4.1}The equivalent between definitions of semi-stable lattices}{38}{section.4.1}%

@@ -356,12 +356,14 @@ These two conditions is also sufficent for a chain to be a canonical filtration
     Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
 \end{proof}
 \section{$\rho$- definition of semi-stability}
+\subsection{$\rho$-definition}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
 we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
 \begin{definition}[\label  = $\rho$-definition]\label{ss2}
     Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{$\rho$-semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
     \[\deg_{\text{inst}}(x):= \min_{Q \in ParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
 \end{definition}
+\subsection{Some basis properties}
 We first have an elementary lemma
 \begin{lemma}\label{ss-equiv}
     Given $x \in X_n$, then the following are equivalent
@@ -380,6 +382,7 @@ We first have an elementary lemma
     \[\left\langle \omega,H_P(x\delta) \right\rangle =\left\langle \omega,H_Q(x\delta) \right\rangle \ge 0\]
     Finally, we have $2 \Rightarrow 1$ as $\rho_P$ is a positive linear combination of elements contained in $\widehat{\Delta}_P$.
 \end{proof}
+\subsection{Check for semistablility}\label{semi-stable-verified}
 From lemma \ref{ss-equiv}, to check whether $x \in G$ is semistable, we just need to verify whether $$\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0.$$
 A simple observation is that - a lattice $x$ is semi - stable if for all maximal standard parabolic subgroups
 $Q_i$, we have
@@ -399,7 +402,9 @@ as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particula
         0      & 0      & \ldots & a_n
     \end{bmatrix}\]
 then
-\[\left\langle \rho_{Q_i}, H_B(x\gamma) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i)\]
+\begin{equation}
+    \left\langle \rho_{Q_i}, H_B(x\gamma) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i) \label{volume - H_P}
+\end{equation}
 Thus, to check for the semi-stability of a lattice $x$, we just need to look at the
 $A$-coordinate of $x\gamma$ for every $\gamma \in G(\mathbb{Q})/Q_i(\mathbb{Q})$, and verify whether the following system holds
 \begin{align*}
