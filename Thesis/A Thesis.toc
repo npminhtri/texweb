@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.1.5}Killing form}{19}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Co-roots}{19}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Roots at group level}{20}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Weyl group}{21}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.8}Weyl group}{20}{subsection.2.1.8}%
 \contentsline {subsection}{\numberline {2.1.9}Weights}{21}{subsection.2.1.9}%
 \contentsline {subsection}{\numberline {2.1.10}Cartan matrix}{23}{subsection.2.1.10}%
 \contentsline {section}{\numberline {2.2}Parabolic subgroups}{24}{section.2.2}%
@@ -36,6 +36,11 @@
 \contentsline {subsection}{\numberline {3.1.2}Canonical filtration}{32}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}$\rho $- definition of semi-stability}{35}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Canonical pair}{36}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Equivalence between semistability and $\rho $-semistability}{38}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Equivalence between Grayson's semistability and $\rho $-semistability}{38}{chapter.4}%
 \contentsline {section}{\numberline {4.1}The equivalent between definitions of semi-stable lattices}{38}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Canonical pair and Canonical filtration}{39}{section.4.2}%
+\contentsline {subsection}{\numberline {4.1.1}Statement of the main result}{38}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}A useful lemma}{38}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Proof of the main theorem}{39}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Canonical pair and Canonical filtration}{40}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Equivalence between Canonical pair and canonical filtration}{40}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Equivalence between chain condition and condition \ref {extremal}}{40}{subsection.4.2.2}%

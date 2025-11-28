@@ -404,18 +404,6 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\unique
 INPUT .\A Thesis.aux
 INPUT .\A Thesis.aux
 INPUT A Thesis.aux
-INPUT .\Chapter I.aux
-INPUT .\Chapter I.aux
-INPUT Chapter I.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT ChapterII-fixed typos.aux
-INPUT .\Chapter III.aux
-INPUT .\Chapter III.aux
-INPUT Chapter III.aux
-INPUT .\Chapter IV.aux
-INPUT .\Chapter IV.aux
-INPUT Chapter IV.aux
 OUTPUT A Thesis.aux
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -488,11 +476,10 @@ INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 OUTPUT A Thesis.toc
 INPUT .\Chapter I.tex
 INPUT .\Chapter I.tex
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl12.tfm
-OUTPUT Chapter I.aux
 INPUT .\Chapter I.tex
 INPUT .\Chapter I.tex
 INPUT Chapter I.tex
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -565,7 +552,6 @@ INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
 INPUT .\ChapterII-fixed typos.tex
 INPUT .\ChapterII-fixed typos.tex
-OUTPUT ChapterII-fixed typos.aux
 INPUT .\ChapterII-fixed typos.tex
 INPUT .\ChapterII-fixed typos.tex
 INPUT ChapterII-fixed typos.tex
@@ -586,29 +572,18 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT .\Chapter III.tex
 INPUT .\Chapter III.tex
-OUTPUT Chapter III.aux
 INPUT .\Chapter III.tex
 INPUT .\Chapter III.tex
 INPUT Chapter III.tex
 INPUT .\Chapter IV.tex
 INPUT .\Chapter IV.tex
-OUTPUT Chapter IV.aux
 INPUT .\Chapter IV.tex
 INPUT .\Chapter IV.tex
 INPUT Chapter IV.tex
+INPUT .\A Thesis.bbl
+INPUT .\A Thesis.bbl
+INPUT A Thesis.bbl
 INPUT A Thesis.aux
-INPUT .\Chapter I.aux
-INPUT .\Chapter I.aux
-INPUT Chapter I.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT .\ChapterII-fixed typos.aux
-INPUT ChapterII-fixed typos.aux
-INPUT .\Chapter III.aux
-INPUT .\Chapter III.aux
-INPUT Chapter III.aux
-INPUT .\Chapter IV.aux
-INPUT .\Chapter IV.aux
-INPUT Chapter IV.aux
 INPUT .\A Thesis.out
 INPUT .\A Thesis.out
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk

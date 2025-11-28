@@ -1,31 +1,28 @@
-\chapter{Equivalence between semistability and $\rho$-semistability}
+\chapter{Equivalence between Grayson's semistability and $\rho$-semistability}
 \section{The equivalent between definitions of semi-stable lattices}
+
+\subsection{Statement of the main result}
 Recall that we have two distinct definitions of semi-stability, as defined in definition \ref{ss1} and definition \ref{ss2}. The following theorem asserts their equivalence:
 
+\begin{theorem}\label{semi-stable-equiv}
+    Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ and $L_x$ be the corresponding Euclidean lattice. Then the following conditions on $x$ are equivalent
 
-\begin{prop}\label{semi-stable-equiv}
-    Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ - the space of unit lattice. Then $x$ is semi-stable if one of the following equaivalent
-    conditions holds
     \begin{enumerate}
-        \item The bottom of the profile of $x$ is a line connect solely two points: the origin and $(n,0)$.
+        \item The bottom of the profile of $L_x$ is a line connect solely two points: the origin and $(n,0)$.
         \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
     \end{enumerate}
-\end{prop}
+\end{theorem}
+\subsection{A useful lemma}
+\begin{lemma}\label{useful-lemma}
+    There exists a bijection \label{bijection}
+    \[    \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]\end{lemma}
 \begin{proof}
-    \hfill \\
-    If we can prove there is a correspondence between
-    $\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
-    We first need a slight reduction - we identified the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
-    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
-
-    We will first show the following correspondence
-    \[ \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]
     We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: For any sublattice $M \subset \mathbb{Z}^n$, there exists
     a basis of $M$, denoted by
-    \[\left\lbrace v_1,v_2,\ldots, v_i \right\rbrace \]
+    \[\mathfrak{C} = \left\lbrace v_1,v_2,\ldots, v_i \right\rbrace \]
     we can extend this basis to get a basis of $\mathbb{Z}^n$
-    \[\mathfrak{B'} = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace \]
-    Clearly in $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $. Clearly there
+    \[\mathfrak{C}_1 = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace \]
+    In $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $. Clearly there
     exists a map $\gamma \in \glnz$ such that
     \[\gamma \cdot e_k = v_k \quad \forall k = 1,2,\ldots, n\]
     So we define the map
@@ -33,24 +30,47 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
         \varphi \colon \left\lbrace\text{sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
         M                                                                                        & \mapsto [\gamma]
     \end{align*}
-    where $[\gamma]$ denoted the equaivalent class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, Assume that we extend
-    the basis $\mathfrak{B'}$ in a different way to get the basis
-    \[ \mathfrak{B}_1 = \left\lbrace v_1,\ldots, v_k, v'_{k+1},\ldots,v'_n \right\rbrace\]
-    As above, there also exists $\gamma' \in \glnz$ such that
-    \[\gamma' e_k = v_k \quad \forall k \le i, \quad \text{ and } \quad \gamma'e_k = v'_k \quad \forall k > i\]
-    But this implies that
-    \[(\gamma^{-1})\gamma ' \cdot e_k = \gamma^{-1} v_k = e_k \quad \forall k \le i\]
-    So in particular, we have $[\gamma] = [\gamma']$. The inverse map is given by
-    \[[\gamma] \mapsto \bigoplus_{k=1}^i\mathbb{Z} (\gamma \cdot e_i) = M\]
-    This generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
+    where $[\gamma]$ denoted the equivalent class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, assume that we have a different basis
+    \[ \mathfrak{C}_2 = \left\lbrace w_1,\ldots, w_n \right\rbrace\]
+    where \[\mathfrak{C}' = \left\lbrace w_1,\ldots, w_i \right\rbrace \]
+    is a basis for sublattice $M$.  As above, there also exists $\gamma' \in \glnz$ such that
+    \[\gamma' e_k = w_k \quad \forall k \]
+    Since $\mathfrak{C}$ and $\mathfrak{C'}$ are basis for a sublattice of $\mathbb{Z}^n$ of $\rk i$, we can find an element $g \in \mathrm{GL}_i(\mathbb{Z})$ such that
+    \[gv_k = w_k \quad\forall k \le i\]
+    Similarly, there also exists $h \in \mathrm{GL}_{n-i}(\mathbb{Z})$ such that
+    \[h v_k = w_k \quad \forall k \ge i,\]
+    as $\mathbb{Z}^n/M$ is the quotient lattice, hence a lattice. In particular, we can immediately see that
+    \[\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k\]
+    Thus \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
+            g & 0 \\
+            0 & h
+        \end{bmatrix} \in Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})\]
+    This is exactly the desired result.
+\end{proof}
+\subsection{Proof of the main theorem}
+Now we give a proof for theorem \ref{semi-stable-equiv}
+\begin{proof}
+    \hfill \\
+    If we can prove there is a correspondence between
+    $\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
+    We first need a slight reduction - we identify the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
+    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
+    Lemma \ref{useful-lemma} generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
     the map
     \begin{align*}
-        \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $g\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
-        M_g = gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
+        \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $x\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
+        L_x = gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
     \end{align*}
-    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
-\end{proof}\todo{Check the map in the generalization carefully }
+    where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_x^{-1}([\gamma]) = x \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
+
+    Now apply lemma \ref{ss-equiv}, we have that $\deg_{\text{inst}}(x) \ge 0$ if and only if, for every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$. Note that for 
+    $\omega \in \widehat{\Delta}_Q$, we have 
+    \[\left\langle \omega, H_Q(x\delta)\right\rangle = \left\langle \omega, H_B(x\delta)\right\rangle\]
+\end{proof}
+\todo{Check the map in the generalization carefully }
+
 \section{Canonical pair and Canonical filtration}
+\subsection{Equivalence between Canonical pair and canonical filtration}
 We can further prove that, the equivalence between different notions of semistability
 comes from the equivalence between the notion of canonical pair and the bottom of the
 profile of a lattice - the canonical filtration. The main result is the following proposition
@@ -60,18 +80,22 @@ profile of a lattice - the canonical filtration. The main result is the followin
 \end{prop}
 Recall that, from theorem \ref{Grayson's criterion} and lemma \ref{canonical-pair}, both canonical
 pair and canonical filtration are characterized by two conditions. We will show that these two conditions are equivalent.
+\subsection{Equivalence between chain condition and  condition \ref{extremal}}
 Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_x= x\mathbb{Z}^n$.
 \begin{lemma}\label{increasing-slope}
     The the following conditions are equivalent
     \begin{enumerate}
         \item  $\left\langle \alpha, H_P(x\delta)\right\rangle <0$ for any $\alpha \in \Delta_P$ and for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
-        \item $L_x$ has a chain of vector spaces
+        \item $L_x$ has a chain of lattices
               \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-              such that $\mu(M_i/M_{i-1}) <\mu(M_{i+1}/M_i)$ for all $i$. We also attach to the flag
-              \[\mathcal{F}\otimes \mathbb{R} \colon L_0 \subset M_1 \otimes \mathbb{R} \subset M_2\otimes \mathbb{R} \subset \cdots \subset M_{k-1}\otimes \mathbb{R} \subset M_k\otimes \mathbb{R} =  \mathbb{R}^n \]
-              a rational standard parabolic subgroup $P_\mathbb{Q}$.
+              such that $\mu(M_i/M_{i-1}) <\mu(M_{i+1}/M_i)$ for all $i$.
     \end{enumerate}
 \end{lemma}
+\begin{remark}
+     We also attach to the flag
+              \[\mathcal{F}\otimes \mathbb{R} \colon L_0 \subset M_1 \otimes \mathbb{R} \subset M_2\otimes \mathbb{R} \subset \cdots \subset M_{k-1}\otimes \mathbb{R} \subset M_k\otimes \mathbb{R} =  \mathbb{R}^n \]
+              a rational standard parabolic subgroup $P_\mathbb{Q}$.
+\end{remark}
 \begin{proof}
 
     We first prove (1) implies (2). Assume that $(P,\delta)$ is the canonical pair for $x$ and
@@ -82,7 +106,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
             0      & 0      & \ldots & a_n
         \end{bmatrix}\]
     in the Iwasawa decomposition of $x\delta$. We further assume that the standard parabolic
-    $P$ in the canonical pair is of type $(n_1,\ldots, n_k)$. Let
+    $P$ in the canonical pair is of type $(n_1,\ldots, n_k)$ and set
     \[d_i = n_1+n_2+\ldots +n_i\]
     Then from the chain of standard lattice
     \[0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}\]
@@ -123,8 +147,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \end{figure}
 
 
-
-    We will show that
+\textbf{Claim:}
     \[H_P(x\delta ) =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k}\]
     where
     \[m_i = \dfrac{\log(a_{d_{i-1}}\cdots a_{d_i})}{n_i}-\dfrac{\log(a_{d_i+1}\cdots a_{d_{i+1}})}{n_{i+1}}\]
@@ -149,8 +172,9 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \begin{align*}
         H_P(x\delta) & = H_B(x\delta) - H_{\star B}(x\delta)                                     \\
                      & = \sum_{j=1}^{n-1}t_j\alpha_j^\vee                                        \\
-                     & =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k}
+                     & =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k},
     \end{align*}
+    for some $m_i \in \mathbb{R}$
     Then by \ref{weight-root-comb}, we must have
     \[m_i = 2t_{d_i}-t_{d_{i}-1}+t_{d_i+1}\]
     for $1<i<k$. To compute $t_{d_i}$, we find the coefficient of $\alpha_{d_i}^\vee$. But this
@@ -189,7 +213,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     which simplify to $m_i = \dfrac{\log(a_{d_{i-1}}\cdots a_{d_i})}{n_i}-\dfrac{\log(a_{d_i+1}\cdots a_{d_{i+1}})}{n_{i+1}}$ as desired.
     The cases $i=1,k$  can be verified similarly.
 
-    Conversely, assume that we have a a chain
+    Conversely, assume that we have a chain
     \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
     Then multiplying by $x^{-1}$ on the left gives a chain of lattices in $\mathbb{Z}^n$.
     \[\mathcal{F}: 0 = L_0 \subset N_1 \subset N_2 \subset \cdots \subset N_{k-1} \subset N_k ^n= \mathbb{Z} \]
@@ -215,7 +239,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
         \item $M_i/M_{i-1}$ is semistable for all $i$, where the flag
               \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
               corresponds to $x\delta$.
-        \item $x\delta$ is $P-$semistability for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
+        \item $x\delta$ is $P-$semi-stable for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -230,7 +254,8 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     where $\rk(M_j)=d_j$ for $j \ne i$ and $\rk(M') = d_{i-1}+n_{i,1} =r$.
 
     Using the same computation as in lemma \ref{increasing-slope}, it can be seen that
-    \[0 > \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right) \]
+    \[0 > \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right), \]
+    for some positive number $c$.
     In particular
     \[\mu(M'/M_{i-1})-\mu(M_{i+1}/M') < 0 \Leftrightarrow \mu(M'/M_{i-1})<\mu(M_{i+1}/M')\]
     But this contradicts the fact that $M_i/M_{i-1}$ is a semistable for all $i$, i.e.
@@ -261,7 +286,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
             \draw[red] (D) -- (A) -- (E);
         \end{tikzpicture}
         \caption{}
-        \label{figureproof}
+        \label{figureproof1}
     \end{figure}
 
     Conversely, to prove $2 \Rightarrow 1$, we also prove by contradiction.
