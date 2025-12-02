@@ -42,7 +42,7 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
     as $\mathbb{Z}^n/M$ is the quotient lattice, hence a lattice. In particular, we can immediately see that
     \[\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k\]
     Thus \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
-            g & 0 \\
+            g & \ast \\
             0 & h
         \end{bmatrix} \in Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})\]
     This is exactly the desired result.
@@ -59,16 +59,16 @@ Now we give a proof for theorem \ref{semi-stable-equiv}
     the map
     \begin{align*}
         \phi_g \colon \left\lbrace\text{sublattices of rank $i$ of $x\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
-     gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                            & \mapsto [\gamma]
+        gM = g \bigoplus_{k=1}^i  \mathbb{Z}v_i                                                  & \mapsto [\gamma]
     \end{align*}
     where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
 
-    Now apply lemma \ref{ss-equiv}, we have that $\deg_{\text{inst}}(x) \ge 0$ if and only if, for every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$. Let $M = \phi_g([\delta])$. Note that for 
-    $\omega \in \widehat{\Delta}_Q$, we have 
+    Now apply lemma \ref{ss-equiv}, we have that $\deg_{\text{inst}}(x) \ge 0$ if and only if, for every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$. Let $M = \phi_g([\delta])$. Note that for
+    $\omega \in \widehat{\Delta}_Q$, we have
     \[\left\langle \omega, H_Q(x\delta)\right\rangle = \left\langle \omega, H_B(x\delta)\right\rangle = \dfrac{n}{2}\log(a_1\cdots a_i)\]
-    by equation \ref{volume - H_P}. Hence 
+    by equation \ref{volume - H_P}. Hence
     \[\left\langle \omega, H_B(x\delta) \right\rangle = c\left\langle \rho_{Q_i}, H_B(x\gamma) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i) = c\vol(M)\]
-    for some positive integer $c$. Using the remark as in section \ref{semi-stable-verified}, we have the desired conclusion. 
+    for some positive integer $c$. Using the remark as in section \ref{semi-stable-verified}, we have the desired conclusion.
 \end{proof}
 \todo{Check the map in the generalization carefully }
 
@@ -95,22 +95,23 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \end{enumerate}
 \end{lemma}
 \begin{remark}
-     We also attach to the flag
-              \[\mathcal{F}\otimes \mathbb{R} \colon L_0 \subset M_1 \otimes \mathbb{R} \subset M_2\otimes \mathbb{R} \subset \cdots \subset M_{k-1}\otimes \mathbb{R} \subset M_k\otimes \mathbb{R} =  \mathbb{R}^n \]
-              a rational standard parabolic subgroup $P_\mathbb{Q}$.
+    We also attach to the flag
+    \[\mathcal{F}\otimes \mathbb{R} \colon L_0 \subset M_1 \otimes \mathbb{R} \subset M_2\otimes \mathbb{R} \subset \cdots \subset M_{k-1}\otimes \mathbb{R} \subset M_k\otimes \mathbb{R} =  \mathbb{R}^n \]
+    a rational standard parabolic subgroup $P_\mathbb{Q}$.
 \end{remark}
 \begin{proof}
 
-    We first prove (1) implies (2). Assume that $(P,\delta)$ is the canonical pair for $x$ and
-    \[a(x\delta) = \begin{bmatrix}
-            a_1    & 0      & \ldots & 0      \\
-            0      & a_2    & \ldots & 0      \\
-            \vdots & \vdots & \vdots & \vdots \\
-            0      & 0      & \ldots & a_n
-        \end{bmatrix}\]
-    in the Iwasawa decomposition of $x\delta$. We further assume that the standard parabolic
+    We first prove (1) implies (2). Assume that $(P,\delta)$ is the canonical pair for $x$ and we further assume that the standard parabolic
     $P$ in the canonical pair is of type $(n_1,\ldots, n_k)$ as defined in subsection \ref{parabolic I}, and set
     \[d_i = n_1+n_2+\ldots +n_i\]
+    In particular, the $A_P$-coordinate of $x\delta$ in the \hyperref[P-horospherical]{$P$-horospherical decomposition}
+    \[a_P(x\delta) = \begin{bmatrix}
+            a_1I_{n_1} & 0          & \ldots & 0          \\
+            0          & a_2I_{n_2} & \ldots & 0          \\
+            \vdots     & \vdots     & \vdots & \vdots     \\
+            0          & 0          & \ldots & a_kI_{n_k}
+        \end{bmatrix}\]
+
     Then from the chain of standard lattice
     \[0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}\]
     we obtain a chain of sublattices of $L_x$ as follows
@@ -119,9 +120,14 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
 
     Note that for $M_k = x\delta\mathbb{Z}^{d_k} = x\mathbb{Z}^n = L_x$.
 
-    since the volume depend solely on the $A$-coordinate in the Iwasawa decomposition.
-    In this way, it is immediate that the volume of the sublattice $M_i$ is
-    \[\vol(M_i) = a_1a_2\cdots a_i,\]
+    From the $P$-horospherical coordinate \ref{P-horospherical}
+    \[x = km_P(x)a_P(x)n_P(x),\]
+    where $k \in \SOn$ and $n_P(x)$ stabilizes the flag $0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}$, it is immediately that
+    \[\vol(M_{i}/M_{i-1}) = \left| km_P(x)a_P(x)n_P(x) \bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = \left|a_P(x)\bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = a_i^{n_i}\]
+    Thus,
+    \begin{align*}
+        \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) & = \dfrac{\log\vol(M_i/M_{i-1})}{n_i}-\dfrac{\log\vol(M_{i+1}/M_i)}{n_{i+1}} \\&=\log(a_i) - \log(a_{i+1})
+    \end{align*}
     \begin{figure}[hbt]
         \centering
         \begin{tikzpicture}
@@ -150,10 +156,106 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \end{figure}
 
 
-\textbf{Claim:}
+    \textbf{Claim:}
     \[H_P(x\delta ) =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k}\]
     where
-    \[m_i = \dfrac{\log(a_{d_{i-1}}\cdots a_{d_i})}{n_i}-\dfrac{\log(a_{d_i+1}\cdots a_{d_{i+1}})}{n_{i+1}}\]
+    \[m_i = \log(a_i) - \log(a_{i+1}) \]
+    If we can prove this then
+    \[m_i = \left\langle \alpha_{d_i}, H_P(x\delta)\right\rangle < 0 \Leftrightarrow \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) <0\]
+    But this is immediate from the definition of \hyperref[H-function]{$H_P$-function} and the definition of the set of root $\Delta_P$.
+    \begin{remark}
+        From the proof the lemma \ref{increasing-slope}, we explicitly construct an equivalence
+        \[xG_\mathbb{Q}/P_\mathbb{Q} \longleftrightarrow \{\mbox{ flag of sublattices of $x\mathbb{Z}^n$ of the same type of partition type of $P$}\}\]
+
+    \end{remark}
+    \begin{lemma}\label{ss-slope}
+        Fixed the notations as in lemma \ref{increasing-slope}, the following conditions are equivalent
+        \begin{enumerate}
+            \item $M_i/M_{i-1}$ is semistable for all $i$, where the flag
+                  \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
+                  corresponds to $x\delta$.
+            \item $x\delta$ is $P-$semi-stable for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
+        \end{enumerate}
+    \end{lemma}
+    \begin{proof}
+        \hfill \\
+        We prove $1 \Rightarrow 2$ by contradiction. Assume not, then there exists a maximal
+        parabolic subgroup $Q \subset P$ and an $\eta \in P/Q$ such that
+        \[\left\langle \rho_Q^P, H_Q(x\delta\eta) \right\rangle < 0\]
+        by lemma \ref{ss-equiv}. We assume that $P$ is a standard parabolic subgroup of type $(n_1,n_2,\ldots,n_k)$. Then
+        Q must be of the type $(n_1,\ldots, n_{i,1},n_{i,2},\ldots,n_k)$ where $n_{i,1}+n_{i,2} = n_i$
+        for some $1 \le i \le k$.  Argue as in lemma \ref{increasing-slope}, we obtain a chain of sublattices of $L_x$
+        \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
+        where $\rk(M_j)=d_j$ for $j \ne i$ and $\rk(M') = d_{i-1}+n_{i,1} =r$.
+
+        Using the same computation as in lemma \ref{increasing-slope}, it can be seen that
+        \[0 > \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right), \]
+        for some positive number $c$.
+        In particular
+        \[\mu(M'/M_{i-1})-\mu(M_{i+1}/M') < 0 \Leftrightarrow \mu(M'/M_{i-1})<\mu(M_{i+1}/M')\]
+        But this contradicts the fact that $M_i/M_{i-1}$ is a semistable for all $i$, i.e.
+        there are no sublattices $M'$ such that $\ell(M')$ lies below the line connectings
+        $\ell(M_i)$ and $\ell(M_{i-1})$ for all $i$.
+        \begin{figure}[hbt]
+            \centering
+            \begin{tikzpicture}
+                % Coordinates
+                \coordinate (D) at (2,-2);
+                \coordinate (F) at (4,2.5);
+                \coordinate (A) at (6,-4);
+                \coordinate (E) at (8,-3);
+                \coordinate (G) at (-1,0);
+                \coordinate (H) at (12,-1);
+                % Labels
+                \node at (A) [below] {$\ell(M')$};
+                \node at (D) [below] {$\ell(M_{i-1})$};
+                \node at (E) [below ] {$\ell(M_{i})$};
+                % Points
+                \fill[cyan] (E) circle (2pt);
+                \fill[cyan] (D) circle (2pt);
+                \fill[cyan] (A) circle (2pt);
+                \fill[cyan] (H) circle (2pt);
+                \fill [cyan] (G) circle (2pt);
+                % draw additional lines
+                \draw[thick,black] (G) -- (D)-- (E) -- (H);
+                \draw[red] (D) -- (A) -- (E);
+            \end{tikzpicture}
+            \caption{}
+            \label{figureproof1}
+        \end{figure}
+
+        Conversely, to prove $2 \Rightarrow 1$, we also prove by contradiction.
+        Assume that $M_i/M_{i-1}$ is unstable for some index $i$. Then there exists
+        a flag
+        \[ 0 \subset M^\ast \subset M_i/M_{i-1}\]
+        such that $\mu(M^\ast) <\mu(M_i/M_{i-1})$. Let $M':= M^\ast \oplus M_{i-1}$, then
+        $M'$ is a sublattice of $M_i$ containing $M_{i-1}$ such that
+        \[\mu(M'/M_{i-1}) < \mu (M_i/M_{i-1}) = \dfrac{rk (M'/M_{i-1})}{\rk(M_i/M_{i-1})}\mu(M'/M_{i-1})+\dfrac{rk (M_i/M')}{\rk(M_i/M_{i-1})}\mu(M_i/M') \]
+        which implies that
+        \[\mu(M'/M_{i-1})<\mu(M_i/M')\]
+        Since the chain
+        \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
+        is a refinement of the flag $\mathcal{F}$, this gives rise to a pair $(Q,\delta')$ where $Q\subset P$
+        is a maximal standard parabolic subgroup of $P$ and $\delta'P=\delta P$. But then again we have
+        \[ \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right)<0 \]
+        which is a contradiction.
+    \end{proof}
+    Combinining Lemmas \ref{ss-slope} and \ref{increasing-slope}, we get a proof
+    for proposotion \ref{cp-equiv} as follows
+    \begin{proof}
+        Assume that $(P,\delta)$ is a canonical pair for $x$, then there exists a
+        flag
+        \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
+        that corresponds to $x\delta$ and admits $P_\mathbb{Q}$ as its stabilizer. Lemmas \ref{increasing-slope}
+        and \ref{ss-slope} guarantees that this flag satisfies two condition in Grayson's criterion \ref{Grayson's criterion}, thus
+        $\mathcal{F}$ is the canonical filtration. Conversely, let $\mathcal{F}$ be the canonical
+        filtration for $x$ and denote $Q$ the stabilizer of $\mathcal{F}$. If $(P,\delta)$ is the canonical pair, it also gives
+        rise to a canonical flag $\mathcal{F'}$. Theorem \ref{filtration} ensures that the canonical filtration is unique, thus
+        $\mathcal{F} \equiv \mathcal{F'}$. Consenquently, we must have $Q=P$.
+    \end{proof}
+    \begin{remark}
+        The construction above also shows that the canonical pair, must be unique and determined by the canonical filtration.
+    \end{remark}
     If we can prove this, we are done, as
     \[ \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i)= m_i =\left\langle\alpha_{d_i},H_P(x\delta) \right\rangle < 0\]
     Hence we recover the second condition in Grayson's criterion, namely, $\mu(M_i/M_{i-1}) \le \mu(M_{i+1}/M_i)$ for all $1 \le i \le k-1$.
@@ -173,8 +275,8 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
 
     Note that we can write $H_P(x\delta)$ in two ways
     \begin{align*}
-        H_P(x\delta) & = H_B(x\delta) - H_{\star B}(x\delta)                                     \\
-                     & = \sum_{j=1}^{n-1}t_j\alpha_j^\vee                                        \\
+        H_P(x\delta) & = H_B(x\delta) - H_{\star B}(x\delta)                                      \\
+                     & = \sum_{j=1}^{n-1}t_j\alpha_j^\vee                                         \\
                      & =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k},
     \end{align*}
     for some $m_i \in \mathbb{R}$
@@ -195,7 +297,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
             \lambda_p^\vee \\
             \vdots         \\
             \lambda_q^\vee
-        \end{bmatrix}                                                                                                                                     \\
+        \end{bmatrix}                                                                                                                                       \\
          & =\begin{bmatrix}
                 \log\left(\dfrac{a_p}{a_{p+1}}\right) & \cdots & \log\left(\dfrac{a_q}{a_{q+1}}\right)
             \end{bmatrix}  A^{-1} \begin{bmatrix}
@@ -231,96 +333,3 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \[0 > \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i)= m_i =\left\langle\alpha_{d_i},H_P(x\delta) \right\rangle\]
     Thus the lemma is proved.
 \end{proof}
-\begin{remark}
-    From the proof the lemma \ref{increasing-slope}, we explicitly construct an equivalence
-    \[xG_\mathbb{Q}/P_\mathbb{Q} \longleftrightarrow \{\mbox{ flag of sublattices of $x\mathbb{Z}^n$ of the same type of partition type of $P$}\}\]
-
-\end{remark}
-\begin{lemma}\label{ss-slope}
-    Fixed the notations as in lemma \ref{increasing-slope}, the following conditions are equivalent
-    \begin{enumerate}
-        \item $M_i/M_{i-1}$ is semistable for all $i$, where the flag
-              \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-              corresponds to $x\delta$.
-        \item $x\delta$ is $P-$semi-stable for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
-    \end{enumerate}
-\end{lemma}
-\begin{proof}
-    \hfill \\
-    We prove $1 \Rightarrow 2$ by contradiction. Assume not, then there exists a maximal
-    parabolic subgroup $Q \subset P$ and an $\eta \in P/Q$ such that
-    \[\left\langle \rho_Q^P, H_Q(x\delta\eta) \right\rangle < 0\]
-    by lemma \ref{ss-equiv}. We assume that $P$ is a standard parabolic subgroup of type $(n_1,n_2,\ldots,n_k)$. Then
-    Q must be of the type $(n_1,\ldots, n_{i,1},n_{i,2},\ldots,n_k)$ where $n_{i,1}+n_{i,2} = n_i$
-    for some $1 \le i \le k$.  Argue as in lemma \ref{increasing-slope}, we obtain a chain of sublattices of $L_x$
-    \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
-    where $\rk(M_j)=d_j$ for $j \ne i$ and $\rk(M') = d_{i-1}+n_{i,1} =r$.
-
-    Using the same computation as in lemma \ref{increasing-slope}, it can be seen that
-    \[0 > \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right), \]
-    for some positive number $c$.
-    In particular
-    \[\mu(M'/M_{i-1})-\mu(M_{i+1}/M') < 0 \Leftrightarrow \mu(M'/M_{i-1})<\mu(M_{i+1}/M')\]
-    But this contradicts the fact that $M_i/M_{i-1}$ is a semistable for all $i$, i.e.
-    there are no sublattices $M'$ such that $\ell(M')$ lies below the line connectings
-    $\ell(M_i)$ and $\ell(M_{i-1})$ for all $i$.
-    \begin{figure}[hbt]
-        \centering
-        \begin{tikzpicture}
-            % Coordinates
-            \coordinate (D) at (2,-2);
-            \coordinate (F) at (4,2.5);
-            \coordinate (A) at (6,-4);
-            \coordinate (E) at (8,-3);
-            \coordinate (G) at (-1,0);
-            \coordinate (H) at (12,-1);
-            % Labels
-            \node at (A) [below] {$\ell(M')$};
-            \node at (D) [below] {$\ell(M_{i-1})$};
-            \node at (E) [below ] {$\ell(M_{i})$};
-            % Points
-            \fill[cyan] (E) circle (2pt);
-            \fill[cyan] (D) circle (2pt);
-            \fill[cyan] (A) circle (2pt);
-            \fill[cyan] (H) circle (2pt);
-            \fill [cyan] (G) circle (2pt);
-            % draw additional lines
-            \draw[thick,black] (G) -- (D)-- (E) -- (H);
-            \draw[red] (D) -- (A) -- (E);
-        \end{tikzpicture}
-        \caption{}
-        \label{figureproof1}
-    \end{figure}
-
-    Conversely, to prove $2 \Rightarrow 1$, we also prove by contradiction.
-    Assume that $M_i/M_{i-1}$ is unstable for some index $i$. Then there exists
-    a flag
-    \[ 0 \subset M^\ast \subset M_i/M_{i-1}\]
-    such that $\mu(M^\ast) <\mu(M_i/M_{i-1})$. Let $M':= M^\ast \oplus M_{i-1}$, then
-    $M'$ is a sublattice of $M_i$ containing $M_{i-1}$ such that
-    \[\mu(M'/M_{i-1}) < \mu (M_i/M_{i-1}) = \dfrac{rk (M'/M_{i-1})}{\rk(M_i/M_{i-1})}\mu(M'/M_{i-1})+\dfrac{rk (M_i/M')}{\rk(M_i/M_{i-1})}\mu(M_i/M') \]
-    which implies that
-    \[\mu(M'/M_{i-1})<\mu(M_i/M')\]
-    Since the chain
-    \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
-    is a refinement of the flag $\mathcal{F}$, this gives rise to a pair $(Q,\delta')$ where $Q\subset P$
-    is a maximal standard parabolic subgroup of $P$ and $\delta'P=\delta P$. But then again we have
-    \[ \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right)<0 \]
-    which is a contradiction.
-\end{proof}
-Combinining Lemmas \ref{ss-slope} and \ref{increasing-slope}, we get a proof
-for proposotion \ref{cp-equiv} as follows
-\begin{proof}
-    Assume that $(P,\delta)$ is a canonical pair for $x$, then there exists a
-    flag
-    \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-    that corresponds to $x\delta$ and admits $P_\mathbb{Q}$ as its stabilizer. Lemmas \ref{increasing-slope}
-    and \ref{ss-slope} guarantees that this flag satisfies two condition in Grayson's criterion \ref{Grayson's criterion}, thus
-    $\mathcal{F}$ is the canonical filtration. Conversely, let $\mathcal{F}$ be the canonical
-    filtration for $x$ and denote $Q$ the stabilizer of $\mathcal{F}$. If $(P,\delta)$ is the canonical pair, it also gives
-    rise to a canonical flag $\mathcal{F'}$. Theorem \ref{filtration} ensures that the canonical filtration is unique, thus
-    $\mathcal{F} \equiv \mathcal{F'}$. Consenquently, we must have $Q=P$.
-\end{proof}
-\begin{remark}
-    The construction above also shows that the canonical pair, must be unique and determined by the canonical filtration.
-\end{remark}
