@@ -612,14 +612,14 @@ $P_J$ for some subset $J \subset \{1,\ldots,n-1\}$. Therefore, we can define $\f
 This definition is well-defined since $\log(a_P(x))$ is an element of $\fh_P$ by definition.
 We prove the following lemma
 \begin{lemma}\label{H_P-decomp}
-    Let $B$ the Borel standard subgroup of $G$, i.e. the minimal standard parabolic subgroup and $P$ is any parabolic subgroup of $G$.
+    Let $P \subset Q$ be standard parabolic subgroups of $G$, and $x \in K \backslash G$. Then 
     Then we have
-    \[H_B(x) = H_P(x)+ H_{\ast B}(\text{pr}_{M_P}(x))\]
-    where $\text{pr}_{M_P}(x)$ stands for the natural projection of $x \in X$ on $M_P$
+    \[H_P(x) = H_Q(x)+ H_{\ast P}(\text{pr}_{M_Q}(x))\]
+    where $\text{pr}_{M_Q}(x)$ stands for the natural projection of $x \in X$ on $M_Q/K \cap M_Q$.
 \end{lemma}
 \begin{proof}
     This follows immediately from the observation that
-    \[A_B = A_PA(P)_{\ast B}\]
+    \[A_P = A_QA(Q)_{\ast P}\]
     and the definition \ref{H-function} of the function $H_P$ for parabolic subgroup $P$.
 \end{proof}
 

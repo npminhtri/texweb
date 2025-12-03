@@ -163,173 +163,66 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     If we can prove this then
     \[m_i = \left\langle \alpha_{d_i}, H_P(x\delta)\right\rangle < 0 \Leftrightarrow \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) <0\]
     But this is immediate from the definition of \hyperref[H-function]{$H_P$-function} and the definition of the set of root $\Delta_P$.
-    \begin{remark}
-        From the proof the lemma \ref{increasing-slope}, we explicitly construct an equivalence
-        \[xG_\mathbb{Q}/P_\mathbb{Q} \longleftrightarrow \{\mbox{ flag of sublattices of $x\mathbb{Z}^n$ of the same type of partition type of $P$}\}\]
+\end{proof}
+\begin{remark}
+    From the proof the lemma \ref{increasing-slope}, we explicitly construct an equivalence
+    \[xG_\mathbb{Q}/P_\mathbb{Q} \longleftrightarrow \{\mbox{ flag of sublattices of $x\mathbb{Z}^n$ of the same type of partition type of $P$}\}\]
 
-    \end{remark}
-    \begin{lemma}\label{ss-slope}
-        Fixed the notations as in lemma \ref{increasing-slope}, the following conditions are equivalent
-        \begin{enumerate}
-            \item $M_i/M_{i-1}$ is semistable for all $i$, where the flag
-                  \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-                  corresponds to $x\delta$.
-            \item $x\delta$ is $P-$semi-stable for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
-        \end{enumerate}
-    \end{lemma}
-    \begin{proof}
-        \hfill \\
-        We prove $1 \Rightarrow 2$ by contradiction. Assume not, then there exists a maximal
-        parabolic subgroup $Q \subset P$ and an $\eta \in P/Q$ such that
-        \[\left\langle \rho_Q^P, H_Q(x\delta\eta) \right\rangle < 0\]
-        by lemma \ref{ss-equiv}. We assume that $P$ is a standard parabolic subgroup of type $(n_1,n_2,\ldots,n_k)$. Then
-        Q must be of the type $(n_1,\ldots, n_{i,1},n_{i,2},\ldots,n_k)$ where $n_{i,1}+n_{i,2} = n_i$
-        for some $1 \le i \le k$.  Argue as in lemma \ref{increasing-slope}, we obtain a chain of sublattices of $L_x$
-        \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
-        where $\rk(M_j)=d_j$ for $j \ne i$ and $\rk(M') = d_{i-1}+n_{i,1} =r$.
-
-        Using the same computation as in lemma \ref{increasing-slope}, it can be seen that
-        \[0 > \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right), \]
-        for some positive number $c$.
-        In particular
-        \[\mu(M'/M_{i-1})-\mu(M_{i+1}/M') < 0 \Leftrightarrow \mu(M'/M_{i-1})<\mu(M_{i+1}/M')\]
-        But this contradicts the fact that $M_i/M_{i-1}$ is a semistable for all $i$, i.e.
-        there are no sublattices $M'$ such that $\ell(M')$ lies below the line connectings
-        $\ell(M_i)$ and $\ell(M_{i-1})$ for all $i$.
-        \begin{figure}[hbt]
-            \centering
-            \begin{tikzpicture}
-                % Coordinates
-                \coordinate (D) at (2,-2);
-                \coordinate (F) at (4,2.5);
-                \coordinate (A) at (6,-4);
-                \coordinate (E) at (8,-3);
-                \coordinate (G) at (-1,0);
-                \coordinate (H) at (12,-1);
-                % Labels
-                \node at (A) [below] {$\ell(M')$};
-                \node at (D) [below] {$\ell(M_{i-1})$};
-                \node at (E) [below ] {$\ell(M_{i})$};
-                % Points
-                \fill[cyan] (E) circle (2pt);
-                \fill[cyan] (D) circle (2pt);
-                \fill[cyan] (A) circle (2pt);
-                \fill[cyan] (H) circle (2pt);
-                \fill [cyan] (G) circle (2pt);
-                % draw additional lines
-                \draw[thick,black] (G) -- (D)-- (E) -- (H);
-                \draw[red] (D) -- (A) -- (E);
-            \end{tikzpicture}
-            \caption{}
-            \label{figureproof1}
-        \end{figure}
-
-        Conversely, to prove $2 \Rightarrow 1$, we also prove by contradiction.
-        Assume that $M_i/M_{i-1}$ is unstable for some index $i$. Then there exists
-        a flag
-        \[ 0 \subset M^\ast \subset M_i/M_{i-1}\]
-        such that $\mu(M^\ast) <\mu(M_i/M_{i-1})$. Let $M':= M^\ast \oplus M_{i-1}$, then
-        $M'$ is a sublattice of $M_i$ containing $M_{i-1}$ such that
-        \[\mu(M'/M_{i-1}) < \mu (M_i/M_{i-1}) = \dfrac{rk (M'/M_{i-1})}{\rk(M_i/M_{i-1})}\mu(M'/M_{i-1})+\dfrac{rk (M_i/M')}{\rk(M_i/M_{i-1})}\mu(M_i/M') \]
-        which implies that
-        \[\mu(M'/M_{i-1})<\mu(M_i/M')\]
-        Since the chain
-        \[0 \subset M_{1} \subset \cdots M_{{i-1}} \subset M'\subset M_{{i+1}} \subset \cdots \subset M_{k} = L_x\]
-        is a refinement of the flag $\mathcal{F}$, this gives rise to a pair $(Q,\delta')$ where $Q\subset P$
-        is a maximal standard parabolic subgroup of $P$ and $\delta'P=\delta P$. But then again we have
-        \[ \left\langle\rho_Q^P, H_Q(x\delta\eta)\right\rangle = c \left\langle \alpha_r,H_Q(x\delta\eta) \right\rangle= c\cdot\left(\mu(M'/M_{i-1})-\mu(M_{i+1}/M')\right)<0 \]
-        which is a contradiction.
-    \end{proof}
-    Combinining Lemmas \ref{ss-slope} and \ref{increasing-slope}, we get a proof
-    for proposotion \ref{cp-equiv} as follows
-    \begin{proof}
-        Assume that $(P,\delta)$ is a canonical pair for $x$, then there exists a
-        flag
-        \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-        that corresponds to $x\delta$ and admits $P_\mathbb{Q}$ as its stabilizer. Lemmas \ref{increasing-slope}
-        and \ref{ss-slope} guarantees that this flag satisfies two condition in Grayson's criterion \ref{Grayson's criterion}, thus
-        $\mathcal{F}$ is the canonical filtration. Conversely, let $\mathcal{F}$ be the canonical
-        filtration for $x$ and denote $Q$ the stabilizer of $\mathcal{F}$. If $(P,\delta)$ is the canonical pair, it also gives
-        rise to a canonical flag $\mathcal{F'}$. Theorem \ref{filtration} ensures that the canonical filtration is unique, thus
-        $\mathcal{F} \equiv \mathcal{F'}$. Consenquently, we must have $Q=P$.
-    \end{proof}
-    \begin{remark}
-        The construction above also shows that the canonical pair, must be unique and determined by the canonical filtration.
-    \end{remark}
-    If we can prove this, we are done, as
-    \[ \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i)= m_i =\left\langle\alpha_{d_i},H_P(x\delta) \right\rangle < 0\]
-    Hence we recover the second condition in Grayson's criterion, namely, $\mu(M_i/M_{i-1}) \le \mu(M_{i+1}/M_i)$ for all $1 \le i \le k-1$.
-
-    To prove this, we first note that
+\end{remark}
+\subsection{$P$-semistability and $M_P$-semistability}
+Before proving the remaining equivalence, we need the following lemma
+\begin{lemma}\label{P&M_P ss}
+    Let $P$ be a standard parabolic subgroup of $\GLn$. For $x \in X = K\backslash \GLn$, we let $m:= pr_{M_P}(x)$, the projection of $x$ on the
+    space $X_{M_P}:= M_P/M_P \cap K$. Then
+    \[\deg_{inst}^P(x) = \deg_{inst}^{M_P}(m).\]
+    In particular, $x$ is $P$-semi-stable if and only if its projection $m$ is $M_P$-semi-stable.
+\end{lemma}
+\begin{proof}
+    The identity follows essentially from the definition:
+    \[\deg_{inst}^P(x) = \min_{R \subset P, \delta \in P_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_R(x\delta)\right\rangle \quad \text{ and } \quad \deg_{inst}^{M_P}(m) = \min_{\ast R \subset M_P, \overline{\delta} \in {M_P,}_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_R(m\overline{\delta})\right\rangle \]
+    where $R$ ranges over all standard parabolic subgroup of $P$. Note that $\ast R = R \cap M_P$ is also a standard parabolic subgroup of $M_P$. Moreover, the map
     \begin{align*}
-        H_B(x\delta) & =  \log(a_1)\alpha_i^\vee+\log(a_1a_2)\alpha_2^\vee+\ldots \log(a_1a_2\cdots a_{n-1})\alpha_{n-1}^\vee             \\
-                     & = \log\left(\dfrac{a_1}{a_2}\right)\lambda_1^\vee+\ldots + \log\left(\dfrac{a_{n-1}}{a_n}\right)\lambda_{n-1}^\vee
+        \text{pr}_{M_P} \colon  P_\mathbb{Q}/R_\mathbb{Q} & \to  M_{P,\mathbb{Q}}/\ast R_\mathbb{Q} \\
+        \delta                                            & \mapsto \overline{\delta}
     \end{align*}
-    To compute $H_P(x\delta)$, we will use the Lemma \ref{H_P-decomp} to get
-    \[H_B =H_P + H_{\star B}\]
-    and Lemma \ref{coeff-H(J)} to compute $H_{\star B}$ explicitly. Since $P$ is a standard parabolic
-    subgroup, we have $P=P_J$ and thus
-    \[H_{\star B}(x\delta) = \sum_{i \notin J} \log\left(\dfrac{a_i}{a_{i+1}}\right)\lambda_{i,J}^\vee\]
-    We want to write $\lambda_{i,J}^\vee$ as linear combination of $\alpha_j^\vee$'s. To do this, we use
-    the theorem \ref{cartaininverse}.
+    is a bijection.    This implies that one takes the minimum over the same set in evaluating the degree of $P$-instability and $M_P$-instability.
+    By \ref{H_P-decomp}, For any $R \subset P$ a standard parabolic subgroup, we have
+    \[H_R(x\delta) = H_P(x\delta)+ H_{\ast R}(\text{pr}_{M_P}(x\delta)) = H_{P}(x)+ H_{\ast R}(m\overline{\delta})\]
+    Note that, by definition, we have
+    \[\rho^P_R =  \dfrac{1}{2}\sum_{\alpha \in \Delta^P_R}\alpha,\]
+    which vanishing identically on $\mathfrak{a}_P$. Thus 
+    \begin{align*}
+        \deg_{inst}^P(x) &= \min_{R \subset P, \delta \in P_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_R(x\delta)\right\rangle \\&= \min_{R \subset P, \delta \in P_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_{P}(x)+ H_{\ast R}(m\overline{\delta})\right\rangle \\&= \min_{\ast R \subset M_P, \overline{\delta} \in {M_P,}_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_{P}(x)+ H_{\ast R}(m\overline{\delta})\right\rangle \\&= \deg_{inst}^{M_P}(m)
+    \end{align*}
+    This is what we want.
+\end{proof}
+\subsection{Equivalence between increasing chain condition and condition \ref{destabilizing}}
+\begin{lemma}\label{ss-slope}
+    Fixed the notations as in lemma \ref{increasing-slope}, the following conditions are equivalent
+    \begin{enumerate}
+        \item $M_i/M_{i-1}$ is semi-stable for all $i$, where the flag
+              \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
+              corresponds to $x\delta$.
+        \item $x\delta$ is $P-$semi-stable for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$. It is also clear
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+By lemma \ref{P&M_P ss}, the condition $x\delta$ is $P-$semi-stable is equivalent to $m\overline{\delta}$ is $M_P-$semi-stable. Observe that, if $P$ is of type 
+$(n_1,\ldots,n_k)$, then 
+\[m\overline{\delta} = \begin{bmatrix}
+     A_1 & 0          & \ldots & 0          \\
+            0          & A_2 & \ldots & 0          \\
+            \vdots     & \vdots     & \vdots & \vdots     \\
+            0          & 0          & \ldots & A_k
+\end{bmatrix}\]
+where $A_i$ is a matrix of size $n_i \times n_i$ with determinant $\pm 1$. We can then construct a flag of lattices 
+\[\mathcal{F'} \colon 0 \subset M'_1 \subset M'_2 \ldots \subset M'_k = L'_x\]
+where $L'_x$ is just the normalization of lattice $L_x$, i.e. we rescale $L_x$ to get a similar lattice $L'_x$ of volume $1$. The sublattice $M'_i$ is constructed 
+by setting
+\[M_i' := \bigoplus_{m=1}^{d_i}\mathbb{Z}m\overline{\delta}\cdot e_m \]
+It is clear that $M'_i/M'_{i-1} \cong A_{i}\mathbb{Z}^{n_i}$. It is also clear that, $m\overline{\delta}$ is semi-stable if and only if each quotient $M'_i/M_{i-1}$ is semi-stable.
+Rescaling does not change the semistability, so we can rescale the flag $\mathcal{F'}$ by a suitable factor to get the desired flag $\mathcal{F}$
+              \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
+where  $M_i/M_{i-1}$ is semi-stable for all $i$. 
 
-    Note that we can write $H_P(x\delta)$ in two ways
-    \begin{align*}
-        H_P(x\delta) & = H_B(x\delta) - H_{\star B}(x\delta)                                      \\
-                     & = \sum_{j=1}^{n-1}t_j\alpha_j^\vee                                         \\
-                     & =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k},
-    \end{align*}
-    for some $m_i \in \mathbb{R}$
-    Then by \ref{weight-root-comb}, we must have
-    \[m_i = 2t_{d_i}-t_{d_{i}-1}+t_{d_i+1}\]
-    for $1<i<k$. To compute $t_{d_i}$, we find the coefficient of $\alpha_{d_i}^\vee$. But this
-    is just the coefficient of $\alpha_{d_i}^\vee$ in the linear combination of $H_B(x\delta)$. Thus
-    \[t_{d_i} = \log(a_1\cdots a_{d_i})  \]
-    The value of $t_{d_i-1}$ and $t_{d_i+1}$ is slightly more complicated. For $t_{d_i-1}$, it is the difference between
-    the coefficient of $\alpha_{d_i-1}^\vee$ in $H_B(x\delta)$ and that of $\alpha_{d_i-1}^\vee$ in $H_{\star B}(x\delta)$.
-    By lemma \ref{cartaininverse}, we have
-    \begin{align*}
-        \sum_{s=p}^q\log\left(\dfrac{a_s}{a_{s+1}}\right)\lambda^\vee_s
-         & =\begin{bmatrix}
-                \log\left(\dfrac{a_p}{a_{p+1}}\right) & \cdots & \log\left(\dfrac{a_q}{a_{q+1}}\right)
-            \end{bmatrix}
-        \begin{bmatrix}
-            \lambda_p^\vee \\
-            \vdots         \\
-            \lambda_q^\vee
-        \end{bmatrix}                                                                                                                                       \\
-         & =\begin{bmatrix}
-                \log\left(\dfrac{a_p}{a_{p+1}}\right) & \cdots & \log\left(\dfrac{a_q}{a_{q+1}}\right)
-            \end{bmatrix}  A^{-1} \begin{bmatrix}
-                                      \lambda_p^\vee \\
-                                      \vdots         \\
-                                      \lambda_q^\vee
-                                  \end{bmatrix}
-    \end{align*}
-    So the coefficient of $\alpha_{d_i-1}^\vee$ in $H_{\star B} (x\delta)$ is
-    \[\sum_{u=1}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right)\left(\min\{u,n_i-1\}-\dfrac{u(n_i-1)}{n_i}\right)=\sum_{u=1}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right)\dfrac{u}{n_i}\]
-    Argue similarly, we can also find the value of $t_{d_i+1}$. Overall, we have
-    \begin{align*}
-        \begin{cases}
-            \displaystyle  t_{d_i-1} = \log(a_1\cdots a_{d_i-1})-\sum_{u=1}^{n_i-1}\log\left(\dfrac{a_{d_{i-1}+u}}{a_{d_{i-1}+u+1}}\right)\dfrac{u}{n_i}                  \\
-            \displaystyle t_{d_i+1}= \log(a_1\cdots a_{d_i+1})-\sum_{u=1}^{n_{i+1}-1}\log\left(\dfrac{a_{d_{i}+u}}{a_{d_{i}+u+1}}\right)\left(1-\dfrac{u}{n_{i+1}}\right) \\
-        \end{cases}
-    \end{align*}
-    which simplify to $m_i = \dfrac{\log(a_{d_{i-1}}\cdots a_{d_i})}{n_i}-\dfrac{\log(a_{d_i+1}\cdots a_{d_{i+1}})}{n_{i+1}}$ as desired.
-    The cases $i=1,k$  can be verified similarly.
-
-    Conversely, assume that we have a chain
-    \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-    Then multiplying by $x^{-1}$ on the left gives a chain of lattices in $\mathbb{Z}^n$.
-    \[\mathcal{F}: 0 = L_0 \subset N_1 \subset N_2 \subset \cdots \subset N_{k-1} \subset N_k ^n= \mathbb{Z} \]
-    where $N_i:= x^{-1}M_i$. Let us denote $n_i:=\rk(N_i)$. Then there exists an ordered
-    basis for the standard lattice $\mathbb{Z}^n$
-    \[\mathcal{B} = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace\]
-    such that $\{v_1,\ldots,v_{n_i}\}$ is the basis for the lattice $N_i$. We clearly can find an element
-    $\delta \in \glnz$ such that $\delta\cdot v_i = e_i$. Repeat the argument in Theorem \ref{semi-stable-equiv}, we can see that
-    $\delta\eta$ stabilizes the flag $\mathcal{F}$. So it does not change anything if we consider the coset $\delta P_\mathbb{Q}$.
-    Consider the element $x\delta$ for $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$ and do the same computation for
-    $x\delta$ as in the $1 \Rightarrow 2$ part, we can see that
-    \[0 > \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i)= m_i =\left\langle\alpha_{d_i},H_P(x\delta) \right\rangle\]
-    Thus the lemma is proved.
 \end{proof}
