@@ -49,3 +49,4 @@
 \contentsline {subsection}{\numberline {4.2.2}Equivalence between chain condition and condition \ref {extremal}}{40}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}$P$-semistability and $M_P$-semistability}{41}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Equivalence between increasing chain condition and condition \ref {destabilizing}}{42}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Proof of proposition \ref {cp-equiv}}{43}{subsection.4.2.5}%

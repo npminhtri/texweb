@@ -8,45 +8,45 @@ Database file #1: refs.bib
 Warning--I didn't find a database entry for "MR2977413"
 Warning--I didn't find a database entry for "inversecartan"
 Warning--I didn't find a database entry for ""
-You've used 3 entries,
+You've used 4 entries,
             2118 wiz_defined-function locations,
-            527 strings with 4486 characters,
-and the built_in function-call counts, 800 in all, are:
-= -- 76
-> -- 21
+            532 strings with 4649 characters,
+and the built_in function-call counts, 1040 in all, are:
+= -- 99
+> -- 34
 < -- 2
-+ -- 9
-- -- 6
-* -- 56
-:= -- 139
-add.period$ -- 10
-call.type$ -- 3
-change.case$ -- 11
++ -- 14
+- -- 10
+* -- 68
+:= -- 184
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 37
-empty$ -- 74
-format.name$ -- 6
-if$ -- 164
+cite$ -- 4
+duplicate$ -- 47
+empty$ -- 91
+format.name$ -- 10
+if$ -- 212
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 5
-newline$ -- 19
-num.names$ -- 6
-pop$ -- 14
+int.to.str$ -- 4
+missing$ -- 6
+newline$ -- 24
+num.names$ -- 8
+pop$ -- 19
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 13
 quote$ -- 0
-skip$ -- 19
+skip$ -- 27
 stack$ -- 0
-substring$ -- 40
-swap$ -- 7
+substring$ -- 45
+swap$ -- 8
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 12
 warning$ -- 0
-while$ -- 8
-width$ -- 4
-write$ -- 38
+while$ -- 10
+width$ -- 5
+write$ -- 48
 (There were 3 warnings)
