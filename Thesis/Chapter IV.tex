@@ -105,12 +105,14 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     $P$ in the canonical pair is of type $(n_1,\ldots, n_k)$ as defined in subsection \ref{parabolic I}, and set
     \[d_i = n_1+n_2+\ldots +n_i\]
     In particular, the $A_P$-coordinate of $x\delta$ in the \hyperref[P-horospherical]{$P$-horospherical decomposition}
-    \[a_P(x\delta) = \begin{bmatrix}
+    \begin{equation}
+    a_P(x\delta) = \begin{bmatrix}
             a_1I_{n_1} & 0          & \ldots & 0          \\
             0          & a_2I_{n_2} & \ldots & 0          \\
             \vdots     & \vdots     & \vdots & \vdots     \\
             0          & 0          & \ldots & a_kI_{n_k}
-        \end{bmatrix}\]
+        \end{bmatrix} \label{A_P coor}
+    \end{equation}
 
     Then from the chain of standard lattice
     \[0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}\]
@@ -121,48 +123,35 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     Note that for $M_k = x\delta\mathbb{Z}^{d_k} = x\mathbb{Z}^n = L_x$.
 
     From the $P$-horospherical coordinate \ref{P-horospherical}
-    \[x = km_P(x)a_P(x)n_P(x),\]
-    where $k \in \SOn$ and $n_P(x)$ stabilizes the flag $0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}$, it is immediately that
-    \[\vol(M_{i}/M_{i-1}) = \left| km_P(x)a_P(x)n_P(x) \bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = \left|a_P(x)\bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = a_i^{n_i}\]
+    \[x\delta = km_P(x\delta)a_P(x\delta)n_P(x\delta),\]
+    where $k \in \SOn$, $n_P(x\delta) \in N_P$, $m_p(x\delta) \in M_P$ as in section \ref{P-horospherical} and $a_P(x)$ is defined as in equation \eqref{A_P coor}
+    \[\vol(M_{i}/M_{i-1}) = \left| km_P(x)a_P(x)n_P(x) \bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = \left|a_P(x)\bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = a_i^{n_i}.\]
+    The second equality is because  $k\in \SOn$ preserves the length, $n_p(x\delta)$ stabilizes the flag $0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}$ and $M_P$ is semisimple, so the $m_p(x\delta)$ acts trivially on 
+    the length function. 
     Thus,
     \begin{align*}
         \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) & = \dfrac{\log\vol(M_i/M_{i-1})}{n_i}-\dfrac{\log\vol(M_{i+1}/M_i)}{n_{i+1}} \\&=\log(a_i) - \log(a_{i+1})
     \end{align*}
-    \begin{figure}[hbt]
-        \centering
-        \begin{tikzpicture}
-            % Coordinates
-            \coordinate (D) at (2,-2);
-            \coordinate (F) at (4,2.5);
-            \coordinate (E) at (8,-2);
-            \coordinate (G) at (-1,0);
-            \coordinate (H) at (12,0);
-            % Labels
-            \node at (G) [below] {$\cdots$};
-            \node at (D) [below] {$M_i(d_i,\log(a_1\cdots a_{d_i}))$};
-            \node at (E) [below ] {$M_{i+1}(d_{i+1}\log(a_1\cdots a_{d_{i+1}}))$};
-            \node at (H) [below ] {$\cdots$};
-            % Points
-            \fill[cyan] (E) circle (2pt);
-            \fill[cyan] (D) circle (2pt);
-            \fill[cyan] (G) circle (2pt);
-            \fill[cyan] (H) circle (2pt);
-
-            % draw additional lines
-            \draw[gray] (G) -- (D)-- (E) -- (H);
-        \end{tikzpicture}
-        \caption{}
-        \label{figureproof}
-    \end{figure}
-
-
     \textbf{Claim:}
-    \[H_P(x\delta ) =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k}\]
+    \begin{equation}
+    H_P(x\delta ) =m_1\lambda^\vee_{d_1}+m_2\lambda^\vee_{d_2}+\ldots+m_k\lambda^\vee_{d_k} \label{hp-in-weights}
     where
+    \end{equation}
     \[m_i = \log(a_i) - \log(a_{i+1}) \]
     If we can prove this then
     \[m_i = \left\langle \alpha_{d_i}, H_P(x\delta)\right\rangle < 0 \Leftrightarrow \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) <0\]
-    But this is immediate from the definition of \hyperref[H-function]{$H_P$-function} and the definition of the set of root $\Delta_P$.
+    By the definition of \hyperref[H-function]{($H_P$-function)}, we know that 
+    \[H_P(x\delta) = \log a_P(x\delta) 
+    = \begin{bmatrix}
+       \log(a_1)I_{n_1} & 0          & \ldots & 0          \\
+            0          & \log(a_2)I_{n_2} & \ldots & 0          \\
+            \vdots     & \vdots     & \vdots & \vdots     \\
+            0          & 0          & \ldots & \log(a_k)I_{n_k} 
+    \end{bmatrix}\]
+    The set $(\widehat{\Delta}_P)^\vee =\{\lambda_{d_i}\}$ is a basis for $\mathfrak{a}_P$, which clearly yields the expression \eqref{hp-in-weights}. Thus we just need to 
+    evaluate the value for $m_i$, but 
+    \[m_i = \left\langle \alpha_{d_i}, H_P(x\delta) \right\rangle = \log(a_i) - \log(a_{i+1})\]
+    This is the desired result.    
 \end{proof}
 \begin{remark}
     From the proof the lemma \ref{increasing-slope}, we explicitly construct an equivalence

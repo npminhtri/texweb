@@ -153,3 +153,31 @@ for proposotion \ref{cp-equiv} as follows
 \begin{remark}
     The construction above also shows that the canonical pair, must be unique and determined by the canonical filtration.
 \end{remark}
+
+
+\begin{figure}[hbt]
+        \centering
+        \begin{tikzpicture}
+            % Coordinates
+            \coordinate (D) at (2,-2);
+            \coordinate (F) at (4,2.5);
+            \coordinate (E) at (8,-2);
+            \coordinate (G) at (-1,0);
+            \coordinate (H) at (12,0);
+            % Labels
+            \node at (G) [below] {$\cdots$};
+            \node at (D) [below] {$M_i(d_i,\log(a_1\cdots a_{d_i}))$};
+            \node at (E) [below ] {$M_{i+1}(d_{i+1}\log(a_1\cdots a_{d_{i+1}}))$};
+            \node at (H) [below ] {$\cdots$};
+            % Points
+            \fill[cyan] (E) circle (2pt);
+            \fill[cyan] (D) circle (2pt);
+            \fill[cyan] (G) circle (2pt);
+            \fill[cyan] (H) circle (2pt);
+
+            % draw additional lines
+            \draw[gray] (G) -- (D)-- (E) -- (H);
+        \end{tikzpicture}
+        \caption{}
+        \label{figureproof}
+    \end{figure}
