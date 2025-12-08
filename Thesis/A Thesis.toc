@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Parabolic subgroups I: An explicit description }{29}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Parabolic subgroups II: Using BN-pairs}{30}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Langlands decomposition}{32}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Iwasawa decomposition and P-horospherical decomposition}{33}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.4}Iwasawa decomposition and $P$-horospherical decomposition}{33}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Parabolic sets and parabolic subalgebras}{34}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}On the function $H_P$}{35}{subsection.2.2.6}%
 \contentsline {chapter}{\numberline {3}SEMI-STABLE LATTICE IN HIGHER RANK}{38}{chapter.3}%

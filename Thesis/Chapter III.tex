@@ -92,7 +92,7 @@ Below are the picture of two lattices.
             \filldraw[fill=blue] (1, 1.0912647062501184) circle[radius=0.09cm];
             \filldraw[fill=blue] (1, 1.1603772291700336) circle[radius=0.09cm];
             \filldraw[fill=blue] (1, 1.2) circle[radius=0.09cm];
-        \end{tikzpicture}~ \caption{This is a semistable lattice}
+        \end{tikzpicture}~ \caption{A semistable lattice}
     \end{minipage} \hspace{3cm} \begin{minipage}{.2\textwidth}
         \begin{tikzpicture}[>=stealth, x=1.1cm, y=1.1cm]
             % Dashed lines (axes)
@@ -122,7 +122,7 @@ Below are the picture of two lattices.
             \filldraw[fill=blue] (1, 1.1603772291700336) circle[radius=0.09cm];
             \filldraw[fill=blue] (1, 1.2) circle[radius=0.09cm];
         \end{tikzpicture}~
-        \caption{This is an unstable lattice}
+        \caption{An unstable lattice}
     \end{minipage}
 \end{figure}
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
@@ -242,7 +242,7 @@ illustrated in the figure \ref{Grason's parallelogram rule}.
 The \textbf{vertices} of the profile are the extremal/lowest points of the plot. Clearly the two points
 $(0,0)$ and $(n,\log\vol(L))$ are vertices of the plot of the lattices $L$ with $\rk(L)=n$. The following lemma states the situation for other vertices
 of the profile
-\begin{lemma}
+\begin{lemma}\label{upper-ver}
     Suppose that $M_\ast$ is a lattice with with the point $\ell(M_\ast)$ as a vertex of the profile. If $M$ is any other sublattice such that
     $\ell(M)$ is also a vertex of the profile, then we must have either $M \subset M_\ast$ or $M_\ast \subset M$.
 \end{lemma}
@@ -278,7 +278,7 @@ of the profile
         % draw additional lines
         \draw[gray] (G) -- (D)-- (E) -- (H);
     \end{tikzpicture}
-    \caption{}
+    \caption{Illustration for lemma \ref{upper-ver}}
     \label{figure33}
 \end{figure}
 \begin{proof}
@@ -341,7 +341,7 @@ These two conditions is also sufficent for a chain to be a canonical filtration
         % draw additional lines
         \draw[gray] (G) -- (D)-- (E) -- (H);
     \end{tikzpicture}
-    \caption{}
+    \caption{Canonical filtration}
     \label{figure34}
 \end{figure}
 \begin{proof}

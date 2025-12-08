@@ -132,7 +132,7 @@ where $f_x(y):=\kappa(x,y)$ for all $y \in \mathfrak{h}$. We may thus define a b
     (\cdot,\cdot) \colon \mathfrak{h}^\ast \times \mathfrak{h}^\ast &\to \mathbb{R}\\
                                 (f_x,f_y) & \mapsto \kappa(x,y)
 \end{align*}
-A more thorough treatment of the Killing form can be found in \cite[Chapter 5]{MR499562} and \cite[Chapter 8]{MR499562}.
+A more thorough treatment of the Killing form can be found in \cite[Chapter 5,8]{MR499562} .
 \subsection{Co-roots}
 In previous section, we showed that the Killing form gives rise to an inner product over
 the dual space $\mathfrak{h}^* = \Hom(\mathfrak{h}, \mathbb{R})$. For each root $\alpha \in \mathfrak{h}^*$, we define the
@@ -142,7 +142,7 @@ On the other hand, since $\alpha^\vee$ is the dual space of $\mathfrak{h}^*$, it
 as an element $h_\alpha$ of $\mathfrak{h}$. So we have
 \[\beta(h_\alpha)=\left\langle \beta, \alpha^\vee\right\rangle:= \dfrac{2(\beta,\alpha)}{(\alpha,\alpha)} \]
 \begin{example}\label{simple root}
-    We compute explicitly the fundamental coroot $\alpha_i\vee$ of the fundamental root $\alpha_i$ for the Lie algebra
+    We compute explicitly the fundamental coroot $\alpha_i^\vee$ of the fundamental root $\alpha_i$ for the Lie algebra
     $\slnr$. In previous section, we defined the fundamental roots to be $\alpha_{ij} = L_i-L_j$. It can be
     verified directly that $\alpha_{ij}^\vee = E_i-E_{j}$ as
     \[\left\langle \alpha_{ij}, \alpha_{ij}^\vee \right\rangle = (L_i-L_j)(E_i-E_j)=2\]
@@ -211,8 +211,7 @@ We have the following
     \[\lambda_i := r_1\alpha_1 + r_2\alpha_2+\ldots + r_d\alpha_d\]
     where $r_i$'s are rational number such that $r_i \ge 0$.
 \end{lemma}
-This coefficients $r_i$'s is determined by inverting the Cartan matrix of $\slnr$. Hence we postpone a proof
-of this until reviewing the notion of Cartan matrices.
+This coefficients $r_i$'s is determined by inverting the Cartan matrix of $\slnr$. We refer to \cite{Wei_2017}  for an explicit formula for $r_i's$.
 \begin{example}
     When $n=3$, we have the following relations
     \[\lambda_1 = \dfrac{2}{3}\alpha_1+\dfrac{1}{3}\alpha_2, \quad \lambda_2 = \dfrac{1}{3}\alpha_1+\dfrac{2}{3}\alpha_2\]
@@ -272,8 +271,6 @@ Therefore, $(\mu, \alpha_i) = \mu(h_i) = 1$ for all $i$. So, $\mu = \rho$.
 
 We of course also have an action of $W$ on the weights.  For example, one can verify that
 \[ \begin{array}{lcr} s_i(\lambda_i) = \lambda_i - \alpha_i & \text{ and } & s_j(\lambda_i) = \lambda_i \mbox{ for } i \neq j \end{array}.\]
-
-\[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
 Unlike Lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in terms of the fundamental roots, we do not always
 get positive coefficients. However, it is true that all the coefficients must be integer. In particular, we have
 \[\alpha_j = \sum_{n_j}n_j\lambda_j, \quad n_j \in \mathbb{Z}.\]
@@ -393,7 +390,7 @@ For our purpose, it is enough to concentrate on the following example
     Let $G = \GLn$, then the sets $B,N,R$ are given explicitly as follows
     \begin{itemize}
         \item $B = \text{ upper triangular matrices}$
-        \item $N = \text{ monomial matrices, namely, matrices that have exactly one non-zero entry in each row and column}$
+        \item $N =$  monomial matrices, namely, matrices that have exactly one non-zero entry in each row and column.
         \item From the above, it is clear that $H = B \cap N$ is the diagonal group, and this group is normal in $N$.
         \item It can be shown that $W = N/H \cong S_n$, and we can choose $R = \left\lbrace (i,i-1)\right\rbrace $ - the set of transpositions.
     \end{itemize}
@@ -480,7 +477,7 @@ with $A_{n_1,\ldots, n_k}$ plays the role of the connected center of $M_{n_1,\ld
         0      & 0      & \ldots & t_kI_k
     \end{bmatrix} : t_i > 0\right\rbrace \]
 and
-\[M'_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
+\[M^1_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
         \mathfrak{m}'_1 & 0               & \ldots & 0               \\
         0               & \mathfrak{m}'_2 & \ldots & 0               \\
         \vdots          & \vdots          & \ddots & \vdots          \\
@@ -489,10 +486,10 @@ and
 where $\det(\mathfrak{m}'_i) = \pm 1$.
 \begin{definition}
     For a given parabolic subgroup $P$, the factorization
-    \[P = M'_P \times A_P \times N_P\]
+    \[P = M^1_P \times A_P \times N_P\]
     as above is called \textbf{Langlands decomposition}.
 \end{definition}
-\subsection{Iwasawa decomposition and P-horospherical decomposition}
+\subsection{Iwasawa decomposition and $P$-horospherical decomposition}
 We introduce two important ways to decompose a matrix in $\GLn$ into simpler parts. This will be frequently used
 in the remaining of this thesis.
 \begin{prop}

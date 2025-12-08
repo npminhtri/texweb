@@ -479,6 +479,10 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 OUTPUT A Thesis.toc
+INPUT .\A Thesis.lof
+INPUT .\A Thesis.lof
+INPUT A Thesis.lof
+OUTPUT A Thesis.lof
 INPUT .\Chapter I.tex
 INPUT .\Chapter I.tex
 INPUT .\Chapter I.tex
