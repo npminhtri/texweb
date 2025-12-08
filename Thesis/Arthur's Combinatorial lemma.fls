@@ -1,6 +1,6 @@
-PWD e:\texweb\Thesis
+PWD d:\texweb2\Thesis
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\texweb\Thesis\Arthur's Combinatorial lemma.tex
+INPUT d:\texweb2\Thesis\Arthur's Combinatorial lemma.tex
 OUTPUT Arthur's Combinatorial lemma.log
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -494,14 +494,14 @@ INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT .\alternate sum.png
-INPUT .\alternate sum.png
-INPUT .\alternate sum.png
-INPUT .\alternate sum.png
-INPUT .\alternate sum.png
-INPUT .\alternate sum.png
-INPUT .\alternate sum.png
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl12.tfm
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
+INPUT .\alternate sum.png
 INPUT Arthur's Combinatorial lemma.aux
 INPUT .\Arthur's Combinatorial lemma.out
 INPUT .\Arthur's Combinatorial lemma.out

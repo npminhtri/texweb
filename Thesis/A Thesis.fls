@@ -558,6 +558,8 @@ INPUT ChapterII-fixed typos.tex
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl8.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl8.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
@@ -568,8 +570,6 @@ INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\matha12.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathb12.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT C:\Users\Hi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT .\Chapter III.tex
 INPUT .\Chapter III.tex
 INPUT .\Chapter III.tex
@@ -584,8 +584,6 @@ INPUT A Thesis.bbl
 INPUT A Thesis.aux
 INPUT .\A Thesis.out
 INPUT .\A Thesis.out
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk
-INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi720\matha12.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Hi\AppData\Local\MiKTeX\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk

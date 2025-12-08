@@ -1,6 +1,6 @@
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
-
 \usepackage[papersize={216mm,330mm},tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm]{geometry}
+
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,mathabx,amsthm}%\for eqref
@@ -42,14 +42,16 @@
 
 \newtheorem*{remark}{Remark}
 \lhead{}%clear the lead head
+\renewcommand{\baselinestretch}{1.37}
 
 
 
 \pagestyle{fancy}
 \cfoot{\thepage} % this is for the page numbering
 \setlength\parindent{0pt} % noindent for the whole document.
-\renewcommand{\baselinestretch}{1.2} % increase the distance between line.
+ % increase the distance between line.
 
+    
 \DeclareMathOperator{\SLn}{\text{SL}_n(\mathbb{R})}
 \DeclareMathOperator{\GLn}{\text{GL}_n(\mathbb{R})}
 \DeclareMathOperator{\glnr}{\mathfrak{gl}_n(\mathbb{R})}

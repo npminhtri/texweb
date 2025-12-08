@@ -181,3 +181,35 @@ for proposotion \ref{cp-equiv} as follows
         \caption{}
         \label{figureproof}
     \end{figure}
+    %%%%Inverse Cartan
+
+    We will also need the inverse of the Cartan matrices of type $A_n$. The following formulae for the
+inverse matrices of $\slnr$ can be found .in \cite{inversecartan}
+\begin{theorem}\label{cartaininverse}
+    The inverse of the Cartan matrices
+    \[A_n = \begin{bmatrix}
+            2      & -1     & 0      & 0      & \ldots & 0      \\
+            -1     & 2      & -1     & 0      & \ldots & 0      \\
+            \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+            0      & 0      & \ldots & -1     & 2      & -1     \\
+            0      & 0      & \ldots & 0      & -1     & 2      \\
+        \end{bmatrix},\]
+    is the matrix $(A_n)^{-1}$ with the entries given by the following formula
+    \[(A_n)^{-1}_{ij} = \min\{i,j\}-\dfrac{ij}{n+1}\]
+    As a consequence, we can see that the entries for the inverse matrix $(A_n)^{-1}$ is positive. Indeed, assume that
+    $i \ge j$, we have
+    \[(A_n)^{-1}_{ij} = \dfrac{j(n+1-i)}{n+1}>0\]
+    In particular, we just proved lemma $\ref{linear-comb-of-weights}$.
+\end{theorem}
+%%%Simple Lie algebra and ideals
+\begin{definition}\label{ideal}
+    An ideal $I \subset \mathfrak{g}$ is a subspace of $\mathfrak{g}$ such that $[I,\mathfrak{g}] \subset \mathfrak{g}$.
+\end{definition}
+\begin{definition}\label{simple-lie algebra}
+    A Lie algebra $\mathfrak{g}$ is called \textbf{simple} if it has no nontrivial ideals.
+\end{definition}
+From the computation in \ref{slnr-example}, it is immediate that $\slnr$ is an ideal of $\glnr$. This implies that $\glnr$ 
+is not a simple Lie algebra. However, the Lie algebra $\slnr$ is simple. 
+
+%%
+\todo{Check the map in the generalization carefully }

@@ -6,47 +6,46 @@ The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 Database file #1: refs.bib
 Warning--I didn't find a database entry for "MR2977413"
-Warning--I didn't find a database entry for "inversecartan"
 Warning--I didn't find a database entry for ""
-You've used 4 entries,
+You've used 7 entries,
             2118 wiz_defined-function locations,
-            532 strings with 4649 characters,
-and the built_in function-call counts, 1040 in all, are:
-= -- 99
-> -- 34
-< -- 2
-+ -- 14
-- -- 10
-* -- 68
-:= -- 184
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 16
+            558 strings with 5081 characters,
+and the built_in function-call counts, 1876 in all, are:
+= -- 185
+> -- 55
+< -- 3
++ -- 23
+- -- 16
+* -- 127
+:= -- 323
+add.period$ -- 23
+call.type$ -- 7
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 47
-empty$ -- 91
-format.name$ -- 10
-if$ -- 212
+cite$ -- 7
+duplicate$ -- 82
+empty$ -- 168
+format.name$ -- 16
+if$ -- 385
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 6
-newline$ -- 24
-num.names$ -- 8
-pop$ -- 19
+int.to.str$ -- 7
+missing$ -- 10
+newline$ -- 40
+num.names$ -- 14
+pop$ -- 29
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 22
 quote$ -- 0
-skip$ -- 27
+skip$ -- 47
 stack$ -- 0
-substring$ -- 45
-swap$ -- 8
-text.length$ -- 2
+substring$ -- 110
+swap$ -- 13
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 22
 warning$ -- 0
-while$ -- 10
-width$ -- 5
-write$ -- 48
-(There were 3 warnings)
+while$ -- 20
+width$ -- 8
+write$ -- 83
+(There were 2 warnings)

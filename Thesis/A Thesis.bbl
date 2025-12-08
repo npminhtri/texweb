@@ -1,5 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{barnes1967cartan}
+Donald~W Barnes.
+\newblock On cartan subalgebras of lie algebras.
+\newblock {\em Mathematische Zeitschrift}, 101(5):350--355, 1967.
+
+\bibitem{MR2153282}
+Thomas Borek.
+\newblock Successive minima and slopes of {H}ermitian vector bundles over
+  number fields.
+\newblock {\em J. Number Theory}, 113(2):380--388, 2005.
+
 \bibitem{MR3468028}
 Dorian Goldfeld.
 \newblock {\em Automorphic forms and {L}-functions for the group {${\rm
@@ -12,6 +23,13 @@ Dorian Goldfeld.
 Daniel~R. Grayson.
 \newblock Reduction theory using semistability.
 \newblock {\em Comment. Math. Helv.}, 59(4):600--634, 1984.
+
+\bibitem{MR499562}
+James~E. Humphreys.
+\newblock {\em Introduction to {L}ie algebras and representation theory},
+  volume~9 of {\em Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, New York-Berlin, 1978.
+\newblock Second printing, revised.
 
 \bibitem{patnaik2025borel}
 Manish~M Patnaik and Punya~Plaban Satpathy.

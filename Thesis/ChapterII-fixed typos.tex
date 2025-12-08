@@ -1,12 +1,11 @@
 
 
-\chapter{BASIS LIE THEORY FOR  $\SLn\& \GLn$}
+\chapter{BASIC LIE THEORY FOR  $\SLn\& \GLn$}
 % Sets article title
-In this chapter, we review the basic theory of roots and weights for Lie groups. We will first recall the
-general theory and then compute explicitly the examples for $\SLn\& \GLn$.
-\section{Structure theory}
+In this chapter, we review the basic theory of roots and weights for the Lie groups $\SLn$ and $ \GLn$.
+\section{Lie algebras}
 Throughout this section, the ground field is $k=\mathbb{R}$.
-\subsection{Lie algebras}
+\subsection{Definition}
 A Lie algebra $\mathfrak{g}$ is a vector space over $k$ such that the Lie bracket
 \begin{align*}
     [\cdot,\cdot] \colon \mathfrak{g} \times \mathfrak{g} & \to \mathfrak{g} \\
@@ -37,24 +36,17 @@ The last property is called \textit{Jacobi's identity}.
         +&BCA-BAC-CAB+ABC\\
         =&0
     \end{align*}
-Therefore this is a Lie algebra.
+Therefore $\glnr$ is a Lie algebra.
 \end{example}
 \begin{example}\label{slnr-example}
-    A less trivial example is the subspace $\slnr$ of $\glnr$, defined by 
+    Another example is the subspace $\slnr$ of $\glnr$, defined by 
     \[\slnr = \left\lbrace A \in \glnr : tr(A) = 0\right\rbrace\]
     The Lie bracket over $\slnr$ is just the restriction of the Lie bracket over $\glnr$. Indeed, for 
-    any $A,B \in slnr$ we have 
+    any $A,B \in \slnr$ we have 
     \[tr[A,B] = tr(AB-BA)= tr(AB)-tr(BA)=0\]
-    Hence the restriction of the Lie bracket over $\glnr$ is a Lie bracket over $\slnr$. The 3 axioms for the Lie bracket is automatically satisfied. 
+    Hence the restriction of the Lie bracket over $\glnr$ are a Lie bracket over $\slnr$. The 3 axioms for the Lie bracket is automatically satisfied. 
 \end{example}
-\begin{definition}\label{ideal}
-    An ideal $I \subset \mathfrak{g}$ is a subspace of $\mathfrak{g}$ such that $[I,\mathfrak{g}] \subset \mathfrak{g}$.
-\end{definition}
-\begin{definition}\label{simple-lie algebra}
-    A Lie algebra $\mathfrak{g}$ is called \textbf{simple} if it has no nontrivial ideals.
-\end{definition}
-From the computation in \ref{slnr-example}, it is immediate that $\slnr$ is an ideal of $\glnr$. This implies that $\glnr$ 
-is not a simple Lie algebra. However, the Lie algebra $\slnr$ is simple. 
+
 \subsection{Cartan Subalgebras}
 First we need the notion of Cartan subalgebras
 \begin{definition}
@@ -64,6 +56,11 @@ First we need the notion of Cartan subalgebras
         \item It is self normalizing. In particular, we have $\fh = \left\lbrace x \in \fg : [x,\fg] \subset \fg\right\rbrace$.
     \end{itemize}
 \end{definition}
+A priori, it is not clear whether such a subalgebra exists for any Lie algebras. However, we have the following theorem 
+\begin{theorem}
+    Let $L$ be a Lie algebra of dimension $n$ over a field $F$ of at least $n-1$ elements. Then $L$ has a Cartan subalgebra.
+\end{theorem}
+A proof for this theorem can be found in \cite[Corollary 1.2]{barnes1967cartan}. In particular, any finite dimensional Lie algebra over an infinite field has a Cartan subalgebra. 
 \begin{example}
     For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is the set
 \[\fh = \left\lbrace H= \begin{bmatrix}
@@ -87,11 +84,12 @@ First we need the notion of Cartan subalgebras
     $\sum_{i,j}a_{ij}E_{ij} \in \mathfrak{h}$  and $\mathfrak{h}$ is then a Cartan subalgebra of $\slnr$.
 \end{proof}
 \subsection{Root space decomposition}
-With respect to a choice of Cartan subalgebra $\mathfrak{h}$, we have a root space decomposition. In particular, there is a finite set
+Given a semisimple Lie algebra $\mathfrak{g}$. With respect to a choice of Cartan subalgebra $\mathfrak{h}$, we have a root space decomposition. In particular, there is a finite set
 $\Phi \subset \fh^{*}$ of linear forms on $\fh$, whose elements are called \textbf{roots}, such that
 \[\fg = \fh \oplus \left(\bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha\right),\]
-where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x, \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$.
-\subsection{A specific example: root space decomposition for $\mathfrak{sl}_n(\mathbb{R})$}
+where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x, \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$. We refer to \cite[Chapter 8]{MR499562} for a detail analysis of this decomposition in general case. For this thesis,
+most of the time, we stick with the following example
+\begin{example}
 For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is the set
 \[\fh = \left\lbrace H= \begin{bmatrix}
         a_1    & 0      & \ldots & 0      \\
@@ -104,6 +102,7 @@ With respect to this Cartan subalgebra, we can define the linear function
 Then the roots are given by $\alpha_{ij} :=L_i - L_j$ for distinct $i,j$. We have the root space decomposition for $\slnr$ as follows
 \[\fg = \fh \oplus \left(\bigoplus\fg_{\alpha_{ij}}\right) = \mathfrak{h}\oplus \left(\bigoplus \mathbb{R}E_{ij}\right)\]
 For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$ - these are called \textbf{simple roots}.
+\end{example}
 \subsection{Killing form}
 \textcolor{red}{to be added}.
 \subsection{Co-roots}
@@ -119,13 +118,18 @@ as an element $h_\alpha$ of $\mathfrak{h}$. So we have
     $\slnr$. In previous section, we defined the fundamental roots to be $\alpha_{ij} = L_i-L_j$. It can be 
     verified directly that $\alpha_{ij}^\vee = E_i-E_{j}$ as 
     \[\left\langle \alpha_{ij}, \alpha_{ij}^\vee \right\rangle = (L_i-L_j)(E_i-E_j)=2\]
-    Similarly, we can also define the $\lambda_i$ such that 
+\end{example}
+\subsection{Weights and coweights}
+Similarly, we can also define the $\lambda_i$ such that 
     \[\left\langle \lambda_i,\alpha_j^\vee\right\rangle = \delta_{ij} = \begin{cases}
         1, i =j\\
         0, i \ne j
     \end{cases}\]
-    Explicitly, it can be checked that $\lambda_i = L_1+L_2+\ldots+L_i$.
-\end{example}
+    Explicitly, it can be checked that $\lambda_i = L_1+L_2+\ldots+L_i$. In the same manner we define the coweight $\lambda_i^\vee$ such that 
+    \[\left\langle\alpha_i,\lambda_j^\vee \right\rangle= \delta_{ij} = \begin{cases}
+        1, i =j\\
+        0, i \ne j
+    \end{cases}\]
 \subsection{Roots at group level}
 We want to understand how the roots behave at group level. The analog for the Cartan subalgebra is the maximal torus
 \[T = \left\lbrace t= \begin{bmatrix}
@@ -169,9 +173,8 @@ Note that $W$ acts on $\Hom(T, \mathbb{R}^*)$ in the natural way: $w . \varphi(h
               \alpha_i + \alpha_j & \mbox{ if } |j-i|=1\end{cases} \]
 
 
-\todo{define in terms of Lie algebra}
 \subsection{Weights}
-Another class of linear forms that we are interested in are the \textbf{fundamental weights}. For each $i \in I$, we define
+Similarly, at Lie group level, we also have the notion of \textbf{fundamental weights}. For each $i \in I$, we define
 a character $\lambda_i \in \Hom(T,\mathbb{R}^*)$ where $T$ is the torus defined in \ref{torus}
 \[\lambda_i \colon T \to \mathbb{R}^*, \quad\lambda_i(t) = a_1\ldots a_i\]
 We have the following
@@ -241,14 +244,12 @@ Therefore, $(\mu, \alpha_i) = \mu(h_i) = 1$ for all $i$. So, $\mu = \rho$.
 
 We of course also have an action of $W$ on the weights.  For example, one can verify that
 \[ \begin{array}{lcr} s_i(\lambda_i) = \lambda_i - \alpha_i & \text{ and } & s_j(\lambda_i) = \lambda_i \mbox{ for } i \neq j \end{array}.\]
-We have the following generalized action of Weyl group of $\rho$:
-\[ w \rho = \rho - \sum_{\alpha \in \Delta_{w^{-1}}} \alpha,\]
-where \textcolor{red}{check this explicitly}
+
 \[\Delta_{\sigma}:= \{ \alpha \in \Phi_+ \mid \sigma(\alpha) \in \Phi_- \}\]
 Unlike Lemma \ref{linear-comb-of-weights}, if we try to express the fundamental weights in terms of the fundamental roots, we do not always
 get positive coefficients. However, it is true that all the coefficients must be integer. In particular, we have
 \[\alpha_j = \sum_{n_j}n_j\lambda_j, \quad n_j \in \mathbb{Z}.\]
-To put it another way, the root lattice $\mathbb{Z}\Delta$ is contained inside the weight lattice $\mathbb{Z}\Pi$.
+To put it another way, the root lattice $$\mathbb{Z}\Delta = \{m_1\alpha_1+\ldots+m_{d}\alpha_{d}, m_i \in \mathbb{Z} \}$$ is contained inside the weight lattice $\mathbb{Z}\Pi = \{n_1\lambda_1+\ldots + n_d\lambda_d, n_i \in \mathbb{Z}\}$.
 
 
 
@@ -279,7 +280,7 @@ as stated in the following lemma
     \[\alpha_i = \begin{cases}
             2\lambda_1-\lambda_2,                    & \mbox{ if } i = 1 \\
             -\lambda_{i-1}+2\lambda_i-\lambda_{i+1}, & \mbox{ if } 1<i<n \\
--            -\lambda_{n-1}+2\lambda_n,               & \mbox{ if } i =n
+           -\lambda_{n-1}+2\lambda_n,               & \mbox{ if } i =n
         \end{cases}.\]
 \end{lemma}
 \begin{proof}
@@ -291,25 +292,8 @@ as stated in the following lemma
         \end{cases}. \]
     So if we let $\alpha_j = \sum_{i=1}^n a_{ij}\lambda_i$ and compute $\left\langle \alpha_i,\alpha_j^{\vee}\right\rangle$, the result follows immediately.
 \end{proof}
-We will also need the inverse of the Cartan matrices of type $A_n$. The following formulae for the
-inverse matrices of $\slnr$ can be found .in \cite{inversecartan}
-\begin{theorem}\label{cartaininverse}
-    The inverse of the Cartan matrices
-    \[A_n = \begin{bmatrix}
-            2      & -1     & 0      & 0      & \ldots & 0      \\
-            -1     & 2      & -1     & 0      & \ldots & 0      \\
-            \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
-            0      & 0      & \ldots & -1     & 2      & -1     \\
-            0      & 0      & \ldots & 0      & -1     & 2      \\
-        \end{bmatrix},\]
-    is the matrix $(A_n)^{-1}$ with the entries given by the following formula
-    \[(A_n)^{-1}_{ij} = \min\{i,j\}-\dfrac{ij}{n+1}\]
-    As a consequence, we can see that the entries for the inverse matrix $(A_n)^{-1}$ is positive. Indeed, assume that
-    $i \ge j$, we have
-    \[(A_n)^{-1}_{ij} = \dfrac{j(n+1-i)}{n+1}>0\]
-    In particular, we just proved lemma $\ref{linear-comb-of-weights}$.
-\end{theorem}
-\section{Parabolic subgroups}
+
+\section{Parabolic subgroups and parabolic subalgebras}
 We shall provide two equivalent viewpoints on parabolic subgroups. They will play different roles in defining
 different notions of semi-stability in the next chapter.
 \subsection{Parabolic subgroups I: An explicit description }\label{parabolic I}
@@ -366,7 +350,7 @@ We call such chain of vector spaces a \textbf{flag} of type $(n_1,\ldots,n_k)$.
               Clearly $\textbf{MaxParSt} = \left\lbrace P_{2,1}, P_{1,2}\right\rbrace$.
 \end{example}
 \subsection{Parabolic subgroups II: Using BN-pairs}
-We first introduce the BN-pairs
+There is another way to look at the parabolic subgroups, and it is related more closesly to the notion of roots, using Weyl group.
 \begin{definition}[BN-pairs]
     A \textbf{BN-pairs} is a 4-tuple $(G,B,N,R)$ where $G$ is a group generated by subgroups $B$ and $N$.
     The subgroup $H = B \cap N$, $R$ is a finite set of involutions which generate the \textit{Weyl group} $W= N/H$. Moreover,
@@ -481,8 +465,8 @@ where $\det(\mathfrak{m}'_i) = \pm 1$.
     as above is called \textbf{Langlands decomposition}.
 \end{definition}
 \subsection{Iwasawa decomposition and P-horospherical decomposition}
-We introduce two important ways to decompose a matrix in $\GLn$ into simple parts. This will be frequently used
-in the remaining part of this thesis.
+We introduce two important ways to decompose a matrix in $\GLn$ into simpler parts. This will be frequently used
+in the remaining of this thesis.
 \begin{prop}
     Let \begin{align*}
         K=\On, \quad A = \left\lbrace\begin{bmatrix}

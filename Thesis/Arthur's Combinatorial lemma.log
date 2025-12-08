@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  21 SEP 2025 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  7 DEC 2025 18:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/texweb/Thesis/Arthur's Combinatorial lemma.tex"
-(e:/texweb/Thesis/Arthur's Combinatorial lemma.tex
+**"d:/texweb2/Thesis/Arthur's Combinatorial lemma.tex"
+(d:/texweb2/Thesis/Arthur's Combinatorial lemma.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -1082,10 +1082,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
 \c@definition=\count378
-LaTeX Info: Redefining \sl2 on input line 68.
-LaTeX Info: Redefining \SO2 on input line 69.
+LaTeX Info: Redefining \sl2 on input line 71.
+LaTeX Info: Redefining \SO2 on input line 72.
 ) (Arthur's Combinatorial lemma.aux)
 \openout1 = `"Arthur's Combinatorial lemma.aux"'.
 
@@ -1223,12 +1223,6 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<alternate sum.png, id=59, 435.42674pt x 364.9635pt>
-File: alternate sum.png Graphic file (type png)
-<use alternate sum.png>
-Package pdftex.def Info: alternate sum.png  used on input line 76.
-(pdftex.def)             Requested size: 435.42567pt x 364.9626pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1237,6 +1231,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
+<alternate sum.png, id=66, 435.42674pt x 364.9635pt>
+File: alternate sum.png Graphic file (type png)
+<use alternate sum.png>
+Package pdftex.def Info: alternate sum.png  used on input line 76.
+(pdftex.def)             Requested size: 435.42567pt x 364.9626pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1254,14 +1254,14 @@ Package rerunfilecheck Info: File `"Arthur's Combinatorial lemma".out' has not c
  ) 
 Here is how much of TeX's memory you used:
  40649 strings out of 474486
- 912117 string characters out of 5745171
- 1944542 words of memory out of 5000000
+ 912127 string characters out of 5745171
+ 1942542 words of memory out of 5000000
  62220 multiletter control sequences out of 15000+600000
  575852 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,11n,96p,789b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,96p,790b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Arthur's Combinatorial lemma.pdf" (3 pages, 184117 bytes).
+Output written on "Arthur's Combinatorial lemma.pdf" (3 pages, 184510 bytes).
 PDF statistics:
  187 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
