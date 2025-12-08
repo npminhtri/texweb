@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  8 DEC 2025 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  8 DEC 2025 02:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -7,10 +7,10 @@ entering extended mode
 (d:/texweb2/Thesis/A Thesis.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
-(C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
-Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
-(C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
-File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
 \c@chapter=\count188
@@ -139,6 +139,9 @@ Package babel Info: Importing font and identification data for english
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
+) (mathesis.sty
+A thesis style file for Department of Math & Stat Sciences,
+University of Alberta written by Hongtao Yang
 ) (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
@@ -194,236 +197,236 @@ LaTeX Font Info:    Redeclaring math symbol \vDash on input line 143.
 LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 145.
 LaTeX Font Info:    Redeclaring math symbol \Vdash on input line 147.
 LaTeX Font Info:    Redeclaring math symbol \nVdash on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \flat on input line 158.
-LaTeX Font Info:    Redeclaring math symbol \natural on input line 159.
-LaTeX Font Info:    Redeclaring math symbol \sharp on input line 160.
-LaTeX Font Info:    Redeclaring math symbol \infty on input line 161.
-LaTeX Font Info:    Redeclaring math symbol \propto on input line 162.
-LaTeX Font Info:    Redeclaring math symbol \dagger on input line 163.
-LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 164.
-LaTeX Font Info:    Redeclaring math symbol \between on input line 170.
-LaTeX Font Info:    Redeclaring math symbol \smile on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \frown on input line 172.
-LaTeX Font Info:    Redeclaring math symbol \leftthreetimes on input line 174.
-LaTeX Font Info:    Redeclaring math symbol \rightthreetimes on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \pitchfork on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \nVDash on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Vvdash on input line 184.
-LaTeX Font Info:    Redeclaring math symbol \therefore on input line 189.
-LaTeX Font Info:    Redeclaring math symbol \because on input line 190.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 193.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 195.
-LaTeX Font Info:    Redeclaring math symbol \measuredangle on input line 202.
-LaTeX Font Info:    Redeclaring math symbol \sphericalangle on input line 203.
-LaTeX Font Info:    Redeclaring math symbol \setminus on input line 218.
-LaTeX Font Info:    Redeclaring math symbol \mid on input line 222.
-LaTeX Font Info:    Redeclaring math symbol \forall on input line 279.
-LaTeX Font Info:    Redeclaring math symbol \complement on input line 280.
-LaTeX Font Info:    Redeclaring math symbol \partial on input line 281.
-LaTeX Font Info:    Redeclaring math symbol \exists on input line 284.
-LaTeX Font Info:    Redeclaring math symbol \nexists on input line 285.
-LaTeX Font Info:    Redeclaring math symbol \Finv on input line 286.
-LaTeX Font Info:    Redeclaring math symbol \Game on input line 287.
-LaTeX Font Info:    Redeclaring math symbol \emptyset on input line 288.
-LaTeX Font Info:    Redeclaring math symbol \top on input line 290.
-LaTeX Font Info:    Redeclaring math symbol \bot on input line 291.
-LaTeX Font Info:    Redeclaring math symbol \perp on input line 292.
-LaTeX Font Info:    Redeclaring math symbol \curlywedge on input line 296.
-LaTeX Font Info:    Redeclaring math symbol \curlyvee on input line 297.
-LaTeX Font Info:    Redeclaring math symbol \in on input line 299.
-LaTeX Font Info:    Redeclaring math symbol \owns on input line 300.
-LaTeX Font Info:    Redeclaring math symbol \cap on input line 312.
-LaTeX Font Info:    Redeclaring math symbol \cup on input line 313.
-LaTeX Font Info:    Redeclaring math symbol \uplus on input line 314.
-LaTeX Font Info:    Redeclaring math symbol \sqcap on input line 315.
-LaTeX Font Info:    Redeclaring math symbol \sqcup on input line 316.
-LaTeX Font Info:    Redeclaring math symbol \wedge on input line 318.
-LaTeX Font Info:    Redeclaring math symbol \vee on input line 320.
-LaTeX Font Info:    Redeclaring math symbol \barwedge on input line 327.
-LaTeX Font Info:    Redeclaring math symbol \veebar on input line 328.
-LaTeX Font Info:    Redeclaring math symbol \doublebarwedge on input line 329.
-LaTeX Font Info:    Redeclaring math symbol \doublecap on input line 331.
-LaTeX Font Info:    Redeclaring math symbol \doublecup on input line 333.
-LaTeX Font Info:    Redeclaring math symbol \subset on input line 344.
-LaTeX Font Info:    Redeclaring math symbol \supset on input line 345.
-LaTeX Font Info:    Redeclaring math symbol \subseteq on input line 348.
-LaTeX Font Info:    Redeclaring math symbol \supseteq on input line 349.
-LaTeX Font Info:    Redeclaring math symbol \nsubseteq on input line 350.
-LaTeX Font Info:    Redeclaring math symbol \nsupseteq on input line 351.
-LaTeX Font Info:    Redeclaring math symbol \subsetneq on input line 352.
-LaTeX Font Info:    Redeclaring math symbol \supsetneq on input line 353.
-LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 354.
-LaTeX Font Info:    Redeclaring math symbol \varsupsetneq on input line 355.
-LaTeX Font Info:    Redeclaring math symbol \subseteqq on input line 357.
-LaTeX Font Info:    Redeclaring math symbol \supseteqq on input line 358.
-LaTeX Font Info:    Redeclaring math symbol \nsubseteqq on input line 359.
-LaTeX Font Info:    Redeclaring math symbol \nsupseteqq on input line 360.
-LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 361.
-LaTeX Font Info:    Redeclaring math symbol \supsetneqq on input line 362.
-LaTeX Font Info:    Redeclaring math symbol \varsubsetneqq on input line 363.
-LaTeX Font Info:    Redeclaring math symbol \varsupsetneqq on input line 364.
-LaTeX Font Info:    Redeclaring math symbol \Subset on input line 366.
-LaTeX Font Info:    Redeclaring math symbol \Supset on input line 367.
-LaTeX Font Info:    Redeclaring math symbol \sqsubseteq on input line 380.
-LaTeX Font Info:    Redeclaring math symbol \sqsupseteq on input line 381.
-LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 407.
-LaTeX Font Info:    Redeclaring math symbol \vartriangleleft on input line 408.
-LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 409.
-LaTeX Font Info:    Redeclaring math symbol \vartriangleright on input line 410.
-LaTeX Font Info:    Redeclaring math symbol \ntriangleleft on input line 411.
-LaTeX Font Info:    Redeclaring math symbol \ntriangleright on input line 412.
-LaTeX Font Info:    Redeclaring math symbol \trianglelefteq on input line 413.
-LaTeX Font Info:    Redeclaring math symbol \trianglerighteq on input line 414.
-LaTeX Font Info:    Redeclaring math symbol \ntrianglelefteq on input line 415.
-LaTeX Font Info:    Redeclaring math symbol \ntrianglerighteq on input line 416.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangledown on input line 427.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 428.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 429.
-LaTeX Font Info:    Redeclaring math symbol \nless on input line 437.
-LaTeX Font Info:    Redeclaring math symbol \ngtr on input line 438.
-LaTeX Font Info:    Redeclaring math symbol \leq on input line 439.
-LaTeX Font Info:    Redeclaring math symbol \geq on input line 441.
-LaTeX Font Info:    Redeclaring math symbol \nleq on input line 443.
-LaTeX Font Info:    Redeclaring math symbol \ngeq on input line 445.
-LaTeX Font Info:    Redeclaring math symbol \lneq on input line 451.
-LaTeX Font Info:    Redeclaring math symbol \gneq on input line 452.
-LaTeX Font Info:    Redeclaring math symbol \leqq on input line 453.
-LaTeX Font Info:    Redeclaring math symbol \geqq on input line 454.
-LaTeX Font Info:    Redeclaring math symbol \nleqq on input line 455.
-LaTeX Font Info:    Redeclaring math symbol \ngeqq on input line 456.
-LaTeX Font Info:    Redeclaring math symbol \lneqq on input line 457.
-LaTeX Font Info:    Redeclaring math symbol \gneqq on input line 458.
-LaTeX Font Info:    Redeclaring math symbol \lvertneqq on input line 459.
-LaTeX Font Info:    Redeclaring math symbol \gvertneqq on input line 460.
-LaTeX Font Info:    Redeclaring math symbol \eqslantless on input line 461.
-LaTeX Font Info:    Redeclaring math symbol \eqslantgtr on input line 462.
-LaTeX Font Info:    Redeclaring math symbol \lessgtr on input line 465.
-LaTeX Font Info:    Redeclaring math symbol \gtrless on input line 466.
-LaTeX Font Info:    Redeclaring math symbol \lesseqgtr on input line 467.
-LaTeX Font Info:    Redeclaring math symbol \gtreqless on input line 468.
-LaTeX Font Info:    Redeclaring math symbol \lesseqqgtr on input line 469.
-LaTeX Font Info:    Redeclaring math symbol \gtreqqless on input line 470.
-LaTeX Font Info:    Redeclaring math symbol \lesssim on input line 472.
-LaTeX Font Info:    Redeclaring math symbol \gtrsim on input line 473.
-LaTeX Font Info:    Redeclaring math symbol \lnsim on input line 476.
-LaTeX Font Info:    Redeclaring math symbol \gnsim on input line 477.
-LaTeX Font Info:    Redeclaring math symbol \lessapprox on input line 478.
-LaTeX Font Info:    Redeclaring math symbol \gtrapprox on input line 479.
-LaTeX Font Info:    Redeclaring math symbol \lnapprox on input line 482.
-LaTeX Font Info:    Redeclaring math symbol \gnapprox on input line 483.
-LaTeX Font Info:    Redeclaring math symbol \lessdot on input line 485.
-LaTeX Font Info:    Redeclaring math symbol \gtrdot on input line 486.
-LaTeX Font Info:    Redeclaring math symbol \lll on input line 488.
-LaTeX Font Info:    Redeclaring math symbol \ggg on input line 489.
-LaTeX Font Info:    Redeclaring math symbol \prec on input line 498.
-LaTeX Font Info:    Redeclaring math symbol \succ on input line 499.
-LaTeX Font Info:    Redeclaring math symbol \nprec on input line 500.
-LaTeX Font Info:    Redeclaring math symbol \nsucc on input line 501.
-LaTeX Font Info:    Redeclaring math symbol \preccurlyeq on input line 502.
-LaTeX Font Info:    Redeclaring math symbol \succcurlyeq on input line 503.
-LaTeX Font Info:    Redeclaring math symbol \preceq on input line 506.
-LaTeX Font Info:    Redeclaring math symbol \succeq on input line 507.
-LaTeX Font Info:    Redeclaring math symbol \npreceq on input line 508.
-LaTeX Font Info:    Redeclaring math symbol \nsucceq on input line 509.
-LaTeX Font Info:    Redeclaring math symbol \curlyeqprec on input line 512.
-LaTeX Font Info:    Redeclaring math symbol \curlyeqsucc on input line 513.
-LaTeX Font Info:    Redeclaring math symbol \precsim on input line 517.
-LaTeX Font Info:    Redeclaring math symbol \succsim on input line 518.
-LaTeX Font Info:    Redeclaring math symbol \precnsim on input line 521.
-LaTeX Font Info:    Redeclaring math symbol \succnsim on input line 522.
-LaTeX Font Info:    Redeclaring math symbol \precapprox on input line 523.
-LaTeX Font Info:    Redeclaring math symbol \succapprox on input line 524.
-LaTeX Font Info:    Redeclaring math symbol \precnapprox on input line 527.
-LaTeX Font Info:    Redeclaring math symbol \succnapprox on input line 528.
-LaTeX Font Info:    Redeclaring math symbol \leftarrow on input line 540.
-LaTeX Font Info:    Redeclaring math symbol \rightarrow on input line 542.
-LaTeX Font Info:    Redeclaring math symbol \nwarrow on input line 546.
-LaTeX Font Info:    Redeclaring math symbol \nearrow on input line 547.
-LaTeX Font Info:    Redeclaring math symbol \swarrow on input line 548.
-LaTeX Font Info:    Redeclaring math symbol \searrow on input line 549.
-LaTeX Font Info:    Redeclaring math symbol \leftrightarrow on input line 550.
-LaTeX Font Info:    Redeclaring math symbol \nleftarrow on input line 552.
-LaTeX Font Info:    Redeclaring math symbol \nrightarrow on input line 553.
-LaTeX Font Info:    Redeclaring math symbol \nleftrightarrow on input line 554.
-LaTeX Font Info:    Redeclaring math symbol \mapstochar on input line 557.
-LaTeX Font Info:    Redeclaring math symbol \leftharpoonup on input line 560.
-LaTeX Font Info:    Redeclaring math symbol \rightharpoonup on input line 561.
-LaTeX Font Info:    Redeclaring math symbol \leftharpoondown on input line 562.
-LaTeX Font Info:    Redeclaring math symbol \rightharpoondown on input line 563.
-LaTeX Font Info:    Redeclaring math symbol \upharpoonleft on input line 564.
-LaTeX Font Info:    Redeclaring math symbol \downharpoonleft on input line 565.
-LaTeX Font Info:    Redeclaring math symbol \upharpoonright on input line 566.
-LaTeX Font Info:    Redeclaring math symbol \restriction on input line 567.
-LaTeX Font Info:    Redeclaring math symbol \downharpoonright on input line 568.
-LaTeX Font Info:    Redeclaring math symbol \leftrightharpoons on input line 569.
-LaTeX Font Info:    Redeclaring math symbol \Leftarrow on input line 575.
-LaTeX Font Info:    Redeclaring math symbol \Rightarrow on input line 576.
-LaTeX Font Info:    Redeclaring math symbol \Leftrightarrow on input line 579.
-LaTeX Font Info:    Redeclaring math symbol \nLeftarrow on input line 581.
-LaTeX Font Info:    Redeclaring math symbol \nRightarrow on input line 582.
-LaTeX Font Info:    Redeclaring math symbol \nLeftrightarrow on input line 583.
-LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 593.
-LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 594.
-LaTeX Font Info:    Redeclaring math symbol \upuparrows on input line 595.
-LaTeX Font Info:    Redeclaring math symbol \downdownarrows on input line 596.
-LaTeX Font Info:    Redeclaring math symbol \leftrightarrows on input line 597.
-LaTeX Font Info:    Redeclaring math symbol \rightleftarrows on input line 598.
-LaTeX Font Info:    Redeclaring math symbol \rhook on input line 612.
-LaTeX Font Info:    Redeclaring math symbol \lhook on input line 613.
-LaTeX Font Info:    Redeclaring math symbol \diagup on input line 614.
-LaTeX Font Info:    Redeclaring math symbol \diagdown on input line 615.
-LaTeX Font Info:    Redeclaring math symbol \Lsh on input line 617.
-LaTeX Font Info:    Redeclaring math symbol \Rsh on input line 619.
-LaTeX Font Info:    Redeclaring math symbol \looparrowleft on input line 624.
-LaTeX Font Info:    Redeclaring math symbol \looparrowright on input line 626.
-LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 631.
-LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 633.
-LaTeX Font Info:    Redeclaring math symbol \circlearrowleft on input line 641.
-LaTeX Font Info:    Redeclaring math symbol \circlearrowright on input line 642.
-LaTeX Font Info:    Redeclaring math symbol \rightsquigarrow on input line 645.
-LaTeX Font Info:    Redeclaring math symbol \leftrightsquigarrow on input line 646.
-LaTeX Font Info:    Redeclaring math symbol \oplus on input line 658.
-LaTeX Font Info:    Redeclaring math symbol \ominus on input line 659.
-LaTeX Font Info:    Redeclaring math symbol \otimes on input line 661.
-LaTeX Font Info:    Redeclaring math symbol \odot on input line 663.
-LaTeX Font Info:    Redeclaring math symbol \oslash on input line 675.
-LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 683.
-LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 684.
-LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 686.
-LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 688.
+LaTeX Font Info:    Redeclaring math symbol \flat on input line 157.
+LaTeX Font Info:    Redeclaring math symbol \natural on input line 158.
+LaTeX Font Info:    Redeclaring math symbol \sharp on input line 159.
+LaTeX Font Info:    Redeclaring math symbol \infty on input line 160.
+LaTeX Font Info:    Redeclaring math symbol \propto on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 163.
+LaTeX Font Info:    Redeclaring math symbol \between on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \smile on input line 170.
+LaTeX Font Info:    Redeclaring math symbol \frown on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \leftthreetimes on input line 173.
+LaTeX Font Info:    Redeclaring math symbol \rightthreetimes on input line 174.
+LaTeX Font Info:    Redeclaring math symbol \pitchfork on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \nVDash on input line 181.
+LaTeX Font Info:    Redeclaring math symbol \Vvdash on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \therefore on input line 188.
+LaTeX Font Info:    Redeclaring math symbol \because on input line 189.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 192.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \measuredangle on input line 201.
+LaTeX Font Info:    Redeclaring math symbol \sphericalangle on input line 202.
+LaTeX Font Info:    Redeclaring math symbol \setminus on input line 217.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 221.
+LaTeX Font Info:    Redeclaring math symbol \forall on input line 278.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 279.
+LaTeX Font Info:    Redeclaring math symbol \partial on input line 280.
+LaTeX Font Info:    Redeclaring math symbol \exists on input line 283.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 284.
+LaTeX Font Info:    Redeclaring math symbol \Finv on input line 285.
+LaTeX Font Info:    Redeclaring math symbol \Game on input line 286.
+LaTeX Font Info:    Redeclaring math symbol \emptyset on input line 287.
+LaTeX Font Info:    Redeclaring math symbol \top on input line 289.
+LaTeX Font Info:    Redeclaring math symbol \bot on input line 290.
+LaTeX Font Info:    Redeclaring math symbol \perp on input line 291.
+LaTeX Font Info:    Redeclaring math symbol \curlywedge on input line 295.
+LaTeX Font Info:    Redeclaring math symbol \curlyvee on input line 296.
+LaTeX Font Info:    Redeclaring math symbol \in on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \owns on input line 299.
+LaTeX Font Info:    Redeclaring math symbol \cap on input line 311.
+LaTeX Font Info:    Redeclaring math symbol \cup on input line 312.
+LaTeX Font Info:    Redeclaring math symbol \uplus on input line 313.
+LaTeX Font Info:    Redeclaring math symbol \sqcap on input line 314.
+LaTeX Font Info:    Redeclaring math symbol \sqcup on input line 315.
+LaTeX Font Info:    Redeclaring math symbol \wedge on input line 317.
+LaTeX Font Info:    Redeclaring math symbol \vee on input line 319.
+LaTeX Font Info:    Redeclaring math symbol \barwedge on input line 326.
+LaTeX Font Info:    Redeclaring math symbol \veebar on input line 327.
+LaTeX Font Info:    Redeclaring math symbol \doublebarwedge on input line 328.
+LaTeX Font Info:    Redeclaring math symbol \doublecap on input line 330.
+LaTeX Font Info:    Redeclaring math symbol \doublecup on input line 332.
+LaTeX Font Info:    Redeclaring math symbol \subset on input line 343.
+LaTeX Font Info:    Redeclaring math symbol \supset on input line 344.
+LaTeX Font Info:    Redeclaring math symbol \subseteq on input line 347.
+LaTeX Font Info:    Redeclaring math symbol \supseteq on input line 348.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteq on input line 349.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteq on input line 350.
+LaTeX Font Info:    Redeclaring math symbol \subsetneq on input line 351.
+LaTeX Font Info:    Redeclaring math symbol \supsetneq on input line 352.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 353.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneq on input line 354.
+LaTeX Font Info:    Redeclaring math symbol \subseteqq on input line 356.
+LaTeX Font Info:    Redeclaring math symbol \supseteqq on input line 357.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteqq on input line 358.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteqq on input line 359.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 360.
+LaTeX Font Info:    Redeclaring math symbol \supsetneqq on input line 361.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneqq on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneqq on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Subset on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Supset on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \sqsubseteq on input line 379.
+LaTeX Font Info:    Redeclaring math symbol \sqsupseteq on input line 380.
+LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 406.
+LaTeX Font Info:    Redeclaring math symbol \vartriangleleft on input line 407.
+LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 408.
+LaTeX Font Info:    Redeclaring math symbol \vartriangleright on input line 409.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleleft on input line 410.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleright on input line 411.
+LaTeX Font Info:    Redeclaring math symbol \trianglelefteq on input line 412.
+LaTeX Font Info:    Redeclaring math symbol \trianglerighteq on input line 413.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglelefteq on input line 414.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglerighteq on input line 415.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangledown on input line 426.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 427.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 428.
+LaTeX Font Info:    Redeclaring math symbol \nless on input line 436.
+LaTeX Font Info:    Redeclaring math symbol \ngtr on input line 437.
+LaTeX Font Info:    Redeclaring math symbol \leq on input line 438.
+LaTeX Font Info:    Redeclaring math symbol \geq on input line 440.
+LaTeX Font Info:    Redeclaring math symbol \nleq on input line 442.
+LaTeX Font Info:    Redeclaring math symbol \ngeq on input line 444.
+LaTeX Font Info:    Redeclaring math symbol \lneq on input line 450.
+LaTeX Font Info:    Redeclaring math symbol \gneq on input line 451.
+LaTeX Font Info:    Redeclaring math symbol \leqq on input line 452.
+LaTeX Font Info:    Redeclaring math symbol \geqq on input line 453.
+LaTeX Font Info:    Redeclaring math symbol \nleqq on input line 454.
+LaTeX Font Info:    Redeclaring math symbol \ngeqq on input line 455.
+LaTeX Font Info:    Redeclaring math symbol \lneqq on input line 456.
+LaTeX Font Info:    Redeclaring math symbol \gneqq on input line 457.
+LaTeX Font Info:    Redeclaring math symbol \lvertneqq on input line 458.
+LaTeX Font Info:    Redeclaring math symbol \gvertneqq on input line 459.
+LaTeX Font Info:    Redeclaring math symbol \eqslantless on input line 460.
+LaTeX Font Info:    Redeclaring math symbol \eqslantgtr on input line 461.
+LaTeX Font Info:    Redeclaring math symbol \lessgtr on input line 464.
+LaTeX Font Info:    Redeclaring math symbol \gtrless on input line 465.
+LaTeX Font Info:    Redeclaring math symbol \lesseqgtr on input line 466.
+LaTeX Font Info:    Redeclaring math symbol \gtreqless on input line 467.
+LaTeX Font Info:    Redeclaring math symbol \lesseqqgtr on input line 468.
+LaTeX Font Info:    Redeclaring math symbol \gtreqqless on input line 469.
+LaTeX Font Info:    Redeclaring math symbol \lesssim on input line 471.
+LaTeX Font Info:    Redeclaring math symbol \gtrsim on input line 472.
+LaTeX Font Info:    Redeclaring math symbol \lnsim on input line 475.
+LaTeX Font Info:    Redeclaring math symbol \gnsim on input line 476.
+LaTeX Font Info:    Redeclaring math symbol \lessapprox on input line 477.
+LaTeX Font Info:    Redeclaring math symbol \gtrapprox on input line 478.
+LaTeX Font Info:    Redeclaring math symbol \lnapprox on input line 481.
+LaTeX Font Info:    Redeclaring math symbol \gnapprox on input line 482.
+LaTeX Font Info:    Redeclaring math symbol \lessdot on input line 484.
+LaTeX Font Info:    Redeclaring math symbol \gtrdot on input line 485.
+LaTeX Font Info:    Redeclaring math symbol \lll on input line 487.
+LaTeX Font Info:    Redeclaring math symbol \ggg on input line 488.
+LaTeX Font Info:    Redeclaring math symbol \prec on input line 497.
+LaTeX Font Info:    Redeclaring math symbol \succ on input line 498.
+LaTeX Font Info:    Redeclaring math symbol \nprec on input line 499.
+LaTeX Font Info:    Redeclaring math symbol \nsucc on input line 500.
+LaTeX Font Info:    Redeclaring math symbol \preccurlyeq on input line 501.
+LaTeX Font Info:    Redeclaring math symbol \succcurlyeq on input line 502.
+LaTeX Font Info:    Redeclaring math symbol \preceq on input line 505.
+LaTeX Font Info:    Redeclaring math symbol \succeq on input line 506.
+LaTeX Font Info:    Redeclaring math symbol \npreceq on input line 507.
+LaTeX Font Info:    Redeclaring math symbol \nsucceq on input line 508.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqprec on input line 511.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqsucc on input line 512.
+LaTeX Font Info:    Redeclaring math symbol \precsim on input line 516.
+LaTeX Font Info:    Redeclaring math symbol \succsim on input line 517.
+LaTeX Font Info:    Redeclaring math symbol \precnsim on input line 520.
+LaTeX Font Info:    Redeclaring math symbol \succnsim on input line 521.
+LaTeX Font Info:    Redeclaring math symbol \precapprox on input line 522.
+LaTeX Font Info:    Redeclaring math symbol \succapprox on input line 523.
+LaTeX Font Info:    Redeclaring math symbol \precnapprox on input line 526.
+LaTeX Font Info:    Redeclaring math symbol \succnapprox on input line 527.
+LaTeX Font Info:    Redeclaring math symbol \leftarrow on input line 539.
+LaTeX Font Info:    Redeclaring math symbol \rightarrow on input line 541.
+LaTeX Font Info:    Redeclaring math symbol \nwarrow on input line 545.
+LaTeX Font Info:    Redeclaring math symbol \nearrow on input line 546.
+LaTeX Font Info:    Redeclaring math symbol \swarrow on input line 547.
+LaTeX Font Info:    Redeclaring math symbol \searrow on input line 548.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrow on input line 549.
+LaTeX Font Info:    Redeclaring math symbol \nleftarrow on input line 551.
+LaTeX Font Info:    Redeclaring math symbol \nrightarrow on input line 552.
+LaTeX Font Info:    Redeclaring math symbol \nleftrightarrow on input line 553.
+LaTeX Font Info:    Redeclaring math symbol \mapstochar on input line 556.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoonup on input line 559.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoonup on input line 560.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoondown on input line 561.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoondown on input line 562.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonleft on input line 563.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonleft on input line 564.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonright on input line 565.
+LaTeX Font Info:    Redeclaring math symbol \restriction on input line 566.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonright on input line 567.
+LaTeX Font Info:    Redeclaring math symbol \leftrightharpoons on input line 568.
+LaTeX Font Info:    Redeclaring math symbol \Leftarrow on input line 574.
+LaTeX Font Info:    Redeclaring math symbol \Rightarrow on input line 575.
+LaTeX Font Info:    Redeclaring math symbol \Leftrightarrow on input line 578.
+LaTeX Font Info:    Redeclaring math symbol \nLeftarrow on input line 580.
+LaTeX Font Info:    Redeclaring math symbol \nRightarrow on input line 581.
+LaTeX Font Info:    Redeclaring math symbol \nLeftrightarrow on input line 582.
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 592.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 593.
+LaTeX Font Info:    Redeclaring math symbol \upuparrows on input line 594.
+LaTeX Font Info:    Redeclaring math symbol \downdownarrows on input line 595.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrows on input line 596.
+LaTeX Font Info:    Redeclaring math symbol \rightleftarrows on input line 597.
+LaTeX Font Info:    Redeclaring math symbol \rhook on input line 611.
+LaTeX Font Info:    Redeclaring math symbol \lhook on input line 612.
+LaTeX Font Info:    Redeclaring math symbol \diagup on input line 613.
+LaTeX Font Info:    Redeclaring math symbol \diagdown on input line 614.
+LaTeX Font Info:    Redeclaring math symbol \Lsh on input line 616.
+LaTeX Font Info:    Redeclaring math symbol \Rsh on input line 618.
+LaTeX Font Info:    Redeclaring math symbol \looparrowleft on input line 623.
+LaTeX Font Info:    Redeclaring math symbol \looparrowright on input line 625.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 630.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 632.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowleft on input line 640.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowright on input line 641.
+LaTeX Font Info:    Redeclaring math symbol \rightsquigarrow on input line 644.
+LaTeX Font Info:    Redeclaring math symbol \leftrightsquigarrow on input line 645.
+LaTeX Font Info:    Redeclaring math symbol \oplus on input line 657.
+LaTeX Font Info:    Redeclaring math symbol \ominus on input line 658.
+LaTeX Font Info:    Redeclaring math symbol \otimes on input line 660.
+LaTeX Font Info:    Redeclaring math symbol \odot on input line 662.
+LaTeX Font Info:    Redeclaring math symbol \oslash on input line 674.
+LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 682.
+LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 683.
+LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 685.
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 687.
 \mayacnter=\count279
 \mayacnta=\count280
 \mayacntb=\count281
 \mayacntc=\count282
 \mayawidth=\dimen159
-LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
-LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
-LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 842.
-LaTeX Info: Redefining \{ on input line 846.
-LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 848.
-LaTeX Info: Redefining \} on input line 852.
-LaTeX Font Info:    Redeclaring math delimiter \langle on input line 858.
-LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 859.
-LaTeX Font Info:    Redeclaring math delimiter \vert on input line 863.
-LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 865.
-LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 868.
-LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 869.
-LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 870.
-LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 871.
-LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 872.
-LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 873.
-LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 880.
-LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 881.
-LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 882.
-LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 883.
-LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 884.
-LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 885.
-LaTeX Font Info:    Redeclaring math symbol \braceld on input line 903.
-LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 905.
-LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 907.
-LaTeX Font Info:    Redeclaring math symbol \braceru on input line 909.
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
+LaTeX Font Info:    Redeclaring math symbol \intop on input line 752.
+LaTeX Font Info:    Redeclaring math symbol \ointop on input line 759.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 841.
+LaTeX Info: Redefining \{ on input line 845.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 847.
+LaTeX Info: Redefining \} on input line 851.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 857.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 858.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 862.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 864.
+LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 867.
+LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 879.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 880.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 881.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 882.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 883.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 884.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 902.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 904.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 906.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 908.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 943.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 945.
 )) (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks26
@@ -1083,10 +1086,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+Package hyperref Info: Option `colorlinks' set `true' on input line 35.
 \c@definition=\count379
-LaTeX Info: Redefining \sl2 on input line 71.
-LaTeX Info: Redefining \SO2 on input line 72.
+LaTeX Info: Redefining \sl2 on input line 70.
+LaTeX Info: Redefining \SO2 on input line 71.
 ) (A Thesis.aux
 
 LaTeX Warning: Label `=' multiply defined.
@@ -1137,13 +1140,13 @@ LaTeX Info: Command `\ddddot' is already robust on input line 4.
 * \textheight=654.41339pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-33.0119pt
+* \topmargin=-38.1381pt
 * \headheight=12.0pt
-* \headsep=19.8738pt
+* \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=47.0pt
-* \marginparsep=7.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
@@ -1189,23 +1192,21 @@ Package hyperref Info: Link coloring ON on input line 4.
 \@outlinefile=\write4
 \openout4 = `"A Thesis.out"'.
 
- (A Thesis.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
- (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+euf on input line 3.
- (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [1
+
+
+Package hyperref Warning: Option `pdfpagemode' has already been used,
+(hyperref)                setting the option has no effect on input line 50.
+
+
+Package hyperref Warning: Option `colorlinks' has already been used,
+(hyperref)                setting the option has no effect on input line 50.
+
+Package hyperref Info: Option `breaklinks' set `true' on input line 50.
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 50.
+
+[1
 Non-PDF special ignored!
 <special> header=pstricks.pro
 Non-PDF special ignored!
@@ -1231,20 +1232,29 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
+{C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+ (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+ (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58.
+ (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [0] (A Thesis.toc
+LaTeX Font Info:    Trying to load font information for U+euf on input line 3.
+ (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [2
 
-{C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
+])
 \tf@toc=\write5
 \openout5 = `"A Thesis.toc"'.
 
- (Chapter I.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2]
+ [3] (Chapter I.tex
 Chapter 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1530,44 +1540,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 5.
 
-[3
+[1
 
 ]
 
-LaTeX Warning: Citation `MR2977413' on page 4 undefined on input line 43.
+LaTeX Warning: Citation `MR2977413' on page 2 undefined on input line 43.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[6]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7]
+[2] [3] [4] [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 191.
@@ -1641,36 +1620,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 191.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-<Shortest vector.png, id=371, 627.5445pt x 257.763pt>
+[6] [7]
+<Shortest vector.png, id=383, 627.5445pt x 257.763pt>
 File: Shortest vector.png Graphic file (type png)
 <use Shortest vector.png>
 Package pdftex.def Info: Shortest vector.png  used on input line 299.
 (pdftex.def)             Requested size: 422.52055pt x 173.54987pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]
+ [8]
 Overfull \hbox (34.11122pt too wide) in paragraph at lines 381--382
 [][]  
  []
@@ -1686,41 +1642,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11 <./Shortest vector.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
+[9 <./Shortest vector.png>] [10]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 460.
 
-Overfull \hbox (23.03967pt too wide) in paragraph at lines 460--460
+Overfull \hbox (26.03967pt too wide) in paragraph at lines 460--460
 \OT1/cmr/m/n/12 dimensional 
  []
 
 
-Overfull \hbox (23.03967pt too wide) in paragraph at lines 460--460
+Overfull \hbox (26.03967pt too wide) in paragraph at lines 460--460
 \OT1/cmr/m/n/12 dimensional 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
+[11]
 Overfull \hbox (43.0789pt too wide) in paragraph at lines 529--530
  [][] 
  []
@@ -1737,77 +1671,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 533.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
+[12] [13]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19]
+[14] [15] [16] [17]
 Overfull \hbox (10.13553pt too wide) in paragraph at lines 761--763
 [][]\OT1/cmr/bx/n/12 Definition 1.5.6 \OT1/cmr/m/n/12 ([]sub-lat-tice)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\U/matha/m/n/12 p\OML/cmm/m/it/12 L; Q\U/matha/m/n/12 q$ \OT1/cmr/m/it/12 be a Eu-clidean $\U/msb/m/n/12 Z$\OT1/cmr/m/it/12 -lattice. We say that a $\U/msb/m/n/12 Z\U/matha/m/n/12 ^^A$\OT1/cmr/m/it/12 submodule
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20]) (ChapterII-fixed typos.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[21]
+[18]) (ChapterII-fixed typos.tex [19]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1947,125 +1820,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[22
+[20
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[27]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[29]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[30]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[31]
+] [21] [22] [23] [24] [25] [26] [27] [28] [29]
 Overfull \hbox (100.72452pt too wide) in paragraph at lines 396--397
 []$\OML/cmm/m/it/12 N \U/matha/m/n/12 ^^P []$ 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[32]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[34]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[35]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[36]
+[30] [31] [32] [33] [34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 574.
@@ -2078,43 +1840,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 574.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[37]
+[35]
 Overfull \hbox (4.18271pt too wide) in paragraph at lines 595--599
 \OT1/cmr/m/n/12 We also write $\OML/cmm/m/it/12 ^^U[]$ \OT1/cmr/m/n/12 for the ba-sis of $[]\U/matha/m/n/12 p\OML/cmm/m/it/12 J\U/matha/m/n/12 q$ \OT1/cmr/m/n/12 con-tain-ing the fun-da-men-tal weight, namely $[] \U/matha/m/n/12 ^^P
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[38]) (Chapter III.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[39]
+[36]) (Chapter III.tex [37]
 Chapter 3.
-[40
+[38
 
 ]
-Overfull \hbox (0.96082pt too wide) in paragraph at lines 63--65
-[][]\OT1/cmr/bx/n/12 Definition 3.1.6. []\OT1/cmr/m/it/12 If the bot-tom of the pro-file con-tains only two points $\U/matha/m/n/12 p\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\U/matha/m/n/12 q$ \OT1/cmr/m/it/12 and $\U/matha/m/n/12 p\OML/cmm/m/it/12 n; [] [] L\U/matha/m/n/12 q$\OT1/cmr/m/it/12 ,
- []
-
-
 Overfull \hbox (34.11122pt too wide) in paragraph at lines 95--95
 [][]  
  []
@@ -2124,46 +1859,7 @@ Overfull \hbox (34.11122pt too wide) in paragraph at lines 124--125
 [][]  
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[41]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[42]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[43]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[44]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[45]
+[39] [40] [41] [42] [43]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 357.
@@ -2188,38 +1884,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 358.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[46]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[47]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[48]) (Chapter IV.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[49]
+[44] [45] [46]) (Chapter IV.tex [47]
 Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2233,33 +1898,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[50
+[48
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[51]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[52]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[53]
+] [49] [50] [51]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 158.
@@ -2280,38 +1921,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 158.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[54]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[55]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[56]) (A Thesis.bbl
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[57]) [58
+[52] [53] [54]) (A Thesis.bbl [55]) [56
 
 ] (A Thesis.aux)
  ***********
@@ -2326,20 +1936,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `"A Thesis".out' has not changed.
-(rerunfilecheck)             Checksum: E826C8FBABEAE869ABAADDFD18B8C32A;11446.
+(rerunfilecheck)             Checksum: E32B1F5FB3683202382B4666C04DEB97;11557.
  ) 
 Here is how much of TeX's memory you used:
- 41630 strings out of 474486
- 928828 string characters out of 5745171
+ 41696 strings out of 474486
+ 929915 string characters out of 5745171
  2014542 words of memory out of 5000000
- 62917 multiletter control sequences out of 15000+600000
- 591059 words of font info for 154 fonts, out of 8000000 for 9000
+ 62980 multiletter control sequences out of 15000+600000
+ 590003 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,17n,96p,1254b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha6.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi864\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi1244\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "A Thesis.pdf" (58 pages, 634124 bytes).
+ 89i,16n,96p,1254b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha6.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi864\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi1244\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "A Thesis.pdf" (60 pages, 616015 bytes).
 PDF statistics:
- 1056 PDF objects out of 1200 (max. 8388607)
- 262 named destinations out of 1000 (max. 500000)
- 514 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1064 PDF objects out of 1200 (max. 8388607)
+ 264 named destinations out of 1000 (max. 500000)
+ 522 words of extra memory for PDF output out of 10000 (max. 10000000)
 
