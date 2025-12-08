@@ -1,51 +1,51 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}$\SO 2 \backslash \SLR $}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}$\SLR $ and its action on the upper half plane $\uH $}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Fundamental domain}{4}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Lattices,upper half plane and $\SLR $}{7}{section.1.3}%
-\contentsline {section}{\numberline {1.4}$\rho $-semi-stability of lattices}{12}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Unstable lattices}{14}{subsection.1.4.1}%
-\contentsline {section}{\numberline {1.5}Lattices in higher rank}{15}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Abstract lattices}{15}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}An alternative definition of lattices}{15}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}Equivalence between two definitions of lattices}{16}{subsection.1.5.3}%
-\contentsline {subsection}{\numberline {1.5.4}Covolume of a lattice}{16}{subsection.1.5.4}%
-\contentsline {subsection}{\numberline {1.5.5}Sublattices}{17}{subsection.1.5.5}%
-\contentsline {chapter}{\numberline {2}BASIC LIE THEORY FOR $\SLn \& \GLn $}{18}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Lie algebras}{18}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Definition}{18}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Cartan Subalgebras}{19}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Root space decomposition}{20}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Killing form}{20}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Co-roots}{21}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Weights and coweights}{21}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Roots at group level}{21}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Weyl group}{22}{subsection.2.1.8}%
-\contentsline {subsection}{\numberline {2.1.9}Weights}{22}{subsection.2.1.9}%
-\contentsline {subsection}{\numberline {2.1.10}Cartan matrix}{24}{subsection.2.1.10}%
-\contentsline {section}{\numberline {2.2}Parabolic subgroups and parabolic subalgebras}{25}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Parabolic subgroups I: An explicit description }{25}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Parabolic subgroups II: Using BN-pairs}{26}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Langlands decomposition}{27}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Iwasawa decomposition and P-horospherical decomposition}{28}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Parabolic sets and parabolic subalgebras}{29}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}On the function $H_P$}{30}{subsection.2.2.6}%
-\contentsline {chapter}{\numberline {3}SEMI-STABLE LATTICE IN HIGHER RANK}{32}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Grayson's definition of semistablility}{32}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Grayson's definition}{32}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Canonical filtration}{33}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}$\rho $- definition of semi-stability}{37}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}$\rho $-definition}{37}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Some basis properties}{38}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Check for semistablility}{38}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Canonical pair}{39}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Equivalence between Grayson's semistability and $\rho $-semistability}{41}{chapter.4}%
-\contentsline {section}{\numberline {4.1}The equivalence between definitions of semi-stable lattices}{41}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}A useful lemma}{41}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Proof of the main theorem}{42}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Canonical pair and Canonical filtration}{43}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Equivalence between Canonical pair and canonical filtration}{43}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Equivalence between chain condition and condition \ref {extremal}}{43}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}$P$-semistability and $M_P$-semistability}{45}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Equivalence between increasing chain condition and condition \ref {destabilizing}}{46}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Proof of proposition \ref {cp-equiv}}{47}{subsection.4.2.5}%
+\contentsline {section}{\numberline {1.2}Fundamental domain}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Lattices,upper half plane and $\SLR $}{8}{section.1.3}%
+\contentsline {section}{\numberline {1.4}$\rho $-semi-stability of lattices}{14}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Unstable lattices}{16}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Lattices in higher rank}{17}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Abstract lattices}{18}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}An alternative definition of lattices}{18}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Equivalence between two definitions of lattices}{19}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Covolume of a lattice}{20}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}Sublattices}{20}{subsection.1.5.5}%
+\contentsline {chapter}{\numberline {2}BASIC LIE THEORY FOR $\SLn \& \GLn $}{22}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lie algebras}{22}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Definition}{22}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Cartan Subalgebras}{23}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Root space decomposition}{24}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Killing form}{25}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Co-roots}{26}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Weights and coweights}{26}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Roots at group level}{27}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Weyl group}{27}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Weights}{28}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}Cartan matrix}{30}{subsection.2.1.10}%
+\contentsline {section}{\numberline {2.2}Parabolic subgroups and parabolic subalgebras}{31}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Parabolic subgroups I: An explicit description }{31}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Parabolic subgroups II: Using BN-pairs}{32}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Langlands decomposition}{34}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Iwasawa decomposition and P-horospherical decomposition}{35}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Parabolic sets and parabolic subalgebras}{36}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}On the function $H_P$}{37}{subsection.2.2.6}%
+\contentsline {chapter}{\numberline {3}SEMI-STABLE LATTICE IN HIGHER RANK}{40}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Grayson's definition of semistablility}{40}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Grayson's definition}{40}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Canonical filtration}{42}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}$\rho $- definition of semi-stability}{46}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}$\rho $-definition}{46}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Some basis properties}{47}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Check for semistablility}{47}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Canonical pair}{48}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Equivalence between Grayson's semistability and $\rho $-semistability}{50}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The equivalence between definitions of semi-stable lattices}{50}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}A useful lemma}{50}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Proof of the main theorem}{51}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Canonical pair and Canonical filtration}{52}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Equivalence between Canonical pair and canonical filtration}{52}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Equivalence between chain condition and condition \ref {extremal}}{53}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}$P$-semistability and $M_P$-semistability}{55}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Equivalence between increasing chain condition and condition \ref {destabilizing}}{56}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Proof of proposition \ref {cp-equiv}}{56}{subsection.4.2.5}%
