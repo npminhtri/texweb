@@ -113,24 +113,24 @@ To work with the geometry of the root system, we need the notion of Killing form
     \end{align*}
 \end{definition}
 The bilinear map $\kappa(x,y): = \mathrm{Tr}(\mathrm{ad}(x)\circ \mathrm{ad}(y))$ is called \textbf{Killing form}. If there is no confusion, we write $(x,y):=\kappa(x,y)$.
-    When $\mathfrak{g}$ is semisimple, the Killing form has many nice properties, as recorded in the following theorem
-    \begin{theorem}
-        A Lie algebra $\mathfrak{g}$ is semi-simple if and only if the Killing form is non-degenerate.    
-    \end{theorem}
-It can also be showed that, given the root space decomposition as in section \ref{root-space-decomp}, if $\alpha, \beta \in \Delta$ satisfy $\alpha+\beta \ne 0$, then 
-the space $\mathfrak{g}_\alpha$ is orthogonal to $\mathfrak{g}_\beta$ with respect to the Killing form. A corollary of this is 
+When $\mathfrak{g}$ is semisimple, the Killing form has many nice properties, as recorded in the following theorem
+\begin{theorem}
+    A Lie algebra $\mathfrak{g}$ is semi-simple if and only if the Killing form is non-degenerate.
+\end{theorem}
+It can also be showed that, given the root space decomposition as in section \ref{root-space-decomp}, if $\alpha, \beta \in \Delta$ satisfy $\alpha+\beta \ne 0$, then
+the space $\mathfrak{g}_\alpha$ is orthogonal to $\mathfrak{g}_\beta$ with respect to the Killing form. A corollary of this is
 \begin{theorem}\label{non-degenerate}
     Given a semisimple Lie algebra $\mathfrak{g}$ and a Cartan subalgebra $\mathfrak{h} \subset \mathfrak{g}$. Then the restriction of the Killing form to $\mathfrak{h}$ is non-degenerate.
 \end{theorem}
-By theorem \ref{non-degenerate}, there exists a bijective linear map 
+By theorem \ref{non-degenerate}, there exists a bijective linear map
 \begin{align*}
-    f \colon \mathfrak{h} &\to \mathfrak{h}^\ast\\
-                x &\mapsto f_x
+    f \colon \mathfrak{h} & \to \mathfrak{h}^\ast \\
+    x                     & \mapsto f_x
 \end{align*}
 where $f_x(y):=\kappa(x,y)$ for all $y \in \mathfrak{h}$. We may thus define a bilinear map
 \begin{align*}
-    (\cdot,\cdot) \colon \mathfrak{h}^\ast \times \mathfrak{h}^\ast &\to \mathbb{R}\\
-                                (f_x,f_y) & \mapsto \kappa(x,y)
+    (\cdot,\cdot) \colon \mathfrak{h}^\ast \times \mathfrak{h}^\ast & \to \mathbb{R}      \\
+    (f_x,f_y)                                                       & \mapsto \kappa(x,y)
 \end{align*}
 A more thorough treatment of the Killing form can be found in \cite[Chapter 5,8]{MR499562} .
 \subsection{Co-roots}
@@ -147,7 +147,7 @@ as an element $h_\alpha$ of $\mathfrak{h}$. So we have
     verified directly that $\alpha_{ij}^\vee = E_i-E_{j}$ as
     \[\left\langle \alpha_{ij}, \alpha_{ij}^\vee \right\rangle = (L_i-L_j)(E_i-E_j)=2\]
 \end{example}
-\subsection{Weights and coweights}
+\subsection{Weights and coweights}\label{weight-algebra-level}
 Similarly, we can also define the $\lambda_i$ such that
 \[\left\langle \lambda_i,\alpha_j^\vee\right\rangle = \delta_{ij} = \begin{cases}
         1, i =j \\
@@ -158,6 +158,9 @@ Explicitly, it can be checked that $\lambda_i = L_1+L_2+\ldots+L_i$. In the same
         1, i =j \\
         0, i \ne j
     \end{cases}\]
+From these definitions, we can see that $\widehat{\Delta } = \{ \lambda_i, i =1,2,\ldots,n-1\}$ is a basis for the the space $\mathfrak{h}^\ast$. 
+We call $\widehat{\Delta}$ the set of \textbf{fundamental weights} . Similarly
+the set $\widehat{\Delta }^\vee = \{ \lambda_i^\vee, i =1,2,\ldots,n-1\}$ is a basis for the Cartan subalgebra $\mathfrak{h}$.
 \subsection{Roots at group level}
 We want to understand how the roots behave at group level. The analog for the Cartan subalgebra is the maximal torus
 \[T = \left\lbrace t= \begin{bmatrix}
@@ -468,7 +471,7 @@ and
     \end{bmatrix} \right\rbrace\]
 
 The subgroup $M_{n_1,\ldots, n_k}$ is called \textbf{Levi component}. We can further factor this subgroup as
-\[M_{n_1,\ldots, n_k} = M'_{n_1,\ldots, n_k} \cdot A_{n_1,\ldots, n_k}\]
+\[M_{n_1,\ldots, n_k} = M^1_{n_1,\ldots, n_k} \cdot A_{n_1,\ldots, n_k}\]
 with $A_{n_1,\ldots, n_k}$ plays the role of the connected center of $M_{n_1,\ldots, n_k}$:
 \[A_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
         t_1I_1 & 0      & \ldots & 0      \\
@@ -536,35 +539,35 @@ where $$ X_{\ast P} = X_{M_P}, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_
 \begin{example}
 
 \end{example}
-\subsection{Parabolic sets and parabolic subalgebras}
+\subsection{Parabolic sets and parabolic subalgebras}\label{parabolic-sets-algebra}
 \begin{definition}
-    Given a root system $\Delta$. A \textbf{parabolic subset} $\Delta_P$ is a subset of $\Delta$ such that
-    it satisfies the following conditions:
+    Given a root system $\Phi$ and a base $\Delta$. A \textbf{parabolic subset} $\Delta(P)$ is a subset of $\Delta$  that
+    satisfies the following conditions:
     \begin{enumerate}
-        \item For any $\alpha \in \Delta$, at most one of the two elements $\alpha, - \alpha$ is contained in $\Delta_P$.
-        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Delta_P$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Delta_P$.
+        \item For any $\alpha \in \Delta$, at most one of the two elements $\alpha, - \alpha$ is contained in $\Delta(P)$.
+        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Delta_P$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Delta(P)$.
     \end{enumerate}
 \end{definition}
-The parabolic set parametrizes the parabolic subalgebra with the root system $\Delta$, as given in the following theorem
+The parabolic set parametrizes the corresponding parabolic subalgebra with the root system $\Delta$, as given in the following theorem
 \begin{theorem}
     Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Delta$. There exists a correspondence between
-    parabolic subset of $\Delta_P$ of $\Delta$ and subalgebras of $\mathfrak{g}$ containing the
+    parabolic subset of $\Delta(P)$ of $\Delta$ and subalgebras of $\mathfrak{g}$ containing the
     Borel subalgebra $\mathfrak{b}$. The correspondence is given by
-    \[ \Delta_P \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{\alpha \in \Delta \setminus \Delta_P} g_{\alpha}\]
+    \[ \Delta(P) \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{
+            \alpha \in \Delta \setminus \Delta(P)} g_{-\alpha}\]
 \end{theorem}
 \begin{proof}
-    We refer to \cite{MR2109105} for a proof of this fact.
+    We refer to \cite[Chapter VI, \S 1.7, Proposition 20]{MR2109105} for a proof of this fact.
 \end{proof}
 \begin{example}
     We consider the case $\mathfrak{g} = \mathfrak{sl}_3(\mathbb{R})$. Let's denote
-    $\Pi = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. It is clear that
-    the set of positive root is $\Delta_+=\left\lbrace \alpha,\beta,\gamma \right\rbrace$. There are
+    $\Delta = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. There are
     4 parabolic sets, corresponding to 4 parabolic subalgebra given as follows
     \begin{align*}
-        \Delta_P = \Delta_+                 & \longleftrightarrow \mathfrak{p} = \mathfrak{b}                               \\
-        \Delta_{P} =\Delta \cup \{-\alpha\} & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha} \\
-        \Delta_{P}= \Delta \cup \{-\beta\}  & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta}  \\
-        \Delta_P= \Delta                    & \longleftrightarrow \mathfrak{p} = \mathfrak{g}
+        \Delta(P) = \Delta       & \longleftrightarrow \mathfrak{p} = \mathfrak{b}                               \\
+        \Delta(P) = \{\beta\}  & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha} \\
+        \Delta(P)=  \{\alpha\} & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta}  \\
+        \Delta(P)= \varnothing   & \longleftrightarrow \mathfrak{p} = \mathfrak{g}
     \end{align*}
 \end{example}
 
@@ -631,5 +634,39 @@ We prove the following lemma
     \[A_P = A_QA(Q)_{\ast P}\]
     and the definition \ref{H-function} of the function $H_P$ for parabolic subgroup $P$.
 \end{proof}
+\subsection{Roots and weights for parabolic subgroups }
+We also define the set $\Delta_P: = \Delta \setminus \Delta(P)$. From  section \ref{parabolic-sets-algebra}, we can see that the parabolic subalgebras are parametrized by simple roots. If 
+\[\Delta = \{\alpha_1,\ldots, \alpha_d\} = \{\alpha_i: i \in I\}\]
+where $I= \{1,2,\ldots,d\}$ then each $J \subset I$ gives rise to a parabolic subalgebra $\mathfrak{p}_J$ corresponding to a parabolic subgroup $P=P_J$. In the case of $\slnr$, for each $J \subset I$ and parabolic subalgebra $\mathfrak{p} = \mathfrak{p}_J$, we just write 
+\[\Delta_P = \{\alpha_i, i \notin J\} \quad, \Delta(P) = \{\alpha_i,i \in J\} \label{parabolic-roots}\]
+Let $\widehat{\Delta} = \{\lambda_j, j \in I\}$  be the set of fundamental weights as in subsection \ref{weight-algebra-level}. Then for each parabolic subgroup $P= P_J$ we also define
+\[\widehat{\Delta}(P) = \{{\lambda_i}_{| \mathfrak{h}(J)}, i \in J\} \quad, \widehat{\Delta}_P= \{\lambda_i, i \notin J\}\]
+We give an example for the above sets we just define
+\begin{example}\label{sl3-parabolic-root-weight}
+    Let $G = \mathrm{SL}_3(\mathbb{R})$. We can choose a base $\Delta = \{\alpha_1,\alpha_2\}$ as before, thus $I = \{1,2\}$. Assume that $J= \{2\}$. Then 
+    $P_1: = P_{I\setminus J}$. We have the following sets
+    \[\Delta_{P_1} = \{\alpha_1\}, \quad \widehat{\Delta}_{P_1}= \{{\lambda_1}_{|\mathfrak{h}(J)}\}\]
+\end{example}
+\begin{remark}
+        Over $\mathfrak{h}(J)$ we can also define the notion of weight $\omega_i^J$ by the relations
+        \[\left\langle  \omega_j^J,\alpha_i^\vee\right\rangle=\delta_{ij}\]
+        for $j\in J$. It is known that we have the relation
+        \[\omega^J_i = \sum_{c_i, i \in J}c_i\alpha_j,\]
+        where $c_j \le 0$. Thus we can naturally define $\omega^J_i$ on the Cartan subalgebra $\mathfrak{h}$ by letting 
+        $\omega^J_i$ to be identically zero on $\mathfrak{h}_J$. For example, the weights in $\mathfrak{h}(J)$ is different from that of $\mathfrak{h}$. In example 
+        \ref{sl3-parabolic-root-weight}, we have the identification
+        \[{\lambda_1}_{|\mathfrak{h}(J)} = \dfrac{1}{2}\alpha_1\]
+        But they extend differently over $\mathfrak{h}$.
+\end{remark}
+\subsection{The linear functionals $\rho_P$ and $\rho_Q^P$}
+We define an analog for Weyl vector $\rho$, which is essential in studying the semi-stablility in the later of this thesis.
+\begin{definition}
+    Given a Parabolic subgroup $P = P_J$ of $G=\SLn$ or $G=\GLn$, we define 
+    \[\rho_P = \dfrac{1}{2}\sum_{i \in J}\alpha_i\]
+\end{definition}
+If we are given another standard parabolic subgroup $Q\subset P$ then
+\begin{definition}
+    \[\rho^P_Q:= \rho_Q- \rho_P\]
+\end{definition}
 
 
