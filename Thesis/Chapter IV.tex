@@ -211,7 +211,7 @@ Rescaling does not change the semistability, so we can rescale the flag $\mathca
               \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
 where  $M_i/M_{i-1}$ is semi-stable for all $i$. 
 \subsection{Proof of proposition \ref{cp-equiv}}
-By \cite[Subsection 4.3.4]{patnaik2025borel}, the two conditions in lemma \ref{canonical-pair} are sufficient to guarantee that $\text{cp}(x) =(P,\delta)$. Thus $\text{cp}(x) = (P,\delta)$ if and only if
+By \cite[Subsection 4.3.4]{patnaik2025borel}, the two conditions in lemma \ref{canonical-pair} are sufficient to guarantee that $\text{cp}(x) =(P,\delta)$. Thus, by lemma \ref{ss-slope} and lemma \ref{increasing-slope}, $\text{cp}(x) = (P,\delta)$ if and only if
 there exists a flag of sublattices 
 \[\mathcal{F} \colon 0 = M_0 \subset M_1 \subset \ldots \subset M_k = L_x\]
  stabilized by $P$, such that 
@@ -219,5 +219,5 @@ there exists a flag of sublattices
     \item $\mu(M_i/M_{i-1}) <\mu(M_{i+1}/M_i)$.
     \item $M_i/M_{i-1}$ is semi-stable for all $i$.
 \end{itemize}
-By theorem \ref{Grayson's criterion}, $\mathcal{F}$ is the canonicalf filtration for $L_x$.
+By theorem \ref{Grayson's criterion}, $\mathcal{F}$ satisfies the above conditions if and only if $\mathcal{F}$ is the canonical filtration for $L_x$.
 \end{proof}

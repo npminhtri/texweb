@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1765155751.72712 "d:/texweb2/Thesis/Arthur's Combinatorial lemma.tex" "Arthur's Combinatorial lemma.pdf" "Arthur's Combinatorial lemma" 1765155754.03208 0
-  "Arthur's Combinatorial lemma.aux" 1765155753 623 8e7183a14ae25eee1c267c38f1ab3eea "pdflatex"
-  "Arthur's Combinatorial lemma.out" 1765155753 318 09fbdb49471187f46cbde5c139e19ee4 "pdflatex"
+["pdflatex"] 1765393001.83773 "d:/texweb2/Thesis/Arthur's Combinatorial lemma.tex" "Arthur's Combinatorial lemma.pdf" "Arthur's Combinatorial lemma" 1765393009.32224 0
+  "Arthur's Combinatorial lemma.aux" 1765393008 623 8e7183a14ae25eee1c267c38f1ab3eea "pdflatex"
+  "Arthur's Combinatorial lemma.out" 1765393008 318 09fbdb49471187f46cbde5c139e19ee4 "pdflatex"
   "Arthur's Combinatorial lemma.tex" 1764207656 5215 4bd2fd5cc52085a0c0c8e284dfb2d162 ""
-  "C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1764286382 123610 534f02007ff4fb4ce9d27ccc0fbde84f ""
+  "C:/Users/Hi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1765393006 123610 534f02007ff4fb4ce9d27ccc0fbde84f ""
   "C:/Users/Hi/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1747265158 14064 7f44ce55259b761b982f341db43bf3a1 ""
   "C:/Users/Hi/AppData/Local/MiKTeX/fonts/pk/ljfour/public/mathabx/dpi600/matha12.pk" 1747265159 29292 a6f1f39e64717a9fde975b591da4aa1d ""
   "C:/Users/Hi/AppData/Local/MiKTeX/fonts/pk/ljfour/public/mathabx/dpi600/matha8.pk" 1747265156 20784 da0a66384887ee53491138f7bce879aa ""
@@ -75,7 +75,7 @@
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty" 1576433764 31769 002a487f55041f8e805cfbf6385ffd97 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefinekeys.sty" 1576763304 5412 d5a2436094cd7be85769db90f29250a6 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty" 1702206890 17865 1a9bd36b4f98178fa551aca822290953 ""
-  "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/mathabx/mathabx.dcl" 1116399180 47027 3dbc67397f77c6c4915232a8ff46a778 ""
+  "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/mathabx/mathabx.dcl" 1765184386 46982 39d795ab732e641356e7190b9eaab799 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/multido/multido.tex" 1273874056 9097 0ff4dff7eb59381cc861308a1c448fc4 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.sty" 1575926700 19007 15924f7228aca6c6d184b115f4baa231 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds.sty" 1623005277 20089 80423eac55aa175305d35b49e04fe23b ""
@@ -279,6 +279,7 @@
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/rank-2-roots/rank-2-roots.sty" 1694337156 22592 fd4b92ddcbd0ced700d464a5b7c18f48 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
+  "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/todonotes/todonotes.sty" 1704622898 21404 916e19cbd009b6d289c8194b313d3895 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
@@ -286,9 +287,10 @@
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/pst-xkey.sty" 1656236919 1694 74b0201cd6a70abed294b6332f129c41 ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Hi/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "Preamble.tex" 1765155746 2508 82ece1195ed399d87c8b7958df61c5f8 ""
+  "Preamble.tex" 1765393000 2571 49e6433f68b5046e3cffba563176a6a9 ""
   "alternate sum.png" 1764207656 30805 9d909965fcb7ad4e1d2dac796502a71c ""
   "d:/texweb2/Thesis/Arthur's Combinatorial lemma.tex" 1764207656 5215 4bd2fd5cc52085a0c0c8e284dfb2d162 ""
+  "mathesis.sty" 1765184301 6952 ff23ea89d9dbbe9caf0226bf439234d3 ""
   (generated)
   "Arthur's Combinatorial lemma.aux"
   "Arthur's Combinatorial lemma.log"

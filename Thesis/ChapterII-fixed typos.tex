@@ -204,7 +204,7 @@ Note that $W$ acts on $\Hom(T, \mathbb{R}^*)$ in the natural way: $w . \varphi(h
               \alpha_i + \alpha_j & \mbox{ if } |j-i|=1\end{cases} \]
 
 
-\subsection{Weights}
+\subsection{Weights}\label{Weyl-vector-def}
 Similarly, at Lie group level, we also have the notion of \textbf{fundamental weights}. For each $i \in I$, we define
 a character $\lambda_i \in \Hom(T,\mathbb{R}^*)$ where $T$ is the torus defined in \ref{torus}
 \[\lambda_i \colon T \to \mathbb{R}^*, \quad\lambda_i(t) = a_1\ldots a_i\]
@@ -541,33 +541,34 @@ where $$ X_{\ast P} = X_{M_P}, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_
 \end{example}
 \subsection{Parabolic sets and parabolic subalgebras}\label{parabolic-sets-algebra}
 \begin{definition}
-    Given a root system $\Phi$ and a base $\Delta$. A \textbf{parabolic subset} $\Delta(P)$ is a subset of $\Delta$  that
+    Given a root system $\Phi$ . A \textbf{parabolic subset} $\Phi(P)$ is a subset of $\Phi$  that
     satisfies the following conditions:
     \begin{enumerate}
-        \item For any $\alpha \in \Delta$, at most one of the two elements $\alpha, - \alpha$ is contained in $\Delta(P)$.
-        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Delta_P$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Delta(P)$.
+        \item $\Phi(P) \cup -\Phi(P) = \Phi$.
+        \item It is closed, in the sense that, for any two root $\alpha,\beta \in \Phi(P)$ such that $\alpha+\beta$ is a root, then $\alpha+\beta \in \Phi(P)$.
     \end{enumerate}
 \end{definition}
-The parabolic set parametrizes the corresponding parabolic subalgebra with the root system $\Delta$, as given in the following theorem
+The parabolic set parametrizes the corresponding parabolic subalgebra with a choice of base $\Delta$ of the root system $\Phi$ as given in the following theorem
 \begin{theorem}
-    Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Delta$. There exists a correspondence between
-    parabolic subset of $\Delta(P)$ of $\Delta$ and subalgebras of $\mathfrak{g}$ containing the
+    Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Phi$ and a base $\Delta$. We denote $\Phi^+$ the set of positive roots with respect to this base. There exists a correspondence between
+    parabolic subset  $\Phi(P)$ of $\Phi$ and subalgebras of $\mathfrak{g}$ containing the
     Borel subalgebra $\mathfrak{b}$. The correspondence is given by
-    \[ \Delta(P) \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{
-            \alpha \in \Delta \setminus \Delta(P)} g_{-\alpha}\]
+    \[ \Phi(P) \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{
+            \alpha \in \Phi(P) \setminus \Phi^+} g_{\alpha}\] 
 \end{theorem}
 \begin{proof}
     We refer to \cite[Chapter VI, \S 1.7, Proposition 20]{MR2109105} for a proof of this fact.
 \end{proof}
 \begin{example}
     We consider the case $\mathfrak{g} = \mathfrak{sl}_3(\mathbb{R})$. Let's denote
-    $\Delta = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. There are
-    4 parabolic sets, corresponding to 4 parabolic subalgebra given as follows
+    $\Delta = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. The set of positive roots is
+    \[\Phi^+= \{\alpha, \beta, \alpha+\beta\}\] 
+    There are 4 parabolic sets, corresponding to 4 parabolic subalgebras given as follows
     \begin{align*}
-        \Delta(P) = \Delta       & \longleftrightarrow \mathfrak{p} = \mathfrak{b}                               \\
-        \Delta(P) = \{\beta\}  & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha} \\
-        \Delta(P)=  \{\alpha\} & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta}  \\
-        \Delta(P)= \varnothing   & \longleftrightarrow \mathfrak{p} = \mathfrak{g}
+        \Phi(P) = \Phi^+       & \longleftrightarrow \mathfrak{p} = \mathfrak{b}                               \\
+        \Phi(P) = \Phi^+ \cup\{-\beta\}  & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\beta} \\
+        \Phi(P)= \Phi^+ \cup\{-\alpha\} & \longleftrightarrow \mathfrak{p} = \mathfrak{b} \oplus \mathfrak{g}_{-\alpha}  \\
+        \Phi(P)= \Phi^+ \cup -\Phi^+   & \longleftrightarrow \mathfrak{p} = \mathfrak{g}
     \end{align*}
 \end{example}
 
@@ -576,30 +577,30 @@ Recall that for the Lie group $\SLn$, we attach to it a root system $\Phi = \lef
 \[\Delta = \left\lbrace \alpha_i\mid i \in I \right\rbrace, \quad I = \{1,2,\ldots,n-1\}\]
 as the set of fundamental roots. It is a fact that the Weyl group $W$ satisfies
 \[W = \left\langle r_{\alpha_i}: i \in I \right\rangle\]
-For the sake of brevity, we denote $r_{\alpha_i}:=r_i$. Then for each subset $J \subset I$,
+For the sake of brevity, we denote $r_{\alpha_i}:=r_i$. For a standard parabolic subgroup $P = P_J$ where $J \subset I$,
 we define the following subset of the Cartan subalgebra $\fh$ of $\slnr$
 \begin{align*}
-    \fh(J) & :=\text{span}\{ \alpha^\vee_i: i \in J\}                                       \\
-    \fh_J  & := \{H \in \fh: \left\langle \alpha_i,H\right\rangle=0 \mbox{ for } i \in J \}
+    \mathfrak{a}(P) & :=\text{span}\{ \alpha^\vee_i: i \in J\}                                       \\
+    \mathfrak{a}_P  & := \{H \in \fh: \left\langle \alpha_i,H\right\rangle=0 \mbox{ for } i \in J \}
 \end{align*}
-By the definition of weights, i.e. $\left\langle \lambda_i,\alpha^\vee_j \right\rangle = \delta_{ij}$, it is immediate
-that the subspace $\fh_J$ of $\fh$ contains the subspace
+By the definition of weights, i.e. $\left\langle \lambda_i,\alpha^\vee_j \right\rangle = \delta_{ij}$, we can see 
+that the subspace $ \mathfrak{a}_P$ of $\fh$ contains the subspace
 \[\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace \]
 It is also clear that the dimension of $\mathfrak{h}(J)$ is $|J|$ as the set $\{ \alpha^\vee_i: i \in J\}  $
 is a linearly independent set. Assume that
 \[\sum_{i \notin J}c_i\lambda_i^\vee =0\]
 Pairing both sides with $\alpha_i$, we deduce that $c_i=0$ for all $i \notin J$. In particular, the set $\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace $ contains linearly independent vectors and thus spans
 a subspace of $\mathfrak{h}_J$ of dimension $|I|-|J|$. Therefore
-\[\mathfrak{h}_J=\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace\]
+\[ \mathfrak{a}_P=\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace\]
 To put it another way, we have a direct sum decomposition
-\[\mathfrak{h} = \mathfrak{h}(J) \oplus \mathfrak{h}_J\]
+\[\mathfrak{h} = \mathfrak{a}(P) \oplus \mathfrak{a}_P\]
 We also write $\lambda^{\vee}_{j,J}$ for the basis of $\fh(J)$ containing the fundamental
 weight, namely $\left\langle \alpha_k,\lambda^{\vee}_{j,J}\right\rangle = \delta_{kj}$ for $j,k \in J$. We have
 the following easy lemma
 \begin{lemma}\label{coeff-H(J)}
-    Let $H \in \fg$ be arbitrary. For $J \subsetneq I$ we have the orthogonal decomposition
+    Let $H \in \fg$ be arbitrary. For $J \subsetneq I$ we have the decomposition
     \[H = H(J)+H_J,\]
-    where $H(J) \in \fh(J)$ and $H_J \in \fh_J$. If $H = \sum_{i=1}^n p_i\lambda^\vee_i$ then
+    where $H(J) \in \mathfrak{a}(P) $ and $H_J \in  \mathfrak{a}_P$. If $H = \sum_{i=1}^n p_i\lambda^\vee_i$ then
     \[H(J) = \sum_{i \in J} p_i \lambda^\vee_{i,J}\]
 \end{lemma}
 \begin{proof}
@@ -607,21 +608,19 @@ the following easy lemma
     \[p_j = \left\langle \alpha_i,H \right\rangle =\left\langle \alpha_i,H_J+H(J) \right\rangle = \sum_{i \in J}\left\langle \alpha_i,  c_i \lambda^\vee_{i,J}\right\rangle=c_i \]
     Hence $H(J) = \sum_{i \in J} p_i \lambda^\vee_{i,J}$.
 \end{proof}
-We know from previous section that for each standard parabolic subgroup of $G$, it must be of the form
-$P_J$ for some subset $J \subset \{1,\ldots,n-1\}$. Therefore, we can define $\fh(P):= \fh(J)$ and $
-    \fh_P:= \fh_J$. we now define the function $H_P$ as follows:
+We now define the function $H_P$ as follows:
 \begin{definition}\label{H-function}
     Assume that for $x \in X$,
     we have a $P$-horospherical decomposition
     \[x = (m_P(x),a_P(x),n_P(x))\]
     Then we define
     \begin{align*}
-        H_P \colon X & \to \fh_P                      \\
+        H_P \colon X & \to \mathfrak{a}_P                      \\
         x            & \mapsto H_P(x) = \log(a_P(x)),
     \end{align*}
     where $\log$ means we  take the logarithm of the diagonal entries of $a_P(x)$.
 \end{definition}
-This definition is well-defined since $\log(a_P(x))$ is an element of $\fh_P$ by definition.
+This definition is well-defined since $\log(a_P(x))$ is an element of $\mathfrak{a}_P  $ by definition.
 We prove the following lemma
 \begin{lemma}\label{H_P-decomp}
     Let $P \subset Q$ be standard parabolic subgroups of $G$, and $x \in K \backslash G$. Then
@@ -634,39 +633,55 @@ We prove the following lemma
     \[A_P = A_QA(Q)_{\ast P}\]
     and the definition \ref{H-function} of the function $H_P$ for parabolic subgroup $P$.
 \end{proof}
-\subsection{Roots and weights for parabolic subgroups }
-We also define the set $\Delta_P: = \Delta \setminus \Delta(P)$. From  section \ref{parabolic-sets-algebra}, we can see that the parabolic subalgebras are parametrized by simple roots. If 
-\[\Delta = \{\alpha_1,\ldots, \alpha_d\} = \{\alpha_i: i \in I\}\]
-where $I= \{1,2,\ldots,d\}$ then each $J \subset I$ gives rise to a parabolic subalgebra $\mathfrak{p}_J$ corresponding to a parabolic subgroup $P=P_J$. In the case of $\slnr$, for each $J \subset I$ and parabolic subalgebra $\mathfrak{p} = \mathfrak{p}_J$, we just write 
-\[\Delta_P = \{\alpha_i, i \notin J\} \quad, \Delta(P) = \{\alpha_i,i \in J\} \label{parabolic-roots}\]
-Let $\widehat{\Delta} = \{\lambda_j, j \in I\}$  be the set of fundamental weights as in subsection \ref{weight-algebra-level}. Then for each parabolic subgroup $P= P_J$ we also define
-\[\widehat{\Delta}(P) = \{{\lambda_i}_{| \mathfrak{h}(J)}, i \in J\} \quad, \widehat{\Delta}_P= \{\lambda_i, i \notin J\}\]
-We give an example for the above sets we just define
+\subsection{Some additional notations}
+We define some important set that will be used in the later part of this thesis. Given a standard parabolic subgroup $P=P_J$, let 
+\[\Delta(P):= \{\alpha_i^: \ i\in J\} \quad \text{ and } \quad \Delta_P:= \{{\alpha_i}_{\mid \mathfrak{a}_P}: i \notin J\}\]
+Similarly, we define
+\[\widehat{\Delta}(P): = \{ {\lambda_i}_{\mid \mathfrak{a}(P)}: i \in J\}\quad \text{ and } \quad \widehat{\Delta}_P:= \{\lambda_i, i \notin J\}\]
+
 \begin{example}\label{sl3-parabolic-root-weight}
     Let $G = \mathrm{SL}_3(\mathbb{R})$. We can choose a base $\Delta = \{\alpha_1,\alpha_2\}$ as before, thus $I = \{1,2\}$. Assume that $J= \{2\}$. Then 
     $P_1: = P_{I\setminus J}$. We have the following sets
-    \[\Delta_{P_1} = \{\alpha_1\}, \quad \widehat{\Delta}_{P_1}= \{{\lambda_1}_{|\mathfrak{h}(J)}\}\]
+    \[\Delta_{P_1} = \{{\alpha_1}_{\mid\mathfrak{a}_{P_1}}\}, \quad \widehat{\Delta}_{P_1}= \{{\lambda_1}\}\]
 \end{example}
 \begin{remark}
         Over $\mathfrak{h}(J)$ we can also define the notion of weight $\omega_i^J$ by the relations
         \[\left\langle  \omega_j^J,\alpha_i^\vee\right\rangle=\delta_{ij}\]
         for $j\in J$. It is known that we have the relation
         \[\omega^J_i = \sum_{c_i, i \in J}c_i\alpha_j,\]
-        where $c_j \le 0$. Thus we can naturally define $\omega^J_i$ on the Cartan subalgebra $\mathfrak{h}$ by letting 
+        where $c_j \ge 0$. Thus we can naturally define $\omega^J_i$ on the Cartan subalgebra $\mathfrak{h}$ by letting 
         $\omega^J_i$ to be identically zero on $\mathfrak{h}_J$. For example, the weights in $\mathfrak{h}(J)$ is different from that of $\mathfrak{h}$. In example 
         \ref{sl3-parabolic-root-weight}, we have the identification
-        \[{\lambda_1}_{|\mathfrak{h}(J)} = \dfrac{1}{2}\alpha_1\]
+        \[{\lambda_1}_{|\mathfrak{a}(P)} = \dfrac{1}{2}\alpha_1\]
         But they extend differently over $\mathfrak{h}$.
 \end{remark}
 \subsection{The linear functionals $\rho_P$ and $\rho_Q^P$}
 We define an analog for Weyl vector $\rho$, which is essential in studying the semi-stablility in the later of this thesis.
 \begin{definition}
-    Given a Parabolic subgroup $P = P_J$ of $G=\SLn$ or $G=\GLn$, we define 
-    \[\rho_P = \dfrac{1}{2}\sum_{i \in J}\alpha_i\]
+    Given a standard parabolic subgroup $P = P_J$ of $G=\SLn$ or $G=\GLn$, we define 
+    \[\rho(P): = \sum_{\omega \in \widehat{\Delta}(P)}\omega \quad \text{ and } \quad \rho_P:= \rho- \rho(P),\]
+    where $\rho$ is the Weyl vector in section \ref{Weyl-vector-def}.
 \end{definition}
 If we are given another standard parabolic subgroup $Q\subset P$ then
 \begin{definition}
     \[\rho^P_Q:= \rho_Q- \rho_P\]
 \end{definition}
+We have a more concrete description for $\rho_P$ as follows
+\begin{lemma}\label{rhoP}
+    Fix a standard parabolic subgroup $P$ and define $d_P(\alpha): = \left\langle \rho(P), \alpha^\vee\right\rangle$ for each $\alpha \in \Delta_P$. Then $d_P(\alpha)$ is non-positive and 
+    \[\rho_P = \sum_{\alpha \in \Delta_P}(1-d_P(\alpha))\lambda_{\alpha}\]
+\end{lemma}
+\begin{proof}
+    We write $\rho_P = \sum_{i \in I}c_i\lambda_i$ and evaluate at $\alpha_i$. Then
+    \[c_i = \left\langle \rho_P,\alpha_i^\vee\right\rangle = \left\langle \rho,\alpha_i^\vee\right\rangle - \left\langle \rho(P),\alpha_i^\vee\right\rangle = \begin{cases}
+        0, \text{ if } i \in J\\
+        1-d_P(\alpha), \text{ otherwise } 
+    \end{cases}\]
+Since $\rho(P)$ is a non-negative linear combination of roots in $\Delta(P)$,  says 
+\[\rho(P) = \sum_{i \in J}{m_i\alpha_i}\]
+we have 
+\[d_P(\alpha) = \sum_{i \in J} m_i\left\langle \alpha_i,\alpha^\vee\right\rangle\]
+where $\alpha \in \Delta_P$. It is known in Lie theory that the angle between two simple roots are obtuse, hence $\left\langle \alpha_i,\alpha^\vee\right\rangle  \le 0$, which implies $d_P(\alpha)$ is non-positive
+\end{proof}
 
 

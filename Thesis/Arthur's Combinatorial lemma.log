@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  7 DEC 2025 18:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  10 DEC 2025 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -138,6 +138,9 @@ Package babel Info: Importing font and identification data for english
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
+) (mathesis.sty
+A thesis style file for Department of Math & Stat Sciences,
+University of Alberta written by Hongtao Yang
 ) (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
@@ -193,236 +196,236 @@ LaTeX Font Info:    Redeclaring math symbol \vDash on input line 143.
 LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 145.
 LaTeX Font Info:    Redeclaring math symbol \Vdash on input line 147.
 LaTeX Font Info:    Redeclaring math symbol \nVdash on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \flat on input line 158.
-LaTeX Font Info:    Redeclaring math symbol \natural on input line 159.
-LaTeX Font Info:    Redeclaring math symbol \sharp on input line 160.
-LaTeX Font Info:    Redeclaring math symbol \infty on input line 161.
-LaTeX Font Info:    Redeclaring math symbol \propto on input line 162.
-LaTeX Font Info:    Redeclaring math symbol \dagger on input line 163.
-LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 164.
-LaTeX Font Info:    Redeclaring math symbol \between on input line 170.
-LaTeX Font Info:    Redeclaring math symbol \smile on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \frown on input line 172.
-LaTeX Font Info:    Redeclaring math symbol \leftthreetimes on input line 174.
-LaTeX Font Info:    Redeclaring math symbol \rightthreetimes on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \pitchfork on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \nVDash on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Vvdash on input line 184.
-LaTeX Font Info:    Redeclaring math symbol \therefore on input line 189.
-LaTeX Font Info:    Redeclaring math symbol \because on input line 190.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 193.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 195.
-LaTeX Font Info:    Redeclaring math symbol \measuredangle on input line 202.
-LaTeX Font Info:    Redeclaring math symbol \sphericalangle on input line 203.
-LaTeX Font Info:    Redeclaring math symbol \setminus on input line 218.
-LaTeX Font Info:    Redeclaring math symbol \mid on input line 222.
-LaTeX Font Info:    Redeclaring math symbol \forall on input line 279.
-LaTeX Font Info:    Redeclaring math symbol \complement on input line 280.
-LaTeX Font Info:    Redeclaring math symbol \partial on input line 281.
-LaTeX Font Info:    Redeclaring math symbol \exists on input line 284.
-LaTeX Font Info:    Redeclaring math symbol \nexists on input line 285.
-LaTeX Font Info:    Redeclaring math symbol \Finv on input line 286.
-LaTeX Font Info:    Redeclaring math symbol \Game on input line 287.
-LaTeX Font Info:    Redeclaring math symbol \emptyset on input line 288.
-LaTeX Font Info:    Redeclaring math symbol \top on input line 290.
-LaTeX Font Info:    Redeclaring math symbol \bot on input line 291.
-LaTeX Font Info:    Redeclaring math symbol \perp on input line 292.
-LaTeX Font Info:    Redeclaring math symbol \curlywedge on input line 296.
-LaTeX Font Info:    Redeclaring math symbol \curlyvee on input line 297.
-LaTeX Font Info:    Redeclaring math symbol \in on input line 299.
-LaTeX Font Info:    Redeclaring math symbol \owns on input line 300.
-LaTeX Font Info:    Redeclaring math symbol \cap on input line 312.
-LaTeX Font Info:    Redeclaring math symbol \cup on input line 313.
-LaTeX Font Info:    Redeclaring math symbol \uplus on input line 314.
-LaTeX Font Info:    Redeclaring math symbol \sqcap on input line 315.
-LaTeX Font Info:    Redeclaring math symbol \sqcup on input line 316.
-LaTeX Font Info:    Redeclaring math symbol \wedge on input line 318.
-LaTeX Font Info:    Redeclaring math symbol \vee on input line 320.
-LaTeX Font Info:    Redeclaring math symbol \barwedge on input line 327.
-LaTeX Font Info:    Redeclaring math symbol \veebar on input line 328.
-LaTeX Font Info:    Redeclaring math symbol \doublebarwedge on input line 329.
-LaTeX Font Info:    Redeclaring math symbol \doublecap on input line 331.
-LaTeX Font Info:    Redeclaring math symbol \doublecup on input line 333.
-LaTeX Font Info:    Redeclaring math symbol \subset on input line 344.
-LaTeX Font Info:    Redeclaring math symbol \supset on input line 345.
-LaTeX Font Info:    Redeclaring math symbol \subseteq on input line 348.
-LaTeX Font Info:    Redeclaring math symbol \supseteq on input line 349.
-LaTeX Font Info:    Redeclaring math symbol \nsubseteq on input line 350.
-LaTeX Font Info:    Redeclaring math symbol \nsupseteq on input line 351.
-LaTeX Font Info:    Redeclaring math symbol \subsetneq on input line 352.
-LaTeX Font Info:    Redeclaring math symbol \supsetneq on input line 353.
-LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 354.
-LaTeX Font Info:    Redeclaring math symbol \varsupsetneq on input line 355.
-LaTeX Font Info:    Redeclaring math symbol \subseteqq on input line 357.
-LaTeX Font Info:    Redeclaring math symbol \supseteqq on input line 358.
-LaTeX Font Info:    Redeclaring math symbol \nsubseteqq on input line 359.
-LaTeX Font Info:    Redeclaring math symbol \nsupseteqq on input line 360.
-LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 361.
-LaTeX Font Info:    Redeclaring math symbol \supsetneqq on input line 362.
-LaTeX Font Info:    Redeclaring math symbol \varsubsetneqq on input line 363.
-LaTeX Font Info:    Redeclaring math symbol \varsupsetneqq on input line 364.
-LaTeX Font Info:    Redeclaring math symbol \Subset on input line 366.
-LaTeX Font Info:    Redeclaring math symbol \Supset on input line 367.
-LaTeX Font Info:    Redeclaring math symbol \sqsubseteq on input line 380.
-LaTeX Font Info:    Redeclaring math symbol \sqsupseteq on input line 381.
-LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 407.
-LaTeX Font Info:    Redeclaring math symbol \vartriangleleft on input line 408.
-LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 409.
-LaTeX Font Info:    Redeclaring math symbol \vartriangleright on input line 410.
-LaTeX Font Info:    Redeclaring math symbol \ntriangleleft on input line 411.
-LaTeX Font Info:    Redeclaring math symbol \ntriangleright on input line 412.
-LaTeX Font Info:    Redeclaring math symbol \trianglelefteq on input line 413.
-LaTeX Font Info:    Redeclaring math symbol \trianglerighteq on input line 414.
-LaTeX Font Info:    Redeclaring math symbol \ntrianglelefteq on input line 415.
-LaTeX Font Info:    Redeclaring math symbol \ntrianglerighteq on input line 416.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangledown on input line 427.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 428.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 429.
-LaTeX Font Info:    Redeclaring math symbol \nless on input line 437.
-LaTeX Font Info:    Redeclaring math symbol \ngtr on input line 438.
-LaTeX Font Info:    Redeclaring math symbol \leq on input line 439.
-LaTeX Font Info:    Redeclaring math symbol \geq on input line 441.
-LaTeX Font Info:    Redeclaring math symbol \nleq on input line 443.
-LaTeX Font Info:    Redeclaring math symbol \ngeq on input line 445.
-LaTeX Font Info:    Redeclaring math symbol \lneq on input line 451.
-LaTeX Font Info:    Redeclaring math symbol \gneq on input line 452.
-LaTeX Font Info:    Redeclaring math symbol \leqq on input line 453.
-LaTeX Font Info:    Redeclaring math symbol \geqq on input line 454.
-LaTeX Font Info:    Redeclaring math symbol \nleqq on input line 455.
-LaTeX Font Info:    Redeclaring math symbol \ngeqq on input line 456.
-LaTeX Font Info:    Redeclaring math symbol \lneqq on input line 457.
-LaTeX Font Info:    Redeclaring math symbol \gneqq on input line 458.
-LaTeX Font Info:    Redeclaring math symbol \lvertneqq on input line 459.
-LaTeX Font Info:    Redeclaring math symbol \gvertneqq on input line 460.
-LaTeX Font Info:    Redeclaring math symbol \eqslantless on input line 461.
-LaTeX Font Info:    Redeclaring math symbol \eqslantgtr on input line 462.
-LaTeX Font Info:    Redeclaring math symbol \lessgtr on input line 465.
-LaTeX Font Info:    Redeclaring math symbol \gtrless on input line 466.
-LaTeX Font Info:    Redeclaring math symbol \lesseqgtr on input line 467.
-LaTeX Font Info:    Redeclaring math symbol \gtreqless on input line 468.
-LaTeX Font Info:    Redeclaring math symbol \lesseqqgtr on input line 469.
-LaTeX Font Info:    Redeclaring math symbol \gtreqqless on input line 470.
-LaTeX Font Info:    Redeclaring math symbol \lesssim on input line 472.
-LaTeX Font Info:    Redeclaring math symbol \gtrsim on input line 473.
-LaTeX Font Info:    Redeclaring math symbol \lnsim on input line 476.
-LaTeX Font Info:    Redeclaring math symbol \gnsim on input line 477.
-LaTeX Font Info:    Redeclaring math symbol \lessapprox on input line 478.
-LaTeX Font Info:    Redeclaring math symbol \gtrapprox on input line 479.
-LaTeX Font Info:    Redeclaring math symbol \lnapprox on input line 482.
-LaTeX Font Info:    Redeclaring math symbol \gnapprox on input line 483.
-LaTeX Font Info:    Redeclaring math symbol \lessdot on input line 485.
-LaTeX Font Info:    Redeclaring math symbol \gtrdot on input line 486.
-LaTeX Font Info:    Redeclaring math symbol \lll on input line 488.
-LaTeX Font Info:    Redeclaring math symbol \ggg on input line 489.
-LaTeX Font Info:    Redeclaring math symbol \prec on input line 498.
-LaTeX Font Info:    Redeclaring math symbol \succ on input line 499.
-LaTeX Font Info:    Redeclaring math symbol \nprec on input line 500.
-LaTeX Font Info:    Redeclaring math symbol \nsucc on input line 501.
-LaTeX Font Info:    Redeclaring math symbol \preccurlyeq on input line 502.
-LaTeX Font Info:    Redeclaring math symbol \succcurlyeq on input line 503.
-LaTeX Font Info:    Redeclaring math symbol \preceq on input line 506.
-LaTeX Font Info:    Redeclaring math symbol \succeq on input line 507.
-LaTeX Font Info:    Redeclaring math symbol \npreceq on input line 508.
-LaTeX Font Info:    Redeclaring math symbol \nsucceq on input line 509.
-LaTeX Font Info:    Redeclaring math symbol \curlyeqprec on input line 512.
-LaTeX Font Info:    Redeclaring math symbol \curlyeqsucc on input line 513.
-LaTeX Font Info:    Redeclaring math symbol \precsim on input line 517.
-LaTeX Font Info:    Redeclaring math symbol \succsim on input line 518.
-LaTeX Font Info:    Redeclaring math symbol \precnsim on input line 521.
-LaTeX Font Info:    Redeclaring math symbol \succnsim on input line 522.
-LaTeX Font Info:    Redeclaring math symbol \precapprox on input line 523.
-LaTeX Font Info:    Redeclaring math symbol \succapprox on input line 524.
-LaTeX Font Info:    Redeclaring math symbol \precnapprox on input line 527.
-LaTeX Font Info:    Redeclaring math symbol \succnapprox on input line 528.
-LaTeX Font Info:    Redeclaring math symbol \leftarrow on input line 540.
-LaTeX Font Info:    Redeclaring math symbol \rightarrow on input line 542.
-LaTeX Font Info:    Redeclaring math symbol \nwarrow on input line 546.
-LaTeX Font Info:    Redeclaring math symbol \nearrow on input line 547.
-LaTeX Font Info:    Redeclaring math symbol \swarrow on input line 548.
-LaTeX Font Info:    Redeclaring math symbol \searrow on input line 549.
-LaTeX Font Info:    Redeclaring math symbol \leftrightarrow on input line 550.
-LaTeX Font Info:    Redeclaring math symbol \nleftarrow on input line 552.
-LaTeX Font Info:    Redeclaring math symbol \nrightarrow on input line 553.
-LaTeX Font Info:    Redeclaring math symbol \nleftrightarrow on input line 554.
-LaTeX Font Info:    Redeclaring math symbol \mapstochar on input line 557.
-LaTeX Font Info:    Redeclaring math symbol \leftharpoonup on input line 560.
-LaTeX Font Info:    Redeclaring math symbol \rightharpoonup on input line 561.
-LaTeX Font Info:    Redeclaring math symbol \leftharpoondown on input line 562.
-LaTeX Font Info:    Redeclaring math symbol \rightharpoondown on input line 563.
-LaTeX Font Info:    Redeclaring math symbol \upharpoonleft on input line 564.
-LaTeX Font Info:    Redeclaring math symbol \downharpoonleft on input line 565.
-LaTeX Font Info:    Redeclaring math symbol \upharpoonright on input line 566.
-LaTeX Font Info:    Redeclaring math symbol \restriction on input line 567.
-LaTeX Font Info:    Redeclaring math symbol \downharpoonright on input line 568.
-LaTeX Font Info:    Redeclaring math symbol \leftrightharpoons on input line 569.
-LaTeX Font Info:    Redeclaring math symbol \Leftarrow on input line 575.
-LaTeX Font Info:    Redeclaring math symbol \Rightarrow on input line 576.
-LaTeX Font Info:    Redeclaring math symbol \Leftrightarrow on input line 579.
-LaTeX Font Info:    Redeclaring math symbol \nLeftarrow on input line 581.
-LaTeX Font Info:    Redeclaring math symbol \nRightarrow on input line 582.
-LaTeX Font Info:    Redeclaring math symbol \nLeftrightarrow on input line 583.
-LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 593.
-LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 594.
-LaTeX Font Info:    Redeclaring math symbol \upuparrows on input line 595.
-LaTeX Font Info:    Redeclaring math symbol \downdownarrows on input line 596.
-LaTeX Font Info:    Redeclaring math symbol \leftrightarrows on input line 597.
-LaTeX Font Info:    Redeclaring math symbol \rightleftarrows on input line 598.
-LaTeX Font Info:    Redeclaring math symbol \rhook on input line 612.
-LaTeX Font Info:    Redeclaring math symbol \lhook on input line 613.
-LaTeX Font Info:    Redeclaring math symbol \diagup on input line 614.
-LaTeX Font Info:    Redeclaring math symbol \diagdown on input line 615.
-LaTeX Font Info:    Redeclaring math symbol \Lsh on input line 617.
-LaTeX Font Info:    Redeclaring math symbol \Rsh on input line 619.
-LaTeX Font Info:    Redeclaring math symbol \looparrowleft on input line 624.
-LaTeX Font Info:    Redeclaring math symbol \looparrowright on input line 626.
-LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 631.
-LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 633.
-LaTeX Font Info:    Redeclaring math symbol \circlearrowleft on input line 641.
-LaTeX Font Info:    Redeclaring math symbol \circlearrowright on input line 642.
-LaTeX Font Info:    Redeclaring math symbol \rightsquigarrow on input line 645.
-LaTeX Font Info:    Redeclaring math symbol \leftrightsquigarrow on input line 646.
-LaTeX Font Info:    Redeclaring math symbol \oplus on input line 658.
-LaTeX Font Info:    Redeclaring math symbol \ominus on input line 659.
-LaTeX Font Info:    Redeclaring math symbol \otimes on input line 661.
-LaTeX Font Info:    Redeclaring math symbol \odot on input line 663.
-LaTeX Font Info:    Redeclaring math symbol \oslash on input line 675.
-LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 683.
-LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 684.
-LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 686.
-LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 688.
+LaTeX Font Info:    Redeclaring math symbol \flat on input line 157.
+LaTeX Font Info:    Redeclaring math symbol \natural on input line 158.
+LaTeX Font Info:    Redeclaring math symbol \sharp on input line 159.
+LaTeX Font Info:    Redeclaring math symbol \infty on input line 160.
+LaTeX Font Info:    Redeclaring math symbol \propto on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 163.
+LaTeX Font Info:    Redeclaring math symbol \between on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \smile on input line 170.
+LaTeX Font Info:    Redeclaring math symbol \frown on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \leftthreetimes on input line 173.
+LaTeX Font Info:    Redeclaring math symbol \rightthreetimes on input line 174.
+LaTeX Font Info:    Redeclaring math symbol \pitchfork on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \nVDash on input line 181.
+LaTeX Font Info:    Redeclaring math symbol \Vvdash on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \therefore on input line 188.
+LaTeX Font Info:    Redeclaring math symbol \because on input line 189.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 192.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \measuredangle on input line 201.
+LaTeX Font Info:    Redeclaring math symbol \sphericalangle on input line 202.
+LaTeX Font Info:    Redeclaring math symbol \setminus on input line 217.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 221.
+LaTeX Font Info:    Redeclaring math symbol \forall on input line 278.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 279.
+LaTeX Font Info:    Redeclaring math symbol \partial on input line 280.
+LaTeX Font Info:    Redeclaring math symbol \exists on input line 283.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 284.
+LaTeX Font Info:    Redeclaring math symbol \Finv on input line 285.
+LaTeX Font Info:    Redeclaring math symbol \Game on input line 286.
+LaTeX Font Info:    Redeclaring math symbol \emptyset on input line 287.
+LaTeX Font Info:    Redeclaring math symbol \top on input line 289.
+LaTeX Font Info:    Redeclaring math symbol \bot on input line 290.
+LaTeX Font Info:    Redeclaring math symbol \perp on input line 291.
+LaTeX Font Info:    Redeclaring math symbol \curlywedge on input line 295.
+LaTeX Font Info:    Redeclaring math symbol \curlyvee on input line 296.
+LaTeX Font Info:    Redeclaring math symbol \in on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \owns on input line 299.
+LaTeX Font Info:    Redeclaring math symbol \cap on input line 311.
+LaTeX Font Info:    Redeclaring math symbol \cup on input line 312.
+LaTeX Font Info:    Redeclaring math symbol \uplus on input line 313.
+LaTeX Font Info:    Redeclaring math symbol \sqcap on input line 314.
+LaTeX Font Info:    Redeclaring math symbol \sqcup on input line 315.
+LaTeX Font Info:    Redeclaring math symbol \wedge on input line 317.
+LaTeX Font Info:    Redeclaring math symbol \vee on input line 319.
+LaTeX Font Info:    Redeclaring math symbol \barwedge on input line 326.
+LaTeX Font Info:    Redeclaring math symbol \veebar on input line 327.
+LaTeX Font Info:    Redeclaring math symbol \doublebarwedge on input line 328.
+LaTeX Font Info:    Redeclaring math symbol \doublecap on input line 330.
+LaTeX Font Info:    Redeclaring math symbol \doublecup on input line 332.
+LaTeX Font Info:    Redeclaring math symbol \subset on input line 343.
+LaTeX Font Info:    Redeclaring math symbol \supset on input line 344.
+LaTeX Font Info:    Redeclaring math symbol \subseteq on input line 347.
+LaTeX Font Info:    Redeclaring math symbol \supseteq on input line 348.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteq on input line 349.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteq on input line 350.
+LaTeX Font Info:    Redeclaring math symbol \subsetneq on input line 351.
+LaTeX Font Info:    Redeclaring math symbol \supsetneq on input line 352.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 353.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneq on input line 354.
+LaTeX Font Info:    Redeclaring math symbol \subseteqq on input line 356.
+LaTeX Font Info:    Redeclaring math symbol \supseteqq on input line 357.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteqq on input line 358.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteqq on input line 359.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 360.
+LaTeX Font Info:    Redeclaring math symbol \supsetneqq on input line 361.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneqq on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneqq on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Subset on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Supset on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \sqsubseteq on input line 379.
+LaTeX Font Info:    Redeclaring math symbol \sqsupseteq on input line 380.
+LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 406.
+LaTeX Font Info:    Redeclaring math symbol \vartriangleleft on input line 407.
+LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 408.
+LaTeX Font Info:    Redeclaring math symbol \vartriangleright on input line 409.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleleft on input line 410.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleright on input line 411.
+LaTeX Font Info:    Redeclaring math symbol \trianglelefteq on input line 412.
+LaTeX Font Info:    Redeclaring math symbol \trianglerighteq on input line 413.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglelefteq on input line 414.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglerighteq on input line 415.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangledown on input line 426.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 427.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 428.
+LaTeX Font Info:    Redeclaring math symbol \nless on input line 436.
+LaTeX Font Info:    Redeclaring math symbol \ngtr on input line 437.
+LaTeX Font Info:    Redeclaring math symbol \leq on input line 438.
+LaTeX Font Info:    Redeclaring math symbol \geq on input line 440.
+LaTeX Font Info:    Redeclaring math symbol \nleq on input line 442.
+LaTeX Font Info:    Redeclaring math symbol \ngeq on input line 444.
+LaTeX Font Info:    Redeclaring math symbol \lneq on input line 450.
+LaTeX Font Info:    Redeclaring math symbol \gneq on input line 451.
+LaTeX Font Info:    Redeclaring math symbol \leqq on input line 452.
+LaTeX Font Info:    Redeclaring math symbol \geqq on input line 453.
+LaTeX Font Info:    Redeclaring math symbol \nleqq on input line 454.
+LaTeX Font Info:    Redeclaring math symbol \ngeqq on input line 455.
+LaTeX Font Info:    Redeclaring math symbol \lneqq on input line 456.
+LaTeX Font Info:    Redeclaring math symbol \gneqq on input line 457.
+LaTeX Font Info:    Redeclaring math symbol \lvertneqq on input line 458.
+LaTeX Font Info:    Redeclaring math symbol \gvertneqq on input line 459.
+LaTeX Font Info:    Redeclaring math symbol \eqslantless on input line 460.
+LaTeX Font Info:    Redeclaring math symbol \eqslantgtr on input line 461.
+LaTeX Font Info:    Redeclaring math symbol \lessgtr on input line 464.
+LaTeX Font Info:    Redeclaring math symbol \gtrless on input line 465.
+LaTeX Font Info:    Redeclaring math symbol \lesseqgtr on input line 466.
+LaTeX Font Info:    Redeclaring math symbol \gtreqless on input line 467.
+LaTeX Font Info:    Redeclaring math symbol \lesseqqgtr on input line 468.
+LaTeX Font Info:    Redeclaring math symbol \gtreqqless on input line 469.
+LaTeX Font Info:    Redeclaring math symbol \lesssim on input line 471.
+LaTeX Font Info:    Redeclaring math symbol \gtrsim on input line 472.
+LaTeX Font Info:    Redeclaring math symbol \lnsim on input line 475.
+LaTeX Font Info:    Redeclaring math symbol \gnsim on input line 476.
+LaTeX Font Info:    Redeclaring math symbol \lessapprox on input line 477.
+LaTeX Font Info:    Redeclaring math symbol \gtrapprox on input line 478.
+LaTeX Font Info:    Redeclaring math symbol \lnapprox on input line 481.
+LaTeX Font Info:    Redeclaring math symbol \gnapprox on input line 482.
+LaTeX Font Info:    Redeclaring math symbol \lessdot on input line 484.
+LaTeX Font Info:    Redeclaring math symbol \gtrdot on input line 485.
+LaTeX Font Info:    Redeclaring math symbol \lll on input line 487.
+LaTeX Font Info:    Redeclaring math symbol \ggg on input line 488.
+LaTeX Font Info:    Redeclaring math symbol \prec on input line 497.
+LaTeX Font Info:    Redeclaring math symbol \succ on input line 498.
+LaTeX Font Info:    Redeclaring math symbol \nprec on input line 499.
+LaTeX Font Info:    Redeclaring math symbol \nsucc on input line 500.
+LaTeX Font Info:    Redeclaring math symbol \preccurlyeq on input line 501.
+LaTeX Font Info:    Redeclaring math symbol \succcurlyeq on input line 502.
+LaTeX Font Info:    Redeclaring math symbol \preceq on input line 505.
+LaTeX Font Info:    Redeclaring math symbol \succeq on input line 506.
+LaTeX Font Info:    Redeclaring math symbol \npreceq on input line 507.
+LaTeX Font Info:    Redeclaring math symbol \nsucceq on input line 508.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqprec on input line 511.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqsucc on input line 512.
+LaTeX Font Info:    Redeclaring math symbol \precsim on input line 516.
+LaTeX Font Info:    Redeclaring math symbol \succsim on input line 517.
+LaTeX Font Info:    Redeclaring math symbol \precnsim on input line 520.
+LaTeX Font Info:    Redeclaring math symbol \succnsim on input line 521.
+LaTeX Font Info:    Redeclaring math symbol \precapprox on input line 522.
+LaTeX Font Info:    Redeclaring math symbol \succapprox on input line 523.
+LaTeX Font Info:    Redeclaring math symbol \precnapprox on input line 526.
+LaTeX Font Info:    Redeclaring math symbol \succnapprox on input line 527.
+LaTeX Font Info:    Redeclaring math symbol \leftarrow on input line 539.
+LaTeX Font Info:    Redeclaring math symbol \rightarrow on input line 541.
+LaTeX Font Info:    Redeclaring math symbol \nwarrow on input line 545.
+LaTeX Font Info:    Redeclaring math symbol \nearrow on input line 546.
+LaTeX Font Info:    Redeclaring math symbol \swarrow on input line 547.
+LaTeX Font Info:    Redeclaring math symbol \searrow on input line 548.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrow on input line 549.
+LaTeX Font Info:    Redeclaring math symbol \nleftarrow on input line 551.
+LaTeX Font Info:    Redeclaring math symbol \nrightarrow on input line 552.
+LaTeX Font Info:    Redeclaring math symbol \nleftrightarrow on input line 553.
+LaTeX Font Info:    Redeclaring math symbol \mapstochar on input line 556.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoonup on input line 559.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoonup on input line 560.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoondown on input line 561.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoondown on input line 562.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonleft on input line 563.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonleft on input line 564.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonright on input line 565.
+LaTeX Font Info:    Redeclaring math symbol \restriction on input line 566.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonright on input line 567.
+LaTeX Font Info:    Redeclaring math symbol \leftrightharpoons on input line 568.
+LaTeX Font Info:    Redeclaring math symbol \Leftarrow on input line 574.
+LaTeX Font Info:    Redeclaring math symbol \Rightarrow on input line 575.
+LaTeX Font Info:    Redeclaring math symbol \Leftrightarrow on input line 578.
+LaTeX Font Info:    Redeclaring math symbol \nLeftarrow on input line 580.
+LaTeX Font Info:    Redeclaring math symbol \nRightarrow on input line 581.
+LaTeX Font Info:    Redeclaring math symbol \nLeftrightarrow on input line 582.
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 592.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 593.
+LaTeX Font Info:    Redeclaring math symbol \upuparrows on input line 594.
+LaTeX Font Info:    Redeclaring math symbol \downdownarrows on input line 595.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrows on input line 596.
+LaTeX Font Info:    Redeclaring math symbol \rightleftarrows on input line 597.
+LaTeX Font Info:    Redeclaring math symbol \rhook on input line 611.
+LaTeX Font Info:    Redeclaring math symbol \lhook on input line 612.
+LaTeX Font Info:    Redeclaring math symbol \diagup on input line 613.
+LaTeX Font Info:    Redeclaring math symbol \diagdown on input line 614.
+LaTeX Font Info:    Redeclaring math symbol \Lsh on input line 616.
+LaTeX Font Info:    Redeclaring math symbol \Rsh on input line 618.
+LaTeX Font Info:    Redeclaring math symbol \looparrowleft on input line 623.
+LaTeX Font Info:    Redeclaring math symbol \looparrowright on input line 625.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 630.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 632.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowleft on input line 640.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowright on input line 641.
+LaTeX Font Info:    Redeclaring math symbol \rightsquigarrow on input line 644.
+LaTeX Font Info:    Redeclaring math symbol \leftrightsquigarrow on input line 645.
+LaTeX Font Info:    Redeclaring math symbol \oplus on input line 657.
+LaTeX Font Info:    Redeclaring math symbol \ominus on input line 658.
+LaTeX Font Info:    Redeclaring math symbol \otimes on input line 660.
+LaTeX Font Info:    Redeclaring math symbol \odot on input line 662.
+LaTeX Font Info:    Redeclaring math symbol \oslash on input line 674.
+LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 682.
+LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 683.
+LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 685.
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 687.
 \mayacnter=\count278
 \mayacnta=\count279
 \mayacntb=\count280
 \mayacntc=\count281
 \mayawidth=\dimen159
-LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
-LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
-LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 842.
-LaTeX Info: Redefining \{ on input line 846.
-LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 848.
-LaTeX Info: Redefining \} on input line 852.
-LaTeX Font Info:    Redeclaring math delimiter \langle on input line 858.
-LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 859.
-LaTeX Font Info:    Redeclaring math delimiter \vert on input line 863.
-LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 865.
-LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 868.
-LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 869.
-LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 870.
-LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 871.
-LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 872.
-LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 873.
-LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 880.
-LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 881.
-LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 882.
-LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 883.
-LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 884.
-LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 885.
-LaTeX Font Info:    Redeclaring math symbol \braceld on input line 903.
-LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 905.
-LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 907.
-LaTeX Font Info:    Redeclaring math symbol \braceru on input line 909.
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
+LaTeX Font Info:    Redeclaring math symbol \intop on input line 752.
+LaTeX Font Info:    Redeclaring math symbol \ointop on input line 759.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 841.
+LaTeX Info: Redefining \{ on input line 845.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 847.
+LaTeX Info: Redefining \} on input line 851.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 857.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 858.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 862.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 864.
+LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 867.
+LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 879.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 880.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 881.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 882.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 883.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 884.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 902.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 904.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 906.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 908.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 943.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 945.
 )) (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks26
@@ -450,6 +453,8 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
+) (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
 ) (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks32
 \pgfutil@tempdima=\dimen162
@@ -1084,8 +1089,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 36.
 \c@definition=\count378
-LaTeX Info: Redefining \sl2 on input line 71.
-LaTeX Info: Redefining \SO2 on input line 72.
+LaTeX Info: Redefining \sl2 on input line 70.
+LaTeX Info: Redefining \SO2 on input line 71.
 ) (Arthur's Combinatorial lemma.aux)
 \openout1 = `"Arthur's Combinatorial lemma.aux"'.
 
@@ -1118,15 +1123,15 @@ LaTeX Info: Command `\ddddot' is already robust on input line 5.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 500.76851pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 825.12993pt, 56.9055pt)
-* \paperwidth=614.57951pt
-* \paperheight=938.94093pt
-* \textwidth=500.76851pt
-* \textheight=825.12993pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-52.36449pt
+* h-part:(L,W,R)=(71.13188pt, 469.47047pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 654.41339pt, 71.13188pt)
+* \paperwidth=611.73424pt
+* \paperheight=796.67715pt
+* \textwidth=469.47047pt
+* \textheight=654.41339pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -1190,11 +1195,8 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-LaTeX Warning: No \author given.
-
 LaTeX Font Info:    Trying to load font information for U+euf on input line 12.
-(C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+ (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [1
 Non-PDF special ignored!
@@ -1253,15 +1255,15 @@ Package rerunfilecheck Info: File `"Arthur's Combinatorial lemma".out' has not c
 (rerunfilecheck)             Checksum: 09FBDB49471187F46CBDE5C139E19EE4;318.
  ) 
 Here is how much of TeX's memory you used:
- 40649 strings out of 474486
- 912127 string characters out of 5745171
- 1942542 words of memory out of 5000000
- 62220 multiletter control sequences out of 15000+600000
+ 40774 strings out of 474486
+ 914545 string characters out of 5745171
+ 1941542 words of memory out of 5000000
+ 62338 multiletter control sequences out of 15000+600000
  575852 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,11n,96p,790b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,12n,96p,790b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Arthur's Combinatorial lemma.pdf" (3 pages, 184510 bytes).
+Output written on "Arthur's Combinatorial lemma.pdf" (3 pages, 184580 bytes).
 PDF statistics:
  187 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
