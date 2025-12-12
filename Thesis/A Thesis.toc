@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.1.3}Root space decomposition}{22}{subsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.1.4}Killing form}{23}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Co-roots}{24}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Weights and coweights}{24}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.6}Weights and co-weights}{24}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Roots at group level}{25}{subsection.2.1.7}%
 \contentsline {subsection}{\numberline {2.1.8}Weyl group}{26}{subsection.2.1.8}%
 \contentsline {subsection}{\numberline {2.1.9}Weights}{26}{subsection.2.1.9}%
