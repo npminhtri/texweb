@@ -578,7 +578,7 @@ Recall that for the Lie group $\SLn$, we attach to it a root system $\Phi = \lef
 as the set of fundamental roots. It is a fact that the Weyl group $W$ satisfies
 \[W = \left\langle r_{\alpha_i}: i \in I \right\rangle\]
 For the sake of brevity, we denote $r_{\alpha_i}:=r_i$. For a standard parabolic subgroup $P = P_J$ where $J \subset I$,
-we define the following subset of the Cartan subalgebra $\fh$ of $\slnr$
+we define the following subset of a fixed Cartan subalgebra $\fh$ of $\slnr$
 \begin{align*}
     \mathfrak{a}(P) & :=\text{span}\{ \alpha^\vee_i: i \in J\}                                       \\
     \mathfrak{a}_P  & := \{H \in \fh: \left\langle \alpha_i,H\right\rangle=0 \mbox{ for } i \in J \}
@@ -590,7 +590,7 @@ It is also clear that the dimension of $\mathfrak{h}(J)$ is $|J|$ as the set $\{
 is a linearly independent set. Assume that
 \[\sum_{i \notin J}c_i\lambda_i^\vee =0\]
 Pairing both sides with $\alpha_i$, we deduce that $c_i=0$ for all $i \notin J$. In particular, the set $\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace $ contains linearly independent vectors and thus spans
-a subspace of $\mathfrak{h}_J$ of dimension $|I|-|J|$. Therefore
+a subspace of $\mathfrak{a}_P$ of dimension $|I|-|J|$. Therefore
 \[ \mathfrak{a}_P=\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace\]
 To put it another way, we have a direct sum decomposition
 \[\mathfrak{h} = \mathfrak{a}(P) \oplus \mathfrak{a}_P\]
@@ -664,7 +664,7 @@ We define an analog for Weyl vector $\rho$, which is essential in studying the s
 \end{definition}
 If we are given another standard parabolic subgroup $Q\subset P$ then
 \begin{definition}
-    \[\rho^P_Q:= \rho_Q- \rho_P\]
+    \[\rho^P_Q:= \rho(P)- \rho(Q) = \rho_Q-\rho_P\]
 \end{definition}
 We have a more concrete description for $\rho_P$ as follows
 \begin{lemma}\label{rhoP}
