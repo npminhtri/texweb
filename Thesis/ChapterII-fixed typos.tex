@@ -22,21 +22,7 @@ The last property is called \textit{Jacobi's identity}.
     The first example is the set of all matrices of size $n \times n$, denoted by $\glnr$. We
     define the Lie bracket by
     \[[A,B] :=AB-BA,\]
-    for arbitrary matrices $A,B \in \glnr$. It is clearly that $[A,B]$ is bilinear and $[A,A]=0$ for all matrices $A$.
-    We need to verify the Jacobi's identity. Note that
-    \begin{align*}
-        [A,[B,C]] & = A(BC-CB)-(BC-CB)A     \\
-                  & = ABC - ACB - BCA + CBA
-    \end{align*}
-    It follows that
-    \begin{align*}
-          & [A,[B,C]]+[C,[A,B]] + [B,[C,A]] \\
-        = & ABC - ACB - BCA + CBA           \\
-        + & CAB-CBA-ABC+BAC                 \\
-        + & BCA-BAC-CAB+ABC                 \\
-        = & 0
-    \end{align*}
-    Therefore $\glnr$ is a Lie algebra.
+    for $A,B \in \glnr$. Therefore $\glnr$ is a Lie algebra.
 \end{example}
 \begin{example}\label{slnr-example}
     Another example is the subspace $\slnr$ of $\glnr$, defined by
@@ -44,7 +30,6 @@ The last property is called \textit{Jacobi's identity}.
     The Lie bracket over $\slnr$ is just the restriction of the Lie bracket over $\glnr$. Indeed, for
     any $A,B \in \slnr$ we have
     \[tr[A,B] = tr(AB-BA)= tr(AB)-tr(BA)=0\]
-    Hence the restriction of the Lie bracket over $\glnr$ are a Lie bracket over $\slnr$. The 3 axioms for the Lie bracket is automatically satisfied.
 \end{example}
 
 \subsection{Cartan Subalgebras}
@@ -52,23 +37,26 @@ First we need the notion of Cartan subalgebras
 \begin{definition}
     For any Lie algebra $\mathfrak{g}$, a subalgebra $\mathfrak{h}$ of $\fg$ is said to be a \textit{Cartan algebra} if it is
     \begin{itemize}
-        \item $\fh$ is a nilpotent subalgebra.
-        \item It is self normalizing. In particular, we have $\fh = \left\lbrace x \in \fg : [x,\fg] \subset \fg\right\rbrace$.
+        \item $\fh$ is a nilpotent subalgebra, i.e. $\fh^{(n)} = \underbrace{[\fh,[\fh,\ldots,[\fh,\fh]]]}_{n-\text{times}}=0$ for some integer $n >0$.
+        
+        \item It is self normalizing. Namely, we have $\fh = \left\lbrace x \in \fg : [x,\fg] \subset \fg\right\rbrace$.
     \end{itemize}
 \end{definition}
 A priori, it is not clear whether such a subalgebra exists for any Lie algebras. However, we have the following theorem
-\begin{theorem}
+\begin{theorem}\cite[Corollary 1.2]{barnes1967cartan}
     Let $L$ be a Lie algebra of dimension $n$ over a field $F$ of at least $n-1$ elements. Then $L$ has a Cartan subalgebra.
 \end{theorem}
-A proof for this theorem can be found in \cite[Corollary 1.2]{barnes1967cartan}. In particular, any finite dimensional Lie algebra over an infinite field has a Cartan subalgebra.
+ In particular, any finite dimensional Lie algebra over an infinite field has a Cartan subalgebra.
 \begin{example}
     For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is the set
-    \[\fh = \left\lbrace H= \begin{bmatrix}
+    \begin{equation}
+        \fh = \left\lbrace H= \begin{bmatrix}
             a_1    & 0      & \ldots & 0      \\
             0      & a_2    & \ldots & 0      \\
             \vdots & \vdots & \ddots & \vdots \\
             0      & 0      & \cdots & a_n
-        \end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
+        \end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace \label{A-Cartan-subalgera}
+    \end{equation}
 \end{example}
 \begin{proof}
     Indeed, it is obvious that $[\mathfrak{h},\mathfrak{h}]=0$, thus the Lie algebra $\mathfrak{h}$ is nilpotent. To show the
@@ -84,27 +72,24 @@ A proof for this theorem can be found in \cite[Corollary 1.2]{barnes1967cartan}.
     $\sum_{i,j}a_{ij}E_{ij} \in \mathfrak{h}$  and $\mathfrak{h}$ is then a Cartan subalgebra of $\slnr$.
 \end{proof}
 \subsection{Root space decomposition}\label{root-space-decomp}
-Given a semisimple Lie algebra $\mathfrak{g}$. With respect to a choice of Cartan subalgebra $\mathfrak{h}$, we have a root space decomposition. In particular, there is a finite set
+Consider a semisimple Lie algebra $\mathfrak{g}$. With respect to a choice of Cartan subalgebra $\mathfrak{h}$, we have a root space decomposition. In particular, there is a finite set
 $\Phi \subset \fh^{*}$ of linear forms on $\fh$, whose elements are called \textbf{roots}, such that
 \[\fg = \fh \oplus \left(\bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha\right),\]
 where $\fg_\alpha = \left\lbrace x \in \fg: [h,x] = \alpha(h)x, \forall h \in \fh\right\rbrace$ for any $\alpha \in \Phi$. We refer to \cite[Chapter 8]{MR499562} for a detail analysis of this decomposition in general case. For this thesis,
 most of the time, we stick with the following example
 \begin{example}
-    For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is the set
-    \[\fh = \left\lbrace H= \begin{bmatrix}
-            a_1    & 0      & \ldots & 0      \\
-            0      & a_2    & \ldots & 0      \\
-            \vdots & \vdots & \ddots & \vdots \\
-            0      & 0      & \cdots & a_n
-        \end{bmatrix}, a_1 + a_2+ \ldots + a_n = 0\right\rbrace\]
+    Let $I = \{1,2,\ldots,n-1\}$. For the simple Lie algebra $\slnr$, one choice of  Cartan subalgebra $\mathfrak{h}$ is as in \eqref{A-Cartan-subalgera}.
     With respect to this Cartan subalgebra, we can define the linear function
     \[L_i \colon \fh \to \mathbb{R}, \quad H \mapsto  a_i\]
-    Then the roots are given by $\alpha_{ij} :=L_i - L_j$ for distinct $i,j$. We have the root space decomposition for $\slnr$ as follows
-    \[\fg = \fh \oplus \left(\bigoplus\fg_{\alpha_{ij}}\right) = \mathfrak{h}\oplus \left(\bigoplus \mathbb{R}E_{ij}\right)\]
-    For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$ - these are called \textbf{simple roots}.
+    Then the roots are given by $\alpha_{ij} :=L_i - L_j$ for distinct $i,j \in I$. We have the root space decomposition for $\slnr$ as follows
+    \[\fg = \fh \oplus \left(\bigoplus_{i \ne j}\fg_{\alpha_{ij}}\right) = \mathfrak{h}\oplus \left(\bigoplus_{i \ne j} \mathbb{R}E_{ij}\right)\]
+    For the sake of brevity, we will denote $\alpha_{i,i+1}$ by $\alpha_i$  - these are called \textbf{simple roots}.
+    We can decompose the set of roots $\Phi = \left\lbrace \alpha_{ij}, i \ne j\right\rbrace$ into disjoint subsets, namely
+\[\Phi = \Phi_+ \coprod \Phi_{-}\]
+where the positive set of roots $\Phi_+$  comprises $\alpha_{ij}$ for $i<j$ and the remaining roots are in the negative set of roots $\Phi_{-}$. 
 \end{example}
 \subsection{Killing form}
-To work with the geometry of the root system, we need the notion of Killing form
+To work with the geometry of the root system, we need the notion of the Killing form.
 \begin{definition}
     Let $\mathfrak{g}$ be any Lie algebra and $x,y \in \mathfrak{g}$. We define the map
     \begin{align*}
@@ -114,15 +99,15 @@ To work with the geometry of the root system, we need the notion of Killing form
 \end{definition}
 The bilinear map $\kappa(x,y): = \mathrm{Tr}(\mathrm{ad}(x)\circ \mathrm{ad}(y))$ is called \textbf{Killing form}. If there is no confusion, we write $(x,y):=\kappa(x,y)$.
 When $\mathfrak{g}$ is semisimple, the Killing form has many nice properties, as recorded in the following theorem
-\begin{theorem}
+\begin{theorem}\cite[Chapter 5]{MR499562}
     A Lie algebra $\mathfrak{g}$ is semi-simple if and only if the Killing form is non-degenerate.
 \end{theorem}
 It can also be showed that, given the root space decomposition as in section \ref{root-space-decomp}, if $\alpha, \beta \in \Delta$ satisfy $\alpha+\beta \ne 0$, then
 the space $\mathfrak{g}_\alpha$ is orthogonal to $\mathfrak{g}_\beta$ with respect to the Killing form. A corollary of this is
-\begin{theorem}\label{non-degenerate}
+\begin{theorem}\cite[Chapter 8]{MR499562}\label{non-degenerate}
     Given a semisimple Lie algebra $\mathfrak{g}$ and a Cartan subalgebra $\mathfrak{h} \subset \mathfrak{g}$. Then the restriction of the Killing form to $\mathfrak{h}$ is non-degenerate.
 \end{theorem}
-By theorem \ref{non-degenerate}, there exists a bijective linear map
+By Theorem \ref{non-degenerate}, there exists a bijective linear map
 \begin{align*}
     f \colon \mathfrak{h} & \to \mathfrak{h}^\ast \\
     x                     & \mapsto f_x
@@ -136,28 +121,37 @@ A more thorough treatment of the Killing form can be found in \cite[Chapter 5,8]
 \subsection{Co-roots}
 In previous section, we showed that the Killing form gives rise to an inner product over
 the dual space $\mathfrak{h}^* = \Hom(\mathfrak{h}, \mathbb{R})$. For each root $\alpha \in \mathfrak{h}^*$, we define the
-corresponding co-root $\alpha^\vee$ to be the linear functional over $\mathfrak{h}^*$ such that
-\[\left\langle \beta, \alpha^\vee\right\rangle:= \dfrac{2(\beta,\alpha)}{(\alpha,\alpha)}\]
-On the other hand, since $\alpha^\vee$ is the dual space of $\mathfrak{h}^*$, it can be regarded
-as an element $h_\alpha$ of $\mathfrak{h}$. So we have
-\[\beta(h_\alpha)=\left\langle \beta, \alpha^\vee\right\rangle:= \dfrac{2(\beta,\alpha)}{(\alpha,\alpha)} \]
-\begin{example}\label{simple root}
+corresponding co-root $\alpha^\vee \in \fh$ to be the element such that
+\[\left\langle \beta, \alpha^\vee\right\rangle:=\beta(\alpha^\vee) = \dfrac{2(\beta,\alpha)}{(\alpha,\alpha)}\]
+for all $\beta \in \fh^\ast$. It is clear from this definition that $\left\langle\alpha,\alpha^\vee \right\rangle =2$.
+\begin{example}\label{simple-co-root}
     We compute explicitly the fundamental coroot $\alpha_i^\vee$ of the fundamental root $\alpha_i$ for the Lie algebra
     $\slnr$. In previous section, we defined the fundamental roots to be $\alpha_{ij} = L_i-L_j$. It can be
-    verified directly that $\alpha_{ij}^\vee = E_i-E_{j}$ as
-    \[\left\langle \alpha_{ij}, \alpha_{ij}^\vee \right\rangle = (L_i-L_j)(E_i-E_j)=2\]
+    verified directly that $\alpha_{ij}^\vee = E_{i,i} - E_{j,j}$ as
+    \[\left\langle \alpha_{ij}, \alpha_{ij}^\vee \right\rangle = (L_i-L_j)(E_{i,i} - E_{j,j})=2\]
 \end{example}
 \subsection{Weights and co-weights}\label{weight-algebra-level}
-Similarly, we can also define the $\lambda_i$ such that
+Fix $i \in I$, define $\lambda_i \in \fh^\ast$ by specifying
 \[\left\langle \lambda_i,\alpha_j^\vee\right\rangle = \delta_{ij} = \begin{cases}
         1, i =j \\
         0, i \ne j
     \end{cases}\]
-Explicitly, it can be checked that $\lambda_i = L_1+L_2+\ldots+L_i$. In the same manner we define the co-weight $\lambda_i^\vee$ such that
+ \begin{example}
+    Let again consider the Lie algebra $\slnr$ with the co-root $\alpha_{ij}^\vee = E_i-E_j$. Explicitly, it can be checked that $\lambda_i = L_1+L_2+\ldots+L_i$. Indeed,
+    we have 
+    \[(L_1+L_2+\ldots+L_i)(E_{j,j}-E_{j+1,j+1}) = 1 \Leftrightarrow i = j \quad \text{ and } 0 \text{ otherwise}\]
+    which uniquely characterize $\lambda_i$. 
+ \end{example}
+In the same manner we define the co-weight $\lambda_i^\vee$ such that
 \[\left\langle\alpha_i,\lambda_j^\vee \right\rangle= \delta_{ij} = \begin{cases}
         1, i =j \\
         0, i \ne j
     \end{cases}\]
+\begin{example}
+    We work with $\slnr$. Note that 
+    \[(L_i - L_{i+1})(E_{1,1}+ \ldots +E_{j,j})=1 \Leftrightarrow i = j, \quad \text{ and } 0 \text{ otherwise}\]
+we can see that $\lambda_i^\vee =E_{1,1}+ \ldots +E_{i,i} $ 
+\end{example}
 From these definitions, we can see that $\widehat{\Delta } = \{ \lambda_i, i =1,2,\ldots,n-1\}$ is a basis for the the space $\mathfrak{h}^\ast$. 
 We call $\widehat{\Delta}$ the set of \textbf{fundamental weights} . Similarly
 the set $\widehat{\Delta }^\vee = \{ \lambda_i^\vee, i =1,2,\ldots,n-1\}$ is a basis for the Cartan subalgebra $\mathfrak{h}$.
@@ -177,9 +171,6 @@ is a root whenever $i \ne j$. We define the set of  \textbf{simple roots} as
 where
 \[\alpha_i \colon T \mapsto \mathbb{R}, t \mapsto \dfrac{t_i}{t_{i+1}}.\]
 
-We can decompose the set of roots $\Phi = \left\lbrace \alpha_{ij}, i \ne j\right\rbrace$ into disjoint subsets, namely
-\[\Phi = \Phi_+ \coprod \Phi_{-}\]
-where the positive set of roots $\Phi_+$  comprises $\alpha_{ij}$ for $i<j$ and the remaining roots are in the negative set of roots $\Phi_{-}$. We have the following lemma
 \begin{lemma}\label{linear-comb-of-roots}
     Each $\alpha \in \Phi$ can be written uniquely as a linear combination
     \[\alpha = m_1\alpha_1+\ldots+m_{d}\alpha_{d}\]
@@ -325,10 +316,10 @@ as stated in the following lemma
 We shall provide two equivalent viewpoints on parabolic subgroups. They will play different roles in defining
 different notions of semi-stability in the next chapter.
 \subsection{Parabolic subgroups I: An explicit description }\label{parabolic I}
-For our purposes, it is enough to define the standard parabolic subgroups.  There exists a bijection between each parabolic subgroup of $\SLn$
-and each partition of $n$. We can therefore define the parabolic subgroup explicitly as follows:
+For our purposes, it is enough to define the standard parabolic subgroups.  There exists a bijection between  standard parabolic subgroups of $\SLn$
+and  partitions of $n$, and  partition $n =n_1+\ldots+n_k$ defines the standard parabolic subgroup corresponding to the partition as follows
 \begin{definition}
-    The standard parabolic subgroup associated to the partition $n = n_1 + n_2 + \cdots + n_r$ is denoted $P_{n_1,\ldots,n_r}$ and is defined to be the group of all matrices of the form
+    The standard parabolic subgroup $P$ of $\GLn$ associated to the partition $n = n_1 + n_2 + \cdots + n_r$ is denoted $P_{n_1,\ldots,n_r}$ and is defined to be the group of all matrices of the form
     \[
         \begin{bmatrix}
             M_{n_1} & 0       & \ldots & 0       \\
@@ -340,15 +331,15 @@ and each partition of $n$. We can therefore define the parabolic subgroup explic
     where $M_{n_i} \in \mathrm{GL}(n_i, \mathbb{R})$ for $1 \leq i \leq r$. The integer $r-1$ is called the rank of the parabolic subgroup $P_{n_1,\ldots,n_r}$.
     We denote the collection of such subgroups \textbf{ParSt}.
 \end{definition}
-In this form, we can choose the standard basis  $\{e_i\}$ of $\mathbb{R}^n$. Let
+We  denote $\{e_i\}$  the standard basis of $\mathbb{R}^n$. Let
 \[d_i = n_1+n_2+\ldots+n_i\]
-Then it is clearly that any element in $P_{n_1,\ldots,n_r}$ stabilizes the chain of vector spaces
+Then any element in $P_{n_1,\ldots,n_r}$ stabilizes the chain of vector spaces
 \[0 \subset \mathbb{R}^{d_1} \subset \mathbb{R}^{d_2}\subset \ldots \subset \mathbb{R}^{d_k} = \mathbb{R}^n\]
-Here $R^k$ is generated by the linearly independent subset $\{e_1,\ldots, e_k\}$ of the standard basis.
+Here $\mathbb{R}^k$ is generated by the linearly independent subset $\{e_1,\ldots, e_k\}$ of the standard basis.
 We call such chain of vector spaces a \textbf{flag} of type $(n_1,\ldots,n_k)$.
 
 \begin{definition}
-    The maximal standard parabolic subgroups in $\text{GL}_n(k)$ corresponds to the
+    The maximal standard parabolic subgroups in $\text{GL}_n(\mathbb{R})$ corresponds to the
     stabilizer of the flag of type $\rho_i =(i,n-i)$, where $i = 1,\ldots,n-1$ of $n$. We will
     further denote $Q_i = P_{\rho_i}$ and $\textbf{MaxParSt}$ the collection of such maximal parabolic subgroups.
 \end{definition}
@@ -378,11 +369,11 @@ We call such chain of vector spaces a \textbf{flag} of type $(n_1,\ldots,n_k)$.
     Clearly $\textbf{MaxParSt} = \left\lbrace P_{2,1}, P_{1,2}\right\rbrace$.
 \end{example}
 \subsection{Parabolic subgroups II: Using BN-pairs}
-There is another way to look at the parabolic subgroups, and it is related more closesly to the notion of roots, using Weyl group.
+There is another way to look at the parabolic subgroups
 \begin{definition}[BN-pairs]
     A \textbf{BN-pairs} is a 4-tuple $(G,B,N,R)$ where $G$ is a group generated by subgroups $B$ and $N$.
     The subgroup $H = B \cap N$, $R$ is a finite set of involutions which generate the \textit{Weyl group} $W= N/H$. Moreover,
-    the following theorem holds
+    the following axioms holds
     \begin{itemize}
         \item If $ r \in R$ and $w \in W$, then $rBw \subset BwB \cup BrwB$.
         \item If $r \in R, rBr \ne B$.
@@ -408,7 +399,7 @@ BN-pairs. We have the following theorem
               \[G = BWB,\]
               which is called \textbf{Bruhat decomposition} of $G$.
         \item If $P_I=P_J$ then we have $I=J$.
-        \item All subgroups of $G$ containing $B$ arises in this way. \textcolor{red}{Add proofs?}
+        \item All subgroups of $G$ containing $B$ arises in this way. 
     \end{itemize}
 \end{theorem}
 The above theorem leads to the following definition of parabolic subgroups
@@ -446,12 +437,12 @@ We fix a partition of $n$ as
 \[n=n_1+n_2+\ldots+n_k\]
 and consider the parabolic subgroup of this type, i.e. the subgroup
 \[P_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        \mathfrak{m}_1 & \ast           & \ldots & \ast           \\
-        0              & \mathfrak{m}_2 & \ldots & \ast           \\
+        M_1 & \ast           & \ldots & \ast           \\
+        0              & M_2 & \ldots & \ast           \\
         \vdots         & \vdots         & \ddots & \vdots         \\
-        0              & 0              & \ldots & \mathfrak{m}_k
+        0              & 0              & \ldots & M_k
     \end{bmatrix} \right\rbrace\]
-where $\mathfrak{m_i}$ is invertible of size $n_i \times n_i$.
+where $M_i \in \mathrm{GL}_{n_i}(\mathbb{R})$ is invertible of size $n_i \times n_i$.
 
 This group can be factored as
 \[P_{n_1,\ldots, n_k} =M_{n_1,\ldots, n_k}\ltimes N_{n_1,\ldots, n_k}\]
@@ -511,13 +502,13 @@ in the remaining of this thesis.
         \right\rbrace
     \end{align*}
     Then the natural product map \[p \colon K \times A \times U \to \GLn, \quad p(k,a,n)=kan\]
-    is an isomorphism.
+    is a bijection.
 \end{prop}
 Thus, the following decomposition makes sense
 \begin{definition}
     The decomposition of $g = kan$ for $k \in K, a \in A$ and $n \in N$ is called \textbf{Iwasawa} decomposition.
 \end{definition}
-Using the Langlands decomposition as well as the Iwasawa decomposition $G= ANK = BK$, we observation
+Using the Langlands decomposition as well as the Iwasawa decomposition $G= KAN = KB$, we obtain
 the decomposition
 \[G = KP = KM_PA_PN_P \cong KM_P\times A_P\times N_P\]
 As a consequence, we get
@@ -541,7 +532,7 @@ where $$ X_{\ast P} = X_{M_P}, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_
 \end{example}
 \subsection{Parabolic sets and parabolic subalgebras}\label{parabolic-sets-algebra}
 \begin{definition}
-    Given a root system $\Phi$ . A \textbf{parabolic subset} $\Phi(P)$ is a subset of $\Phi$  that
+    Given a root system $\Phi$, a \textbf{parabolic subset} $\Phi(P)$ is a subset of $\Phi$  that
     satisfies the following conditions:
     \begin{enumerate}
         \item $\Phi(P) \cup -\Phi(P) = \Phi$.
@@ -550,18 +541,18 @@ where $$ X_{\ast P} = X_{M_P}, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_
 \end{definition}
 The parabolic set parametrizes the corresponding parabolic subalgebra with a choice of base $\Delta$ of the root system $\Phi$ as given in the following theorem
 \begin{theorem}
-    Given a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Phi$ and a base $\Delta$. We denote $\Phi^+$ the set of positive roots with respect to this base. There exists a correspondence between
+    Consider a semisimple Lie algebra $\mathfrak{g}$ with the root system $\Phi$ and a base $\Delta$. We denote $\Phi^+$ the set of positive roots with respect to this base. There exists a correspondence between
     parabolic subset  $\Phi(P)$ of $\Phi$ and subalgebras of $\mathfrak{g}$ containing the
     Borel subalgebra $\mathfrak{b}$. The correspondence is given by
     \[ \Phi(P) \longleftrightarrow \mathfrak{p}:= \mathfrak{b}\oplus \bigoplus_{
-            \alpha \in \Phi(P) \setminus \Phi^+} g_{\alpha}\] 
+            \alpha \in \Phi(P) \setminus \Phi^+} \mathfrak{g}_{\alpha}\] 
 \end{theorem}
 \begin{proof}
     We refer to \cite[Chapter VI, \S 1.7, Proposition 20]{MR2109105} for a proof of this fact.
 \end{proof}
 \begin{example}
     We consider the case $\mathfrak{g} = \mathfrak{sl}_3(\mathbb{R})$. Let's denote
-    $\Delta = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$. The set of positive roots is
+    $\Delta = \left\lbrace \alpha,\beta\right\rbrace$ a base for the root system of $\mathfrak{g}$, so that
     \[\Phi^+= \{\alpha, \beta, \alpha+\beta\}\] 
     There are 4 parabolic sets, corresponding to 4 parabolic subalgebras given as follows
     \begin{align*}
@@ -586,7 +577,7 @@ we define the following subset of a fixed Cartan subalgebra $\fh$ of $\slnr$
 By the definition of weights, i.e. $\left\langle \lambda_i,\alpha^\vee_j \right\rangle = \delta_{ij}$, we can see 
 that the subspace $ \mathfrak{a}_P$ of $\fh$ contains the subspace
 \[\text{span}\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace \]
-It is also clear that the dimension of $\mathfrak{h}(J)$ is $|J|$ as the set $\{ \alpha^\vee_i: i \in J\}  $
+It is also clear that the dimension of $\mathfrak{a}(P)$ is $|J|$ as the set $\{ \alpha^\vee_i: i \in J\}  $
 is a linearly independent set. Assume that
 \[\sum_{i \notin J}c_i\lambda_i^\vee =0\]
 Pairing both sides with $\alpha_i$, we deduce that $c_i=0$ for all $i \notin J$. In particular, the set $\left\lbrace \lambda^\vee_i: i \notin J\right\rbrace $ contains linearly independent vectors and thus spans
@@ -596,8 +587,8 @@ To put it another way, we have a direct sum decomposition
 \[\mathfrak{h} = \mathfrak{a}(P) \oplus \mathfrak{a}_P\]
 We also write $\lambda^{\vee}_{j,J}$ for the basis of $\fh(J)$ containing the fundamental
 weight, namely $\left\langle \alpha_k,\lambda^{\vee}_{j,J}\right\rangle = \delta_{kj}$ for $j,k \in J$. We have
-the following easy lemma
-\begin{lemma}\label{coeff-H(J)}
+the following  lemma
+\begin{lemma}\cite[Subsection 2.3.5]{patnaik2025borel}\label{coeff-H(J)}
     Let $H \in \fg$ be arbitrary. For $J \subsetneq I$ we have the decomposition
     \[H = H(J)+H_J,\]
     where $H(J) \in \mathfrak{a}(P) $ and $H_J \in  \mathfrak{a}_P$. If $H = \sum_{i=1}^n p_i\lambda^\vee_i$ then
@@ -645,12 +636,12 @@ Similarly, we define
     \[\Delta_{P_1} = \{{\alpha_1}_{\mid\mathfrak{a}_{P_1}}\}, \quad \widehat{\Delta}_{P_1}= \{{\lambda_1}\}\]
 \end{example}
 \begin{remark}
-        Over $\mathfrak{h}(J)$ we can also define the notion of weight $\omega_i^J$ by the relations
+        Over $\mathfrak{h}(J)$ we can also define the notion of weight $\lambda_{i,J}$ by the relations
         \[\left\langle  \omega_j^J,\alpha_i^\vee\right\rangle=\delta_{ij}\]
         for $j\in J$. It is known that we have the relation
-        \[\omega^J_i = \sum_{c_i, i \in J}c_i\alpha_j,\]
-        where $c_j \ge 0$. Thus we can naturally define $\omega^J_i$ on the Cartan subalgebra $\mathfrak{h}$ by letting 
-        $\omega^J_i$ to be identically zero on $\mathfrak{h}_J$. For example, the weights in $\mathfrak{h}(J)$ is different from that of $\mathfrak{h}$. In example 
+        \[\omega^J_i = \sum_{i \in J}c_i\alpha_j,\]
+        where $c_j \ge 0$. Thus we can naturally define $\lambda_{i,J}$ on the Cartan subalgebra $\mathfrak{h}$ by letting 
+        $\lambda_{i,J}$ to be identically zero on $\mathfrak{h}_J$. For example, the weights in $\mathfrak{h}(J)$ are different from that of $\mathfrak{h}$. In example 
         \ref{sl3-parabolic-root-weight}, we have the identification
         \[{\lambda_1}_{|\mathfrak{a}(P)} = \dfrac{1}{2}\alpha_1\]
         But they extend differently over $\mathfrak{h}$.
@@ -662,12 +653,12 @@ We define an analog for Weyl vector $\rho$, which is essential in studying the s
     \[\rho(P): = \sum_{\omega \in \widehat{\Delta}(P)}\omega \quad \text{ and } \quad \rho_P:= \rho- \rho(P),\]
     where $\rho$ is the Weyl vector in section \ref{Weyl-vector-def}.
 \end{definition}
-If we are given another standard parabolic subgroup $Q\subset P$ then
-\begin{definition}
+If we are given another standard parabolic subgroup $Q\subset P$ then we also set
+
     \[\rho^P_Q:= \rho(P)- \rho(Q) = \rho_Q-\rho_P\]
-\end{definition}
+
 We have a more concrete description for $\rho_P$ as follows
-\begin{lemma}\label{rhoP}
+\begin{lemma}\cite[Subsection 4.1.3]{patnaik2025borel}\label{rhoP}
     Fix a standard parabolic subgroup $P$ and define $d_P(\alpha): = \left\langle \rho(P), \alpha^\vee\right\rangle$ for each $\alpha \in \Delta_P$. Then $d_P(\alpha)$ is non-positive and 
     \[\rho_P = \sum_{\alpha \in \Delta_P}(1-d_P(\alpha))\lambda_{\alpha}\]
 \end{lemma}
@@ -681,7 +672,7 @@ Since $\rho(P)$ is a non-negative linear combination of roots in $\Delta(P)$,  s
 \[\rho(P) = \sum_{i \in J}{m_i\alpha_i}\]
 we have 
 \[d_P(\alpha) = \sum_{i \in J} m_i\left\langle \alpha_i,\alpha^\vee\right\rangle\]
-where $\alpha \in \Delta_P$. It is known in Lie theory that the angle between two simple roots are obtuse, hence $\left\langle \alpha_i,\alpha^\vee\right\rangle  \le 0$, which implies $d_P(\alpha)$ is non-positive
+where $\alpha \in \Delta_P$. It is known in Lie theory that the angle between two simple roots are obtuse, hence $\left\langle \alpha_i,\alpha^\vee\right\rangle  \le 0$, which implies $d_P(\alpha)$ is non-positive.
 \end{proof}
 
 

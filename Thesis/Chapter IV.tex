@@ -13,7 +13,7 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
 \subsection{A useful lemma}
 \begin{lemma}\label{useful-lemma}
     There exists a bijection \label{bijection}
-    \[    \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattice of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]\end{lemma}
+    \[    \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]\end{lemma}
 \begin{proof}
     We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: For any sublattice $M \subset \mathbb{Z}^n$, there exists
     a basis of $M$, denoted by
@@ -75,8 +75,8 @@ We can further prove that, the equivalence between different notions of semistab
 comes from the equivalence between the notion of canonical pair and the bottom of the
 profile of a lattice - the canonical filtration. The main result is the following proposition
 \begin{prop}\label{cp-equiv}
-    Given an $x \in X_n = K\backslash G$. Then $(P,\delta)$ is the canonical pair for $x$ if and only if $\delta P\delta^{-1}$
-    is the stabilizer of the canonical filtration for the lattice $L_x = x\mathbb{Z}^n$.
+    Given an $x \in X_n = K\backslash G$. Then $(P,\delta)$ is the canonical pair for $x$ if and only if $P$
+    is the stabilizer of the canonical filtration for the lattice $L_x = x\mathbb{Z}^n = x\delta \mathbb{Z}^n$.
 \end{prop}
 Recall that, from theorem \ref{Grayson's criterion} and lemma \ref{canonical-pair}, both canonical
 pair and canonical filtration are characterized by two conditions. We will show that these two conditions are equivalent.
