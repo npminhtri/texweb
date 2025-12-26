@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{barnes1967cartan}
 Donald~W Barnes.
@@ -17,6 +17,13 @@ Nicolas Bourbaki.
 \newblock Elements of Mathematics (Berlin). Springer-Verlag, Berlin, 2005.
 \newblock Translated from the 1975 and 1982 French originals by Andrew
   Pressley.
+
+\bibitem{MR2426516}
+Jacques Faraut.
+\newblock {\em Analysis on {L}ie groups}, volume 110 of {\em Cambridge Studies
+  in Advanced Mathematics}.
+\newblock Cambridge University Press, Cambridge, 2008.
+\newblock An introduction.
 
 \bibitem{MR3468028}
 Dorian Goldfeld.
