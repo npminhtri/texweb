@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  26 DEC 2025 17:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  26 DEC 2025 18:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1256,7 +1256,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [0] (A Thesis.toc
-LaTeX Font Info:    Trying to load font information for U+euf on input line 3.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [2
@@ -1271,7 +1271,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
  [4
 
-] (Chapter I.tex
+] (Chapter I.tex [1]
 Chapter 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1557,13 +1557,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 5.
 
-[1
+[2
 
 ]
 
-LaTeX Warning: Citation `MR2977413' on page 2 undefined on input line 43.
+LaTeX Warning: Citation `MR2977413' on page 3 undefined on input line 43.
 
-[2] [3] [4] [5]
+[3] [4] [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 191.
@@ -1637,13 +1637,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 191.
 
-[6] [7]
-<Shortest vector.png, id=436, 627.5445pt x 257.763pt>
+[7] [8]
+<Shortest vector.png, id=445, 627.5445pt x 257.763pt>
 File: Shortest vector.png Graphic file (type png)
 <use Shortest vector.png>
 Package pdftex.def Info: Shortest vector.png  used on input line 299.
 (pdftex.def)             Requested size: 422.52055pt x 173.54987pt.
- [8]
+ [9]
 Overfull \hbox (34.11122pt too wide) in paragraph at lines 381--382
 [][]  
  []
@@ -1659,45 +1659,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 <./Shortest vector.png>] [10]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 460.
+[10 <./Shortest vector.png>] [11]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 459.
 
-Overfull \hbox (26.03967pt too wide) in paragraph at lines 460--460
+Overfull \hbox (26.03967pt too wide) in paragraph at lines 459--459
 \OT1/cmr/m/n/12 dimensional 
  []
 
 
-Overfull \hbox (26.03967pt too wide) in paragraph at lines 460--460
+Overfull \hbox (26.03967pt too wide) in paragraph at lines 459--459
 \OT1/cmr/m/n/12 dimensional 
  []
 
-[11]
-Overfull \hbox (43.0789pt too wide) in paragraph at lines 529--530
+[12]
+Overfull \hbox (43.0789pt too wide) in paragraph at lines 528--529
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 533.
+(hyperref)                removing `math shift' on input line 532.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 533.
+(hyperref)                removing `\rho' on input line 532.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 533.
+(hyperref)                removing `math shift' on input line 532.
 
-[12] [13]
+[13] [14]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] [15] [16] [17]
-Overfull \hbox (20.63553pt too wide) in paragraph at lines 761--763
+[15] [16] [17] [18]
+Overfull \hbox (20.63553pt too wide) in paragraph at lines 760--762
 [][]\OT1/cmr/bx/n/12 Definition 1.5.5.1 \OT1/cmr/m/n/12 ([]sub-lat-tice)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\U/matha/m/n/12 p\OML/cmm/m/it/12 L; Q\U/matha/m/n/12 q$ \OT1/cmr/m/it/12 be a Eu-clidean $\U/msb/m/n/12 Z$\OT1/cmr/m/it/12 -lattice. We say that a $\U/msb/m/n/12 Z\U/matha/m/n/12 ^^A$\OT1/cmr/m/it/12 submodule
  []
 
-[18]) (ChapterII-fixed typos.tex [19]
+[19]) (ChapterII-fixed typos.tex [20]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1837,18 +1837,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[20
+[21
 
-] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 580.
-
+] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 580.
 
-[35] [36]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 580.
+
+[36] [37]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 660.
@@ -1861,12 +1861,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 660.
 
-[37]
+[38]
 Overfull \hbox (5.53311pt too wide) in paragraph at lines 681--685
 \OT1/cmr/m/n/12 We also write $\OML/cmm/m/it/12 ^^U[]$ \OT1/cmr/m/n/12 for the ba-sis of $\U/euf/m/n/12 a\U/matha/m/n/12 p\OML/cmm/m/it/12 P\U/matha/m/n/12 q$ \OT1/cmr/m/n/12 con-tain-ing the fun-da-men-tal weight, namely $[] \U/matha/m/n/12 ^^P
  []
 
-[38] [39]
+[39] [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 743.
@@ -1903,9 +1903,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 743.
 
-[40]) (Chapter III.tex [41]
+[41]) (Chapter III.tex [42]
 Chapter 3.
-[42
+[43
 
 ]
 Overfull \hbox (11.46082pt too wide) in paragraph at lines 61--63
@@ -1927,10 +1927,10 @@ Overfull \hbox (34.11122pt too wide) in paragraph at lines 122--123
 [][]  
  []
 
-[43] [44] [45]
+[44] [45] [46]
 Underfull \vbox (badness 3009) has occurred while \output is active []
 
- [46] [47]
+ [47] [48]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 355.
@@ -1955,7 +1955,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 356.
 
-[48] [49] [50]) (Chapter IV.tex [51]
+[49] [50] [51]) (Chapter IV.tex [52]
 Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1969,9 +1969,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[52
+[53
 
-] [53] [54] [55]
+] [54] [55] [56]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 158.
@@ -1992,14 +1992,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 158.
 
-[56]
+[57]
 Overfull \hbox (5.92482pt too wide) in paragraph at lines 161--163
 [][]\OT1/cmr/bx/n/12 Lemma 4.2.3.1. []\OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 P$ \OT1/cmr/m/it/12 be a stan-dard parabolic sub-group of $[]$. For $\OML/cmm/m/it/12 x \U/matha/m/n/12 P \OML/cmm/m/it/12 X \U/matha/m/n/12 ^^P \OML/cmm/m/it/12 K\U/matha/m/n/12 z []$\OT1/cmr/m/it/12 ,
  []
 
-[57] [58]) (A Thesis.bbl [59]) [60
+[58] [59]) (A Thesis.bbl [60] [61
 
-] (A Thesis.aux)
+]) [62] (A Thesis.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2012,20 +2012,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `"A Thesis".out' has not changed.
-(rerunfilecheck)             Checksum: C04F9D6D5F33BA9397129B6DF2BE954A;12618.
+(rerunfilecheck)             Checksum: 579354947F726DF069D58747863225ED;12698.
  ) 
 Here is how much of TeX's memory you used:
- 44127 strings out of 474486
- 1013230 string characters out of 5745171
+ 44134 strings out of 474486
+ 1013339 string characters out of 5745171
  2014542 words of memory out of 5000000
- 65376 multiletter control sequences out of 15000+600000
+ 65380 multiletter control sequences out of 15000+600000
  590003 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,16n,96p,1254b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi480\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha6.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi864\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi1244\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "A Thesis.pdf" (65 pages, 648890 bytes).
+Output written on "A Thesis.pdf" (67 pages, 652646 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 288 named destinations out of 1000 (max. 500000)
- 562 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1193 PDF objects out of 1200 (max. 8388607)
+ 291 named destinations out of 1000 (max. 500000)
+ 570 words of extra memory for PDF output out of 10000 (max. 10000000)
 

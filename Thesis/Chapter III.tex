@@ -138,7 +138,7 @@ $L/M$ also inherits an inner product. In particular, it is a lattice.
 \begin{definition}
     Given a lattice $L$ containing a sublattice $M$, then $L/M$ is a lattice. We call this lattice \textbf{quotient lattice}.
 \end{definition}
-\begin{lemma}\label{volume-of-lattice}
+\begin{lemma}\label{volume-of-lattice}\cite[Proposition 4.1]{MR2127941}
     If $L$ is a lattice and $M\subset L$ is a sublattice, we have
     \[\vol(L) = \vol(M)\cdot \vol(L/M)\]
     and if $N$ is any sublattice of $L$ that satisfies $N+M=L$ then
@@ -196,11 +196,11 @@ Given two sublattices $M_1,M_2 \subset L$, if we apply lemma \ref{volume-of-latt
 $M_1/M_1\cap M_2$ and $M_2/M_1\cap M_2$ in $M_1+M_2/M_1\cap M_2$, we get
 \[\vol(M_1/M_1 \cap M_2)\vol(M_2/M_1\cap M_2) \ge \vol(M_1+M_2/M_1\cap M_2)\]
 or equivalently
-\begin{lemma}
+\begin{lemma}\cite[Corollary 4.2]{MR2127941}
     \[\vol(M_1+M_2)\vol(M_1\cap M_2) \le \vol(M_1)\vol(M_2)\]
 \end{lemma}
 Grayson used the logarithm to express the above inequality in additive terms:
-\begin{prop}\label{parallelogram-rule}
+\begin{prop}\label{parallelogram-rule}\cite[Proposition 4.3]{MR2127941}
     Suppose $M_1,M_2$ are sublattices of $L$ then
     \[\log\vol(M_1)+\log(\vol(M_2)) \ge \log(\vol(M_1+M_2))+\log\vol(M_1\cap M_2)\]
 \end{prop}
@@ -240,7 +240,7 @@ illustrated in the figure \ref{Grason's parallelogram rule}.
 The \textbf{vertices} of the profile are the extremal/lowest points of the plot. Clearly the two points
 $(0,0)$ and $(n,\log\vol(L))$ are vertices of the plot of the lattices $L$ with $\rk(L)=n$. The following lemma states the situation for other vertices
 of the profile
-\begin{lemma}\label{upper-ver}
+\begin{lemma}\label{upper-ver}\cite[Lemma 4.4]{MR2127941}
     Suppose that $M_\ast$ is a lattice with with the point $\ell(M_\ast)$ as a vertex of the profile. If $M$ is any other sublattice such that
     $\ell(M)$ is also a vertex of the profile, then we must have either $M \subset M_\ast$ or $M_\ast \subset M$.
 \end{lemma}
@@ -287,7 +287,7 @@ of the profile
     $M \cap _M*=M$, in which $M\subset M_*$, or $M+M_* = M$, in which $M_* \subset M$.
 \end{proof}
 An immediate consequence is that
-\begin{theorem}\label{filtration}
+\begin{theorem}\label{filtration}\cite[Theorem 1.18]{MR780079}
     The vertices of the profile of a lattice $L$ are represented by unique sublattices, and they form a chain.
 \end{theorem}
 For a given lattice $L$, we call the chain of sublattices in theorem \ref{filtration} the \textbf{canonical filtration} of $L$. Assume that the canonical filtration for $L$
@@ -299,7 +299,7 @@ then it can be seen from the diagram that
     \item $\mu(L_i/L_{i-1}) \le \mu(L_{i+1}/L_i)$ for all $1 \le i \le k-1$.
 \end{enumerate}
 These two conditions is also sufficent for a chain to be a canonical filtration
-\begin{theorem}\label{Grayson's criterion}
+\begin{theorem}\label{Grayson's criterion}\cite[Corollary 1.30]{MR780079}
     Suppose
     \[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
     is a chain of lattices such that $L_i/L_{i-1}$ is semi-stable and the slope $L_i/L_{i-1}$ is not larger than the slope of $L_{i+1}/L_i$.
