@@ -1,50 +1,50 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: A Thesis.aux
-Reallocating 'name_of_file' (item size: 1) to 6 items.
-The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainnat.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 Database file #1: refs.bib
 Warning--I didn't find a database entry for "MR2977413"
-You've used 11 entries,
-            2118 wiz_defined-function locations,
-            591 strings with 5674 characters,
-and the built_in function-call counts, 2988 in all, are:
-= -- 297
-> -- 89
-< -- 4
-+ -- 37
-- -- 26
-* -- 199
-:= -- 514
-add.period$ -- 38
-call.type$ -- 11
-change.case$ -- 42
-chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 129
-empty$ -- 268
-format.name$ -- 26
-if$ -- 618
-int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 16
-newline$ -- 62
-num.names$ -- 22
-pop$ -- 45
+You've used 14 entries,
+            2773 wiz_defined-function locations,
+            729 strings with 7393 characters,
+and the built_in function-call counts, 5399 in all, are:
+= -- 515
+> -- 162
+< -- 21
++ -- 62
+- -- 48
+* -- 383
+:= -- 858
+add.period$ -- 69
+call.type$ -- 14
+change.case$ -- 52
+chr.to.int$ -- 14
+cite$ -- 28
+duplicate$ -- 295
+empty$ -- 512
+format.name$ -- 66
+if$ -- 1140
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 21
+newline$ -- 103
+num.names$ -- 56
+pop$ -- 106
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 44
 quote$ -- 0
-skip$ -- 73
+skip$ -- 191
 stack$ -- 0
 substring$ -- 182
-swap$ -- 19
-text.length$ -- 4
+swap$ -- 33
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 34
+type$ -- 119
 warning$ -- 0
-while$ -- 31
-width$ -- 13
-write$ -- 131
+while$ -- 54
+width$ -- 0
+write$ -- 241
 (There was 1 warning)

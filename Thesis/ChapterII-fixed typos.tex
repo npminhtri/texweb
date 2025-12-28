@@ -275,6 +275,12 @@ is a root whenever $i \ne j$. We define the set of  \textbf{simple roots} as
 \[\Delta = \left\lbrace \chi_{i}\mid i =1,\ldots,n \right\rbrace\]
 where
 \[\chi_i \colon T \mapsto \mathbb{R}, t \mapsto \dfrac{t_i}{t_{i+1}}.\]
+
+
+\subsection{Weights}\label{Weyl-vector-def}
+Similarly, at Lie group level, we also have the notion of \textbf{fundamental weights}. For each $i \in I$, we define
+a character $\lambda_i \in \Hom(T,\mathbb{R}^*)$ where $T$ is the torus defined in \ref{torus}
+\[\omega_i \colon T \to \mathbb{R}^*, \quad\omega_i(t) = a_1\ldots a_i\]
 \begin{remark}
     If we define the logarith map over the torus $T$ by 
     \[t = \begin{bmatrix}
@@ -289,15 +295,7 @@ where
         0      & 0      & \cdots & \log(a_n)
     \end{bmatrix} \]
     Then it is clear that $\log$ is a map from $T$ to $\mathfrak{h}$ . In this way, we can think $\chi_{ij}$ as $\alpha_{ij} \circ \log$. When there are no confusion, we use the symbol $\alpha_{ij}$ to indicate
-    the root at both Lie algebra level and Lie group level.
-\end{remark}
-
-\subsection{Weights}\label{Weyl-vector-def}
-Similarly, at Lie group level, we also have the notion of \textbf{fundamental weights}. For each $i \in I$, we define
-a character $\lambda_i \in \Hom(T,\mathbb{R}^*)$ where $T$ is the torus defined in \ref{torus}
-\[\omega_i \colon T \to \mathbb{R}^*, \quad\omega_i(t) = a_1\ldots a_i\]
-\begin{remark}
-    It can be seen that $\omega_i$ can be thought of $\lambda_{i}\circ \log$, so we will also use $\lambda_i$ for the notation of simple weight in both Lie algebra and Lie group level as in the case of root. 
+    the root at both Lie algebra level and Lie group level. Similarly we will also use $\lambda_i$ for the notation of simple weight in both Lie algebra and Lie group level as in the case of root. 
 \end{remark}
 \begin{example}
     When $n=3$, we have the following relations
@@ -411,7 +409,7 @@ different notions of semi-stability in the next chapter.
 \subsection{Parabolic subgroups I: An explicit description }\label{parabolic I}
 For our purposes, it is enough to define the standard parabolic subgroups.  There exists a bijection between  standard parabolic subgroups of $\SLn$
 and  partitions of $n$, and  partition $n =n_1+\ldots+n_k$ defines the standard parabolic subgroup corresponding to the partition as follows
-\begin{definition}
+\begin{definition}\label{parst}
     The standard parabolic subgroup $P$ of $\GLn$ associated to the partition $n = n_1 + n_2 + \cdots + n_r$ is denoted $P_{n_1,\ldots,n_r}$ and is defined to be the group of all matrices of the form
     \[
         \begin{bmatrix}
@@ -501,7 +499,7 @@ The above theorem leads to the following definition of parabolic subgroups
     Using the same notation in the previous theorem, we call the subgroups $P_J$ with $J \subset R$  \textit{standard parabolic subgroups} of group G.
 \end{definition}
 We would like to explicitly describe the parabolic subgroup for $\SLn$.
-\begin{example}
+\begin{example}\label{BN-pair-parabolic}
     As introduced in previous section, the set $\Phi = \left\lbrace \alpha_{ij}\right\rbrace $ forms a
     root system for $\SLn$. The Borel subgroup is just $B \cap \SLn$, the group of upper triangular matrices with determinant $1$.
     We also consider the set $N$ of monomial matrices  with determinant $1$. Then it is easy to check that
@@ -520,7 +518,7 @@ We would like to explicitly describe the parabolic subgroup for $\SLn$.
     \[W_I = \left\langle r_1,r_2,\ldots r_{i-1},r_{i+1},\ldots, r_{n-1} \right\rangle \cong
         S_i \times S_{n-i}\]
     The corresponding parabolic subgroup is
-    \[P_{r_i} := P_I = \left\lbrace \begin{bmatrix}
+    \[P_{i} := P_I = \left\lbrace \begin{bmatrix}
             A & \ast \\
               & B
         \end{bmatrix} \in \SLn: A \in \text{GL}_i, B \in \text{GL}_{n-i}\right\rbrace \]
@@ -566,12 +564,12 @@ with $A_{n_1,\ldots, n_k}$ plays the role of the connected center of $M_{n_1,\ld
     \end{bmatrix} : t_i > 0\right\rbrace \]
 and
 \[M^1_{n_1,\ldots, n_k} = \left\lbrace \begin{bmatrix}
-        \mathfrak{m}'_1 & 0               & \ldots & 0               \\
-        0               & \mathfrak{m}'_2 & \ldots & 0               \\
+        M'_1 & 0               & \ldots & 0               \\
+        0               & M'_2 & \ldots & 0               \\
         \vdots          & \vdots          & \ddots & \vdots          \\
-        0               & 0               & \ldots & \mathfrak{m}'_k
+        0               & 0               & \ldots & M'_k
     \end{bmatrix} \right\rbrace,\]
-where $\det(\mathfrak{m}'_i) = \pm 1$.
+where $\det(M'_i) = \pm 1$.
 \begin{definition}
     For a given parabolic subgroup $P$, the factorization
     \[P = M^1_P \times A_P \times N_P\]
@@ -598,6 +596,9 @@ in the remaining of this thesis.
     Then the natural product map \[p \colon K \times A \times U \to \GLn, \quad p(k,a,n)=kan\]
     is a bijection.
 \end{prop}
+\begin{proof}
+    The Iwasawa decomposition is essentially the Gram-Schmidt orthogonalization process. For more detail, see \cite[Subsection 10.1]{MR584623}
+\end{proof}
 Thus, the following decomposition makes sense
 \begin{definition}
     The decomposition of $g = kan$ for $k \in K, a \in A$ and $n \in N$ is called \textbf{Iwasawa} decomposition.
@@ -617,12 +618,34 @@ we can identify  $x \in X_G$ with the triple $(m_P(x), a_P(x),n_P(x))$.
     \[X_G = K\backslash G = A_B \times N_B\]
     which is in fact just the Iwasawa decomposition.
 \end{example}
-Furthermore, if $Q\supset P$ is also a parabolic subgroup, it gives rise to a parabolic subgroup $\ast P := P \cap M_Q$ of $M_Q$.
+Furthermore, if $Q\supset P$ is also a parabolic subgroup, it gives rise to a parabolic subgroup $\ast P := P \cap M_Q$ of $M_Q$. In particular, we have the following result
+\begin{theorem}\cite[Lemma 2]{harishchandra2006automorphic}\label{M_P - P - bijection}
+    Let $P,Q$ be two  standard parabolic  subgroup such that $Q \supset P$. Then the map
+    \[P \mapsto \star P := P \cap M_Q  \]
+    is a bijection.
+\end{theorem}
 The space $X_{M_Q}$ itself has the decomposition
 \[X_{M_Q} = X_{\ast P} \times A(Q)_{\ast P} \times N(Q)_{\ast P}\]
 where $$ X_{\ast P} = X_{M_P}, \quad A(Q)_{\ast P}A_Q=A_P, \quad N(Q)_{\ast P}N_Q=N_P.$$ This is called \textbf{relative $P$}-horospherical decomposition with respect to $Q$.
 \begin{example}
-
+    Consider the group $G = \mathrm{SL}_3(\mathbb{R})$. We consider the rational standard parabolic subgroup 
+    \[P_1 = \left\lbrace \begin{bmatrix}
+        * & * & * \\
+        0 & * & *\\
+        0 & * & *
+    \end{bmatrix} \right\rbrace \subset \mathrm{SL}_3(\mathbb{R}) \Rightarrow M_{P_1} =\left\lbrace \begin{bmatrix}
+        \pm 1 & 0 & 0 \\
+        0 & * & *\\
+        0 & * & *
+    \end{bmatrix} \right\rbrace  \]
+    and $ B $ the Borel subgroup. Then 
+    \[\ast B = B \cap M_{P_1} = \left\lbrace \begin{bmatrix}
+        1 & 0 & 0\\
+        0 & x & y\\
+        0 & 0 & z
+    \end{bmatrix}: xz=  1\right\rbrace 
+    \]
+Then it is clear that $X_{M_{P_1}}$ can be identified with the space of lattices of rank 2. The $B-$ horospherical decomposition with respect to $P_1$ is just Iwasawa decomposition in disguise.
 \end{example}
 \subsection{Parabolic sets and parabolic subalgebras}\label{parabolic-sets-algebra}
 \begin{definition}
@@ -703,7 +726,7 @@ We now define the function $H_P$ as follows:
         H_P \colon X & \to \mathfrak{a}_P             \\
         x            & \mapsto H_P(x) = \log(a_P(x)),
     \end{align*}
-    where $\log$ means we  take the logarithm of the diagonal entries of $a_P(x)$.
+    where $\log$ is defined as in subsection \ref{Weyl-vector-def}.
 \end{definition}
 This definition is well-defined since $\log(a_P(x))$ is an element of $\mathfrak{a}_P  $ by definition.
 We prove the following lemma

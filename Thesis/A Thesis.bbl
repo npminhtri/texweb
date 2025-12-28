@@ -1,69 +1,115 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{barnes1967cartan}
+\bibitem[Barnes(1967)]{barnes1967cartan}
 Donald~W Barnes.
 \newblock On cartan subalgebras of lie algebras.
-\newblock {\em Mathematische Zeitschrift}, 101(5):350--355, 1967.
+\newblock \emph{Mathematische Zeitschrift}, 101\penalty0 (5):\penalty0
+  350--355, 1967.
 
-\bibitem{MR2153282}
+\bibitem[Borek(2005)]{MR2153282}
 Thomas Borek.
 \newblock Successive minima and slopes of {H}ermitian vector bundles over
   number fields.
-\newblock {\em J. Number Theory}, 113(2):380--388, 2005.
+\newblock \emph{J. Number Theory}, 113\penalty0 (2):\penalty0 380--388, 2005.
+\newblock ISSN 0022-314X,1096-1658.
+\newblock \doi{10.1016/j.jnt.2004.12.003}.
+\newblock URL \url{https://doi.org/10.1016/j.jnt.2004.12.003}.
 
-\bibitem{MR2109105}
+\bibitem[Bourbaki(2005)]{MR2109105}
 Nicolas Bourbaki.
-\newblock {\em Lie groups and {L}ie algebras. {C}hapters 7--9}.
+\newblock \emph{Lie groups and {L}ie algebras. {C}hapters 7--9}.
 \newblock Elements of Mathematics (Berlin). Springer-Verlag, Berlin, 2005.
+\newblock ISBN 3-540-43405-4.
 \newblock Translated from the 1975 and 1982 French originals by Andrew
   Pressley.
 
-\bibitem{MR2127941}
+\bibitem[Casselman(2004)]{MR2127941}
 Bill Casselman.
 \newblock Stability of lattices and the partition of arithmetic quotients.
-\newblock {\em Asian J. Math.}, 8(4):607--637, 2004.
+\newblock \emph{Asian J. Math.}, 8\penalty0 (4):\penalty0 607--637, 2004.
+\newblock ISSN 1093-6106,1945-0036.
+\newblock \doi{10.4310/ajm.2004.v8.n4.a17}.
+\newblock URL \url{https://doi.org/10.4310/ajm.2004.v8.n4.a17}.
 
-\bibitem{MR2426516}
+\bibitem[Chaudouard(2018)]{MR3969872}
+Pierre-Henri Chaudouard.
+\newblock Sur une variante des troncatures d'{A}rthur.
+\newblock In \emph{Geometric aspects of the trace formula}, Simons Symp., pages
+  85--120. Springer, Cham, 2018.
+\newblock ISBN 978-3-319-94832-4; 978-3-319-94833-1.
+
+\bibitem[Faraut(2008)]{MR2426516}
 Jacques Faraut.
-\newblock {\em Analysis on {L}ie groups}, volume 110 of {\em Cambridge Studies
-  in Advanced Mathematics}.
+\newblock \emph{Analysis on {L}ie groups}, volume 110 of \emph{Cambridge
+  Studies in Advanced Mathematics}.
 \newblock Cambridge University Press, Cambridge, 2008.
+\newblock ISBN 978-0-521-71930-8.
+\newblock \doi{10.1017/CBO9780511755170}.
+\newblock URL \url{https://doi.org/10.1017/CBO9780511755170}.
 \newblock An introduction.
 
-\bibitem{MR3468028}
+\bibitem[Goldfeld(2015)]{MR3468028}
 Dorian Goldfeld.
-\newblock {\em Automorphic forms and {L}-functions for the group {${\rm
-  GL}(n,\rm R)$}}, volume~99 of {\em Cambridge Studies in Advanced
+\newblock \emph{Automorphic forms and {L}-functions for the group {${\rm
+  GL}(n,\rm R)$}}, volume~99 of \emph{Cambridge Studies in Advanced
   Mathematics}.
 \newblock Cambridge University Press, Cambridge, paperback edition, 2015.
+\newblock ISBN 978-1-107-56502-9; 978-0-521-83771-2.
 \newblock With an appendix by Kevin A. Broughan.
 
-\bibitem{MR780079}
+\bibitem[Grayson(1984)]{MR780079}
 Daniel~R. Grayson.
 \newblock Reduction theory using semistability.
-\newblock {\em Comment. Math. Helv.}, 59(4):600--634, 1984.
+\newblock \emph{Comment. Math. Helv.}, 59\penalty0 (4):\penalty0 600--634,
+  1984.
+\newblock ISSN 0010-2571,1420-8946.
+\newblock \doi{10.1007/BF02566369}.
+\newblock URL \url{https://doi.org/10.1007/BF02566369}.
 
-\bibitem{MR499562}
+\bibitem[Harishchandra(2006)]{harishchandra2006automorphic}
+Bhartendu Harishchandra.
+\newblock \emph{Automorphic forms on semisimple Lie groups}, volume~62.
+\newblock Springer, 2006.
+
+\bibitem[Humphreys(1978)]{MR499562}
 James~E. Humphreys.
-\newblock {\em Introduction to {L}ie algebras and representation theory},
-  volume~9 of {\em Graduate Texts in Mathematics}.
+\newblock \emph{Introduction to {L}ie algebras and representation theory},
+  volume~9 of \emph{Graduate Texts in Mathematics}.
 \newblock Springer-Verlag, New York-Berlin, 1978.
+\newblock ISBN 0-387-90053-5.
 \newblock Second printing, revised.
 
-\bibitem{patnaik2025borel}
+\bibitem[Humphreys(1980)]{MR584623}
+James~E. Humphreys.
+\newblock \emph{Arithmetic groups}, volume 789 of \emph{Lecture Notes in
+  Mathematics}.
+\newblock Springer, Berlin, 1980.
+\newblock ISBN 3-540-09972-7.
+
+\bibitem[Patnaik and Satpathy(2025)]{patnaik2025borel}
 Manish~M Patnaik and Punya~Plaban Satpathy.
 \newblock Borel--serre type bordifications and canonical pairs for loop groups.
-\newblock {\em arXiv preprint arXiv:2507.13980}, 2025.
+\newblock \emph{arXiv preprint arXiv:2507.13980}, 2025.
 
-\bibitem{MR4505757}
+\bibitem[Schwermer(2023)]{MR4505757}
 Joachim Schwermer.
-\newblock {\em Reduction theory and arithmetic groups}, volume~45 of {\em New
+\newblock \emph{Reduction theory and arithmetic groups}, volume~45 of \emph{New
   Mathematical Monographs}.
 \newblock Cambridge University Press, Cambridge, 2023.
+\newblock ISBN 978-1-108-83203-8.
 
-\bibitem{Wei_2017}
+\bibitem[Wei and Zou(2017)]{Wei_2017}
 Yangjiang Wei and Yi~Ming Zou.
 \newblock Inverses of cartan matrices of lie algebras and lie superalgebras.
-\newblock {\em Linear Algebra and its Applications}, 521:283–298, May 2017.
+\newblock \emph{Linear Algebra and its Applications}, 521:\penalty0 283–298,
+  May 2017.
+\newblock ISSN 0024-3795.
+\newblock \doi{10.1016/j.laa.2017.01.036}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.laa.2017.01.036}.
 
 \end{thebibliography}

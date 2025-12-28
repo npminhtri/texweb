@@ -1,53 +1,48 @@
 \chapter{SEMI-STABLE LATTICE IN HIGHER RANK}
 In this chapter, we will establish the notion of semi-stable lattice. Heuristically,
-this is the lattice that achieve all the successive minima at the same time, see \cite{MR2153282}.
+this is a lattice that achieve all the successive minima at the same time, see \cite{MR2153282}.
 
-We will provide two different definitions of semi -stable lattice: one is geometric - which follows Grayson's idea of utilizing
-the canonical plot, and one is purely algebraic, which make use of the maximal standard parabolic subgroups.
-The toy model will be the moduli space of 2-dimensional lattice, which is essential the upper half plane in the complex field.
-At the end, we will show that the two definitions coincide.
+We will provide two different definitions of semi -stable lattice: one is geometric - which follows Grayson's notion of a canonical plot in \cite{MR780079}, and one is purely algebraic, which makes use of the maximal standard parabolic subgroups. We will show that the two definitions coincide in the next chapter.
 
 \section{Grayson's definition of semi-stability}
 \subsection{Grayson's definition}
-In this section, we introduce the idea of Grayson in defining \textit{semi-stable} lattices, as first introduced in \cite{MR780079}.
-In particular, he associates every lattices a plot and its convex hull - called \textit{ profiles}.
-An easy observation is that, if $M \subset L$ is a sublattice, then the space $M_\mathbb{R} = M \otimes \mathbb{R}$
-is a subspace of $L_\mathbb{R}$, equipped with the restriction of the positive definite symmetric form $Q$ of $L$, hence $M$
+In this section, we introduce Grayson's definition of \textit{semi-stable} lattices, follows \cite{MR780079}. 
+Grayson associates every lattice convex hull of points in $\mathbb{R}^2$ - called its \textit{ profiles}.
+To define the profile, observe first that if $M \subset L$ is a sublattice, then the space $M_\mathbb{R} = M \otimes \mathbb{R}$
+is a subspace of $L_\mathbb{R}$, equipped with the restriction of the positive definite symmetric form $Q$ of $L$, then $M$
 is also a lattice of rank not exceeding rank of $L$.
 \begin{definition}[\label = slope]
     The slope of a non-zero lattice $L$ is the number
     \[\mu(L) = \dfrac{\log\vol(L)}{\dim L}\]
 \end{definition}
 \begin{definition}
-    Suppose we have a lattice $L$. For any sublattice $M \subset L$, we assign $M$ to a point
-    \[\ell(M) = \left(\dim M, \log\vol(M)\right)\]
-    in the plane $\mathbb{R}^2$. The collection of all points $\ell(M)$ where $M$ ranges over
+   Consider a lattice $L$. For any sublattice $M \subset L$, define 
+    \[\ell(M) = \left(\dim M, \log\vol(M)\right) \in \mathbb{R}^2.\] 
+    The collection of all points $\ell(M)$ where $M$ ranges over
     all sublattices of $L$ is called \textbf{ the canonical plot} of the lattice $L$. By convention, we assign
     the lattice of zero rank to the origin of the plane.
 \end{definition}
 
 
-The following lemma asserts that, for each vertical axis $x =i$, there is a lowest point.
+The following lemma asserts that, on each vertical line $x =n$ where $(n=0,1,\ldots, \text{rk}(L))$, there is a lowest point and so the canonical plot is bounded below.
 \begin{lemma}
     Given a lattice $L$ and a number $c$, there exists only a finite number of sublattices $M \subset L$ such that
     $\vol(M)<c$.
 \end{lemma}
 \begin{proof}
-    We will prove by induction on the rank of the sublattices.
+    We will prove this by induction on the rank of the sublattices.
     \begin{itemize}
         \item For $r =1$, the collection of all rank $1$ sublattices of $L$ is just the set of all vectors in $L$. So we reduce
-              to show that for any $c>0$, the set $B(0,c) \cap L$  has finitely many elements. But this follows immediately from the fact that
-              $L$ is a discrete subset of $L_\mathbb{R}$.
-        \item Assume that the lemma holds for $r >1$. Assume that
-              \[M = \mathbb{Z}m_1\oplus \ldots \mathbb{Z}m_r\]
-              is a sublattice of the lattices $L$ of rank $n$. Consider the wedge product $\bigwedge^r L$, then clearly
+              to show that for any $c>0$, the set $B(0,c) \cap L$  has finitely many elements. But the lattice $L$ is a discrete subset of $L_\mathbb{R}$, thus the intersection of $L$ with a bounded set has only finitely many elements.
+        \item Assume that the lemma holds for $r >1$. Consider
+              \[M = \mathbb{Z}m_1\oplus \ldots \oplus\mathbb{Z}m_r\]
+              is a sublattice of  $L$ of rank $r$. Consider the wedge product $\bigwedge^r L$, then clearly
               $m_1\wedge m_2\ldots \wedge m_r$ is a vector in the lattice  $\bigwedge^r L$.
               By the previous case, there are finitely
               many vectors with bounded length inside lattice. So we only need to show that the map
               \[ M \mapsto \bigwedge^r M \]
-              is finite to one, then we are done. But this is due to the observation of $\bigwedge^r M$ determines the lattice $L \cap (M \otimes \mathbb{Q})$ and the index of $M$ inside this lattice.
+              is finite to one, then we are done. But this is due to the observation of $\bigwedge^r M$ determines the lattice $L \cap (M \otimes \mathbb{Q})$ and the index of $M$ inside this lattice.\qedhere
     \end{itemize}
-    So the canonical plot is bounded below.
 \end{proof}
 \begin{definition}
     The boundary polygon of the convex hull of the canonical plot is called \textbf{profile} of the lattice $L$.
@@ -126,7 +121,7 @@ Below are the picture of two lattices.
 Visually, a lattice is called \textbf{semi-stable} if it satisfies the other equivalent
 conditions:   If $M$ is an arbitrary sublattice of $L$ then $\mu(M) \ge \mu(L)$.
 \subsection{Canonical filtration}
-Given a lattice $L$ and a sublattice $M \subset L$, the quotient group $L/M$ have the structure of
+Given a lattice $L$ and a sublattice $M \subset L$, the quotient group $L/M$ has the structure of
 a lattice. Indeed, consider the exact sequence of lattices
 \[0\rightarrow M\rightarrow L\rightarrow L/M\rightarrow 0\]
 By tensoring with $\mathbb{R}$ we get a short exact sequence of $\mathbb{R}$-vector subspaces
@@ -207,7 +202,7 @@ Grayson used the logarithm to express the above inequality in additive terms:
 \begin{proof}
     It follows immediately from the fact that $\log$ is an increasing function over $(0,\infty)$.
 \end{proof}
-Grayson called this parallelogram rule, as the geometric meaning of  proposition \ref{parallelogram-rule} is
+Grayson called this the parallelogram rule, as the geometric meaning of  proposition \ref{parallelogram-rule} is
 illustrated in the figure \ref{Grason's parallelogram rule}.
 \begin{figure}[hbt!]
     \centering
@@ -352,21 +347,23 @@ These two conditions is also sufficent for a chain to be a canonical filtration
     \end{itemize}
     Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
 \end{proof}
-\section{$\rho$- definition of semi-stability}
+\section{$\rho$ semi-stability}
 \subsection{$\rho$-definition}
 We are now ready to define the $\rho$-definition of semi-stable lattice. Recall that
-we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup.
+we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(\mathbb{R})$, where $K$ is the orthogonal subgroup
 \begin{definition}[\label  = $\rho$-definition]\label{ss2}
     Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{$\rho$-semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
     \[\deg_{\text{inst}}(x):= \min_{Q \in ParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
+    where $\text{ParSt}$ stands for the set of standard parabolic subgroup of $\GLn$ as defined in definition \ref{parst}.
 \end{definition}
-\subsection{Some basis properties}
+\subsection{Some basic properties}
 We first have an elementary lemma
-\begin{lemma}\label{ss-equiv}
+\begin{lemma}\label{ss-equiv}\citetext{\citealp[Lemma 2.2.1]{MR3969872}; \citealp[Proposition 4.2.3]{patnaik2025borel}}
+
     Given $x \in X_n$, then the following are equivalent
     \begin{enumerate}
         \item $\deg_{\text{inst}}(x) \ge 0$.
-        \item For every stsandard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
+        \item For every standard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
         \item For every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
     \end{enumerate}
 \end{lemma}
@@ -426,7 +423,7 @@ We will show that it is in fact equivalent to the notion of canonical filtration
 $\cpx$ must exist and it is unique.
 
 We obtain the following lemma as a consequence of the definition of canonical pair
-\begin{lemma}\label{canonical-pair}
+\begin{lemma}\label{canonical-pair}\citetext{\citealp[Lemma 2.3.2]{MR3969872}; \citealp[Lemma 4.2.5]{patnaik2025borel}}
     Let $x \in X_n$  and $(P,\delta)$ be a pair with $P \subsetneq G$ be standard parabolic subgroup and
     $\delta \in G(\mathbb{Q})/P(\mathbb{Q})$. Then
     \begin{enumerate}
