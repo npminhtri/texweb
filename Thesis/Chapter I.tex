@@ -711,7 +711,7 @@ This will be helpful in visualizing the abstract lattices, as we are just lookin
 
 First we need to specify the notion of isomorphic lattices - in the first definition
 \begin{definition}
-  A map $f \colon (L,Q)   \to (L',Q')$  is an \textbf{isomorhism} between lattices if it is a group isomorphism and
+  A map $f \colon (L,Q)   \to (L',Q')$  is an \textbf{isomorphism} between lattices if it is a group isomorphism and
   for all $x \in L$, we have
   \[Q(x) = Q'(f(x)) \]
 \end{definition}
@@ -746,9 +746,9 @@ The number $n$ is called the \textbf{rank} of the lattice $L$.
 Let $\left\lbrace e_1,e_2,\ldots,e_n \right\rbrace$ be an orthonormal basis of $L_\mathbb{R} \cong \mathbb{R}^n$ and
 \[g = [b_1 | b_2 | \ldots | b_n] .\] The covolume of the lattice
 $L$ is defined as
-\begin{definition}
-  The covolume of $L$ is given by the formulae
-  \[\vol(L) = \left|\det(b_i\cdot e_j)\right|\]
+\begin{definition}\label{covolume-lattice-formula}
+  The covolume of $L$ is given by the formula
+  \[\vol(L) = \left|\det(\left\langle b_i,e_j\right\rangle)\right|\]
 \end{definition}
 The rank and covolume are invariant numerical values of $L$, as they don't depend on the choice of basis. Indeed, two bases of a rank $n$ lattice $L$
 are related by a transformation $g \in \text{GL}_n(\mathbb{Z})$. Clearly this preserves the volume and the rank as a $\mathbb{Z}-$module.

@@ -5,6 +5,8 @@ this is a lattice that achieve all the successive minima at the same time, see \
 We will provide two different definitions of semi -stable lattice: one is geometric - which follows Grayson's notion of a canonical plot in \cite{MR780079}, and one is purely algebraic, which makes use of the maximal standard parabolic subgroups. We will show that the two definitions coincide in the next chapter.
 
 \section{Grayson's definition of semi-stability}
+Recall that a lattice is a pair $(L,\left\langle\cdot,\cdot\right\rangle)$ where $L$ is a $\mathbb{Z}$-module
+and $\left\langle\cdot,\cdot\right\rangle$ is the associated inner product. If there is no confusion, we can will just denote this lattice by $L$ - the underlying $\mathbb{Z}$-module, and $\left\langle \cdot,\cdot\right\rangle$ for  the associated inner product.
 \subsection{Grayson's definition}
 In this section, we introduce Grayson's definition of \textit{semi-stable} lattices, follows \cite{MR780079}. 
 Grayson associates every lattice convex hull of points in $\mathbb{R}^2$ - called its \textit{ profiles}.
@@ -41,7 +43,10 @@ The following lemma asserts that, on each vertical line $x =n$ where $(n=0,1,\ld
               By the previous case, there are finitely
               many vectors with bounded length inside lattice. So we only need to show that the map
               \[ M \mapsto \bigwedge^r M \]
-              is finite to one, then we are done. But this is due to the observation of $\bigwedge^r M$ determines the lattice $L \cap (M \otimes \mathbb{Q})$ and the index of $M$ inside this lattice.\qedhere
+              is finite to one, then we are done. Consider the sublattice $M' = L \cap (M\otimes \mathbb{Q})$. It is clear that $M' \supset M$. Assume that 
+              $M'$ has a basis $\{v_1,\ldots,v_r\}$. Then we have 
+              \[[M':M]v_1 \wedge \ldots \wedge v_r = m_1 \wedge \ldots \wedge m_r\]
+              Thus $\bigwedge^r M$ output the index of $M$ in $M'$. As groups, there are only finite subgroups of $M'$ of a fixed index, so there are only finitely many choices of $M$ under the map $M \mapsto \bigwedge^r M$. \qedhere
     \end{itemize}
 \end{proof}
 \begin{definition}
@@ -129,7 +134,8 @@ By tensoring with $\mathbb{R}$ we get a short exact sequence of $\mathbb{R}$-vec
 which is split. Thus we have the isomorphisms
 \[(L/M)_\mathbb{R} \cong L_\mathbb{R}/M_\mathbb{R} \cong M^\perp_\mathbb{R}\]
 Therefore, by restricting of the inner product over $L_\mathbb{R}$ to $M^\perp_\mathbb{R}$, we clearly see that
-$L/M$ also inherits an inner product. In particular, it is a lattice.
+$L/M$ also inherits an inner product. Explicitly, the norm over $L/M$ can be defined by restricting the norm $||\cdot||$ on $L_\mathbb{R}/M_\mathbb{R}$, which is given by 
+\[||x||:= \inf\{ \sqrt{ \left\langle x+m, x+m\right\rangle}: m \in M \}\]
 \begin{definition}
     Given a lattice $L$ containing a sublattice $M$, then $L/M$ is a lattice. We call this lattice \textbf{quotient lattice}.
 \end{definition}
@@ -145,7 +151,7 @@ $L/M$ also inherits an inner product. In particular, it is a lattice.
     basis $\{m_i\} \cup \{n_j\}$ for the lattice $L$. Similarly, we can extend  $\{e_i\}$ to get an orthonormal
     basis $\{e_i\} \cup \{f_j\}$ for the vector space $L_\mathbb{R}$. In particular, we would have
     $\left\langle m_i,f_j \right\rangle =0$ for all $i,j$.
-    By definition, we have
+    By definition \ref{covolume-lattice-formula}, we have
     \begin{align*}
         vol(L) & = \det\begin{bmatrix}
                            \left\langle m_i,e_i\right\rangle  & \left\langle n_j,e_i\right\rangle \\
@@ -161,7 +167,7 @@ $L/M$ also inherits an inner product. In particular, it is a lattice.
     $N_\mathbb{R} \supset (L/M)_\mathbb{R}$.
 \end{proof}
 In the canonical plot, the import of lemma \ref{volume-of-lattice} is that the slope of the quotient lattice $L/M$ appears as
-the slope of the line segment connecting the points corresponding to the sublattice $M$ and the lattice $L$. This is due to the geometry fact that
+the slope of the line segment connecting the points corresponding to the sublattice $M$ and the lattice $L$. This is due to lemma \ref{volume-of-lattice}
 \[(\rk(M),\log(\vol(M))+ (\rk(L/M),\log\vol(L/M)))= (\rk(L),\log\vol(L))\]
 \begin{figure}[ht]
     \centering\begin{tikzpicture}

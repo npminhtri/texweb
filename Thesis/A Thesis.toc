@@ -40,11 +40,11 @@
 \contentsline {section}{\numberline {3.1}Grayson's definition of semi-stability}{43}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Grayson's definition}{43}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Canonical filtration}{45}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}$\rho $ semi-stability}{49}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}$\rho $-definition}{49}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.2}$\rho $ semi-stability}{50}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}$\rho $-definition}{50}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Some basic properties}{50}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Check for semi-stability}{50}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Canonical pair}{51}{section.3.3}%
+\contentsline {subsection}{\numberline {3.2.3}Check for semi-stability}{51}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Canonical pair}{52}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Equivalence between Grayson's semistability and $\rho $-semistability}{53}{chapter.4}%
 \contentsline {section}{\numberline {4.1}The equivalence between definitions of semi-stable lattices}{53}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}A useful lemma}{53}{subsection.4.1.1}%
