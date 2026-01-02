@@ -581,19 +581,18 @@ We shall use this definition to find the semi-stable locus in the upper half pla
   complement of the Farey balls.
 \end{prop}
 \begin{proof}
-  We first make simple observation: If $\deg_{\text{inst}}(z)$ is achieved at some
+ If $\deg_{\text{inst}}(z)$ is achieved at some
   $\gamma_0 \in \Gamma$ and $z$ is $\rho$-semistable, then
-  \[\left\langle \rho, H_B(z\gamma)\right\rangle \ge 0 \mbox{ for all } \gamma \in \Gamma\]
-  From this observation, the $\rho$-semistable locus must be the set
-  \[ \left\lbrace z \in \uH: \left\langle \rho, H_B(z\gamma)\right\rangle \ge 0 \mbox{ for all } \gamma \in \Gamma \right\rbrace\]
+  \[\left\langle \rho, H_B(z\gamma_0)\right\rangle \ge 0 \]
+  
   We identify $z=x+iy$ with the product $a(y)n(x)$ as above. Under the identification \ref{upper-group}, we must have
-  \[\left\langle \rho, H_B(z\gamma) = -\log(a(\gamma^{-1} \circ z)) \right\rangle\]
-  Assume that $\gamma^{-1} =
+  \[\left\langle \rho, H_B(z\gamma_0) = -\log(a(\gamma_0^{-1} \circ z)) \right\rangle\]
+  Assume that $\gamma_0^{-1} =
     \begin{bmatrix}
       a & b \\
       c & d
-    \end{bmatrix}$, then $\gamma^{-1} \circ z$ satisfies
-  \[\Im(\gamma^{-1}\circ z) = \dfrac{\Im(z)}{(cx+d)^2+(cy)^2}\]
+    \end{bmatrix}$, then $\gamma_0^{-1} \circ z$ satisfies
+  \[\Im(\gamma_0^{-1}\circ z) = \dfrac{\Im(z)}{(cx+d)^2+(cy)^2}\]
   Thus, $z$ is semistable if and only if it satifies the inequalities
   \[y \le(cx+d)^2+(cy)^2  \Leftrightarrow \left(x+\dfrac{c}{d}\right)^2+\left(y-\dfrac{1}{2c^2}\right)^2 \ge \left(\dfrac{1}{2c^2}\right)^2 \]
   for any $c,d$ coprime. Since the above equation is exactly the equation for Farey balls, we are done.
