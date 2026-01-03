@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{15}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -90,6 +90,18 @@ James~E. Humphreys.
   Mathematics}.
 \newblock Springer, Berlin, 1980.
 \newblock ISBN 3-540-09972-7.
+
+\bibitem[Neukirch(1999)]{MR1697859}
+J\"urgen Neukirch.
+\newblock \emph{Algebraic number theory}, volume 322 of \emph{Grundlehren der
+  mathematischen Wissenschaften [Fundamental Principles of Mathematical
+  Sciences]}.
+\newblock Springer-Verlag, Berlin, 1999.
+\newblock ISBN 3-540-65399-6.
+\newblock \doi{10.1007/978-3-662-03983-0}.
+\newblock URL \url{https://doi.org/10.1007/978-3-662-03983-0}.
+\newblock Translated from the 1992 German original and with a note by Norbert
+  Schappacher, With a foreword by G. Harder.
 
 \bibitem[Patnaik and Satpathy(2025)]{patnaik2025borel}
 Manish~M Patnaik and Punya~Plaban Satpathy.

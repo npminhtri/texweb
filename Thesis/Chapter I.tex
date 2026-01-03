@@ -583,19 +583,20 @@ We shall use this definition to find the semi-stable locus in the upper half pla
 \begin{proof}
  If $\deg_{\text{inst}}(z)$ is achieved at some
   $\gamma_0 \in \Gamma$ and $z$ is $\rho$-semistable, then
-  \[\left\langle \rho, H_B(z\gamma_0)\right\rangle \ge 0 \]
-  
+  \[\min_{\gamma \in \Gamma/\Gamma \cap B_\mathbb{Q}}\left\langle\rho,H_B(z\gamma)\right\rangle = \left\langle \rho, H_B(z\gamma_0)\right\rangle \ge 0  \]
+   Hence $\rho$-semistable locus must be the set
+  \[ \left\lbrace z \in \uH: \left\langle \rho, H_B(z\gamma)\right\rangle \ge 0 \mbox{ for all } \gamma \in \Gamma \right\rbrace\]
   We identify $z=x+iy$ with the product $a(y)n(x)$ as above. Under the identification \ref{upper-group}, we must have
-  \[\left\langle \rho, H_B(z\gamma_0) = -\log(a(\gamma_0^{-1} \circ z)) \right\rangle\]
-  Assume that $\gamma_0^{-1} =
+  \[\left\langle \rho, H_B(z\gamma) = -\log(a(\gamma^{-1} \circ z)) \right\rangle\]
+  Note that, for any pair of co-prime integers $(c,d)$, we can always find integers $a,b$ such that $ad-bc =1$ by Bezout's theorem. Assume that $\gamma^{-1} =
     \begin{bmatrix}
       a & b \\
       c & d
-    \end{bmatrix}$, then $\gamma_0^{-1} \circ z$ satisfies
-  \[\Im(\gamma_0^{-1}\circ z) = \dfrac{\Im(z)}{(cx+d)^2+(cy)^2}\]
+    \end{bmatrix} \in \slz$, then $\gamma_0^{-1} \circ z$ satisfies
+  \[\Im(\gamma^{-1}\circ z) = \dfrac{\Im(z)}{(cx+d)^2+(cy)^2}\]
   Thus, $z$ is semistable if and only if it satifies the inequalities
-  \[y \le(cx+d)^2+(cy)^2  \Leftrightarrow \left(x+\dfrac{c}{d}\right)^2+\left(y-\dfrac{1}{2c^2}\right)^2 \ge \left(\dfrac{1}{2c^2}\right)^2 \]
-  for any $c,d$ coprime. Since the above equation is exactly the equation for Farey balls, we are done.
+  \[y \le(cx+d)^2+(cy)^2  \Leftrightarrow \left(x+\dfrac{c}{d}\right)^2+\left(y-\dfrac{1}{2c^2}\right)^2 \ge \left(\dfrac{1}{2c^2}\right)^2. \]
+   Since the above equation is exactly the equation for Farey balls, we are done.
 \end{proof}
 In particular, we just proved that the $\rho$-semistablility and the semistablility in Grayson's sense
 are equivalent.
@@ -673,18 +674,22 @@ The definitions and properties of a general lattice will be used extensively in 
 \subsection{Abstract lattices}
 \begin{definition}[\label = Abstract $\mathbb{Z}$-lattices]
   Let $L$ be a finitely generated $\mathbb{Z}$-module. In particular, it is a free $\mathbb{Z}$-module
-  of finite rank. Suppose that $L$ is endowed with a real-valued  positive definite\footnote{The non-degenerate implicity state that rank L is the same as $\text{dim} L_\mathbb{R}$} quadratic form $Q\colon L \to \mathbb{R}$, such that the set
-
-  \[\left\lbrace x \in L: Q(x) \le r\right\rbrace \]
-  is finite for any real number $r$.
+  of finite rank. Suppose that $L$ is endowed with a real-valued  positive definite\footnote{The non-degenerate implicity state that rank L is the same as $\text{dim} L_\mathbb{R}$} quadratic form $Q\colon L \to \mathbb{R}$, such that
+  the following conditions hold
+\begin{enumerate}
+  \item The set $\left\lbrace x \in L: Q(x) \le r\right\rbrace $ is finite for any real number $r$ - \textbf{the parallelogram law}\label{parallelogram law}.
+  \item $Q(x+y)+Q(x-y) = 2Q(x)+2Q(y)$ for all $x,y \in L$.
+  \item $Q(x) \ne 0$ for all $x \in L \setminus \{0\}$.
+\end{enumerate}
   We will call  the pair $(L,Q)$ a \textbf{abstract $\mathbb{Z}$-lattice}.
 \end{definition}
 
-An easy example is to take $L = \mathbb{Z}^n$ and choose our quadratic form to be the standard one. namely
-\[\left\langle x,y \right\rangle = x \cdot y = \sum_{i=1}^n x_iy_i\]
+\begin{example}\label{standard-lattice-zn}
+Take $L = \mathbb{Z}^n$ and choose our quadratic form to be the standard one. In particular, for $x = (x_1,x_2,\ldots,x_n) \in \mathbb{Z}^n$,
+\[Q(x):= x_1^2+x_2^2+\ldots +x_n^2\]
 Here the multiplication is just the usual dot product between 2 vectors. In term of matrix, this quadratic form is assigned to the
 identity matrix $I_n$.
-
+\end{example}
 If there is no further confusion, we can just denote a Euclidean lattice by $L$, without specifying the bilinear form
 $Q$. The lattice $L$ determines a full-rank lattice inside $L_\mathbb{R}$, namely, the rank
 of the lattice $L$ is equal to the dimension of $L_\mathbb{R}$.
@@ -701,9 +706,12 @@ to $\mathbb{R}^n$ via base changing.
   \[g = [b_1 | b_2 | \ldots | b_n] ,\]
   then $L = g\mathbb{Z}^n$.
 \end{definition}
-In the second definition, we can just identify $L$ with the standard lattice $\mathbb{Z}^n$ and the
-symmetric positive definite form is $g^tg$. So an Euclidean $\mathbb{Z}$-lattice is an abstract lattice with the standard
-positive definite quadratic form.
+It can be shown that $L$ is a discrete subset of $\mathbb{R}^n$ . The discrete property turns out to be the sufficient condition for a subset of $\mathbb{R}^n$ to be a lattice, as stated in the 
+following proposition
+\begin{theorem}\cite[Proposition 4.2]{MR1697859}
+  Given a vector space $V$ and a subset $L \subset V$. Then $L$ is a lattice if and only if $L$ is discrete. 
+\end{theorem}
+
 \subsection{Equivalence between two definitions of lattices}
 In this subsection, we will show that every abstract $\mathbb{Z}$- lattice is isomorphic to an Euclidean $\mathbb{Z}-$ lattice.
 This will be helpful in visualizing the abstract lattices, as we are just looking at concrete lattices with deformation by a linear transformation.
@@ -718,23 +726,29 @@ First we need to specify the notion of isomorphic lattices - in the first defini
   Any abstract lattice is isomorphic to a Euclidean $\mathbb{Z}-$ lattice.
 \end{prop}
 \begin{proof}
-  Let $(L,Q)$ be an arbitrary lattice. We define a bilinear form as
-  \[ \left\langle x,y \right\rangle := \dfrac{Q(x+y)-Q(x-y)}{4}\]
-  We will show that this bilinear form defines an inner product over the real vector space $L_\mathbb{R} = L \otimes_\mathbb{Z} \mathbb{R}$.
-  Clearly we have $\left\langle x,x \right\rangle = 4Q(x)/4 = Q(x) \ge 0$ for all $x  \in L \setminus \left\lbrace 0 \right\rbrace$.
-  Now the extended bilinear form is defined as
+  Assume that $L=\mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n$, and choose the associated quadratic form as in example \ref{standard-lattice-zn}, we can directly 
+  verify that the 3 conditions defining an abstract lattice hold. Conversely, we define
+  \[\left\langle x,y\right\rangle:=\dfrac{Q(x+y)-Q(x-y)}{4}\]
+  We will show that this can be extended to an inner product on $\mathbb{R}^n = L \otimes \mathbb{R}$. By the parallelogram law \ref{parallelogram law}, we have $Q(y-x) = 2Q(x)+2Q(y)-Q(x+y) = Q(x-y)$, thus
+  \[\left\langle x,y \right\rangle=\dfrac{Q(x+y)-Q(x-y)}{4} = \dfrac{Q(x+y)-Q(y-x)}{4} = \left\langle y,x \right\rangle\]
+  We will prove by induction that $Q(mx) = m^2Q(x)$ for all positive integer $m$. The statement is trivial for $m=1$. By parallelogram law
+  \[Q(mx) = 2Q[(m-1)x] + 2Q(x) - Q[(m-2)x] = [2(m-1)^2+2-(m-2)^2]Q(x) = m^2Q(x)\]
+  As a consequence, $Q(x) \ge 0$ for all $x \in L$. Indeed, if $Q(x)<0$ for some $x \in L$, then the set $\{v \in L: Q(v)<0\}\supset \mathbb{Z}x$, hence infinite. But this contradicts 
+  the condition 3 of an abstract lattice. Finally, consider the relations
   \begin{align*}
-    \left\langle \cdot,\cdot \right\rangle  \colon L_\mathbb{R} \times L_\mathbb{R} & \to      \mathbb{R}                      \\
-    (x\otimes a, y \otimes b)                                                       & \mapsto  ab\left\langle x,y\right\rangle
+    Q(a+b+c) +Q(a-b+c) = 2Q(a+c)+2Q(b)\\
+    Q(a+b-c)+ Q(a-b-c) = 2Q(a-c)+2Q(b)\\
+    Q(a+b+c)+ Q(a-b-c) =2Q(b+c)+2Q(a)\\
+    Q(a+b-c)+ Q(a-b+c) =2Q(b-c)+2Q(a)
   \end{align*}
-  It is immediate that the extended bilinear form is inner product. So we have proved that
-  $L_\mathbb{R}$ is a Euclidean space containing $L$. Moreover, $L$ is embedded injectively in $L_\mathbb{R}$
-  as $\mathbb{R}$ is a flat $\mathbb{Z}$ module. The condition that
-  \[ \# \left\lbrace x \in L: Q(x) \le r\right\rbrace < \infty\]
-  implies $L$ can be identified with a discrete in $L_\mathbb{R}$. But this implies that there exists a basis
-  $\left\lbrace b_1,\ldots,b_n\right\rbrace \subset L_\mathbb{R}$  such that
-  \[L = \mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n\]
-  Hence we are done.\todo{fix the proof so that we use the definition 1.4.}
+  Taking the alternative sum yields 
+  \[2Q(a+b+c)-2Q(a+b-c) = 2Q(a+c)-2Q(a-c) + 2Q(b+c)-2Q(b-c) \]
+  or equivalently
+  \[\left\langle a+b,c\right\rangle = \left\langle a,c\right\rangle+ \left\langle b,c\right\rangle \]
+  Thus we can extend  the function $\left\langle \cdot,\cdot \right\rangle \colon L \times L\to \mathbb{R}$ to a $\mathbb{R}$-bilinear function over $L_\mathbb{R} \times L_\mathbb{R}$ by 
+  taking the tensor product. Clearly $Q(x/m) = \dfrac{1}{m^2}Q(x)$ for any $m \in \mathbb{Z} \setminus \{0\}$ and $x\in L$. Moreover the set $\{x/m: x \in L, m \in \mathbb{Z} \setminus \{0\}\}$ is dense 
+  in $L_\mathbb{R}$, hence $Q$ define a norm on $L_\mathbb{R}$. In particular, $\left\langle \cdot, \cdot\right\rangle$ extends to an inner product on $L_\mathbb{R}$. The discrete condition of the abstract lattice ensure that 
+  $L$ is a discrete subset of $L_\mathbb{R}$ hence an Euclidean lattice.
 \end{proof}
 \subsection{Covolume of a lattice}
 Now that for every abstract lattice $L$ we can find an invertible matrix $g$ such that
