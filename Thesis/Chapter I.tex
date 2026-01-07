@@ -192,6 +192,7 @@ Now we are ready to describe the domain for $\slz \backslash \uH$. First we need
 In this section, we investigate the notion of semi-stable lattices and how the
 upper half plane $\uH$ can be regard as a space of two-dimensional lattices. First we need to
 define what a lattice is.
+\subsection{Upper half plane and classification of similar lattices}
 \begin{definition}\label{2-lattice }
   A \textbf{lattice} $L$ in $\mathbb{C}$ is an additive group of the form
   \[L = \mathbb{Z}\omega_1 \oplus  \mathbb{Z} \omega_2\]
@@ -307,8 +308,8 @@ as large as that of $u$. So if we rotate and scale to get $u=1$, the vector $v$ 
 in the strip $(-1/2,1/2]$ and has the length at least 1. This clearly show that $v$ is a point in the domain
 $\mathfrak{D}$.
 
+\subsection{Canonical plot and semistablility in two dimensional space}
 
-\vspace{\baselineskip}
 Now Grayson - following a prior idea of Stuhler - associated every lattice to a sort of \textbf{Newton Polygon}.
 We will set up a graph coordinate in the following way:
 \begin{enumerate}
@@ -532,6 +533,7 @@ following figure, where the blue part is the semi-stable locus and the gray part
   \label{P-partition}
 \end{figure}
 \section{$\rho$-semi-stability of lattices}
+\subsection{Lie-theoretic definition of semi-stable lattices}
 The semi-stability can be defined in a more Lie-theoretic way. First we recall the Iwasawa decomposition
 for $\SLR$.
 \begin{prop}
@@ -573,11 +575,12 @@ Let $\alpha\colon \mathfrak{h} \to \mathbb{R}$ be the unique linear function suc
 $\alpha(H)=2$. If we let $\rho = \dfrac{1}{2}\alpha$, then we define
 \[\deg_{\text{inst}}(z):= \min_{\gamma \in  \Gamma/\Gamma \cap B} \left\langle \rho,H_B(z\gamma) \right\rangle\]
 where $B$ is the group of upper triangular matrices with invertible entries along the diagonal.
-\begin{definition}
+\begin{definition}\label{rho-definition-2-dim-lattice}
   The lattice $L_z$ corresponds to the point $z \in \uH$ is called \textbf{$\rho$-semi-stable} or just \textbf{semi-stable}
   if $\deg_{inst}(z) \ge 0$.
 \end{definition}
-We shall use this definition to find the semi-stable locus in the upper half plane $\uH$.
+\subsection{Semi-stable locus in the upper half plane model}
+We shall use  Definition \ref{rho-definition-2-dim-lattice} to find the semi-stable locus in the upper half plane $\uH$.
 \begin{prop}
   The locus of $\rho$-semi-stable points in the upper half plane $\uH$ is the
   complement of the Farey balls.
