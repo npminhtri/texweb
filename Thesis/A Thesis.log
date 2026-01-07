@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  6 JAN 2026 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  6 JAN 2026 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1261,21 +1261,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [0] (A Thesis.toc
+) [0] [2] (A Thesis.toc
 LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [2
+) [3
 
 ])
 \tf@toc=\write5
 \openout5 = `"A Thesis.toc"'.
 
- [3] (A Thesis.lof)
+ [4] (A Thesis.lof)
 \tf@lof=\write6
 \openout6 = `"A Thesis.lof"'.
 
- [4
+ [5
 
 ] (Chapter I.tex [1]
 Chapter 1.
@@ -1640,7 +1640,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 191.
 
 [7] [8]
-<Shortest vector.png, id=464, 627.5445pt x 257.763pt>
+<Shortest vector.png, id=472, 627.5445pt x 257.763pt>
 File: Shortest vector.png Graphic file (type png)
 <use Shortest vector.png>
 Package pdftex.def Info: Shortest vector.png  used on input line 300.
@@ -1999,17 +1999,17 @@ Package rerunfilecheck Info: File `"A Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: 652D6FE15E1BD8A0AC9702ACEC40B09A;13869.
  ) 
 Here is how much of TeX's memory you used:
- 44474 strings out of 474486
- 1017509 string characters out of 5745171
+ 44477 strings out of 474486
+ 1017575 string characters out of 5745171
  2016542 words of memory out of 5000000
- 65703 multiletter control sequences out of 15000+600000
+ 65705 multiletter control sequences out of 15000+600000
  590172 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,16n,96p,1254b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi480\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha6.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi864\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi1244\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "A Thesis.pdf" (67 pages, 677491 bytes).
+Output written on "A Thesis.pdf" (68 pages, 679352 bytes).
 PDF statistics:
- 1255 PDF objects out of 1440 (max. 8388607)
- 303 named destinations out of 1000 (max. 500000)
+ 1261 PDF objects out of 1440 (max. 8388607)
+ 304 named destinations out of 1000 (max. 500000)
  594 words of extra memory for PDF output out of 10000 (max. 10000000)
 
