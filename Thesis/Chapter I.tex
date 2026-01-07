@@ -40,7 +40,7 @@ In particular, we have the following Proposition
     \begin{bmatrix}a & b \\ c & d\end{bmatrix} \circ (z) := \frac{az+b}{cz + d}
   \]
   The side of the action doesn't really matter here, as we can recover the whole theory by switching between the left/right action.
-  However, the result of this thesis follows the recent paper \cite{MR2977413}, which use the inverse action. That's why we follow the same notations set up in that paper.
+  However, the result of this thesis follows the recent paper \cite{patnaik2025borel}, which use the inverse action. That's why we follow the same notations set up in that paper.
 \end{remark}
 
 The point $z = i$ is special, in the sense that its stability group is the orthogonal group $K =\SO2$. Indeed, for any \(g = \begin{bmatrix}d & -b \\ -c & a\end{bmatrix} \in SL_{2}(\mathbb{R})\)  we have
@@ -206,10 +206,10 @@ where
 The maps is surjective, as we can always choose the sign of the elements in the base so that it is an element in $\text{BAS}^+$.
 Let $\gamma =\begin{bmatrix}a & b \\ c & d\end{bmatrix} \in \SLR$ acts on $\text{BAS}^+$ in the following way
 \[\gamma \{z,w\} = \{az+bw,cz+dw\}\]
-It is clear that this is indeed an action. Two lattices in the same orbit under this action are called \text{similar}.  Modulo this action, we can define a bijective map as in the below lemma
-\begin{lemma}
+It is clear that this is indeed an action.  Modulo this action, we can define a bijective map as in the below lemma
+\begin{lemma}\label{base-and-lattices}
   Two bases in $\text{BAS}^+$ are mapped to the same lattice if they are in the same orbit under the action of $\SLR$. In particular, the quotient set
-  $\SLR \backslash \text{BAS}^+$ are in bijection with the set of lattices in $\mathbb{C}$.
+  $ \text{BAS}^+/\slz$ are in bijection with the set of lattices in $\mathbb{C}$.
 \end{lemma}
 \begin{proof}
   Let $\{z,w\}$ and $\{z',w'\}$ be two bases such that
@@ -261,10 +261,10 @@ It is clear that this is indeed an action. Two lattices in the same orbit under 
       c & d
     \end{bmatrix} \in \slz$.
 \end{proof}
-We also note that, each element $\{z,w\} \in \text{BAS}^+$ can be rescaled to get a base of the form $\{\tau,1\}$ where $\Im(\tau) = \Im(z/w)>0$. This mean we can also define another action - the
-resclaling action on $\text{BAS}^+$. This action commutes with the action of $\SLR$, hence induces an action on the space of similar lattices $\SLR \backslash \text{BAS}^+$. In particular, we can choose
-a representative for $\SLR \backslash \text{BAS}^+/\mathbb{C}^\times$ to be $\{\tau,1\}$ with $\Im(\tau)>0$. We just proved
-\begin{prop}
+Note that for each element $(z,w) \in \text{BAS}^+$, we can rescaling by a factor $w$ to get a base $(z',1)$ where $\Im(z')=\Im(z/w)>0$. Since the rescaling action commutes with the action 
+of $\gamma$ on $\text{BAS}^+$, it makes sense to define the space $\mathbb{C}^\times \backslash\text{BAS}^+/\slz$. By identifying the pair $(z',1)$ with $z' \in \uH$ and using lemma \ref{base-and-lattices}, we have the following bijection
+\[\uH/\slz \cong \mathbb{C}^\times \backslash\text{BAS}^+/\slz \cong \mathbb{C}^\times \backslash\{\text{lattices in $\mathbb{C}$}\}\]
+\begin{prop}\label{classify-similar-lattice}
   The upper half plane $\uH$ classifies similarity classes of two dimensional lattices.
 \end{prop}
 Now regard $\mathbb{C} \cong \mathbb{R}^2$ via $x+iy \mapsto (x,y)$, and the inner product is defined to be
@@ -448,18 +448,20 @@ we call such a lattice \textbf{unstable}. In some sense, we can see that \textit
 by the shortest vector compared to its volume. In the above lemma, we only find the semi-stable locus inside the fundamental domain.
 To find the semi-stable locus for the whole upper half plane $\uH$, we use the following lemma:
 \begin{lemma}
-  If $L_z$ is semi-stable, then so is the lattice $L_{g \circ z}$, where $g \in \SLR$.
+  If $L_z$ is semi-stable if and only if the lattice $L_{g \circ z}$ is semi-stable, where $g \in \SLR$.
 \end{lemma}
 \begin{proof}
-  If we denote $L_z=\text{span}_\mathbb{Z}\left\lbrace 1,z\right\rbrace$, then $L_{\gamma\circ z} = cL_z$ for some complex number $c$.
-  Indeed, we just need to check for $\gamma$ being an inversion or translation, since these two transformations generate $\SLR$, but this is easy.
-  Now let $c = re^{it}$. Multiplying by $e^{it}$ doesn't change the length, hence doesn't change the semi-stability. Multiplying by a positive number
-  $r$ will shift $(1,\log|u|)$ to $(1,\log|u|+\log r)$ and $(2,\log(\vol(A)))$ to $(2,\log(\vol(A))+2\log r)$.
-
-  \todo{I think in 2-dimensional case, c is 1}
-
-  The line segment $d$ connecting the origin with the final point intersects the line $x=1$ at $(1,\log(\vol(A))+\log r)$. By the semi-stability of the original lattice,
-  the point $(1,\log|u|+\log r)$ is above the line segment $d$.
+ By definition, the lattice $L_{g\circ z}:= \mathbb{Z}(g\circ z) \oplus \mathbb{Z}$. It is obvious that $g\circ z$ and $z$ are in the same coset of the quotient space $\uH/\slz$. By Proposition \ref{classify-similar-lattice}, we have 
+ \[\uH/\slz \cong \mathbb{C}^\times \backslash \{\text{lattices in $\mathbb{C}$}\}.\]
+ In particular, we must have that $L_{g \circ z} = cL_{z}$ for some non-zero complex number $c$. In polar coordinate $c=re^{it}$ for some real number $t$. Let's denote $u$ the shortest vector of $L_z$. Then $cu$ is also the shortest vector of
+ $cL_z$ and  
+ \[|cu| = r|u|, \quad \text{ and, } \quad \vol(L_{g\circ z}) = \vol(cL_z) = c^2 \vol(L_z)\]
+ Using the assumption that $L_z$ is semi-stable and the above equality, we get
+\begin{align*}
+  L_z \text{ is semi-stable} &\Leftrightarrow |u| \ge \sqrt{\vol(L_z)}\\
+  &\Leftrightarrow |cu| \ge c\sqrt{\vol(L_z)}= \sqrt{\vol(L_{g\circ z})}\\
+  &\Leftrightarrow L_{g\circ z} \text{ is semi-stable} \qedhere
+\end{align*}
 \end{proof}
 From this lemma, we can see that the semi-stable locus is the complement of the Farey balls in the upper half plane, as illustrated in the
 following figure, where the blue part is the semi-stable locus and the gray part is the unstable one.
@@ -526,7 +528,7 @@ following figure, where the blue part is the semi-stable locus and the gray part
     \drawCircle{3}{5}
     \drawCircle{4}{5}
   \end{tikzpicture}
-  \caption{Semistable locus in upper half plane}
+  \caption{semi-stable locus in upper half plane}
   \label{P-partition}
 \end{figure}
 \section{$\rho$-semi-stability of lattices}
@@ -572,19 +574,19 @@ $\alpha(H)=2$. If we let $\rho = \dfrac{1}{2}\alpha$, then we define
 \[\deg_{\text{inst}}(z):= \min_{\gamma \in  \Gamma/\Gamma \cap B} \left\langle \rho,H_B(z\gamma) \right\rangle\]
 where $B$ is the group of upper triangular matrices with invertible entries along the diagonal.
 \begin{definition}
-  The lattice $L_z$ corresponds to the point $z \in \uH$ is called \textbf{$\rho$-semistable} or just \textbf{semi-stable}
+  The lattice $L_z$ corresponds to the point $z \in \uH$ is called \textbf{$\rho$-semi-stable} or just \textbf{semi-stable}
   if $\deg_{inst}(z) \ge 0$.
 \end{definition}
 We shall use this definition to find the semi-stable locus in the upper half plane $\uH$.
 \begin{prop}
-  The locus of $\rho$-semistable points in the upper half plane $\uH$ is the
+  The locus of $\rho$-semi-stable points in the upper half plane $\uH$ is the
   complement of the Farey balls.
 \end{prop}
 \begin{proof}
  If $\deg_{\text{inst}}(z)$ is achieved at some
-  $\gamma_0 \in \Gamma$ and $z$ is $\rho$-semistable, then
+  $\gamma_0 \in \Gamma$ and $z$ is $\rho$-semi-stable, then
   \[\min_{\gamma \in \Gamma/\Gamma \cap B_\mathbb{Q}}\left\langle\rho,H_B(z\gamma)\right\rangle = \left\langle \rho, H_B(z\gamma_0)\right\rangle \ge 0  \]
-   Hence $\rho$-semistable locus must be the set
+   Hence $\rho$-semi-stable locus must be the set
   \[ \left\lbrace z \in \uH: \left\langle \rho, H_B(z\gamma)\right\rangle \ge 0 \mbox{ for all } \gamma \in \Gamma \right\rbrace\]
   We identify $z=x+iy$ with the product $a(y)n(x)$ as above. Under the identification \ref{upper-group}, we must have
   \[\left\langle \rho, H_B(z\gamma) = -\log(a(\gamma^{-1} \circ z)) \right\rangle\]
@@ -594,7 +596,7 @@ We shall use this definition to find the semi-stable locus in the upper half pla
       c & d
     \end{bmatrix} \in \slz$, then $\gamma_0^{-1} \circ z$ satisfies
   \[\Im(\gamma^{-1}\circ z) = \dfrac{\Im(z)}{(cx+d)^2+(cy)^2}\]
-  Thus, $z$ is semistable if and only if it satifies the inequalities
+  Thus, $z$ is semi-stable if and only if it satifies the inequalities
   \[y \le(cx+d)^2+(cy)^2  \Leftrightarrow \left(x+\dfrac{c}{d}\right)^2+\left(y-\dfrac{1}{2c^2}\right)^2 \ge \left(\dfrac{1}{2c^2}\right)^2. \]
    Since the above equation is exactly the equation for Farey balls, we are done.
 \end{proof}
@@ -708,7 +710,7 @@ to $\mathbb{R}^n$ via base changing.
 \end{definition}
 It can be shown that $L$ is a discrete subset of $\mathbb{R}^n$ . The discrete property turns out to be the sufficient condition for a subset of $\mathbb{R}^n$ to be a lattice, as stated in the 
 following proposition
-\begin{theorem}\cite[Proposition 4.2]{MR1697859}
+\begin{theorem}\cite[Proposition 4.2]{MR1697859}\label{discrete-lattice}
   Given a vector space $V$ and a subset $L \subset V$. Then $L$ is a lattice if and only if $L$ is discrete. 
 \end{theorem}
 
@@ -748,7 +750,7 @@ First we need to specify the notion of isomorphic lattices - in the first defini
   Thus we can extend  the function $\left\langle \cdot,\cdot \right\rangle \colon L \times L\to \mathbb{R}$ to a $\mathbb{R}$-bilinear function over $L_\mathbb{R} \times L_\mathbb{R}$ by 
   taking the tensor product. Clearly $Q(x/m) = \dfrac{1}{m^2}Q(x)$ for any $m \in \mathbb{Z} \setminus \{0\}$ and $x\in L$. Moreover the set $\{x/m: x \in L, m \in \mathbb{Z} \setminus \{0\}\}$ is dense 
   in $L_\mathbb{R}$, hence $Q$ define a norm on $L_\mathbb{R}$. In particular, $\left\langle \cdot, \cdot\right\rangle$ extends to an inner product on $L_\mathbb{R}$. The discrete condition of the abstract lattice ensure that 
-  $L$ is a discrete subset of $L_\mathbb{R}$ hence an Euclidean lattice.
+  $L$ is a discrete subset of $L_\mathbb{R}$ hence an Euclidean lattice by theorem \ref{discrete-lattice}.
 \end{proof}
 \subsection{Covolume of a lattice}
 Now that for every abstract lattice $L$ we can find an invertible matrix $g$ such that

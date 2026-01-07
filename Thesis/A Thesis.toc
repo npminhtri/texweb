@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {1.5.2}An alternative definition of lattices}{17}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}Equivalence between two definitions of lattices}{18}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Covolume of a lattice}{19}{subsection.1.5.4}%
-\contentsline {subsection}{\numberline {1.5.5}Sublattices}{19}{subsection.1.5.5}%
+\contentsline {subsection}{\numberline {1.5.5}Sublattices}{20}{subsection.1.5.5}%
 \contentsline {chapter}{\numberline {2}BASIC LIE THEORY FOR $\SLn \& \GLn $}{21}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Lie algebras}{21}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Definition}{21}{subsection.2.1.1}%
