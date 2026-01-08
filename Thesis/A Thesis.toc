@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {1.4.3}Unstable lattices}{16}{subsection.1.4.3}%
 \contentsline {section}{\numberline {1.5}Lattices in higher rank}{18}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Abstract lattices}{18}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}An alternative definition of lattices}{19}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}An alternative definition of lattices}{18}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}Equivalence between two definitions of lattices}{19}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Covolume of a lattice}{20}{subsection.1.5.4}%
 \contentsline {subsection}{\numberline {1.5.5}Sublattices}{21}{subsection.1.5.5}%
@@ -33,9 +33,9 @@
 \contentsline {subsection}{\numberline {2.2.5}Cartan matrix}{34}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}Parabolic subgroups and parabolic subalgebras}{35}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Parabolic subgroups I: An explicit description }{35}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Parabolic subgroups II: Using BN-pairs}{37}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Parabolic subgroups II: Using BN-pairs}{36}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Langlands decomposition}{38}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Iwasawa decomposition and $P$-horospherical decomposition}{40}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.4}Iwasawa decomposition and $P$-horospherical decomposition}{39}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Parabolic sets and parabolic subalgebras}{41}{subsection.2.3.5}%
 \contentsline {subsection}{\numberline {2.3.6}On the function $H_P$}{42}{subsection.2.3.6}%
 \contentsline {subsection}{\numberline {2.3.7}Some additional notations}{44}{subsection.2.3.7}%
@@ -53,8 +53,8 @@
 \contentsline {section}{\numberline {4.1}The equivalence between definitions of semi-stable lattices}{58}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}A useful lemma}{58}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Proof of the main theorem}{60}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Canonical pair and Canonical filtration}{61}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Equivalence between Canonical pair and canonical filtration}{61}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.2}Canonical pair and Canonical filtration}{60}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Equivalence between Canonical pair and canonical filtration}{60}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Equivalence between chain condition and condition \ref {extremal}}{61}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}$P$-semistability and $M_P$-semistability}{63}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Equivalence between increasing chain condition and condition \ref {destabilizing}}{64}{subsection.4.2.4}%

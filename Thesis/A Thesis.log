@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  6 JAN 2026 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.14)  7 JAN 2026 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1107,8 +1107,8 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 37.
 \c@definition=\count387
-LaTeX Info: Redefining \sl2 on input line 72.
-LaTeX Info: Redefining \SO2 on input line 73.
+LaTeX Info: Redefining \sl2 on input line 70.
+LaTeX Info: Redefining \SO2 on input line 71.
 ) (A Thesis.aux
 
 LaTeX Warning: Label `=' multiply defined.
@@ -1263,7 +1263,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [0] [2] (A Thesis.toc
+) [0] (Abstract.tex) [2] (A Thesis.toc
 LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
  (C:\Users\Hi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1642,7 +1642,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 191.
 
 [7] [8]
-Underfull \vbox (badness 1383) has occurred while \output is active []
+Underfull \vbox (badness 1708) has occurred while \output is active []
 
  [9]
 <Shortest vector.png, id=478, 627.5445pt x 257.763pt>
@@ -1666,10 +1666,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11] [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
+[11] [12] [13]
 Overfull \hbox (43.0789pt too wide) in paragraph at lines 531--532
  [][] 
  []
@@ -1686,8 +1683,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 535.
 
-[14] [15] [16] [17] [18] [19] [20]
-Overfull \hbox (20.63553pt too wide) in paragraph at lines 778--780
+[14] [15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17] [18] [19] [20]
+Overfull \hbox (20.63553pt too wide) in paragraph at lines 777--779
 [][]\OT1/cmr/bx/n/12 Definition 1.5.5.1 \OT1/cmr/m/n/12 ([]sub-lat-tice)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\U/matha/m/n/12 p\OML/cmm/m/it/12 L; Q\U/matha/m/n/12 q$ \OT1/cmr/m/it/12 be a Eu-clidean $\U/msb/m/n/12 Z$\OT1/cmr/m/it/12 -lattice. We say that a $\U/msb/m/n/12 Z\U/matha/m/n/12 ^^A$\OT1/cmr/m/it/12 submodule
  []
 
@@ -1834,77 +1838,80 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [23
 
 ] [24]
-Underfull \vbox (badness 1097) has occurred while \output is active []
+Underfull \vbox (badness 1454) has occurred while \output is active []
 
- [25] [26] [27] [28] [29] [30] [31] [32] [33]
-Underfull \vbox (badness 1442) has occurred while \output is active []
+ [25] [26] [27] [28] [29] [30] [31] [32]
+Underfull \vbox (badness 1769) has occurred while \output is active []
 
- [34] [35] [36] [37] [38]
+ [33] [34] [35] [36] [37]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 578.
+(hyperref)                removing `math shift' on input line 574.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 578.
+(hyperref)                removing `math shift' on input line 574.
 
 [39] [40] [41]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 683.
+(hyperref)                removing `math shift' on input line 679.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 683.
+(hyperref)                removing `subscript' on input line 679.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 683.
+(hyperref)                removing `math shift' on input line 679.
 
 
-Underfull \vbox (badness 2376) has occurred while \output is active []
+Underfull \vbox (badness 5771) has occurred while \output is active []
 
  [42]
-Overfull \hbox (5.53311pt too wide) in paragraph at lines 704--708
+Overfull \hbox (5.53311pt too wide) in paragraph at lines 700--704
 \OT1/cmr/m/n/12 We also write $\OML/cmm/m/it/12 ^^U[]$ \OT1/cmr/m/n/12 for the ba-sis of $\U/euf/m/n/12 a\U/matha/m/n/12 p\OML/cmm/m/it/12 P\U/matha/m/n/12 q$ \OT1/cmr/m/n/12 con-tain-ing the fun-da-men-tal weight, namely $[] \U/matha/m/n/12 ^^P
  []
 
 [43] [44]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 766.
+(hyperref)                removing `math shift' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 766.
+(hyperref)                removing `\rho' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 766.
+(hyperref)                removing `subscript' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 766.
+(hyperref)                removing `math shift' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 766.
+(hyperref)                removing `math shift' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 766.
+(hyperref)                removing `\rho' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 766.
+(hyperref)                removing `subscript' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 766.
+(hyperref)                removing `superscript' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 766.
+(hyperref)                removing `math shift' on input line 762.
 
 [45]) (Chapter III.tex [46]
 Chapter 3.
@@ -1977,41 +1984,41 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60] [61]
+ [59] [60] [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [62]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 158.
+(hyperref)                removing `subscript' on input line 157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 157.
 
 
-Overfull \hbox (5.92482pt too wide) in paragraph at lines 161--163
+Overfull \hbox (5.92482pt too wide) in paragraph at lines 160--162
 [][]\OT1/cmr/bx/n/12 Lemma 4.2.3.1. []\OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 P$ \OT1/cmr/m/it/12 be a stan-dard parabolic sub-group of $[]$. For $\OML/cmm/m/it/12 x \U/matha/m/n/12 P \OML/cmm/m/it/12 X \U/matha/m/n/12 ^^P \OML/cmm/m/it/12 K\U/matha/m/n/12 z []$\OT1/cmr/m/it/12 ,
  []
 
-[63] [64] [65]) (A Thesis.bbl [66] [67
+[63]
+Underfull \vbox (badness 2460) has occurred while \output is active []
 
-]) [68] (A Thesis.aux)
+ [64]) (A Thesis.bbl [65] [66
+
+]) [67] (A Thesis.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2024,17 +2031,17 @@ Package rerunfilecheck Info: File `"A Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: 652D6FE15E1BD8A0AC9702ACEC40B09A;13869.
  ) 
 Here is how much of TeX's memory you used:
- 44523 strings out of 474486
- 1018516 string characters out of 5745171
+ 44528 strings out of 474486
+ 1018620 string characters out of 5745171
  2014542 words of memory out of 5000000
- 65741 multiletter control sequences out of 15000+600000
+ 65744 multiletter control sequences out of 15000+600000
  590172 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,16n,96p,1254b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi480\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha6.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi720\mathx10.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi864\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi1244\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\matha12.pk> <C:\Users\Hi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "A Thesis.pdf" (74 pages, 686168 bytes).
+Output written on "A Thesis.pdf" (73 pages, 685574 bytes).
 PDF statistics:
- 1288 PDF objects out of 1440 (max. 8388607)
- 310 named destinations out of 1000 (max. 500000)
+ 1284 PDF objects out of 1440 (max. 8388607)
+ 309 named destinations out of 1000 (max. 500000)
  594 words of extra memory for PDF output out of 10000 (max. 10000000)
 

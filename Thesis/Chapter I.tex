@@ -440,12 +440,12 @@ The interesting part of $\mathfrak{D}$ is where $y\le 1$. This corresponds to th
 that have the canonical plots lying entirely on or above the $x$-axis. In particular, the profile of such a lattice
 only has the vertices at the origin and $(2,0)$. Grayson and Stuhler call this kind of lattice
 \textbf{semi-stable}. If we don't normalize the area of such a lattice, then a semi-stable
-lattice has the bottom of the profile as a straight line.
+lattice has the bottom of the profile as a straight line. 
 
 Conversely, the lattices assigned to the points $z \in \uH$ with $\Im(z)>1$ correspond to lattices
 that have the canonical plot breaking at the lowest point on the axis $x=1$. In the general case, this reflects the fact that
 a non semi-stable lattice has the shortest vector $u$ satisfying $||u||<\sqrt{\vol(L_z)}$. Following Casselman,
-we call such a lattice \textbf{unstable}. In some sense, we can see that \textit{the degree of instability} is measured
+we call such a lattice \textbf{unstable}. In some sense, we can see that \textbf{the degree of instability} is measured
 by the shortest vector compared to its volume. In the above lemma, we only find the semi-stable locus inside the fundamental domain.
 To find the semi-stable locus for the whole upper half plane $\uH$, we use the following lemma:
 \begin{lemma}
@@ -466,7 +466,7 @@ To find the semi-stable locus for the whole upper half plane $\uH$, we use the f
 \end{proof}
 From this lemma, we can see that the semi-stable locus is the complement of the Farey balls in the upper half plane, as illustrated in the
 following figure, where the blue part is the semi-stable locus and the gray part is the unstable one.
-\begin{figure}[h]
+\begin{figure}[hbt]
   \centering
   \begin{tikzpicture}[scale =3]
     % Define colors
@@ -603,8 +603,7 @@ We shall use  Definition \ref{rho-definition-2-dim-lattice} to find the semi-sta
   \[y \le(cx+d)^2+(cy)^2  \Leftrightarrow \left(x+\dfrac{c}{d}\right)^2+\left(y-\dfrac{1}{2c^2}\right)^2 \ge \left(\dfrac{1}{2c^2}\right)^2. \]
    Since the above equation is exactly the equation for Farey balls, we are done.
 \end{proof}
-In particular, we just proved that the $\rho$-semistablility and the semistablility in Grayson's sense
-are equivalent.
+
 \subsection{Unstable lattices}
 Consider an unstable lattice $L$ with a shortest vectur $u$, then the bottom
 of the profile of $L$ has a break at the point $(1,\log(||u||))$. Clearly $u$ is a primitive vector, so $L_1 = \mathbb{Z}u$
