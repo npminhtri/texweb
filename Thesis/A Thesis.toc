@@ -1,5 +1,6 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Preface}{1}{chapter*.2}%
+\contentsline {chapter}{Preface}{v}{chapter*.1}%
+\contentsline {chapter}{List of Figures}{v}{chapter*.1}%
 \contentsline {chapter}{\numberline {1}$\SO 2 \backslash \SLR $}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}$\SLR $ and its action on the upper half plane $\uH $}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Fundamental domain}{4}{section.1.2}%
