@@ -1,15 +1,150 @@
 \chapter{SEMI-STABLE LATTICE IN HIGHER RANK}
 In this chapter, we will establish the notion of semi-stable lattice. Heuristically,
-this is a lattice that achieve all the successive minima at the same time, see \cite{MR2153282}.
+this is a lattice that achieve all its successive minima at the same time, see \cite{MR2153282}.
 
-We will provide two different definitions of semi -stable lattice: one is geometric - which follows Grayson's notion of a canonical plot in \cite{MR780079}, and one is purely algebraic, which makes use of the maximal standard parabolic subgroups. We will show that the two definitions coincide in the next chapter.
+We will provide two different definitions of semi -stable lattices; one is geometric - which follows Grayson's notion of a canonical plot in \cite{MR780079}, and one is purely algebraic, which makes use of the maximal standard parabolic subgroups. We will show that the two definitions coincide in the next chapter.
+\section{Lattices in higher rank}
+Since lattices is the central object for studying in this thesis, we will define the notion of lattice of rank at least 3 in the last section in chapter I.
+The definitions and properties of a general lattice will be used extensively in the later part of this thesis. Note that, in many reference, such as
+\cite{MR780079}, the lattice is defined to be a module over a ring of algebraic integers, but we can always restrict to a $\mathbb{Z}$-module.
+\subsection{Abstract lattices}
+\begin{definition}[\label = Abstract $\mathbb{Z}$-lattices]
+  Let $L$ be a finitely generated $\mathbb{Z}$-module. In particular, it is a free $\mathbb{Z}$-module
+  of finite rank. Suppose that $L$ is endowed with a map $Q\colon L \to \mathbb{R}$, such that
+  the following conditions hold
+\begin{enumerate}
+  \item The set $\left\lbrace x \in L: Q(x) \le r\right\rbrace $ is finite for any real number $r$ - \textbf{the parallelogram law}\label{parallelogram law}.
+  \item $Q(x+y)+Q(x-y) = 2Q(x)+2Q(y)$ for all $x,y \in L$.
+  \item $Q(x) \ne 0$ for all $x \in L \setminus \{0\}$.
+\end{enumerate}
+  We will call  the pair $(L,Q)$ a \textbf{abstract $\mathbb{Z}$-lattice}.
+\end{definition}
 
+\begin{example}\label{standard-lattice-zn}
+Take $L = \mathbb{Z}^n$ and choose our quadratic form to be the standard one. In particular, for $x = (x_1,x_2,\ldots,x_n) \in \mathbb{Z}^n$,
+\[Q(x):= x_1^2+x_2^2+\ldots +x_n^2\]
+Here the multiplication is just the usual dot product between 2 vectors. In term of matrix, this quadratic form is assigned to the
+identity matrix $I_n$.
+\end{example}
+If there is no further confusion, we can just denote a Euclidean lattice by $L$, without specifying the bilinear form
+$Q$. The lattice $L$ determines a full-rank lattice inside $L_\mathbb{R}$, namely, the rank
+of the lattice $L$ is equal to the dimension of $L_\mathbb{R}$.
+
+\subsection{An alternative definition of lattices}
+For the sake of computation, we also usually adopt another definition of the lattice.
+In particular, we view lattice as a free $\mathbb{Z}-$ module of rank $n$ that is isomorphic
+to $\mathbb{R}^n$ via base changing.
+\begin{definition}\label{lattice2}
+  A \textit{lattice} in $\mathbb{R}^n$ is a subset $L \subset \mathbb{R}^n$ such that there exists
+  a basis $b_1,\ldots,b_n$ of $\mathbb{R}^n$ such that
+  \[L = \mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n\]
+  If we put the vector $b_1,b_2,\ldots,b_n$ in columns, with respect to the standard basis, namely
+  \[g = [b_1 | b_2 | \ldots | b_n] ,\]
+  then $L = g\mathbb{Z}^n$.
+\end{definition}
+It can be shown that $L$ is a discrete subset of $\mathbb{R}^n$ . The discrete property turns out to be the sufficient condition for a subset of $\mathbb{R}^n$ to be a lattice, as stated in the 
+following proposition
+\begin{theorem}\cite[Proposition 4.2]{MR1697859}\label{discrete-lattice}
+  Given a vector space $V$ and a subset $L \subset V$. Then $L$ is a lattice if and only if $L$ is discrete. 
+\end{theorem}
+
+\subsection{Equivalence between two definitions of lattices}
+In this subsection, we will show that every abstract $\mathbb{Z}$- lattice is isomorphic to an Euclidean $\mathbb{Z}-$ lattice.
+This will be helpful in visualizing the abstract lattices, as we are just looking at concrete lattices with deformation by a linear transformation.
+
+First we need to specify the notion of isomorphic lattices - in the first definition
+\begin{definition}
+  A map $f \colon (L,Q)   \to (L',Q')$  is an \textbf{isomorphism} between lattices if it is a group isomorphism and
+  for all $x \in L$, we have
+  \[Q(x) = Q'(f(x)) \]
+\end{definition}
+\begin{prop}\label{equiv-def}
+  Any abstract lattice is isomorphic to a Euclidean $\mathbb{Z}-$ lattice.
+\end{prop}
+\begin{proof}
+  Assume that $L=\mathbb{Z}b_1\oplus \mathbb{Z}b_2\oplus \ldots \mathbb{Z}b_n$, and choose the associated quadratic form as in example \ref{standard-lattice-zn}, we can directly 
+  verify that the 3 conditions defining an abstract lattice hold. Conversely, we define
+  \[\left\langle x,y\right\rangle:=\dfrac{Q(x+y)-Q(x-y)}{4}\]
+  We will show that this can be extended to an inner product on $\mathbb{R}^n = L \otimes \mathbb{R}$. By the parallelogram law \ref{parallelogram law}, we have $Q(y-x) = 2Q(x)+2Q(y)-Q(x+y) = Q(x-y)$, thus
+  \[\left\langle x,y \right\rangle=\dfrac{Q(x+y)-Q(x-y)}{4} = \dfrac{Q(x+y)-Q(y-x)}{4} = \left\langle y,x \right\rangle\]
+  We will prove by induction that $Q(mx) = m^2Q(x)$ for all positive integer $m$. The statement is trivial for $m=1$. By parallelogram law
+  \[Q(mx) = 2Q[(m-1)x] + 2Q(x) - Q[(m-2)x] = [2(m-1)^2+2-(m-2)^2]Q(x) = m^2Q(x)\]
+  As a consequence, $Q(x) \ge 0$ for all $x \in L$. Indeed, if $Q(x)<0$ for some $x \in L$, then the set $\{v \in L: Q(v)<0\}\supset \mathbb{Z}x$, hence infinite. But this contradicts 
+  the condition 3 of an abstract lattice. Finally, consider the relations
+  \begin{align*}
+    Q(a+b+c) +Q(a-b+c) = 2Q(a+c)+2Q(b)\\
+    Q(a+b-c)+ Q(a-b-c) = 2Q(a-c)+2Q(b)\\
+    Q(a+b+c)+ Q(a-b-c) =2Q(b+c)+2Q(a)\\
+    Q(a+b-c)+ Q(a-b+c) =2Q(b-c)+2Q(a)
+  \end{align*}
+  Taking the alternative sum yields 
+  \[2Q(a+b+c)-2Q(a+b-c) = 2Q(a+c)-2Q(a-c) + 2Q(b+c)-2Q(b-c) \]
+  or equivalently
+  \[\left\langle a+b,c\right\rangle = \left\langle a,c\right\rangle+ \left\langle b,c\right\rangle \]
+  Thus we can extend  the function $\left\langle \cdot,\cdot \right\rangle \colon L \times L\to \mathbb{R}$ to a $\mathbb{R}$-bilinear function over $L_\mathbb{R} \times L_\mathbb{R}$ by 
+  taking the tensor product. Clearly $Q(x/m) = \dfrac{1}{m^2}Q(x)$ for any $m \in \mathbb{Z} \setminus \{0\}$ and $x\in L$. Moreover the set $\{x/m: x \in L, m \in \mathbb{Z} \setminus \{0\}\}$ is dense 
+  in $L_\mathbb{R}$, hence $Q$ define a norm on $L_\mathbb{R}$. In particular, $\left\langle \cdot, \cdot\right\rangle$ extends to an inner product on $L_\mathbb{R}$. The discrete condition of the abstract lattice ensure that 
+  $L$ is a discrete subset of $L_\mathbb{R}$ hence an Euclidean lattice by theorem \ref{discrete-lattice}.
+\end{proof}
+\subsection{Covolume of a lattice}
+Now that for every abstract lattice $L$ we can find an invertible matrix $g$ such that
+\[ L  \cong g\mathbb{Z}^n\]
+
+The number $n$ is called the \textbf{rank} of the lattice $L$.
+
+Let $\left\lbrace e_1,e_2,\ldots,e_n \right\rbrace$ be an orthonormal basis of $L_\mathbb{R} \cong \mathbb{R}^n$ and
+\[g = [b_1 | b_2 | \ldots | b_n] .\] The covolume of the lattice
+$L$ is defined as
+\begin{definition}\label{covolume-lattice-formula}
+  The covolume of $L$ is given by the formula
+  \[\vol(L) = \left|\det(\left\langle b_i,e_j\right\rangle)\right|\]
+\end{definition}
+The rank and covolume are invariant numerical values of $L$, as they don't depend on the choice of basis. Indeed, two bases of a rank $n$ lattice $L$
+are related by a transformation $g \in \text{GL}_n(\mathbb{Z})$. Clearly this preserves the volume and the rank as a $\mathbb{Z}-$module.
+
+
+\subsection{Sublattices}
+To work with semi-stable lattice $L$, we need to consider all the sublattices contained inside $L$.
+\begin{definition}[\label=sublattice]
+  Let $(L,Q)$ be a Euclidean $\mathbb{Z}$-lattice. We say that a $\mathbb{Z}-$submodule $M$ of
+  $L$ a \textbf{sublattice} if and only if $L/M$ is torsion free.
+\end{definition}
+From this definition, we can prove that $M$ is a sublattice of $L$ if it satisfies one of the
+following equivalent properties:
+\begin{enumerate}
+  \item $M$ is a summand of $L$.
+  \item every basis of $M$ can be extended to a basis of $L$.
+  \item The group $M$ is an intersection of $L$ with a rational subspace of $L_\mathbb{R}$.
+\end{enumerate}
+We refer to the \cite[Section 1.4]{MR4505757} for a proof of these equivalences.
+\begin{example}
+  If $L = \mathbb{Z}^2$, then any sublattice of $L$ is a primitive vector $u = (a,b)$, i.e
+  $\gcd(a,b)=1$. Indeed, $u=(a,b)$ is a sublattice of $\mathbb{Z}^2$ if and only if there exists a vector $v \in \mathbb{Z}^2$
+  such that $L = \mathbb{Z}u \oplus \mathbb{Z}v$. With respect to the usual inner product on $\mathbb{R}^2$,
+  we have
+  \[1 = \vol(\mathbb{Z}^2) = \det \begin{bmatrix}
+      a & b \\
+      c & d
+    \end{bmatrix} = ad-bc\]
+  This happens if and only if $\gcd(a,b)=1$.
+
+  \begin{definition}
+    Given a lattice $L$ and a subgroup $M \subset L$, then we call the  $M$ \textbf{primitive } if $L/M$ is torsion free. Equivalently, $M \subset L $ is a
+    primitive sublattice if no non-zero multiples of non-members of $M$ are in M. In formula
+    \[(M \otimes \mathbb{Q}) \cap L = M\]
+  \end{definition}
+  \begin{example}
+    We consider the subgroup $M$ generated by a single element $v \in L$. Then $\mathbb{Z}v$ is primitive if and only if there is no $w \in L \setminus \{v\}$ such that 
+    \[w = c\cdot v,\]
+    for some integer $c$.
+  \end{example}
+\end{example}
 \section{Grayson's definition of semi-stability}
 Recall that a lattice is a pair $(L,\left\langle\cdot,\cdot\right\rangle)$ where $L$ is a $\mathbb{Z}$-module
 and $\left\langle\cdot,\cdot\right\rangle$ is the associated inner product. If there is no confusion, we can will just denote this lattice by $L$ - the underlying $\mathbb{Z}$-module, and $\left\langle \cdot,\cdot\right\rangle$ for  the associated inner product.
 \subsection{Grayson's definition}
-In this section, we introduce Grayson's definition of \textit{semi-stable} lattices, follows \cite{MR780079}. 
-Grayson associates every lattice convex hull of points in $\mathbb{R}^2$ - called its \textit{ profiles}.
+In this subsection, we introduce Grayson's definition of \textit{semi-stable} lattices, follows \cite{MR780079}. 
+Grayson associates to every lattice a convex hull of certain points in $\mathbb{R}^2$ - called its \textit{ profile}.
 To define the profile, observe first that if $M \subset L$ is a sublattice, then the space $M_\mathbb{R} = M \otimes \mathbb{R}$
 is a subspace of $L_\mathbb{R}$, equipped with the restriction of the positive definite symmetric form $Q$ of $L$, then $M$
 is also a lattice of rank not exceeding rank of $L$.
@@ -36,17 +171,21 @@ The following lemma asserts that, on each vertical line $x =n$ where $(n=0,1,\ld
     \begin{itemize}
         \item For $r =1$, the collection of all rank $1$ sublattices of $L$ is just the set of all vectors in $L$. So we reduce
               to show that for any $c>0$, the set $B(0,c) \cap L$  has finitely many elements. But the lattice $L$ is a discrete subset of $L_\mathbb{R}$, thus the intersection of $L$ with a bounded set has only finitely many elements.
-        \item Assume that the lemma holds for $r >1$. Consider
+        \item Let $r>1$. Consider
               \[M = \mathbb{Z}m_1\oplus \ldots \oplus\mathbb{Z}m_r\]
-              is a sublattice of  $L$ of rank $r$. Consider the wedge product $\bigwedge^r L$, then clearly
+             The wedge product $\bigwedge^r L$, then clearly
               $m_1\wedge m_2\ldots \wedge m_r$ is a vector in the lattice  $\bigwedge^r L$.
               By the previous case, there are finitely
               many vectors with bounded length inside lattice. So we only need to show that the map
               \[ M \mapsto \bigwedge^r M \]
-              is finite to one, then we are done. Consider the sublattice $M' = L \cap (M\otimes \mathbb{Q})$. It is clear that $M' \supset M$. Assume that 
-              $M'$ has a basis $\{v_1,\ldots,v_r\}$. Then we have 
-              \[[M':M]v_1 \wedge \ldots \wedge v_r = m_1 \wedge \ldots \wedge m_r\]
-              Thus $\bigwedge^r M$ output the index of $M$ in $M'$. As groups, there are only finite subgroups of $M'$ of a fixed index, so there are only finitely many choices of $M$ under the map $M \mapsto \bigwedge^r M$. \qedhere
+              is finite to one, then we are done. Indeed, let $v= \bigwedge^r M$ be a vector in $\bigwedge^r L$. We want to show that there are only finitely many sublattices $N \subset L$  of rank $r$  such that 
+              $\bigwedge^r N = v$. Indeed, let $\{n_1,n_2,\ldots n_r\}$ be a basis for $N$ then 
+              \[v = m_1\wedge m_2\ldots \wedge m_r = n_1\wedge n_2\ldots \wedge n_r \Rightarrow M \otimes \mathbb{Q} = N \otimes \mathbb{Q}\]
+              If this is not true, we would find a factor $u \in \mathrm{span}_\mathbb{Q}(n_1,\ldots,n_r) - \mathrm{span}_\mathbb{Q}(m_1,\ldots,m_r)$. But this implies 
+              \[0 = u\wedge n_1 \wedge\ldots \wedge n_r = u \wedge m_1 \wedge \ldots \wedge m_r \ne 0\]
+              which is a contradiction. Furthermore, we note that $N$ and $M'$ are lattice of $L$ with the same rank, so $N$ must have finite index in $M'$. This index is the same as index of $M$ in $M'$.
+              In particular, the preimage of the map $M \mapsto \bigwedge^r M$ must be a abelian subgroup of $M'$ with fixed index.  There are finitely many such group, by 
+              \cite[Proposition A.1]{MR1460018}. Hence we are done. \qedhere
     \end{itemize}
 \end{proof}
 \begin{definition}
@@ -55,8 +194,7 @@ The following lemma asserts that, on each vertical line $x =n$ where $(n=0,1,\ld
 In theory, we can compute the profile by searching for the shortest vector in each of its exterior product, but this computation
 is infeasible when the dimension of the lattice grows. Since there are lattices with
 arbitrarily large volume of any rank smaller than that of $L$, we add to the side the point $(0,\infty)$ and $(n,\infty)$. The sides
-of the profile are therefore two vertical lines. The bottom is just the convex polygonal connecting the origin with the point
-$\ell(L) = (n,\log\vol(L))$, where $n$ is the rank of $L$.
+of the profile are therefore two vertical lines. The bottom is a convex polygonal consisting of consecutive lines connecting the origin with the point $\ell(L)$.
 \begin{definition}\label{ss1}
     If the bottom of the profile contains only two points $(0,0)$ and $(n,\log\vol L)$, then the
     lattice $L$ is said to be \textbf{semi-stable}. Otherwise $L$ is said to be \textbf{unstable}.
@@ -135,7 +273,7 @@ which is split. Thus we have the isomorphisms
 \[(L/M)_\mathbb{R} \cong L_\mathbb{R}/M_\mathbb{R} \cong M^\perp_\mathbb{R}\]
 Therefore, by restricting of the inner product over $L_\mathbb{R}$ to $M^\perp_\mathbb{R}$, we clearly see that
 $L/M$ also inherits an inner product. Explicitly, the norm over $L/M$ can be defined by restricting the norm $||\cdot||$ on $L_\mathbb{R}/M_\mathbb{R}$, which is given by 
-\[||x||:= \inf\{ \sqrt{ \left\langle x+m, x+m\right\rangle}: m \in M \}\]
+\[||x||:= \inf\{ ||x+m||: m \in M \}\]
 \begin{definition}
     Given a lattice $L$ containing a sublattice $M$, then $L/M$ is a lattice. We call this lattice \textbf{quotient lattice}.
 \end{definition}
@@ -153,7 +291,7 @@ $L/M$ also inherits an inner product. Explicitly, the norm over $L/M$ can be def
     $\left\langle m_i,f_j \right\rangle =0$ for all $i,j$.
     By definition \ref{covolume-lattice-formula}, we have
     \begin{align*}
-        vol(L) & = \det\begin{bmatrix}
+        \vol(L) & = \det\begin{bmatrix}
                            \left\langle m_i,e_i\right\rangle  & \left\langle n_j,e_i\right\rangle \\
                            \left\langle m_i,f_J \right\rangle & \left\langle n_j,f_j\right\rangle
                        \end{bmatrix} \\
@@ -163,7 +301,7 @@ $L/M$ also inherits an inner product. Explicitly, the norm over $L/M$ can be def
                        \end{bmatrix}  \\
                & =\vol(M)\cdot \vol(L/M)
     \end{align*}
-    Hence we are done. The latter inequality follows from the fact that the volume decrease under the orthogonal projection and the observation that
+    Hence we are done. The last inequality follows from the fact that the volume decrease under the orthogonal projection and the observation that
     $N_\mathbb{R} \supset (L/M)_\mathbb{R}$.
 \end{proof}
 In the canonical plot, the import of lemma \ref{volume-of-lattice} is that the slope of the quotient lattice $L/M$ appears as
@@ -197,17 +335,12 @@ Given two sublattices $M_1,M_2 \subset L$, if we apply lemma \ref{volume-of-latt
 $M_1/M_1\cap M_2$ and $M_2/M_1\cap M_2$ in $M_1+M_2/M_1\cap M_2$, we get
 \[\vol(M_1/M_1 \cap M_2)\vol(M_2/M_1\cap M_2) \ge \vol(M_1+M_2/M_1\cap M_2)\]
 or equivalently
-\begin{lemma}\cite[Corollary 4.2]{MR2127941}
-    \[\vol(M_1+M_2)\vol(M_1\cap M_2) \le \vol(M_1)\vol(M_2)\]
-\end{lemma}
-Grayson used the logarithm to express the above inequality in additive terms:
 \begin{prop}\label{parallelogram-rule}\cite[Proposition 4.3]{MR2127941}
     Suppose $M_1,M_2$ are sublattices of $L$ then
-    \[\log\vol(M_1)+\log(\vol(M_2)) \ge \log(\vol(M_1+M_2))+\log\vol(M_1\cap M_2)\]
+    \[\log\vol(M_1)+\log\vol(M_2) \ge \log\vol(M_1+M_2)+\log\vol(M_1\cap M_2)\]
 \end{prop}
-\begin{proof}
-    It follows immediately from the fact that $\log$ is an increasing function over $(0,\infty)$.
-\end{proof}
+
+
 Grayson called this the parallelogram rule, as the geometric meaning of  proposition \ref{parallelogram-rule} is
 illustrated in the figure \ref{Grason's parallelogram rule}.
 \begin{figure}[hbt!]
@@ -285,7 +418,7 @@ of the profile
     $\ell(M)$ and $\ell(M_*)$. Similarly, the point $\ell(M+M_*)$ lies somewhere inclusively to the right of $\ell(M)$ and $\ell(M_*)$.
         By the paralellogram rule, the point $ell(M)$ will therefore be above the boundary points
     $\ell(M\cap M_*)$, $\ell(M_*)$ and $\ell(M+M_*)$. If $M$ is also a vertex of the profile, the parallelogram must degenerate. In particular we either have
-    $M \cap _M*=M$, in which $M\subset M_*$, or $M+M_* = M$, in which $M_* \subset M$.
+    $M \cap M*=M$, in which $M\subset M_*$, or $M+M_* = M$, in which $M_* \subset M$.
 \end{proof}
 An immediate consequence is that
 \begin{theorem}\label{filtration}\cite[Theorem 1.18]{MR780079}
@@ -296,7 +429,7 @@ is
 \[\mathcal{F}: 0 = L_0 \subset L_1 \subset L_2 \subset \cdots \subset L_{k-1} \subset L_k = L \]
 then it can be seen from the diagram that
 \begin{enumerate}
-    \item $L_i/L_{i-1}$ is semi-stable for all $1 \le i \le k$.
+    \item $L_i/L_{i-1}$ is semi-stable for all $1 \le i \le k$, as the profile of $L_i/L_{i-1}$  is just a straight line segment connecting $\ell(L_{i-1})$ to $\ell(L_i)$.
     \item $\mu(L_i/L_{i-1}) \le \mu(L_{i+1}/L_i)$ for all $1 \le i \le k-1$.
 \end{enumerate}
 These two conditions is also sufficent for a chain to be a canonical filtration
@@ -345,10 +478,9 @@ These two conditions is also sufficent for a chain to be a canonical filtration
 \end{figure}
 \begin{proof}
     Suppose $M$ to be any other sublattice of $L$. We want to know that $\ell(M)$ lies
-    above the plot $P$ of the $\ell(L_i)$. We prove by induction on the index $i$ that if $M \subset L_i$, then $\ell(M)$ lies above the
-    plot $P$.
+    above the plot $P$ of the $\ell(L_i)$. We prove this by induction on the index $i$ such that if $M \subset L_i$
     \begin{itemize}
-        \item If $i=1$ then $M\subset L_1$. Since $L_1 $is semi-stable, we must have $\ell(M)$ lies above the line connecting $(0,0)$ and $\ell(L_1)$. Hence $\ell(M)$ lies above the plot $P$.
+        \item If $i=1$ then $M\subset L_1$. Since $L_1 $ is semi-stable, we must have $\ell(M)$ lies above the line connecting $(0,0)$ and $\ell(L_1)$. Hence $\ell(M)$ lies above the plot $P$.
         \item Suppose that $M\subset L_i$ for $i>1$. Then $M+L_{i-1} \subset L_i$ contains $L_{i-1}$. Therefore, it corresponds to the point lies above the line connecting $\ell(L_{i-1})$ and $\ell(L_i)$, thus lies above $P$.         By induction, the fact that $(M\cap L_{i-1}) \subset L_{i-1}$ implies $\ell(M\cap L_{i-1})$ lies above the plot $P$. Using the parallelogram rule, the point $\ell(M)$ must then also lie above the plot $P$.
     \end{itemize}
     Thus any chain satisfies the conditions given in the theorem is a canonical filtration.
@@ -360,7 +492,7 @@ we define the space of lattices of rank $n$ by $X_n := K \backslash \text{GL}_n(
 \begin{definition}[\label  = $\rho$-definition]\label{ss2}
     Let $x \in X_n$ be an arbitrary lattice, then the lattice $x$ is called \textbf{$\rho$-semi-stable} if and only if its degree of instability $\deg_{\text{inst}}(x)\ge 0$, where
     \[\deg_{\text{inst}}(x):= \min_{Q \in ParSt, \gamma \in \text{GL}(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle\]
-    where $\text{ParSt}$ stands for the set of standard parabolic subgroup of $\GLn$ as defined in definition \ref{parst}.
+    and $\text{ParSt}$ stands for the set of standard parabolic subgroup of $\GLn$ as defined in definition \ref{parst}.
 \end{definition}
 \subsection{Some basic properties}
 We first have an elementary lemma
@@ -369,32 +501,29 @@ We first have an elementary lemma
     Given $x \in X_n$, then the following are equivalent
     \begin{enumerate}
         \item $\deg_{\text{inst}}(x) \ge 0$.
-        \item For every standard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
-        \item For every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$.
+        \item For every standard parabolic subgroup $P\subset G$ and $\omega \in \widehat{\Delta}_P$ we have \[\left\langle \omega,H_P(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/P(\mathbb{Q})$.
+        \item For every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q(\mathbb{Q})$.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
-    \hfill\\
     First we prove $1 \Rightarrow 3$: This follows immediately as $\rho_Q = c\omega$ for some positive number $c$ and $\omega \in \widehat{\Delta}_Q$, by lemma \ref{rhoP}. In particular
     \[\left\langle \omega,H_Q(x\delta) \right\rangle = \dfrac{1}{c}\left\langle \rho_Q,H_Q(x\delta) \right\rangle \ge \dfrac{1}{c}\deg_{\text{inst}}(x) \ge 0\]
-    For $2 \Rightarrow 3$: We can choose a maximal standard parabolic $Q$ such that 
+    For $3 \Rightarrow 2$: We can choose a maximal standard parabolic $Q$ such that 
     $P \subset Q \subset G$. But then 
-    \[\left\langle \omega,H_P(x\delta) \right\rangle =\left\langle \omega,H_Q(x\delta) \right\rangle \ge 0\]
+    \(\left\langle \omega,H_P(x\delta) \right\rangle =\left\langle \omega,H_Q(x\delta) \right\rangle \ge 0.\)
     Finally, we have $2 \Rightarrow 1$ as $\rho_P$ is a positive linear combination of elements contained in $\widehat{\Delta}_P$, again by lemma \ref{rhoP}
 \end{proof}
 \subsection{Check for semi-stability}\label{semi-stable-verified}
 From lemma \ref{ss-equiv}, to check whether $x \in G$ is semi-stable, we just need to verify whether $$\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0.$$
-A simple observation is that - a lattice $x$ is semi - stable if for all maximal standard parabolic subgroups
-$Q_i$, we have
-\[\min_{\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})}\left\langle \rho_Q, H_Q(x\gamma) \right\rangle \ge 0\]
+for $\omega \in \widehat{\Delta}_Q$ and $Q \subset G$ a standard maximal parabolic subgroup.
 From lemma \ref{coeff-H(J)}
-\[H_B = H_Q+H(B)\]
-where $H_Q$ is a scalar multiple of $\lambda_i^\vee$ for $Q = Q_i$ and $H(B)$ is a linear combination of $\alpha_j^\vee$ for $ j \ne i$.
+\[H_B = H_Q+H(Q)_{\ast B}\]
+where $H_Q$ is a scalar multiple of $\lambda_i^\vee$ for $Q = Q_i$ and $H(Q)_{\ast B}$ is a linear combination of $\alpha_j^\vee$ for $ j \ne i$.
 On the other hand, since $Q$ is a maximal standard parabolic subgroup of $G$,
-$\rho_Q$ is proportional to $\lambda_i.$ Thus $$\left\langle \rho_Q,H(B)(x\gamma)\right\rangle =0.$$ In particular, we can replace $H_Q$ by $H_B$ in verifying the semi-stability.
-This implies that, if
+$\omega$ is proportional to $\lambda_i.$ Thus $$\left\langle \omega H(Q)_{\ast B}(x\gamma)\right\rangle =0.$$ In particular, we can replace $H_Q$ by $H_B$ in verifying semi-stability.
+Write
 \[ x\gamma = kan, \quad k \in K, a \in A, n \in N,\]
-as in Iwasawa decomposition, then $H_B(x) = H$ where $H = \exp(a)$. In particular, if
+as in Iwasawa decomposition, and set $H_B(x) = H$ where $H = \exp(a)$. In particular, if
 \[a = \begin{bmatrix}
         a_1    & 0      & \ldots & 0      \\
         0      & a_2    & \ldots & 0      \\
@@ -434,7 +563,7 @@ We obtain the following lemma as a consequence of the definition of canonical pa
     $\delta \in G(\mathbb{Q})/P(\mathbb{Q})$. Then
     \begin{enumerate}
         \item If $(P,\delta)$ is destabilizing for $x$, then $\deg_{inst}^P(x\delta) \ge 0$. \label{destabilizing}
-        \item If $(P,\delta) $ is extremal for $x$, then $\left\langle \alpha, H_P(x\delta)\right\rangle \le 0$ for any $\alpha \in \Delta_P$.\label{extremal}
+        \item If $(P,\delta) $ is extremal for $x$, then $\left\langle \alpha, H_P(x\delta)\right\rangle < 0$ for any $\alpha \in \Delta_P$.\label{extremal}
     \end{enumerate}
 \end{lemma}
 \begin{proof}

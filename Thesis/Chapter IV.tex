@@ -6,8 +6,8 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
     Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ and $L_x$ be the corresponding Euclidean lattice. Then the following conditions on $x$ are equivalent
 
     \begin{enumerate}
-        \item The bottom of the profile of $L_x$ is a line connect just the origin and $(n,0)$.
-        \item The degree of instability of $x$ is nonnegative, namely, $\deg_{inst}(x) \ge 0$.
+        \item The bottom of the profile of $L_x$ is a line connecting  the origin and $(n,0)$.
+        \item The degree of instability of $x$ is nonnegative, i.e., $\deg_{inst}(x) \ge 0$.
     \end{enumerate}
 \end{theorem}
 \subsection{A useful lemma}
@@ -15,29 +15,31 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
     There exists a bijection \label{bijection}
     \[    \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \longleftrightarrow \left\lbrace \text{ sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace\]\end{lemma}
 \begin{proof}
-    We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: For any sublattice $M \subset \mathbb{Z}^n$, there exists
+    We define the map from the collection of sublattices of rank $i$ to the cosets space as follows: for any sublattice $M \subset \mathbb{Z}^n$, there exists
     a basis of $M$, denoted by
     \[\mathfrak{C} = \left\lbrace v_1,v_2,\ldots, v_i \right\rbrace \]
-    we can extend this basis to get a basis of $\mathbb{Z}^n$
+    Extend this basis to get a basis of $\mathbb{Z}^n$
     \[\mathfrak{C}_1 = \left\lbrace v_1,v_2,\ldots, v_n \right\rbrace \]
-    In $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $. Clearly there
-    exists a map $\gamma \in \glnz$ such that
+    In $\mathbb{Z}^n$ we have the standard basis $\mathfrak{B} = \left\lbrace e_1,e_2,\ldots,e_n\right\rbrace $, and there
+    exists  $\gamma \in \glnz$ such that
     \[\gamma \cdot e_k = v_k \quad \forall k = 1,2,\ldots, n\]
     So we define the map
     \begin{align*}
         \varphi \colon \left\lbrace\text{sublattices of rank $i$ of $\mathbb{Z}^n$}\right\rbrace & \to \text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) \\
         M                                                                                        & \mapsto [\gamma]
     \end{align*}
-    where $[\gamma]$ denoted the equivalent class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, assume that we have a different basis
+    where $[\gamma]$ denotes the equivalence class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, assume that we have a different basis
     \[ \mathfrak{C}_2 = \left\lbrace w_1,\ldots, w_n \right\rbrace\]
     where \[\mathfrak{C}' = \left\lbrace w_1,\ldots, w_i \right\rbrace \]
     is a basis for sublattice $M$.  As above, there also exists $\gamma' \in \glnz$ such that
     \[\gamma' e_k = w_k \quad \forall k \]
-    Since $\mathfrak{C}$ and $\mathfrak{C'}$ are basis for a sublattice of $\mathbb{Z}^n$ of $\rk i$, we can find an element $g \in \mathrm{GL}_i(\mathbb{Z})$ such that
+    Since $\mathfrak{C}$ and $\mathfrak{C'}$ are bases for the sublattice of $M \subset \mathbb{Z}^n$ of $\rk i$, we can find an element $g \in \mathrm{GL}_i(\mathbb{Z})$ such that
     \[gv_k = w_k \quad\forall k \le i\]
-    Similarly, there also exists $h \in \mathrm{GL}_{n-i}(\mathbb{Z})$ such that
-    \[h v_k = w_k \quad \forall k \ge i,\]
-    as $\mathbb{Z}^n/M$ is the quotient lattice, hence a lattice. In particular, we can immediately see that
+    As $M$ is a sublattice of $\mathbb{Z}^n$, the quotient group $\mathbb{Z}^n/M$ is a lattice. We identify the set $\{v_k, k>i\}$ and $\{w_k, k>i\}$ with its projection of $\mathbb{Z}^n$ onto $\mathbb{Z}^n/M$. By comparing the rank, it is immediate that 
+    $\{v_k, k>i\}$ and $\{w_k, k>i\}$ are bases of $\mathbb{Z}^n/M$. Hence there also exists $h \in \mathrm{GL}_{n-i}(\mathbb{Z})$ such that 
+    \[hv_k = w_k, \quad \forall k >i\]. 
+    
+    In particular, we can immediately see that
     \[\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k\]
     Thus \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
             g & \ast \\
@@ -48,8 +50,6 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
 \subsection{Proof of the main theorem}
 Now we give a proof for theorem \ref{semi-stable-equiv}
 \begin{proof}
-    If we can prove there is a correspondence between
-    $\gamma \in \text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ and a sublattice of rank $i$ of $x$, then we are done.
     We first need a slight reduction - we identify the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
     the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
     Lemma \ref{useful-lemma} generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
@@ -61,12 +61,13 @@ Now we give a proof for theorem \ref{semi-stable-equiv}
     where $\gamma e_k = v_k$ in $\mathbb{Z}^n$ for all $ k \le i$ and $\phi_g^{-1}([\gamma]) = g \bigoplus_{k=1}^i  \mathbb{Z}(\gamma \cdot e_i)$.
 
     Now apply lemma \ref{ss-equiv}, we have that $\deg_{\text{inst}}(x) \ge 0$ if and only if, for every maximal parabolic subgroup $Q\subset G$ and $\omega \in \widehat{\Delta}_Q$ we have \[\left\langle \omega,H_Q(x\delta)\right\rangle \ge 0\] for each $\delta \in G(\mathbb{Q})/Q_i(\mathbb{Q})$. Let $M = \phi_g([\delta])$. Note that for
-    $\omega \in \widehat{\Delta}_Q$, we have
+    $\omega \in \widehat{\Delta}_{Q_i}$, we have
     \[\left\langle \omega, H_Q(x\delta)\right\rangle = \left\langle \omega, H_B(x\delta)\right\rangle = \dfrac{n}{2}\log(a_1\cdots a_i)\]
-    by equation \ref{volume - H_P}. Hence
+    by equation \ref{volume - H_P} and the observation that $\widehat{\Delta}_{Q_i}$ has only one element as defined in section \ref{additional notation} . Hence
     \[\left\langle \omega, H_B(x\delta) \right\rangle = c\left\langle \rho_{Q_i}, H_B(x\gamma) \right\rangle = \dfrac{n}{2}\log(a_1a_2\ldots a_i) = c\vol(M)\]
-    for some positive integer $c$. Using the remark as in section \ref{semi-stable-verified}, we have the desired conclusion.
-\end{proof}
+    for some positive integer $c$. It is clear that the bottom of the profile of $L_x$ is a straight line if and only if $\vol(M) \ge 0$ for any sublattice $M \subset L_x$. But this condition is equivalent 
+    to $\left\langle \omega, H_B(x\delta) \right\rangle \ge 0$ for $\omega \in \widehat{\Delta}_Q$ and $Q \subset G$ a standard maximal parabolic subgroup. Using the remark in section\ref{semi-stable-verified}, we can conclude that the profile of $L_x$ has bottom as a line 
+    if and only if the degree of instability of $x$ is nonnegative. \end{proof}
 
 \section{Canonical pair and Canonical filtration}
 \subsection{Equivalence between Canonical pair and canonical filtration}
@@ -80,27 +81,26 @@ profile of a lattice - the canonical filtration. The main result is the followin
 Recall that, from theorem \ref{Grayson's criterion} and lemma \ref{canonical-pair}, both canonical
 pair and canonical filtration are characterized by two conditions. We will show that these two conditions are equivalent.
 \subsection{Equivalence between chain condition and  condition \ref{extremal}}
-Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_x= x\mathbb{Z}^n$.
+Throughout this section, we fix  $x \in X_n$ and the corresponding lattice $L_x= x\mathbb{Z}^n$.
 \begin{lemma}\label{increasing-slope}
     The the following conditions are equivalent for $x \in X_n$.
     \begin{enumerate}
-        \item  $\left\langle \alpha, H_P(x\delta)\right\rangle <0$ for any $\alpha \in \Delta_P$ and for some $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$.
+        \item  $\left\langle \alpha, H_P(x\delta)\right\rangle <0$ for any $\alpha \in \Delta_P$ and for some standard parabolic subgroup $P$ and $\delta \in G_\mathbb{Q}/P_\mathbb{Q}$
         \item $L_x$ has a chain of lattices
               \[\mathcal{F}: 0 = L_0 \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
-              such that $\mu(M_i/M_{i-1}) <\mu(M_{i+1}/M_i)$ for all $i$.
+              such that $\mu(M_i/M_{i-1}) <\mu(M_{i+1}/M_i)$ for all $i$ and 
+    \[\mathcal{F}\otimes \mathbb{Q} \colon L_0 \subset M_1 \otimes \mathbb{Q} \subset M_2\otimes \mathbb{Q} \subset \cdots \subset M_{k-1}\otimes \mathbb{Q} \subset M_k\otimes \mathbb{Q} =  \mathbb{Q}^n \]
+    is stabilized by a rational standard parabolic subgroup $P_\mathbb{Q}$.
     \end{enumerate}
 \end{lemma}
 \begin{remark}
-    We also attach to the flag
-    \[\mathcal{F}\otimes \mathbb{R} \colon L_0 \subset M_1 \otimes \mathbb{R} \subset M_2\otimes \mathbb{R} \subset \cdots \subset M_{k-1}\otimes \mathbb{R} \subset M_k\otimes \mathbb{R} =  \mathbb{R}^n \]
-    a rational standard parabolic subgroup $P_\mathbb{Q}$.
+    We are not assuming $M_i/M_{i-1}$ and $M_{i+1}/M_{i}$ are semi-stable, so the chain $\mathcal{F}$ is not necessarily a canonical flag. 
 \end{remark}
 \begin{proof}
-
-    We first prove (1) implies (2). Assume that $(P,\delta)$ is the canonical pair for $x$ and we further assume that the standard parabolic
+    Assume that the standard parabolic
     $P$ in the canonical pair is of type $(n_1,\ldots, n_k)$ as defined in subsection \ref{parabolic I}, and set
     \[d_i = n_1+n_2+\ldots +n_i\]
-    In particular, the $A_P$-coordinate of $x\delta$ in the \hyperref[P-horospherical]{$P$-horospherical decomposition}
+    In particular, the $A_P$-coordinate of $x\delta$ in the \hyperref[P-horospherical]{$P$-horospherical decomposition} is
     \begin{equation}
     a_P(x\delta) = \begin{bmatrix}
             a_1I_{n_1} & 0          & \ldots & 0          \\
@@ -118,9 +118,9 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
 
     Note that for $M_k = x\delta\mathbb{Z}^{d_k} = x\mathbb{Z}^n = L_x$.
 
-    From the $P$-horospherical coordinate \ref{P-horospherical}
+    Using the $P$-horospherical coordinate of section \ref{P-horospherical}, we may write
     \[x\delta = km_P(x\delta)a_P(x\delta)n_P(x\delta),\]
-    where $k \in \SOn$, $n_P(x\delta) \in N_P$, $m_p(x\delta) \in M_P$ as in section \ref{P-horospherical} and $a_P(x)$ is defined as in equation \eqref{A_P coor}
+    where $k \in \SOn$, $n_P(x\delta) \in N_P$, $m_p(x\delta) \in M_P$ are as in section \ref{P-horospherical} and $a_P(x)$ is defined as in equation \eqref{A_P coor}. Then we compute
     \[\vol(M_{i}/M_{i-1}) = \left| km_P(x)a_P(x)n_P(x) \bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = \left|a_P(x)\bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = a_i^{n_i}.\]
     The second equality is because  $k\in \SOn$ preserves the length, $n_p(x\delta)$ stabilizes the flag $0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}$ and $M_P$ is semisimple, so the $m_p(x\delta)$ acts trivially on 
     the length function. 
@@ -136,7 +136,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \[m_i = \log(a_i) - \log(a_{i+1}) \]
     If we can prove this then
     \[m_i = \left\langle \alpha_{d_i}, H_P(x\delta)\right\rangle < 0 \Leftrightarrow \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) <0\]
-    By the definition of \hyperref[H-function]{($H_P$-function)}, we know that 
+    By the definition of \hyperref[H-function]{($H_P$)}, we know that 
     \[H_P(x\delta) = \log a_P(x\delta) 
     = \begin{bmatrix}
        \log(a_1)I_{n_1} & 0          & \ldots & 0          \\
@@ -154,6 +154,7 @@ Throughout this section, we fix an $x \in X_n$ and the corresponding lattice $L_
     \[xG_\mathbb{Q}/P_\mathbb{Q} \longleftrightarrow \{\mbox{ flag of sublattices of $x\mathbb{Z}^n$ of the same type of partition type of $P$}\}\]
 
 \end{remark}
+
 \subsection{$P$-semistability and $M_P$-semistability}
 Before proving the remaining equivalence, we need the following lemma
 \begin{lemma}\label{P&M_P ss}
@@ -174,13 +175,14 @@ Before proving the remaining equivalence, we need the following lemma
     By \ref{H_P-decomp}, For any $R \subset P$ a standard parabolic subgroup, we have
     \[H_R(x\delta) = H_P(x\delta)+ H_{\ast R}(\text{pr}_{M_P}(x\delta)) = H_{P}(x\delta)+ H_{\ast R}(m\overline{\delta})\]
     Note that, by definition, we have
-    \[\rho^P_R =  \rho(P)-\rho(R)\]
+    \(\rho^P_R =  \rho(P)-\rho(R)\)
     which vanishing identically on $\mathfrak{a}_P$. Thus 
     \begin{align*}
         \deg_{inst}^P(x) &= \min_{R \subset P, \delta \in P_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_R(x\delta)\right\rangle \\&= \min_{R \subset P, \delta \in P_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_{P}(x)+ H_{\ast R}(m\overline{\delta})\right\rangle \\&= \min_{\ast R \subset M_P, \overline{\delta} \in {M_P,}_\mathbb{Q}/R_\mathbb{Q}}\left\langle \rho_R^P, H_{P}(x)+ H_{\ast R}(m\overline{\delta})\right\rangle \\&= \deg_{inst}^{M_P}(m)
     \end{align*}
     This is what we want.
 \end{proof}
+
 \subsection{Equivalence between increasing chain condition and condition \ref{destabilizing}}
 \begin{lemma}\label{ss-slope}
     Fixed the notations as in lemma \ref{increasing-slope}, the following conditions are equivalent

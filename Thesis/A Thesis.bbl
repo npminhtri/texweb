@@ -1,9 +1,17 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Baake(1997)]{MR1460018}
+Michael Baake.
+\newblock Solution of the coincidence problem in dimensions {$d\leq4$}.
+\newblock In \emph{The mathematics of long-range aperiodic order ({W}aterloo,
+  {ON}, 1995)}, volume 489 of \emph{NATO Adv. Sci. Inst. Ser. C: Math. Phys.
+  Sci.}, pages 9--44. Kluwer Acad. Publ., Dordrecht, 1997.
+\newblock ISBN 0-7923-4506-1.
 
 \bibitem[Barnes(1967)]{barnes1967cartan}
 Donald~W Barnes.
