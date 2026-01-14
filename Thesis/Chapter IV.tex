@@ -1,10 +1,8 @@
 \chapter{Equivalence between Grayson's semistability and $\rho$-semistability}
 \section{The equivalence between definitions of semi-stable lattices}
 Recall that we have two distinct definitions of semi-stability, as defined in definition \ref{ss1} and definition \ref{ss2}. The following theorem asserts their equivalence:
-
 \begin{theorem}\label{semi-stable-equiv}
     Let $x \in X_n = K \backslash \text{GL}_n(\mathbb{R})$ and $L_x$ be the corresponding Euclidean lattice. Then the following conditions on $x$ are equivalent
-
     \begin{enumerate}
         \item The bottom of the profile of $L_x$ is a line connecting  the origin and $(n,0)$.
         \item The degree of instability of $x$ is nonnegative, i.e., $\deg_{inst}(x) \ge 0$.
@@ -37,8 +35,7 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
     \[gv_k = w_k \quad\forall k \le i\]
     As $M$ is a sublattice of $\mathbb{Z}^n$, the quotient group $\mathbb{Z}^n/M$ is a lattice. We identify the set $\{v_k, k>i\}$ and $\{w_k, k>i\}$ with its projection of $\mathbb{Z}^n$ onto $\mathbb{Z}^n/M$. By comparing the rank, it is immediate that 
     $\{v_k, k>i\}$ and $\{w_k, k>i\}$ are bases of $\mathbb{Z}^n/M$. Hence there also exists $h \in \mathrm{GL}_{n-i}(\mathbb{Z})$ such that 
-    \[hv_k = w_k, \quad \forall k >i\]. 
-    
+    \[hv_k = w_k, \quad \forall k >i.\]
     In particular, we can immediately see that
     \[\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k\]
     Thus \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
@@ -51,7 +48,7 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
 Now we give a proof for theorem \ref{semi-stable-equiv}
 \begin{proof}
     We first need a slight reduction - we identify the quotient $\text{GL}_n(\mathbb{Q})/Q_i(\mathbb{Q})$ with
-    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. Now let $x$ be an arbitrary lattice of rank $n$.
+    the quotient $\text{GL}_n(\mathbb{Z})/(Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})) $. This is due to the fact that $\mathrm{GL}_n$ is split and hence $\mathrm{GL}_n(\mathbb{Q}) = \mathrm{GL}_n(\mathbb{Z})P(\mathbb{Q})$ for any parabolic subgroup $P$, by \cite[Lemma 1]{MR205999}. Now let $x$ be an arbitrary lattice of rank $n$.
     Lemma \ref{useful-lemma} generalizes in the obvious way for lattice $x = g\mathbb{Z}^n$ for some $g \in \text{GL}_n(\mathbb{R})$. Indeed, we just define
     the map
     \begin{align*}
@@ -74,10 +71,10 @@ Now we give a proof for theorem \ref{semi-stable-equiv}
 We can further prove that, the equivalence between different notions of semistability
 comes from the equivalence between the notion of canonical pair and the bottom of the
 profile of a lattice - the canonical filtration. The main result is the following proposition
-\begin{prop}\label{cp-equiv}
+\begin{theorem}\label{cp-equiv}
     Given an $x \in X_n = K\backslash G$. Then $(P,\delta)$ is the canonical pair for $x$ if and only if $P$
     is the stabilizer of the canonical filtration for the lattice $L_x = x\mathbb{Z}^n = x\delta \mathbb{Z}^n$.
-\end{prop}
+\end{theorem}
 Recall that, from theorem \ref{Grayson's criterion} and lemma \ref{canonical-pair}, both canonical
 pair and canonical filtration are characterized by two conditions. We will show that these two conditions are equivalent.
 \subsection{Equivalence between chain condition and  condition \ref{extremal}}
@@ -120,10 +117,9 @@ Throughout this section, we fix  $x \in X_n$ and the corresponding lattice $L_x=
 
     Using the $P$-horospherical coordinate of section \ref{P-horospherical}, we may write
     \[x\delta = km_P(x\delta)a_P(x\delta)n_P(x\delta),\]
-    where $k \in \SOn$, $n_P(x\delta) \in N_P$, $m_p(x\delta) \in M_P$ are as in section \ref{P-horospherical} and $a_P(x)$ is defined as in equation \eqref{A_P coor}. Then we compute
+    where $k \in \SOn$, $n_P(x\delta) \in N_P$, $m_p(x\delta) \in M_P$ are as in section \ref{P-horospherical} and $a_P(x)$ is defined as in equation \eqref{A_P coor}. Using equation \eqref{wedge-norm}, we compute
     \[\vol(M_{i}/M_{i-1}) = \left| km_P(x)a_P(x)n_P(x) \bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = \left|a_P(x)\bigwedge_{j=d_i+1}^{d_{i+1}}e_j\right| = a_i^{n_i}.\]
-    The second equality is because  $k\in \SOn$ preserves the length, $n_p(x\delta)$ stabilizes the flag $0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}$ and $M_P$ is semisimple, so the $m_p(x\delta)$ acts trivially on 
-    the length function. 
+    The second equality is because  $k\in \SOn$ preserves the length, $n_p(x\delta)$ stabilizes the flag $0 \subset \mathbb{Z}^{d_1} \subset \mathbb{Z}^{d_2} \subset \cdots \subset \mathbb{Z}^{d_k}$ and the fact the $m_p$ contains sub-block of of determinant $\pm 1$. 
     Thus,
     \begin{align*}
         \mu(M_i/M_{i-1})-\mu(M_{i+1}/M_i) & = \dfrac{\log\vol(M_i/M_{i-1})}{n_i}-\dfrac{\log\vol(M_{i+1}/M_i)}{n_{i+1}} \\&=\log(a_i) - \log(a_{i+1})
@@ -211,7 +207,7 @@ It is clear that $M'_i/M'_{i-1} \cong A_{i}\mathbb{Z}^{n_i}$. It is also clear t
 Rescaling does not change the semistability, so we can rescale the flag $\mathcal{F'}$ by a suitable factor to get the desired flag $\mathcal{F}$
               \[\mathcal{F}: 0  \subset M_1 \subset M_2 \subset \cdots \subset M_{k-1} \subset M_k = L_x \]
 where  $M_i/M_{i-1}$ is semi-stable for all $i$. 
-\subsection{Proof of proposition \ref{cp-equiv}}
+\subsection{Proof of theorem \ref{cp-equiv}}
 By \cite[Subsection 4.3.4]{patnaik2025borel}, the two conditions in lemma \ref{canonical-pair} are sufficient to guarantee that $\text{cp}(x) =(P,\delta)$. Thus, by lemma \ref{ss-slope} and lemma \ref{increasing-slope}, $\text{cp}(x) = (P,\delta)$ if and only if
 there exists a flag of sublattices 
 \[\mathcal{F} \colon 0 = M_0 \subset M_1 \subset \ldots \subset M_k = L_x\]

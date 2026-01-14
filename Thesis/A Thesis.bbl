@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -27,6 +27,14 @@ Thomas Borek.
 \newblock ISSN 0022-314X,1096-1658.
 \newblock \doi{10.1016/j.jnt.2004.12.003}.
 \newblock URL \url{https://doi.org/10.1016/j.jnt.2004.12.003}.
+
+\bibitem[Borel(1966)]{MR205999}
+Armand Borel.
+\newblock Density and maximality of arithmetic subgroups.
+\newblock \emph{J. Reine Angew. Math.}, 224:\penalty0 78--89, 1966.
+\newblock ISSN 0075-4102,1435-5345.
+\newblock \doi{10.1515/crll.1966.224.78}.
+\newblock URL \url{https://doi.org/10.1515/crll.1966.224.78}.
 
 \bibitem[Bourbaki(2005)]{MR2109105}
 Nicolas Bourbaki.
@@ -79,6 +87,13 @@ Daniel~R. Grayson.
 \newblock \doi{10.1007/BF02566369}.
 \newblock URL \url{https://doi.org/10.1007/BF02566369}.
 
+\bibitem[Greub(1978)]{MR504976}
+Werner Greub.
+\newblock \emph{Multilinear algebra}.
+\newblock Universitext. Springer-Verlag, New York-Heidelberg, second edition,
+  1978.
+\newblock ISBN 0-387-90284-8.
+
 \bibitem[Harishchandra(2006)]{harishchandra2006automorphic}
 Bhartendu Harishchandra.
 \newblock \emph{Automorphic forms on semisimple Lie groups}, volume~62.
@@ -98,6 +113,22 @@ James~E. Humphreys.
   Mathematics}.
 \newblock Springer, Berlin, 1980.
 \newblock ISBN 3-540-09972-7.
+
+\bibitem[Lenstra(2001)]{MR1905312}
+Hendrik~W. Lenstra, Jr.
+\newblock Flags and lattice basis reduction.
+\newblock In \emph{European {C}ongress of {M}athematics, {V}ol. {I}
+  ({B}arcelona, 2000)}, volume 201 of \emph{Progr. Math.}, pages 37--51.
+  Birkh\"auser, Basel, 2001.
+\newblock ISBN 3-7643-6417-3.
+
+\bibitem[Levin et~al.(2016)Levin, Shapira, and Weiss]{MR3605031}
+Michael Levin, Uri Shapira, and Barak Weiss.
+\newblock Closed orbits for the diagonal group and well-rounded lattices.
+\newblock \emph{Groups Geom. Dyn.}, 10\penalty0 (4):\penalty0 1211--1225, 2016.
+\newblock ISSN 1661-7207,1661-7215.
+\newblock \doi{10.4171/GGD/380}.
+\newblock URL \url{https://doi.org/10.4171/GGD/380}.
 
 \bibitem[Neukirch(1999)]{MR1697859}
 J\"urgen Neukirch.
@@ -122,6 +153,32 @@ Joachim Schwermer.
   Mathematical Monographs}.
 \newblock Cambridge University Press, Cambridge, 2023.
 \newblock ISBN 978-1-108-83203-8.
+
+\bibitem[Shapira and Weiss(2014)]{MR3268755}
+Uri Shapira and Barak Weiss.
+\newblock A volume estimate for the set of stable lattices.
+\newblock \emph{C. R. Math. Acad. Sci. Paris}, 352\penalty0 (11):\penalty0
+  875--879, 2014.
+\newblock ISSN 1631-073X,1778-3569.
+\newblock \doi{10.1016/j.crma.2014.08.019}.
+\newblock URL \url{https://doi.org/10.1016/j.crma.2014.08.019}.
+
+\bibitem[Shapira and Weiss(2016)]{MR3519540}
+Uri Shapira and Barak Weiss.
+\newblock Stable lattices and the diagonal group.
+\newblock \emph{J. Eur. Math. Soc. (JEMS)}, 18\penalty0 (8):\penalty0
+  1753--1767, 2016.
+\newblock ISSN 1435-9855,1435-9863.
+\newblock \doi{10.4171/JEMS/628}.
+\newblock URL \url{https://doi.org/10.4171/JEMS/628}.
+
+\bibitem[Stuhler(1976)]{MR424707}
+Ulrich Stuhler.
+\newblock Eine {B}emerkung zur {R}eduktionstheorie quadratischer {F}ormen.
+\newblock \emph{Arch. Math. (Basel)}, 27\penalty0 (6):\penalty0 604--610, 1976.
+\newblock ISSN 0003-889X,1420-8938.
+\newblock \doi{10.1007/BF01224726}.
+\newblock URL \url{https://doi.org/10.1007/BF01224726}.
 
 \bibitem[Wei and Zou(2017)]{Wei_2017}
 Yangjiang Wei and Yi~Ming Zou.
