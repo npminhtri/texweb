@@ -29,20 +29,19 @@ Recall that we have two distinct definitions of semi-stability, as defined in de
     where $[\gamma]$ denotes the equivalence class of $\gamma$ in the quotient space. This is a well-defined map. Indeed, assume that we have a different basis
     \[ \mathfrak{C}_2 = \left\lbrace w_1,\ldots, w_n \right\rbrace\]
     where \[\mathfrak{C}' = \left\lbrace w_1,\ldots, w_i \right\rbrace \]
-    is a basis for sublattice $M$.  As above, there also exists $\gamma' \in \glnz$ such that
-    \[\gamma' e_k = w_k \quad \forall k \]
-    Since $\mathfrak{C}$ and $\mathfrak{C'}$ are bases for the sublattice of $M \subset \mathbb{Z}^n$ of $\rk i$, we can find an element $g \in \mathrm{GL}_i(\mathbb{Z})$ such that
-    \[gv_k = w_k \quad\forall k \le i\]
-    As $M$ is a sublattice of $\mathbb{Z}^n$, the quotient group $\mathbb{Z}^n/M$ is a lattice. We identify the set $\{v_k, k>i\}$ and $\{w_k, k>i\}$ with its projection of $\mathbb{Z}^n$ onto $\mathbb{Z}^n/M$. By comparing the rank, it is immediate that 
-    $\{v_k, k>i\}$ and $\{w_k, k>i\}$ are bases of $\mathbb{Z}^n/M$. Hence there also exists $h \in \mathrm{GL}_{n-i}(\mathbb{Z})$ such that 
-    \[hv_k = w_k, \quad \forall k >i.\]
-    In particular, we can immediately see that
-    \[\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k\]
-    Thus \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
-            g & \ast \\
-            0 & h
-        \end{bmatrix} \in Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})\]
-    This is exactly the desired result.
+    is a basis for sublattice $M$. By definition \ref{lattice2}, we can regard $\mathfrak{C}, \mathfrak{C}'$ as bases of the real vector space 
+    $\mathbb{M} \otimes \mathbb{R} = M_\mathbb{R}$. Similarly, $\mathfrak{C}_1, \mathfrak{C}_2$ are basis of $\mathbb{R}^n$. It is known from linear algebra that there exists a linear
+    $T \colon \mathbb{R}^n \to \mathbb{R}^n$ such that $T(v_k) = w_k$ for $k =1,2,\ldots n$. Moreover, $T(M_\mathbb{R}) = M_\mathbb{R}$. Thus $T$ must have matrix representation as 
+    \[[T]_\mathbb{C} = \begin{bmatrix}
+        A & B \\
+        0 & D
+    \end{bmatrix}\]
+    where $A$ is the matrix representation for $\left.T\right|_{M_\mathbb{R}}$ with respect to the bases $\mathfrak{C}$, hence is of size $i \times i$ . Note that we also have $\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k$. Thus 
+    \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
+        A & B \\
+        0 & D
+    \end{bmatrix} \in Q_i(\mathbb{R}) \cap \mathrm{GL}_n(\mathbb{Z})= Q_i(\mathbb{Q}) \cap \mathrm{GL}_n(\mathbb{Z})\]
+    This is the desired result.
 \end{proof}
 \subsection{Proof of the main theorem}
 Now we give a proof for theorem \ref{semi-stable-equiv}
@@ -65,7 +64,6 @@ Now we give a proof for theorem \ref{semi-stable-equiv}
     for some positive integer $c$. It is clear that the bottom of the profile of $L_x$ is a straight line if and only if $\vol(M) \ge 0$ for any sublattice $M \subset L_x$. But this condition is equivalent 
     to $\left\langle \omega, H_B(x\delta) \right\rangle \ge 0$ for $\omega \in \widehat{\Delta}_Q$ and $Q \subset G$ a standard maximal parabolic subgroup. Using the remark in section\ref{semi-stable-verified}, we can conclude that the profile of $L_x$ has bottom as a line 
     if and only if the degree of instability of $x$ is nonnegative. \end{proof}
-
 \section{Canonical pair and Canonical filtration}
 \subsection{Equivalence between Canonical pair and canonical filtration}
 We can further prove that, the equivalence between different notions of semistability

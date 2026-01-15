@@ -213,3 +213,18 @@ is not a simple Lie algebra. However, the Lie algebra $\slnr$ is simple.
 
 %%
 \todo{Check the map in the generalization carefully }
+%%
+ As above, there also exists $\gamma' \in \glnz$ such that
+    \[\gamma' e_k = w_k \quad \forall k \]
+    Since $\mathfrak{C}$ and $\mathfrak{C'}$ are bases for the sublattice of $M \subset \mathbb{Z}^n$ of $\rk i$, we can find an element $g \in \mathrm{GL}_i(\mathbb{Z})$ such that
+    \[gv_k = w_k \quad\forall k \le i\]
+    As $M$ is a sublattice of $\mathbb{Z}^n$, the quotient group $\mathbb{Z}^n/M$ is a lattice. We identify the set $\{v_k, k>i\}$ and $\{w_k, k>i\}$ with its projection of $\mathbb{Z}^n$ onto $\mathbb{Z}^n/M$. By comparing the rank, it is immediate that 
+    $\{v_k, k>i\}$ and $\{w_k, k>i\}$ are bases of $\mathbb{Z}^n/M$. Hence there also exists $h \in \mathrm{GL}_{n-i}(\mathbb{Z})$ such that 
+    \[hv_k = w_k, \quad \forall k >i.\]
+    In particular, we can immediately see that
+    \[\gamma' \cdot (\gamma)^{-1}v_k=\gamma'e_k = w_k \quad \forall k\]
+    Thus \[\gamma' \cdot (\gamma)^{-1} = \begin{bmatrix}
+            g & \ast \\
+            0 & h
+        \end{bmatrix} \in Q_i(\mathbb{Q}) \cap \text{GL}_n(\mathbb{Z})\]
+    This is exactly the desired result.

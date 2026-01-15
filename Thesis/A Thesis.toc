@@ -42,24 +42,26 @@
 \contentsline {subsection}{\numberline {4.1.1}Abstract lattices}{44}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}An alternative definition of lattices}{45}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Equivalence between two definitions of lattices}{46}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Covolume of a lattice}{47}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Sublattices}{47}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Exterior product and covolume of lattice}{48}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.4}Space of lattices}{47}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Covolume of a lattice}{47}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Sublattices}{48}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Exterior product and covolume of lattice}{49}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.8}}{50}{subsection.4.1.8}%
 \contentsline {section}{\numberline {4.2}Grayson's definition of semi-stability}{50}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Grayson's definition}{50}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Grayson's definition}{51}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Canonical filtration}{52}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}$\rho $ semi-stability}{57}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}$\rho $-definition}{57}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Some basic properties}{57}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Check for semi-stability}{57}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Canonical pair}{58}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Equivalence between Grayson's semistability and $\rho $-semistability}{60}{chapter.5}%
-\contentsline {section}{\numberline {5.1}The equivalence between definitions of semi-stable lattices}{60}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}A useful lemma}{60}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {4.3.2}Some basic properties}{58}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Check for semi-stability}{58}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Canonical pair}{59}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Equivalence between Grayson's semistability and $\rho $-semistability}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}The equivalence between definitions of semi-stable lattices}{61}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}A useful lemma}{61}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Proof of the main theorem}{62}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}Canonical pair and Canonical filtration}{63}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Equivalence between Canonical pair and canonical filtration}{63}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Equivalence between chain condition and condition \ref {extremal}}{63}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}$P$-semistability and $M_P$-semistability}{65}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Equivalence between increasing chain condition and condition \ref {destabilizing}}{66}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Proof of theorem \ref {cp-equiv}}{67}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.2}Equivalence between chain condition and condition \ref {extremal}}{64}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}$P$-semistability and $M_P$-semistability}{66}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Equivalence between increasing chain condition and condition \ref {destabilizing}}{67}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Proof of theorem \ref {cp-equiv}}{68}{subsection.5.2.5}%

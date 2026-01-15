@@ -86,9 +86,18 @@ First we need to specify the notion of isomorphic lattices - in the first defini
     in $L_\mathbb{R}$, hence $Q$ define a norm on $L_\mathbb{R}$. In particular, $\left\langle \cdot, \cdot\right\rangle$ extends to an inner product on $L_\mathbb{R}$. The discrete condition of the abstract lattice ensure that
     $L$ is a discrete subset of $L_\mathbb{R}$ hence an Euclidean lattice by theorem \ref{discrete-lattice}.
 \end{proof}
+\subsection{Space of lattices}
+Let $K =O_n(\mathbb{R})$ be the orthogonal subgroup of $G= \mathrm{GL}_n(\mathbb{R})$. We can identify the space $X_n =K \backslash G$ with the space of lattices 
+up to rotation. Indeed, assume that we have a lattice $(L,Q)$ where 
+\[ L = g\mathbb{Z}^n, \quad Q = BB^t\]
+for some $g, B \in \GLn$. Define the norm $||.||_{gB}$ on $\mathbb{Z}^n$ by setting 
+\[||v||_{Bg} = ||Bgv||, \quad \forall v \in \mathbb{Z}^n\]
+where the norm on the right hand side of the above equation is just the standard norm. Then the lattice $(L,Q)$ and $(\mathbb{Z}^n,||.||_{Bg})$ are isomorphic. Hence each isomorphic class of lattices 
+has a representative of the form $(\mathbb{Z}^n, ||.||_g)$ for some $g \in \GLn$. It can be observed that the $||.||_g = ||.||_{kg}$ for any $k \in O(n)$. This proves that $X_n$ parametric isomorphic classes of lattice bases up to rotation.
 \subsection{Covolume of a lattice}
 Now that for every abstract lattice $L$ we can find an invertible matrix $g$ such that
 \[ L  \cong g\mathbb{Z}^n\]
+
 
 The number $n$ is called the \textbf{rank} of the lattice $L$.
 
@@ -187,8 +196,8 @@ From the equation \eqref{wedge-norm}, we can derive the following result
                     =c^2
     \end{align*}
     which implies that $|c| = \vol(L)$. On the other hand $\left\langle v,v\right\rangle = c^2 \left\langle e,e\right\rangle =c^2$, thus we are done proving $|v_1\wedge \ldots \wedge v_n| = \vol(L) $. \qedhere
- 
 \end{proof}
+\subsection{}
 \section{Grayson's definition of semi-stability}
 Recall that a lattice is a pair $(L,\left\langle\cdot,\cdot\right\rangle)$ where $L$ is a $\mathbb{Z}$-module
 and $\left\langle\cdot,\cdot\right\rangle$ is the associated inner product. If there is no confusion, we can will just denote this lattice by $L$ - the underlying $\mathbb{Z}$-module, and $\left\langle \cdot,\cdot\right\rangle$ for  the associated inner product.
