@@ -1,5 +1,7 @@
+
 \documentclass[12pt,twoside]{report}
 \input{Preamble.tex}
+  % for PDF/A-1b
 
 \begin{document}
 % uncomment this line when submitting to Library and Archives Canada,
@@ -14,7 +16,7 @@
 % this sets the metadata for the PDF (if compiled with pdflatex)
 % FILL THIS IN!!!
 \def\ThesisTitle{On Semi-stable lattices in higher rank}
-\def\ThesisAuthor{Nguyen Pham Minh Tri}
+\def\ThesisAuthor{Pham Minh Tri Nguyen}
 % convocation date must either be ``Spring 20xx'' or ``Fall 20xx''
 \convocationdate{Summer 2026}
 %\degree{Doctor of Philosophy}
@@ -58,14 +60,14 @@
 
 \begin{abstract} \doublespacing
   \addcontentsline{toc}{chapter}{Abstract}
- In this thesis, we study the notion of semi-stable lattices in two dimensional space and generalize it to finite dimensional space of dimension at least 3.
+ In this thesis, we study the notion of semi-stability of lattices in finite dimensional vector space of dimension at least 3.
 
- The semi-stable lattices can be defined using two different definition, as first defined using a plot as in \cite{MR780079} and later defined using Harish-Chandra map as in \cite{MR3969872}. We showed that 
- the two definition are equivalent and proved the equivalence between geometric properties using plot and algebraic properties using Harish-Chandra map. We achieve this by pointing out the volume of sublattices can be computed 
- using pairing between Harish-Chandra map with the Weyl vectors. In this way, the geometric information and algebraic information are the same.
+ Semi-stable lattices can be defined using two different definitions: using a geometric plot as in \cite{MR780079} or Lie theoretically the using of Harish-Chandra map as in \cite{MR3969872}. We show that 
+ the two definition are equivalent and prove the equivalence between geometric properties using plot and algebraic properties using Harish-Chandra map. 
+ 
   
- When the lattice is not semi-stable, which is called unstable, it can be attached 
- a canonical plot in geometric sense and a  canonical pair in algebraic sense. We also proved that these objects encode essentially the same data in finite dimensional case. 
+ When the lattice is not semi-stable, we call it unstable, and attach 
+ a canonical filtration in geometric sense and a  canonical pair in algebraic sense. We also prove that these objects encode essentially the same information. 
 
  
 \end{abstract}%\libraryreleaseform %%% not currently required by FGSR
@@ -75,17 +77,22 @@
 % put your dedication here
 %\end{dedication}
 
-
-
-\tableofcontents
-
 \begin{preface}
 \addcontentsline{toc}{chapter}{Preface}
 This thesis is an original work by Tri Nguyen. No part of this thesis has been previously published. 
 \end{preface}
+\newpage
 
+\tableofcontents
+\newpage
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+\newpage
+
+
+
+
+\renewcommand{\thepage}{}
 
 
 
@@ -99,7 +106,7 @@ This thesis is an original work by Tri Nguyen. No part of this thesis has been p
 \input{Chapter IV.tex}
  \clearpage % add this to clear the page numbering on bibliography + keep number on the last page
 \bibliographystyle{plainnat}
-\renewcommand{\thepage}{}
+% \renewcommand{\thepage}{}
 \bibliography{refs}
 
 \end{document}
